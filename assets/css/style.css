@@ -85,6 +85,7 @@ input, textarea {
   border: 1px solid #e7e7e7;
   border-radius: 2px;
   margin-bottom: 30px;
+
   color: #777777;
   font-family: inherit; }
   input:focus, textarea:focus {
