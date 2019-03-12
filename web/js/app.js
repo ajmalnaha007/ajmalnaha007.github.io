@@ -26,7 +26,27 @@
         });
       }
 
-
+    
+      /**********************\
+      // skill Progrss-bar
+      /************************/
+    
+    $(window).scroll(function() {
+      
+       if ($(this).scrollTop() > (($('#skills').offset().top - 300)+ ($('#skills').outerHeight()) - ($(window).height()))){
+         
+          $(".progress-bar").each(function(){
+              each_bar_width = $(this).attr('aria-valuenow');
+              $(this).css({
+                width:each_bar_width + "%"
+              });
+              $(this).html('<span class="progress-tooltip" style="left:'+ each_bar_width +'%">' + each_bar_width + '%</span>');
+          });
+         
+       }
+      
+    });
+    
   }(jQuery));
 
   
