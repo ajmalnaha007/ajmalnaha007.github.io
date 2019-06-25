@@ -516,3 +516,100 @@ body {
     /* Firefox 5.0~16.0 */
     animation-direction: alternate;
 }
+
+/*feature*/
+
+.media {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.media h5{
+    font-weight:600;
+}
+.media-icon {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border: 1px dashed #346afe;
+    display: inline-block;
+    border-radius: 5px;
+    webkit-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+}
+.media-icon img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 9px;
+}
+.media-icon i {
+    font-size: 35px;
+    color: #346afe;
+    line-height: 60px;
+}
+.media:hover .media-icon {
+    background: #346afe;
+}
+.media:hover .media-icon i {
+    color: #ffffff;
+}
+.vertical-align {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.vertical-align > .flex-box,
+.vertical-align > .flex-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+
+/* -2.6 SECTION TITLE */
+.section-title h2 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.section-title h2 span {
+    color: #346afe;
+}
+.lines {
+    width: 6px;
+    position: relative;
+    border-top: 2px solid #346afe;
+}
+.section-title .lines {
+    width: 6px;
+    position: relative;
+    margin-left: 34px;
+    margin-top: 15px;
+}
+.text-center .lines {
+    margin: auto;
+}
+.lines:before,
+.lines:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    width: 30px;
+    border-top: 2px solid #346afe;
+}
+.lines:before {
+    left: -34px;
+}
+.lines:after {
+    right: -34px;
+}
+.section-title p {
+    margin-top: 20px;
+}
