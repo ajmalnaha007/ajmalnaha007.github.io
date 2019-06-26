@@ -544,7 +544,11 @@ body {
     top: 10%;
     right: -126px;
 }
-
+@media (max-width: 768px) {
+    .about-us:before {
+        display: none;
+    }
+}
 .page-title {
     position: relative;
     margin-bottom: 15px;

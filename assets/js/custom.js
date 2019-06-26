@@ -50,7 +50,6 @@
 		$navbar = $('.navbar');
 		if (varHeaderFix) {
 			$navbar.addClass('nav-sticky');
-			console.log("asasasas");
 		} else {
 			$navbar.removeClass('nav-sticky');
 		}
