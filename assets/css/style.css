@@ -92,7 +92,7 @@ body {
 }
 
 .header.nav-sticky{
-    background: #346afe;
+    background: #0d1523;
 }
 .header-nav .navbar-nav > li .sub-menu li > a:hover{
     background: #346afe;
@@ -272,7 +272,7 @@ body {
   .header-nav.nav-sticky {
     top: 0;
     margin-top: 0;
-    padding: 12px 10px;
+    padding: .5rem 1rem
     -webkit-box-shadow: 0px 1px 27px -3px rgba(0, 0, 0, 0.2);
     /* Webkit browsers */
     -moz-box-shadow: 0px 1px 27px -3px rgba(0, 0, 0, 0.2);
@@ -447,10 +447,11 @@ body {
 
 .bg-gredient{
     background:#f5f7f9;
-    /*background-image: url('../images/banner.png');*/
 }
 
 .hero-section {
+    background-image: url('../images/banner.png');
+    background-color: #6ad5df;
     /*background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -614,10 +615,7 @@ body {
     content: "";
     height: 0;
     width: 100%;
-    background: #346afe;
-    background: -webkit-linear-gradient(to left, #346afe, #004e92);
-    background: -webkit-linear-gradient(right, #346afe, #004e92);
-    background: linear-gradient(to left, #346afe, #004e92);
+    background: #0d1523;
     opacity: 0.8;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
@@ -671,4 +669,88 @@ body {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
+}
+
+.footer {
+    margin-top: 302px;
+    position: relative;
+    border-top: 3px solid #edf1f4;
+}
+
+.footer-contact {
+    background: #fff;
+    border: 1px solid #f3f3f3;
+    box-sizing: border-box;
+    border-radius: 4px;
+    min-height: 200px;
+    margin-top: -150px!important;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+    box-shadow: 0 4px 40px rgba(0,0,0,.11);
+}
+
+.social-icons {
+    margin-bottom: 30px;
+}
+.social-icons ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.social-icons ul li {
+    display: inline;
+}
+.social-icons ul li a {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    border: 1px dashed #ccc;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+.social-icons ul li a:hover {
+    color: #ffffff;
+}
+.social-icons ul li i {
+    line-height: 40px;
+}
+.facebook a {
+    color: #4867AA
+}
+.facebook a:hover {
+    background: #4867AA;
+    text-decoration: none;
+}
+.twitter a {
+    text-decoration: none;
+    color: #1DA1F2;
+}
+.twitter a:hover {
+    text-decoration: none;
+    background: #1DA1F2;
+}
+.linked-in a {
+    text-decoration: none;
+    color: #007BB6;
+}
+.linked-in a:hover {
+    text-decoration: none;
+    background: #007BB6;
+}
+
+.contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.con-icon {
+    margin-right: 15px;
 }
