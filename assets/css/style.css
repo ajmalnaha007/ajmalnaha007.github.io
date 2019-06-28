@@ -456,7 +456,7 @@ img {
 /*hero section*/
 
 .bg-gredient{
-    background:#f5f7f9;
+    background:#eaf1f6;
 }
 
 .hero-section {    
@@ -529,16 +529,33 @@ img {
     padding-bottom: 150px;
 }
 
+.bg-segment {
+    position: absolute;
+    left: -16px;
+    bottom: 0;
+}
+.bg-segment img {
+    width: 550px;
+    height: auto;
+}
+
 #who-we-are {
     padding-top: 150px;
     padding-bottom: 150px;
 }
 
-p.text {
+p.text , a.text{
     line-height: 2;
     margin-top: 23px;
     font-size: 16px;
+    color: inherit;
     text-align: justify;
+}
+
+.con-text .text {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: normal;
 }
 
 .about-us {
@@ -581,7 +598,7 @@ p.text {
 
 #team {
     padding-top: 150px;
-    padding-bottom: 150px;
+    padding-bottom: 80px;
 }
 #team .team-image {
     padding-right: 45px;
@@ -693,12 +710,13 @@ p.text {
 }
 
 .footer {
-    margin-top: 302px;
+    margin-top: 220px;
     position: relative;
     border-top: 3px solid #edf1f4;
 }
 
 .footer-contact {
+    padding: 20px;
     background: #fff;
     border: 1px solid #f3f3f3;
     box-sizing: border-box;
@@ -746,13 +764,13 @@ p.text {
     background: #4867AA;
     text-decoration: none;
 }
-.twitter a {
+.instagram a {
     text-decoration: none;
-    color: #1DA1F2;
+    color: #A823D1;
 }
-.twitter a:hover {
+.instagram a:hover {
     text-decoration: none;
-    background: #1DA1F2;
+    background: #A823D1;
 }
 .linked-in a {
     text-decoration: none;
