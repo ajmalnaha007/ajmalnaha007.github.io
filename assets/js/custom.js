@@ -56,11 +56,17 @@
 
 	}
 
+	// header add class		
+	PATH.addActive = function () {
+	    $("li.active-li").children("a.nav-link").addClass("active");
+    }
+
 	/* Document ready function */
 	$(function(){
 		PATH.HeaderSticky();
 		PATH.MenuClose();
 		PATH.HeaderScroll();
+		PATH.addActive();
 	});
 
 
