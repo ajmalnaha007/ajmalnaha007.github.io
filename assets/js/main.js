@@ -5,10 +5,10 @@
         // Header Sticky
         $(window).on('scroll', function () {
             if ($(this).scrollTop() > 120) {
-                $('.uxhaven-nav').addClass("is-sticky");
+                $('#ps-header').addClass("is-sticky");
             }
             else {
-                $('.uxhaven-nav').removeClass("is-sticky");
+                $('#ps-header').removeClass("is-sticky");
             }
         });
 
