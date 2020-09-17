@@ -24,73 +24,28 @@
 <body>
 	<!-- Start Navbar Area -->
 	<header class="ps-header" id="ps-header">
-		<div class="container">
-			<nav class="navbar navbar-expand-md navbar-light">
-				<a class="navbar-brand ps-logo" href="index.html"><img width="180px" src="assets/img/logo.svg"
-						alt="logo"></a>
-
-
-
-				<div class="collapse navbar-collapse" id="navbarSupportedContent" style="display: block;">
+		<div class="container-lg">
+			<nav class="navbar navbar-light">
+				<a class="navbar-brand ps-logo" href="index.html">
+					<img src="assets/img/logo.svg" alt="logo">
+				</a>
+				<button class="menu-toggle btn" id="menu-toggle" type="button">
+					<div class="hamburger-inner"></div>
+				</button>
+				<div class="menu" id="menu">
 					<ul class="navbar-nav nav">
-						<li class="nav-item"><a href="#" class="nav-link active">Services</a>
-							<ul class="dropdown-menu">
-								<li class="nav-item"><a href="index.html" class="nav-link active">Home One</a></li>
-
-								<li class="nav-item"><a href="index-2.html" class="nav-link">Home Two</a></li>
-
-								<li class="nav-item"><a href="index-3.html" class="nav-link">Home Three</a></li>
-
-								<li class="nav-item"><a href="index-4.html" class="nav-link">Home Four</a></li>
-
-								<li class="nav-item"><a href="index-5.html" class="nav-link">Home Five</a></li>
-
-								<li class="nav-item"><a href="index-6.html" class="nav-link">Home Six</a></li>
-
-								<li class="nav-item"><a href="index-7.html" class="nav-link">Home Seven</a></li>
-
-								<li class="nav-item"><a href="index-8.html" class="nav-link">Home Eight</a></li>
+						<li class="nav-item has-dropdown"><a href="#" class="nav-link active">Services</a>
+							<span class="menu-arrow"></span>
+							<ul class="dropdown">
+								<li class="nav-item"><a href="#" class="nav-link active">Home One</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Home Two</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Home Three</a></li>
 							</ul>
 						</li>
 
+						<li class="nav-item"><a href="#" class="nav-link">Our Works</a></li>
 
-
-						<li class="nav-item"><a href="#" class="nav-link">Our Works</a>
-							<ul class="dropdown-menu">
-								<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-
-								<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-
-								<li class="nav-item"><a href="#" class="nav-link">Portfolio</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a>
-										</li>
-
-										<li class="nav-item"><a href="single-portfolio.html" class="nav-link">Portfolio
-												Details</a></li>
-									</ul>
-								</li>
-
-								<li class="nav-item"><a href="team.html" class="nav-link"></a></li>
-
-								<li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-
-								<li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-
-								<li class="nav-item"><a href="error.html" class="nav-link">Error 404</a></li>
-
-								<li class="nav-item"><a href="contact-1.html" class="nav-link">Contact Us</a></li>
-							</ul>
-						</li>
-
-						<li class="nav-item"><a href="#" class="nav-link">Blogs</a>
-							<ul class="dropdown-menu">
-								<li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-
-								<li class="nav-item"><a href="single-portfolio.html" class="nav-link">Portfolio
-										Details</a></li>
-							</ul>
-						</li>
+						<li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
 
 						<li class="nav-item"><a href="#" class="nav-link">Resources</a>
 							<ul class="dropdown-menu">
@@ -102,12 +57,13 @@
 							</ul>
 						</li>
 					</ul>
+
+					<div class="others-options">
+						<a href="#" class="btn btn-ps ml-3 btn-call"><span class="icon-ps-call"></span></a>
+						<a href="#" class="btn btn-ps">Contact</a>
+					</div>
 				</div>
 
-				<div class="others-options">
-					<a href="#" class="btn btn-ps ml-3 btn-call"><span class="icon-ps-call"></span></a>
-					<a href="#" class="btn btn-ps">Contact</a>
-				</div>
 			</nav>
 		</div>
 	</header>
@@ -133,7 +89,7 @@
 						<svg viewBox="0 0 110 110">
 							<circle cx="55" cy="55" r="50" class="dashed" />
 							<foreignObject x="5" y="5">
-								
+
 							</foreignObject>
 						</svg>
 					</div>
