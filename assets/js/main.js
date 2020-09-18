@@ -40,30 +40,38 @@ goTopBtn.addEventListener('click', () => {
     });
 });
 
-var toggleBtn = document.getElementById('menu-toggle');
 var menu = document.getElementById('menu');
 
-toggleBtn.addEventListener('click', () => {
-    // if (menu.style.display == "none") {
-    //     menu.style.display = "block";
-    // } else {
-    //     menu.style.display = "none";
-    // }
-});
+// toggleBtn.addEventListener('click', () => {
+//     // if (menu.style.display == "none") {
+//     //     menu.style.display = "block";
+//     // } else {
+//     //     menu.style.display = "none";
+//     // }
+// });
 
 
+menuToggle = () => {
+    let toggleBtn = document.getElementById('menu-toggle');
+    toggleBtn.addEventListener('click', () => {
+        toggleBtn.classList.toggle('is-active');
+        header.classList.toggle('minisidebar');
+    });
+}
+
+menuToggle();
 
 // document.addEventListener('click', (e) => {
-//     let isClicked = menu.contains(e.target);
+//     let isClickedOut = menu.contains(e.target);
 //     if (isClicked) {
 //         toggleBtn.classList.remove('is-active');
 //         header.classList.remove('minisidebar');
 //     }
 // });
 
-toggleBtn.addEventListener('click', () => {
-   alert('sdsd');
-});
+// toggleBtn.addEventListener('click', () => {
+//    this.classList.add('hi')
+// });
 
 
 (function ($) {
