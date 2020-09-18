@@ -362,7 +362,7 @@ ul {
   #ps-header.minisidebar nav .navbar-nav>li.has-dropdown>.menu-arrow {
     right: 37px;
   }
-  #ps-header.minisidebar nav .navbar-nav>li> a {
+  #ps-header.minisidebar nav .navbar-nav>li>a {
     padding-left: 9px;
   }
   #ps-header.minisidebar nav .navbar-nav>li:hover {
@@ -379,13 +379,168 @@ ul {
 .ps-banner-sec {
   --color-right: var(--primary-color);
   --color-left: #1b1b4c;
-  display: block;
+  --width-left: 62%;
+  --width-right: 38%;
   position: relative;
   z-index: 9;
-  background: linear-gradient(to right, var(--color-left) 0%, var(--color-left) 66.666667%, var(--color-right) 33.333333%, var(--color-right) 100%);
   padding-top: 95px;
 }
 
+.ps-ins-banner-sec {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  position: fixed;
+  margin: auto;
+  top: 0px;
+  left: 0px;
+  bottom: auto;
+  right: auto;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+.ps-banner-sec-left {
+  background-color: var(--color-left);
+  float: left;
+  width: var( --width-left);
+  position: relative;
+  height: 100vh;
+  transition: all 1s cubic-bezier(.165, .84, .44, 1);
+  -webkit-transition: all 1s cubic-bezier(.165, .84, .44, 1);
+}
+
+.ps-banner-txt {
+  /* position: absolute;
+  right: 40px;
+  top: 0;
+  bottom: 0;
+  width: 740px; */
+  color: #fff;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-right: 155px;
+}
+
+.bfr-bg {
+  position: relative;
+}
+
+.ps-banner-txt .bfr-bg::before {
+  position: absolute;
+  background-image: url(../img/banner-bg.png);
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 308px;
+  height: 739px;
+  background-repeat: no-repeat;
+  content: "";
+  top: 50%;
+  transform: translate(0, -50%);
+  left: -151px;
+}
+
+.ps-banner-txt h1 {
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 85px;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1.2;
+  font-family: var(--font-family);
+  color: var(--white-color);
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  z-index: 2;
+}
+
+.ps-banner-txt p {
+  position: relative;
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.55;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fefefe;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.ps-make-wish {
+  position: absolute;
+  left: var(--width-left);
+  top: 28%;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  z-index: 5;
+  -webkit-transition: all .6s cubic-bezier(.19, 1, .22, 1);
+  transition: all .6s cubic-bezier(.19, 1, .22, 1);
+  transform-origin: top left;
+  -webkit-transform-origin: top left;
+  transform: scale(1) translate(-50%, -50%);
+  -webkit-transform: scale(1) translate(-50%, -50%);
+  background-color: var(--color-right);
+
+}
+
+/* .ps-make-wish .dash-circle {
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .6s cubic-bezier(.165, .84, .44, 1);
+  -webkit-transition: all .6s cubic-bezier(.165, .84, .44, 1);
+  background-color: var(--color-right);
+} */
+
+.ps-make-wish circle {
+  fill: transparent;
+  stroke: var(--white-color);
+  stroke-width: 1;
+  opacity: .4;
+}
+
+.ps-make-wish .dashed {
+  stroke-dasharray: 5, 6.5;
+}
+
+.ps-banner-sec-right {
+  background-color: var(--color-right);
+  position: absolute;
+  left: var(--width-left);
+  top: 0;
+  height: 100vh;
+  width: var(--width-right);
+  transition: all 1s cubic-bezier(.165, .84, .44, 1);
+  -webkit-transition: all 1s cubic-bezier(.165, .84, .44, 1);
+}
+
+.ps-banner-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ps-banner-img img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  margin-left: -30px;
+}
+
+/* 
 .ps-banner-sec .ps-banner {
   overflow: hidden;
   position: relative;
@@ -465,7 +620,7 @@ ul {
 
 .ps-banner-sec .ps-banner .banner-art {
   width: 100%;
-}
+} */
 
 /* .dashouter {
   width: 100%;

@@ -72,6 +72,12 @@ menuToggle();
 // toggleBtn.addEventListener('click', () => {
 //    this.classList.add('hi')
 // });
+var logoLeftSpace = header.children[0].offsetLeft;
+var bannerText = document.getElementById('ps-banner-txt');
+bannerText.style.paddingLeft = logoLeftSpace + 15 + "px";
+
+
+
 
 
 (function ($) {
