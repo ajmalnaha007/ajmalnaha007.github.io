@@ -44,11 +44,11 @@ var toggleBtn = document.getElementById('menu-toggle');
 var menu = document.getElementById('menu');
 
 toggleBtn.addEventListener('click', () => {
-    if (menu.style.display == "none") {
-        menu.style.display = "block";
-    } else {
-        menu.style.display = "none";
-    }
+    // if (menu.style.display == "none") {
+    //     menu.style.display = "block";
+    // } else {
+    //     menu.style.display = "none";
+    // }
 });
 
 
@@ -61,10 +61,9 @@ toggleBtn.addEventListener('click', () => {
 //     }
 // });
 
-// toggleBtn.addEventListener('click', () => {
-//     toggleBtn.classList.toggle('is-active');
-//     header.classList.toggle('minisidebar');
-// });
+toggleBtn.addEventListener('click', () => {
+   alert('sdsd');
+});
 
 
 (function ($) {
