@@ -43,14 +43,13 @@ goTopBtn.addEventListener('click', () => {
 var toggleBtn = document.getElementById('menu-toggle');
 var menu = document.getElementById('menu');
 
-toggleBtn.addEventListener('click', function () {
+toggleBtn.addEventListener('click', () => {
     if (menu.style.display == "none") {
         menu.style.display = "block";
     } else {
         menu.style.display = "none";
     }
-}
-);
+});
 
 
 
