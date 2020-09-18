@@ -43,6 +43,14 @@ goTopBtn.addEventListener('click', () => {
 var toggleBtn = document.getElementById('menu-toggle');
 var menu = document.getElementById('menu');
 
+toggleBtn.addEventListener('click', function () {
+    if (menu.style.display == "none") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+}
+);
 
 
 
@@ -59,13 +67,6 @@ var menu = document.getElementById('menu');
 //     header.classList.toggle('minisidebar');
 // });
 
-toggleInteraction = (e) => {
-    e.preventDefault();
-    toggleBtn.classList.toggle('is-active');
-    header.classList.toggle('minisidebar');
-}
-toggleBtn.addEventListener('touchstart', toggleInteraction);
-toggleBtn.addEventListener('click', toggleInteraction);
 
 (function ($) {
     "use strict";
