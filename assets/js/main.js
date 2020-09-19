@@ -1,3 +1,5 @@
+
+
 var getScrollposition = window.scrollY,
     header = document.getElementById("ps-header");
 
@@ -19,9 +21,19 @@ window.addEventListener('scroll', function () {
     }
 });
 
-var bannerSec = document.getElementById('ps-banner-sec');
-bannerSec.style.width = '100%';
-bannerSec.style.height = window.innerHeight + "px";
+window.onresize =
+    bannerHeight;
+
+window.onload =
+    bannerHeight;
+
+function bannerHeight() {
+    let bannerSec = document.getElementById('ps-banner-sec');
+    bannerSec.style.width = '100%';
+    bannerSec.style.height = window.innerHeight + "px";
+}
+
+
 
 const goTopBtn = document.getElementById('go-top');
 
@@ -72,9 +84,22 @@ menuToggle();
 // toggleBtn.addEventListener('click', () => {
 //    this.classList.add('hi')
 // });
-var logoLeftSpace = header.children[0].offsetLeft;
-var bannerText = document.getElementById('ps-banner-txt');
-bannerText.style.paddingLeft = logoLeftSpace + 15 + "px";
+
+
+window.onresize =
+    bannerOffset;
+
+window.onload =
+    bannerOffset;
+
+
+
+function bannerOffset() {
+    var logoLeftSpace = header.children[0].offsetLeft;
+    var bannerText = document.getElementById('ps-banner-txt');
+    bannerText.style.paddingLeft = logoLeftSpace + 15 + "px";
+
+}
 
 
 
