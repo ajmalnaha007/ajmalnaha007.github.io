@@ -2,7 +2,7 @@
 :root {
   --primary-color: #2f2f82;
   --secondary-color: #8e3ccc;
-  --font-primary-color: #000000;
+  --font-primary-color: #2e2f43;
   --font-secondary-color: #33475b;
   --bg-color: #eaf0f6;
   --white-color: #ffffff;
@@ -40,9 +40,94 @@ ul {
   list-style-type: none;
 }
 
-.btn:focus, a:focus, button:focus {
+.btn {
+  font-family: var(--font-family);
+  border-radius: 5px;
+  padding: 11px 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 16px;
+  transition: all .2s ease-in;
+  letter-spacing: 0.8px;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.btn:focus, a:focus, a:hover, button:focus {
   outline: none!important;
   box-shadow: none!important;
+  text-decoration: none!important;
+}
+
+.shake {
+  animation-name: shake;
+  position: relative;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.36, .07, .19, .97);
+  /* animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; */
+}
+
+.btn-ps {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn-ps:hover, .btn-ps:focus {
+  color: var(--primary-color);
+  background-color: var(--white-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-head {
+  padding: 11px 35px;
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+.btn-head:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  opacity: .5;
+  border: 1px solid var(--primary-color);
+}
+
+.btn-call {
+  background-color: var(--secondary-color);
+  font-weight: normal!important;
+  font-size: 20px!important;
+  padding: 11px 12px!important;
+  line-height: 0;
+}
+
+.btn-call:hover, .btn-call:focus {
+  color: var(--secondary-color);
+  background-color: var(--white-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.ps-btn-outline {
+  background-color: transparent;
+  color: var(--white-color);
+  border: 1px solid var(--white-color);
+}
+
+.ps-btn-outline:hover, .ps-btn-outline:focus {
+  color: var(--primary-color);
+  background-color: var(--white-color);
+  border: 1px solid var(--primary-color);
+}
+
+.ps-btn-alt {
+  background-color: #F7D125;
+  color: var(--black-color);
 }
 
 .slick-slide:focus {
@@ -58,9 +143,9 @@ img {
 }
 
 .ps-subtitle-wrap h2 {
-  font-size: 44px;
+  font-size: 32px;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 800;
   text-transform: none;
   color: var(--font-primary-color);
 }
@@ -124,15 +209,21 @@ img {
 /* header */
 
 #ps-header {
+  --header-padding: 0;
   background: #fff;
-  z-index: 12;
   position: absolute;
   top: 0;
   left: 0;
-  padding: 4px;
+  padding: var(--header-padding);
   width: 100%;
   z-index: 999;
   height: auto;
+}
+
+@media (min-width :991px) {
+  #ps-header {
+    --header-padding: 4px;
+  }
 }
 
 #ps-header nav .ps-logo {
@@ -296,8 +387,6 @@ img {
   color: var(--secondary-color)!important;
 }
 
-}
-
 #ps-header.is-sticky {
   position: fixed;
   top: 0;
@@ -311,41 +400,6 @@ img {
   background-color: #ffffff !important;
   -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-}
-
-.btn-ps {
-  font-family: var(--font-family);
-  border-radius: 5px;
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 11px 20px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  margin-right: 16px;
-  transition: all .2s ease-in;
-}
-
-.btn-ps:hover, .btn-ps:focus {
-  color: var(--primary-color);
-  background-color: var(--white-color);
-  border: 1px solid var(--primary-color);
-  box-shadow: none;
-}
-
-.btn-call {
-  background-color: var(--secondary-color);
-  font-weight: normal;
-  font-size: 20px;
-  padding: 11px 12px;
-  line-height: 0;
-}
-
-.btn-call:hover, .btn-call:focus {
-  color: var(--secondary-color);
-  background-color: var(--white-color);
-  border: 1px solid var(--secondary-color);
-  box-shadow: none;
 }
 
 #ps-header .menu-toggle {
@@ -701,7 +755,7 @@ svg .st2 {
 
 .ps-cnt-card-sec .ps-cnt-ins h2 {
   font-family: var(--font-family);
-  font-size: 40px;
+  font-size: 34px;
   font-weight: bold;
   line-height: normal;
   color: var(--white-color);
@@ -955,7 +1009,7 @@ svg .st2 {
 }
 
 .ps-portfolio .single-slick {
-  /* max-width: 360px; */
+  max-width: 360px;
   margin: 15px;
   border-radius: 5px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
@@ -1010,8 +1064,8 @@ svg .st2 {
   top: 50%;
   transform: translateY(-50%);
   background: var(--secondary-color);
-  border-radius: 50%;
-  font-size: 25px;
+  border-radius: 50%!important;
+  font-size: 25px!important;
   width: 80px;
   height: 80px;
   color: var(--white-color);
@@ -1030,13 +1084,13 @@ svg .st2 {
 .ps-portfolio .slick-arrow.prev {
   left: 5px;
   text-align: right;
-  padding-right: 30px;
+  padding-right: 30px!important;
 }
 
 .ps-portfolio .slick-arrow.next {
   right: 5px;
   text-align: left;
-  padding-left: 30px;
+  padding-left: 30px!important;
 }
 
 .ps-portfolio:hover .slick-arrow {
@@ -1122,20 +1176,18 @@ svg .st2 {
 
 .ps-blog-sec {
   background-color: var(--bg-color);
-  padding-bottom: 75px;
+  padding-bottom: 105px;
 }
 
 .ps-blog-sec .slick-arrow {
   z-index: 9;
   position: absolute;
-  top: 50%;
   width: 45px;
   height: 45px;
   top: calc(100% + 25px);
-  /* border-radius: 50%; */
   transform: translateY(-50%);
   background: var(--white-color);
-  font-size: 20px;
+  font-size: 20px!important;
   color: var(--secondary-color);
   cursor: pointer;
   -webkit-transition: all .3s ease-out 0s;
@@ -1143,22 +1195,19 @@ svg .st2 {
   -ms-transition: all .3s ease-out 0s;
   -o-transition: all .3s ease-out 0s;
   transition: all .3s ease-out 0s;
-  /* visibility: hidden;
-  opacity: 0; */
-  -webkit-box-shadow: 0 0 34px 6px rgba(0,0,0,.07);
-  box-shadow: 0 0 34px 6px rgba(0,0,0,.07);
+  -webkit-box-shadow: 0 0 34px 6px rgba(0, 0, 0, .07);
+  box-shadow: 0 0 34px 6px rgba(0, 0, 0, .07);
+  padding: 8px 12px!important;
 }
 
 .ps-blog-sec .slick-arrow.prev {
-  right: calc(45px + 30px);
-  /* border-radius: 5px 0 0 5px; */
+  right: calc(45px + 15px);
   text-align: right;
 }
 
 .ps-blog-sec .slick-arrow.next {
-  right: 15px;
+  right: 0;
   text-align: left;
-  /* border-radius: 0 5px 5px 0; */
 }
 
 .ps-blog-sec:hover .slick-arrow {
@@ -1201,9 +1250,8 @@ svg .st2 {
   border-radius: 10px;
 }
 
-
 .blog-slick .single-blog {
-  margin: 15px;
+  margin: 15px 15px 15px 0;
   border-radius: 5px;
   border: solid 1px #b7b7c3;
   background-color: #ffffff;
@@ -1311,6 +1359,125 @@ svg .st2 {
   stroke-dashoffset: 0;
 }
 
+.ps-cnt-bar-btm {
+  background-color: var(--primary-color);
+}
+
+.ps-cnt-bar-btm .ps-ins-cnt-bar {
+  background-image: url(../img/cnt-bg-2.png);
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding: 75px 0;
+}
+
+.ps-cnt-bar-btm .ps-ins-cnt-bar .ps-cnt-bar-content h3 {
+  font-family: var(--font-family);
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+  color: var(--white-color);
+}
+
+.ps-cnt-bar-btm .ps-ins-cnt-bar .ps-cnt-bar-content p {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1.6px;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--white-color);
+  margin: 0;
+}
+
+footer.ps-footer {
+  background-color: #131328;
+}
+
+footer.ps-footer .top-footer-content {
+  padding: 75px 0;
+}
+
+footer.ps-footer .bottom-footer-content {
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  padding: 25px 0;
+}
+
+footer.ps-footer .ps-footer-brand>img {
+  width: 170px;
+  margin-bottom: 30px;
+}
+
+footer.ps-footer .ps-footer-social ul>li {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+footer.ps-footer .ps-footer-social ul>li>a {
+  color: var(--white-color);
+  opacity: .7;
+}
+
+footer.ps-footer .ps-footer-social ul>li>a:hover {
+  opacity: 1;
+  color: var(--secondary-color);
+}
+
+footer.ps-footer .ps-footer-social ul>li:first-child {
+  padding-left: 0;
+}
+
+footer.ps-footer .ps-footer-social ul>li:last-child {
+  padding-right: 0;
+}
+
+footer.ps-footer .ps-footer-menu ul>li {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 15px;
+  color: var(--white-color);
+}
+
+footer.ps-footer .ps-footer-menu ul>li>a {
+  display: block;
+  color: var(--white-color);
+  font-size: 14px;
+  background-color: transparent !important;
+  font-weight: normal;
+  opacity: .9;
+  letter-spacing: 1px;
+  line-height: 24px;
+  /* text-transform: uppercase; */
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-family: var(--font-family);
+  /* padding-left: 15px; */
+  padding-right: 15px;
+}
+
+footer.ps-footer .ps-footer-menu ul>li>a:hover {
+  opacity: 1;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+footer.ps-footer .bottom-footer-content p {
+  color: rgba(255, 255, 255, .7);
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 0;
+}
+
 /*================================================
 Go Top CSS
 =================================================*/
@@ -1320,15 +1487,15 @@ Go Top CSS
   cursor: pointer;
   bottom: 10px;
   right: 20px;
-  font-size: 35px;
-  color: #ffffff;
-  background-color: #000000;
+  font-size: 15px;
+  color: var(--white-color);
+  background-color: var(--secondary-color);
   z-index: 4;
   opacity: 0;
   width: 40px;
   text-align: center;
   height: 40px;
-  line-height: 45px;
+  line-height: 41px;
   border-radius: 50%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1341,7 +1508,35 @@ Go Top CSS
 
 .go-top:hover {
   color: #ffffff;
-  background: #ff2c9c;
+  background: var(--primary-color);
 }
 
-/*# sourceMappingURL=style.css.map */
+@-webkit-keyframes shake {
+  1%, 9% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  2%, 8% {
+    transform: translate3d(2px, 0, 0);
+  }
+  3%, 5%, 7% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  4%, 6% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  1%, 9% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  2%, 8% {
+    transform: translate3d(2px, 0, 0);
+  }
+  3%, 5%, 7% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  4%, 6% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
