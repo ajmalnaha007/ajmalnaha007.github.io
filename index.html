@@ -35,11 +35,11 @@
 					<div class="hamburger-inner"></div>
 				</button>
 				<div class="menu" id="menu">
-					<ul class="navbar-nav nav">
-						<li class="nav-item has-dropdown"><a href="#" class="nav-link active">Services</a>
+					<ul class="navbar-nav nav" id="navbarMobile">
+						<li class="nav-item has-dropdown"><a href="#" class="nav-link">Services</a>
 							<span class="menu-arrow"></span>
 							<ul class="dropdown">
-								<li class="nav-item"><a href="#" class="nav-link active">Home One</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Home One</a></li>
 								<li class="nav-item"><a href="#" class="nav-link">Home Two</a></li>
 								<li class="nav-item"><a href="#" class="nav-link">Home Three</a></li>
 							</ul>
@@ -49,8 +49,9 @@
 
 						<li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
 
-						<li class="nav-item"><a href="#" class="nav-link">Resources</a>
-							<ul class="dropdown-menu">
+						<li class="nav-item has-dropdown""><a href="#" class="nav-link">Resources</a>
+							<span class="menu-arrow"></span>
+							<ul class="dropdown">
 								<li class="nav-item"><a href="blog-1.html" class="nav-link">Blog One</a></li>
 
 								<li class="nav-item"><a href="blog-2.html" class="nav-link">Blog Two</a></li>
@@ -70,6 +71,7 @@
 		</div>
 	</header>
 	<!-- End Navbar Area -->
+
 
 	<!-- Start Main Banner -->
 	<section class="ps-banner-sec" id="ps-banner-sec">
@@ -176,7 +178,6 @@
 			</div>
 		</div>
 	</section>
-
 	<section class="bg-sec">
 		<div class="bg-art">
 			<img src="./assets/img/art-2.png" alt="art" class="bg-art">
@@ -604,6 +605,7 @@
 	</footer>
 
 	<div class="go-top" id="go-top"><span class="icon-upload"></span></div>
+	<div class="overlay"></div>
 
 	<!-- JQuery Min JS -->
 	<script src="assets/js/jquery.min.js"></script>

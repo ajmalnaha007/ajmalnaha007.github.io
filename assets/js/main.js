@@ -68,6 +68,7 @@ menuToggle = () => {
     toggleBtn.addEventListener('click', () => {
         toggleBtn.classList.toggle('is-active');
         header.classList.toggle('minisidebar');
+        document.body.classList.toggle('is-overlay');
     });
 }
 
@@ -101,6 +102,169 @@ function bannerOffset() {
 
 }
 
+navItem = document.querySelectorAll('.nav-item');
+// console.log(navItem.contains('.has-dropdown'));
+// menuToggleAdd = () => {
+//     navItem.addEventListener('click', () => {
+
+//     });
+// }
+
+
+// window.onload = function () {
+//     navItem.forEach(item => {
+//         let isClassName = hasClass(item, 'has-dropdown');
+//         if (isClassName) {
+//             item.addEventListener('click', () => {
+//                 item.classList.toggle('active');
+//             });
+//         }
+//     })
+// }
+
+// addSideClass = (item) => {
+
+// // }
+
+
+// function hasClass(element, cls) {
+//     return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+// }
+
+// const mediaQuerySideBar = window.matchMedia('(max-width: 991px)')
+
+// sideBarToggle = () => {
+//     if (mediaQuerySideBar.matches) {
+//         navItem.forEach(item => {
+//             let isClassName = hasClass(item, 'has-dropdown');
+//             if (isClassName) {
+//                 item.addEventListener('click', () => {
+//                     var elems = document.querySelectorAll(".active");
+//                     [].forEach.call(elems, function (item) {
+//                         item.classList.remove("active");
+//                     });
+//                     item.classList.toggle('active');
+//                 })
+//             }
+//         });
+//     }
+// }
+
+// // sideBarToggle();
+// function myFunctione(element) {
+
+//     var dropdowns = document.getElementsByClassName(".has-dropdown");
+
+//     var thisDropdown = element.nextSibling.nextSibling;
+//     console.log(dropdowns);
+// }
+// myFunctione();
+
+
+// function myFunction(element) {
+//     var dropdowns = document.getElementsByClassName(".has-dropdown");
+
+//     var thisDropdown = element.nextSibling.nextSibling;
+
+//     if (!thisDropdown.classList.contains('active')) {
+//         var i;
+//         for (i = 0; i < dropdowns.length; i++) {
+//             dropdowns[i].classList.remove('active');
+//         }
+//     }
+
+//     thisDropdown.classList.toggle("active");
+// }
+
+// window.onclick = function (event) {
+//     if (!event.target.matches('.has-dropdown')) {
+//         var dropdowns = document.getElementsByClassName("dropdown");
+//         var i;
+//         for (i = 0; i < dropdowns.length; i++) {
+//             var openDropdown = dropdowns[i];
+//             if (openDropdown.classList.contains('active')) {
+//                 openDropdown.classList.remove('active');
+//             }
+//         }
+//     }
+// }
+
+/* When the user clicks on the button, 
+closes every dropdowns and open the only one passed as argument */
+
+// /* Javascript only */
+var dropdowns = document.querySelectorAll('.has-dropdown');
+
+function myFunction(item) {
+    if (!item.classList.contains('active')) {
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].classList.remove('active');
+        }
+    }
+    item.classList.toggle("active");
+}
+
+/* W3Schools function to close the dropdown when clicked outside. */
+// window.onclick = function (event) {
+//     if (!event.target.matches('.dropbtn')) {
+//         var dropdowns = document.getElementsByClassName("dropdown");
+//         var i;
+//         for (i = 0; i < dropdowns.length; i++) {
+//             var openDropdown = dropdowns[i];
+//             if (openDropdown.classList.contains('show')) {
+//                 openDropdown.classList.remove('show');
+//             }
+//         }
+//     }
+// }
+
+dropdowns.forEach(item => {
+    item.addEventListener('click', () => {
+        myFunction(item);
+    })
+})
+
+
+
+
+
+// let ul = document.querySelector('#navbarMobile');
+// let li = document.querySelectorAll('.has-dropdown');
+
+// li.forEach(item => {
+//     item.addEventListener('click', () => {
+//         let isClassName = ul.querySelector('.active');
+//         if (isClassName) {
+//             isClassName.classList.remove('active');
+//         }
+//         item.classList.toggle('active');
+//     })
+// })
+
+// menuToggleAdd();
+
+
+
+// const mediaQuerySideBar = window.matchMedia('(max-width: 991px)')
+// function sideBarToggle() {
+//     if (mediaQuerySideBar.matches) {
+//         document.getElementById('navbarMobile').addEventListener('click', (e) => {
+//             var elems = document.querySelectorAll(".active");
+//             [].forEach.call(elems, function (el) {
+//                 el.classList.remove("active");
+//             });
+//             let isClassName = hasClass(e.target.parentNode, 'has-dropdown');
+//             if (isClassName) {
+//                 // e.target.classList.add("active");
+//                 e.target.parentNode.classList.toggle('active');
+//             }
+//         });
+//     }
+// }
+
+// window.onload = sideBarToggle;
+// window.onresize = sideBarToggle;
 
 
 
