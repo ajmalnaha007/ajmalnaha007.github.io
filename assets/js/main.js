@@ -1,4 +1,14 @@
+const mediaMobile = window.matchMedia('(min-width: 991px)')
 
+onloadFucntion = () => {
+    bannerHeight();
+    bannerOffset();
+}
+window.onresize =
+    onloadFucntion;
+
+window.onload =
+    onloadFucntion;
 
 var getScrollposition = window.scrollY,
     header = document.getElementById("ps-header");
@@ -21,18 +31,14 @@ window.addEventListener('scroll', function () {
     }
 });
 
-window.onresize =
-    bannerHeight;
-
-window.onload =
-    bannerHeight;
-
 function bannerHeight() {
     let bannerSec = document.getElementById('ps-banner-sec');
-    bannerSec.style.width = '100%';
-    bannerSec.style.height = window.innerHeight + "px";
+    if (mediaMobile.matches) {
+        bannerSec.style.width = '100%';
+        bannerSec.style.height = window.innerHeight + "px";
+    }
+    // bannerSec.style.paddingTop = header.clientHeight + 'px';
 }
-
 
 
 const goTopBtn = document.getElementById('go-top');
@@ -54,14 +60,6 @@ goTopBtn.addEventListener('click', () => {
 
 var menu = document.getElementById('menu');
 
-// toggleBtn.addEventListener('click', () => {
-//     // if (menu.style.display == "none") {
-//     //     menu.style.display = "block";
-//     // } else {
-//     //     menu.style.display = "none";
-//     // }
-// });
-
 
 menuToggle = () => {
     let toggleBtn = document.getElementById('menu-toggle');
@@ -74,123 +72,23 @@ menuToggle = () => {
 
 menuToggle();
 
-// document.addEventListener('click', (e) => {
-//     let isClickedOut = menu.contains(e.target);
-//     if (isClicked) {
-//         toggleBtn.classList.remove('is-active');
-//         header.classList.remove('minisidebar');
-//     }
-// });
 
-// toggleBtn.addEventListener('click', () => {
-//    this.classList.add('hi')
-// });
+// window.onresize =
+//     bannerOffset;
 
-
-window.onresize =
-    bannerOffset;
-
-window.onload =
-    bannerOffset;
+// window.onload =
+//     bannerOffset;
 
 
 
 function bannerOffset() {
-    var logoLeftSpace = header.children[0].offsetLeft;
-    var bannerText = document.getElementById('ps-banner-txt');
-    bannerText.style.paddingLeft = logoLeftSpace + 15 + "px";
-
+    if (mediaMobile.matches) {
+        var logoLeftSpace = header.children[0].offsetLeft;
+        var bannerText = document.getElementById('ps-banner-txt');
+        bannerText.style.paddingLeft = logoLeftSpace + 30 + "px";
+    }
 }
 
-navItem = document.querySelectorAll('.nav-item');
-// console.log(navItem.contains('.has-dropdown'));
-// menuToggleAdd = () => {
-//     navItem.addEventListener('click', () => {
-
-//     });
-// }
-
-
-// window.onload = function () {
-//     navItem.forEach(item => {
-//         let isClassName = hasClass(item, 'has-dropdown');
-//         if (isClassName) {
-//             item.addEventListener('click', () => {
-//                 item.classList.toggle('active');
-//             });
-//         }
-//     })
-// }
-
-// addSideClass = (item) => {
-
-// // }
-
-
-// function hasClass(element, cls) {
-//     return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-// }
-
-// const mediaQuerySideBar = window.matchMedia('(max-width: 991px)')
-
-// sideBarToggle = () => {
-//     if (mediaQuerySideBar.matches) {
-//         navItem.forEach(item => {
-//             let isClassName = hasClass(item, 'has-dropdown');
-//             if (isClassName) {
-//                 item.addEventListener('click', () => {
-//                     var elems = document.querySelectorAll(".active");
-//                     [].forEach.call(elems, function (item) {
-//                         item.classList.remove("active");
-//                     });
-//                     item.classList.toggle('active');
-//                 })
-//             }
-//         });
-//     }
-// }
-
-// // sideBarToggle();
-// function myFunctione(element) {
-
-//     var dropdowns = document.getElementsByClassName(".has-dropdown");
-
-//     var thisDropdown = element.nextSibling.nextSibling;
-//     console.log(dropdowns);
-// }
-// myFunctione();
-
-
-// function myFunction(element) {
-//     var dropdowns = document.getElementsByClassName(".has-dropdown");
-
-//     var thisDropdown = element.nextSibling.nextSibling;
-
-//     if (!thisDropdown.classList.contains('active')) {
-//         var i;
-//         for (i = 0; i < dropdowns.length; i++) {
-//             dropdowns[i].classList.remove('active');
-//         }
-//     }
-
-//     thisDropdown.classList.toggle("active");
-// }
-
-// window.onclick = function (event) {
-//     if (!event.target.matches('.has-dropdown')) {
-//         var dropdowns = document.getElementsByClassName("dropdown");
-//         var i;
-//         for (i = 0; i < dropdowns.length; i++) {
-//             var openDropdown = dropdowns[i];
-//             if (openDropdown.classList.contains('active')) {
-//                 openDropdown.classList.remove('active');
-//             }
-//         }
-//     }
-// }
-
-/* When the user clicks on the button, 
-closes every dropdowns and open the only one passed as argument */
 
 // /* Javascript only */
 var dropdowns = document.querySelectorAll('.has-dropdown');
@@ -205,19 +103,6 @@ function myFunction(item) {
     item.classList.toggle("active");
 }
 
-/* W3Schools function to close the dropdown when clicked outside. */
-// window.onclick = function (event) {
-//     if (!event.target.matches('.dropbtn')) {
-//         var dropdowns = document.getElementsByClassName("dropdown");
-//         var i;
-//         for (i = 0; i < dropdowns.length; i++) {
-//             var openDropdown = dropdowns[i];
-//             if (openDropdown.classList.contains('show')) {
-//                 openDropdown.classList.remove('show');
-//             }
-//         }
-//     }
-// }
 
 dropdowns.forEach(item => {
     item.addEventListener('click', () => {
