@@ -993,6 +993,10 @@ svg .st2 {
   margin-top: 20px;
 }
 
+.ps-cnt-card-sec .ps-btn-alt {
+  margin: 0;
+}
+
 .ps-service-sec {
   background-color: var(--bg-color);
   padding-top: 80px;
@@ -1000,19 +1004,34 @@ svg .st2 {
 }
 
 .ps-service-sec .ps-service-ins {
+  --b: 10px;
   border-radius: 5px;
-  box-shadow: 0 0 43px 0 rgba(47, 47, 130, 0.13);
+  box-shadow: 0 0 var(--b) 0 rgba(47, 47, 130, 0.13);
   background-color: #ffffff;
   text-align: center;
   cursor: pointer;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
   transition: all .4s;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .ps-service-sec .ps-service-ins {
+    --b: 43px;
+    margin: 0;
+  }
 }
 
 .ps-service-sec .ps-service-ins .ps-service {
   position: relative;
-  padding: 50px 40px 0;
+  padding: 50px 20px 0;
+}
+
+@media (min-width: 1200px) {
+  .ps-service-sec .ps-service-ins .ps-service {
+    padding: 50px 40px 0;
+  }
 }
 
 .ps-service-sec .ps-service-ins .ps-service-ic {
