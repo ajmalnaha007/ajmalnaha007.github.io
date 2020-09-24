@@ -1,29 +1,44 @@
-const mediaMobile = window.matchMedia('(min-width: 991px)')
+const mediaMobile = window.matchMedia('(min-width: 991px)');
+const header = document.getElementById("ps-header");
+const goTopBtn = document.getElementById('go-top');
+const menu = document.getElementById('menu');
+const dropdowns = document.querySelectorAll('.has-dropdown');
+const toggleBtn = document.getElementById('menu-toggle');
+const bannerSec = document.getElementById('ps-banner-sec');
+const bannerText = document.getElementById('ps-banner-txt');
 
-onloadFucntion = () => {
+
+// onload function
+onLoadFucntion = () => {
     bannerHeight();
-    bannerOffset();
+    bannerTxtOffset();
+    menuToggle();
+    scrollToTop();
 }
-window.onresize =
-    onloadFucntion;
 
-window.onload =
-    onloadFucntion;
+// onresize function 
+onResizeFunction = () => {
+    bannerHeight();
+    bannerTxtOffset();
+}
 
-var getScrollposition = window.scrollY,
-    header = document.getElementById("ps-header");
+window.onresize = onResizeFunction;
 
-function addClassHeader() {
+window.onload = onLoadFucntion;
+
+// header class add
+
+addClassHeader = () => {
     header.classList.add("is-sticky");
 }
 
-function removeClassHeader() {
+removeClassHeader = () => {
     header.classList.remove("is-sticky");
 }
 
 window.addEventListener('scroll', function () {
-    getScrollposition = window.scrollY;
-    if (getScrollposition > 120) {
+    let getScrollposition = window.scrollY;
+    if (getScrollposition > 0) {
         addClassHeader();
     }
     else {
@@ -31,69 +46,63 @@ window.addEventListener('scroll', function () {
     }
 });
 
-function bannerHeight() {
-    let bannerSec = document.getElementById('ps-banner-sec');
-    if (mediaMobile.matches) {
+
+// banner Height and width 
+
+bannerHeight = () => {
+    if ((mediaMobile.matches) && (bannerSec != null)) {
         bannerSec.style.width = '100%';
         bannerSec.style.height = window.innerHeight + "px";
     }
-    // bannerSec.style.paddingTop = header.clientHeight + 'px';
 }
 
-
-// const goTopBtn = document.getElementById('go-top');
-
-// window.addEventListener('scroll', () => {
-//     if (document.body.scrollToTop > 20 || document.documentElement.scrollTop > 20)
-//         goTopBtn.classList.add('active');
-//     else
-//         goTopBtn.classList.remove('active');
-// })
-
-// goTopBtn.addEventListener('click', () => {
-//     window.scrollTo({
-//         top: 0,
-//         left: 0,
-//         behavior: 'smooth'
-//     });
-// });
-
-var menu = document.getElementById('menu');
-
-
-menuToggle = () => {
-    let toggleBtn = document.getElementById('menu-toggle');
-    toggleBtn.addEventListener('click', () => {
-        toggleBtn.classList.toggle('is-active');
-        header.classList.toggle('minisidebar');
-        document.body.classList.toggle('is-overlay');
-    });
-}
-
-menuToggle();
-
-
-// window.onresize =
-//     bannerOffset;
-
-// window.onload =
-//     bannerOffset;
-
-
-
-function bannerOffset() {
-    if (mediaMobile.matches) {
-        var logoLeftSpace = header.children[0].offsetLeft;
-        var bannerText = document.getElementById('ps-banner-txt');
+bannerTxtOffset = () => {
+    let logoLeftSpace = header.children[0].offsetLeft;
+    if (mediaMobile.matches && logoLeftSpace && bannerText) {
         bannerText.style.paddingLeft = logoLeftSpace + 30 + "px";
     }
 }
 
+// scroll to top
 
-// /* Javascript only */
-var dropdowns = document.querySelectorAll('.has-dropdown');
+window.addEventListener('scroll', () => {
+    if (goTopBtn) {
+        if (document.body.scrollToTop > 20 || document.documentElement.scrollTop > 20)
+            goTopBtn.classList.add('active');
+        else
+            goTopBtn.classList.remove('active');
+    }
+})
 
-function myFunction(item) {
+scrollToTop = () => {
+    if (goTopBtn) {
+        goTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
+
+
+// menu toggle button on responsive
+
+menuToggle = () => {
+    if (!mediaMobile.matches && toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            toggleBtn.classList.toggle('is-active');
+            header.classList.toggle('minisidebar');
+            document.body.classList.toggle('is-overlay');
+        });
+    }
+}
+
+// header menu addclass in responsive
+
+activeDropdown = (item) => {
     if (!item.classList.contains('active')) {
         var i;
         for (i = 0; i < dropdowns.length; i++) {
@@ -106,126 +115,8 @@ function myFunction(item) {
 
 dropdowns.forEach(item => {
     item.addEventListener('click', () => {
-        myFunction(item);
-    })
-})
-
-
-
-
-
-// let ul = document.querySelector('#navbarMobile');
-// let li = document.querySelectorAll('.has-dropdown');
-
-// li.forEach(item => {
-//     item.addEventListener('click', () => {
-//         let isClassName = ul.querySelector('.active');
-//         if (isClassName) {
-//             isClassName.classList.remove('active');
-//         }
-//         item.classList.toggle('active');
-//     })
-// })
-
-// menuToggleAdd();
-
-
-
-// const mediaQuerySideBar = window.matchMedia('(max-width: 991px)')
-// function sideBarToggle() {
-//     if (mediaQuerySideBar.matches) {
-//         document.getElementById('navbarMobile').addEventListener('click', (e) => {
-//             var elems = document.querySelectorAll(".active");
-//             [].forEach.call(elems, function (el) {
-//                 el.classList.remove("active");
-//             });
-//             let isClassName = hasClass(e.target.parentNode, 'has-dropdown');
-//             if (isClassName) {
-//                 // e.target.classList.add("active");
-//                 e.target.parentNode.classList.toggle('active');
-//             }
-//         });
-//     }
-// }
-
-// window.onload = sideBarToggle;
-// window.onresize = sideBarToggle;
-
-
-
-
-// (function ($) {
-//     "use strict";
-//     jQuery(document).on('ready', function () {
-
-// $('#test').on('click', function (event) {
-//     $(this).toggleClass('open');
-//     $('#menu').slideToggle(400);
-// });
-
-// $(".has-submenu a").click(function() {
-//     if(window.innerWidth < 992){
-//         if($(this).parent().hasClass('open')){
-//             $(this).siblings('.submenu').removeClass('open');
-//             $(this).parent().removeClass('open');
-//         } else {
-//             $(this).siblings('.submenu').addClass('open');
-//             $(this).parent().addClass('open');
-//         }
-//     }
-// });
-
-// // Header Sticky
-// $(window).on('scroll', function () {
-//     if ($(this).scrollTop() > 120) {
-//         $('#ps-header').addClass("is-sticky");
-//     }
-//     else {
-//         $('#ps-header').removeClass("is-sticky");
-//     }
-// });
-
-// Go to Top
-// $(function () {
-//     //Scroll event
-//     $(window).on('scroll', function () {
-//         var scrolled = $(window).scrollTop();
-//         if (scrolled > 300) $('.go-top').fadeIn('slow');
-//         if (scrolled < 300) $('.go-top').fadeOut('slow');
-//     });
-//     //Click event
-//     $('.go-top').on('click', function () {
-//         $("html, body").animate({ scrollTop: "0" }, 500);
-//     });        // });
-
-// });
-// }(jQuery));
-
-// (function ($) {
-//     "use strict"
-    // jQuery(document).on('ready', function () {
-
-            // responsive: [
-            //     {
-            //         breakpoint: 768,
-            //         settings: {
-            //             arrows: false,
-            //             centerMode: true,
-            //             centerPadding: '40px',
-            //             slidesToShow: 3
-            //         }
-            //     },
-            //     {
-            //         breakpoint: 480,
-            //         settings: {
-            //             arrows: false,
-            //             centerMode: true,
-            //             centerPadding: '40px',
-            //             slidesToShow: 1
-            //         }
-            //     }
-            // ]
-        // });
-
-    // });
-// })();
+        if (!mediaMobile.matches) {
+            activeDropdown(item);
+        }
+    });
+});
