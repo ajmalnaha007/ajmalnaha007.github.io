@@ -1632,25 +1632,50 @@ svg .st2 {
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  padding: 75px 0;
+  padding: 50px 0;
+}
+
+@media (min-width: 768px) {
+  .ps-cnt-bar-btm .ps-ins-cnt-bar {
+    padding: 75px 0;
+  }
 }
 
 .ps-cnt-bar-btm .ps-ins-cnt-bar .ps-cnt-bar-content h3 {
   font-family: var(--font-family);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   color: var(--white-color);
+}
+
+@media (min-width: 768px) {
+  .ps-cnt-bar-btm .ps-ins-cnt-bar .ps-cnt-bar-content h3 {
+    font-size: 40px;
+    text-align: left;
+  }
 }
 
 .ps-cnt-bar-btm .ps-ins-cnt-bar .ps-cnt-bar-content p {
   font-family: var(--font-family);
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 300;
   letter-spacing: 1.6px;
-  text-align: left;
   text-transform: uppercase;
   color: var(--white-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .ps-cnt-bar-btm .ps-ins-cnt-bar .ps-cnt-bar-content p {
+    font-size: 20px;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+.ps-cnt-bar-btm .ps-btn-alt {
   margin: 0;
 }
 
