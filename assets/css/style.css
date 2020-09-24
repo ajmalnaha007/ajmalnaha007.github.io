@@ -936,29 +936,54 @@ svg .st2 {
   background-color: var(--primary-color);
   border-radius: 10px;
   text-align: center;
-  padding: 40px 100px;
+  padding: 20px 20px;
   background-image: url(../img/cnt-bg.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
+@media (min-width:769px) {
+  .ps-cnt-card-sec .ps-cnt-ins {
+    padding: 40px 40px;
+  }
+}
+
+@media (min-width:992px) {
+  .ps-cnt-card-sec .ps-cnt-ins {
+    padding: 40px 100px;
+  }
+}
+
 .ps-cnt-card-sec .ps-cnt-ins h2 {
   font-family: var(--font-family);
-  font-size: 34px;
+  font-size: 24px;
   font-weight: bold;
   line-height: normal;
   color: var(--white-color);
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+}
+
+@media (min-width:769px) {
+  .ps-cnt-card-sec .ps-cnt-ins h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+  }
 }
 
 .ps-cnt-card-sec .ps-cnt-ins p {
   font-family: var(--font-family);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   opacity: .8;
   line-height: 1.56;
   color: var(--white-color);
+}
+
+@media (min-width:769px) {
+  .ps-cnt-card-sec .ps-cnt-ins p {
+    font-size: 14px;
+  }
 }
 
 .ps-cnt-card-sec .ps-cnt-ins button.ps-cnt-btn {
