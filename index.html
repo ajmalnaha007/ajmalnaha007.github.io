@@ -391,16 +391,16 @@
 		</div>
 		</div>
 	</section>
-	<!--<section class="ps-blog-sec">
-		<div class="container">
+	<section class="ps-blog-sec">
+		<div class="container-md">
 			<div class="row">
-				<div class="col-8">
-					<div class="ps-subtitle-wrap">
+				<div class="col-lg-8">
+					<div class="ps-subtitle-wrap  text-center text-lg-left">
 						<h2>Our Portfolio</h2>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-lg-4 d-none d-lg-block">
 					<button class="btn btn-ps float-right btn-head">VIEW ALL</button>
 				</div>
 			</div>
@@ -534,7 +534,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="ps-cnt-bar-btm">
+	<!--<section class="ps-cnt-bar-btm">
 		<div class="container">
 			<div class="ps-ins-cnt-bar">
 				<div class="row align-items-center">
@@ -656,12 +656,30 @@
 			dots: true,
 			slidesToScroll: 3,
 			dragToSlide: 3,
-			// centerMode: true,
-			autoplay: false,
+			autoplay: true,
 			autoplaySpeed: 2000,
 			pauseOnHover: true,
 			prevArrow: '<button class="btn slide-arrow prev"><span class="icon-ps-prev"></span></button>',
 			nextArrow: '<button class="btn slide-arrow next"><span class="icon-ps-next"></span></button>',
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2,
+					}
+				},
+				{
+					breakpoint: 497,
+					settings: {
+						arrows: false,
+						// centerMode: true,
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						// dots:false
+					}
+				}
+			]
 		});
 
 	</script>
