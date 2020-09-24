@@ -41,22 +41,22 @@ function bannerHeight() {
 }
 
 
-const goTopBtn = document.getElementById('go-top');
+// const goTopBtn = document.getElementById('go-top');
 
-window.addEventListener('scroll', () => {
-    if (document.body.scrollToTop > 20 || document.documentElement.scrollTop > 20)
-        goTopBtn.classList.add('active');
-    else
-        goTopBtn.classList.remove('active');
-})
+// window.addEventListener('scroll', () => {
+//     if (document.body.scrollToTop > 20 || document.documentElement.scrollTop > 20)
+//         goTopBtn.classList.add('active');
+//     else
+//         goTopBtn.classList.remove('active');
+// })
 
-goTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    });
-});
+// goTopBtn.addEventListener('click', () => {
+//     window.scrollTo({
+//         top: 0,
+//         left: 0,
+//         behavior: 'smooth'
+//     });
+// });
 
 var menu = document.getElementById('menu');
 
