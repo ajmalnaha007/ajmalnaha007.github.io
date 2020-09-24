@@ -1684,7 +1684,13 @@ footer.ps-footer {
 }
 
 footer.ps-footer .top-footer-content {
-  padding: 75px 0;
+  padding: 35px 20px 0 20px;
+}
+
+@media (min-width:992px) {
+  footer.ps-footer .top-footer-content {
+    padding: 75px 0;
+  }
 }
 
 footer.ps-footer .bottom-footer-content {
@@ -1707,6 +1713,16 @@ footer.ps-footer .ps-footer-social ul>li {
   align-items: center;
 }
 
+footer.ps-footer .ps-footer-social {
+  margin-bottom: 20px;
+}
+
+@media (min-width:576px) {
+  footer.ps-footer .ps-footer-social {
+    margin-bottom: 0;
+  }
+}
+
 footer.ps-footer .ps-footer-social ul>li>a {
   color: var(--white-color);
   opacity: .7;
@@ -1725,13 +1741,65 @@ footer.ps-footer .ps-footer-social ul>li:last-child {
   padding-right: 0;
 }
 
+@media (max-width :767px) {
+  footer.ps-footer .ps-footer-menu ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
 footer.ps-footer .ps-footer-menu ul>li {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 0 15px;
+  margin-top: 0;
+  padding: 10px 0;
+  width: 100%;
   color: var(--white-color);
+  /* border-bottom: 1px solid var(--border-color); */
+}
+
+@media (min-width:992px) {
+  footer.ps-footer .ps-footer-menu ul>li {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width:768px) {
+  footer.ps-footer .ps-footer-menu ul>li {
+    /* width: auto; */
+    padding: 0 15px;
+  }
+}
+
+@media (min-width:576px) {
+  footer.ps-footer .ps-footer-menu ul>li {
+    width: 50%;
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+
+/* 
+@media (min-width:992px) {
+  footer.ps-footer .ps-footer-menu ul>li {
+    padding: 0 15px;
+  }
+} */
+
+@media (min-width:768px) {
+  footer.ps-footer .ps-footer-menu ul>li:first-child {
+    padding-left: 0;
+  }
+  footer.ps-footer .ps-footer-menu ul>li:last-child {
+    padding-right: 0;
+  }
 }
 
 footer.ps-footer .ps-footer-menu ul>li>a {
@@ -1743,12 +1811,9 @@ footer.ps-footer .ps-footer-menu ul>li>a {
   opacity: .9;
   letter-spacing: 1px;
   line-height: 24px;
-  /* text-transform: uppercase; */
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   font-family: var(--font-family);
-  /* padding-left: 15px; */
-  padding-right: 15px;
 }
 
 footer.ps-footer .ps-footer-menu ul>li>a:hover {
