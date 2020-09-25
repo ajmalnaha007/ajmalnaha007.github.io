@@ -1999,9 +1999,11 @@ UI UX Page
 }
 
 /* how we work */
-.ps-how-work{
+
+.ps-how-work {
   margin-bottom: 90px;
 }
+
 .ps-how-work .ps-how-work-ins {
   padding: 0 20px;
   margin-top: 20px;
@@ -2051,10 +2053,142 @@ UI UX Page
 }
 
 .ps-how-work .ps-how-work-ins .ps-how-work-txt p {
-    font-family: var(--font-family);
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 24px;
-    text-align: center;
-    color: var(--font-secondary-color);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  text-align: center;
+  color: var(--font-secondary-color);
+}
+
+/* TESTIMONIAL */
+
+.testi-slick .single-testi {
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  padding: 20px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.testi-slick .single-testi .testi-autr {
+  width: 80px;
+  position: relative;
+  min-width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  border: solid 5px rgb(142, 60, 204, 0.31);
+  margin-right: 25px;
+}
+
+.testi-slick .single-testi .testi-autr>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.testi-slick .single-testi .testi-cnt .testi-authr-name {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--font-primary-color);
+  margin-bottom: 10px;
+}
+
+.testi-slick .single-testi .testi-cnt .testi-authr-pos {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+}
+
+.testi-slick .single-testi .testi-cnt .testi-content {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.63;
+  text-align: left;
+  color: var(--font-secondary-color);
+  margin-bottom: 0;
+}
+
+.ps-testi-sec .slick-arrow {
+  z-index: 9;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%!important;
+  font-size: 25px!important;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-out 0s;
+  -moz-transition: all .3s ease-out 0s;
+  -ms-transition: all .3s ease-out 0s;
+  -o-transition: all .3s ease-out 0s;
+  transition: all .3s ease-out 0s;
+  width: 50px;
+  height: 50px;
+  background-color: var(--white-color);
+  color: var(--font-primary-color);
+  box-shadow: 0 0 43px 0 rgba(47, 47, 130, 0.13);
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ps-testi-sec .slick-arrow.prev {
+  left: -65px;
+  text-align: right;
+}
+
+.ps-testi-sec .slick-arrow.prev span {
+  transform: rotate(-180deg);
+}
+
+.ps-testi-sec .slick-arrow.next {
+  right: -65px;
+  text-align: left;
+}
+
+.ps-testi-sec .slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: -35px;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.ps-testi-sec .slick-dots>li {
+  display: inline-block;
+}
+
+.ps-testi-sec .slick-dots>li>button {
+  height: 6px;
+  width: 6px;
+  border: 0;
+  font-size: 0;
+  border-radius: 50%;
+  background: #e0e0e0;
+  padding: 0;
+  margin: 0 5px;
+  -webkit-transition: all .3s ease-out 0s;
+  -moz-transition: all .3s ease-out 0s;
+  -ms-transition: all .3s ease-out 0s;
+  -o-transition: all .3s ease-out 0s;
+  transition: all .3s ease-out 0s;
+}
+
+.ps-testi-sec .slick-dots>li.slick-active button {
+  background: var(--secondary-color);
+  width: 25px;
+  border-radius: 10px;
 }
