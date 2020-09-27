@@ -40,6 +40,27 @@ ul {
   list-style-type: none;
 }
 
+input.form-control {
+  height: 50px;
+  font-size: 14px;
+  color: var(--font-primary-color);
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+}
+
+input.form-control:hover, input.form-control:focus, textarea.form-control:hover, textarea.form-control:focus {
+  box-shadow: 0 0 10px 0 rgba(142, 60, 205, 0.34);
+  border: solid 1px var(--secondary-color);
+  outline: none;
+}
+
+textarea.form-control {
+  resize: none;
+  border: 1px solid var(--border-color);
+  font-size: 14px;
+  color: var(--font-primary-color);
+}
+
 .btn {
   font-family: var(--font-family);
   border-radius: 5px;
@@ -2759,7 +2780,7 @@ Marketing
 .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-right>input:hover, .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-right>input:focus {
   border: solid 1px var(--secondary-color);
   outline: none;
-  box-shadow:0 0 10px rgb(142,60,204,0.21);
+  box-shadow: 0 0 10px rgb(142, 60, 204, 0.21);
 }
 
 .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-right>button {
@@ -2776,4 +2797,80 @@ Marketing
 .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-right>button:hover {
   transform: unset;
   opacity: .8;
+}
+
+/* bottom contact */
+
+.ps-btm-contact {
+  background-color: var(--primary-color);
+  padding: 50px 0;
+}
+
+.ps-btm-contact .ps-btm-ct-left>h3 {
+  font-family: var(--font-family);
+  font-size: 35px;
+  font-weight: bold;
+  line-height: normal;
+  text-align: left;
+  color: var(--white-color);
+  margin-bottom: 40px;
+}
+
+.ps-btm-contact .ps-btm-ct-left>p {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.63;
+  text-align: left;
+  color: var(--white-color);
+  opacity: .8;
+}
+
+.ps-btm-contact .ps-btm-ct-left>p+p {
+  margin-bottom: 45px;
+}
+
+.ps-btm-contact .ps-btm-ct-left .ic-se {
+  margin: 35px 0;
+}
+
+.ps-btm-contact .ps-btm-ct-left .ic-se a>span {
+  font-size: 14px;
+  margin-right: 10PX;
+}
+
+.ps-btm-contact .ps-btm-ct-left .ic-se>a {
+  color: var(--white-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--white-color);
+  transition: all .2s ease;
+}
+
+.ps-btm-contact .ps-btm-ct-left .ic-se>a:hover {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+
+.ps-btm-contact .ps-btm-ct-left .ic-se>a:hover span .path2:before {
+  color: var(--primary-color);
+  opacity: 0.3;
+}
+
+.ps-btm-contact .ps-btm-ct-left .ic-se>a:hover span .path1:before {
+  color: var(--primary-color);
+}
+
+.ps-btm-contact .ps-btm-ct-right {
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.ps-btm-contact .ps-btm-ct-right button {
+  margin-top: 20px;
+  margin-right: 0;
 }
