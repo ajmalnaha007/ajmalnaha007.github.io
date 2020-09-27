@@ -6,7 +6,7 @@
   --font-secondary-color: #33475b;
   --bg-color: #eaf0f6;
   --white-color: #ffffff;
-  --border-color: #e0e0e0;
+  --border-color: #dfe3eb;
   --black-color: #000000;
   --font-family: 'Roboto', sans-serif;
 }
@@ -1975,7 +1975,7 @@ footer.ps-footer .ps-footer-menu ul>li {
 
 @media (min-width:576px) {
   footer.ps-footer .ps-footer-menu ul>li {
-    margin-top: 20px;
+    margin-top: 0;
   }
 }
 
@@ -2153,8 +2153,6 @@ UI UX Page
   padding-top: 110px;
   display: flex;
   align-items: center;
-  /* padding-top: 90px;
-  padding-bottom: 50px; */
   min-height: 100vh;
 }
 
@@ -2168,7 +2166,7 @@ UI UX Page
   margin-bottom: 30px;
 }
 
-.ps-service-banner .ps-service-banner-content h3>span {
+.ps-service-banner.ps-ui .ps-service-banner-content h3>span {
   font-weight: 800;
   color: #57bb69;
 }
@@ -2218,7 +2216,6 @@ UI UX Page
 
 .is-conntected::before {
   content: '';
-  /* height: 2px; */
   background-color: var(--secondary-color);
   position: absolute;
   left: 19%;
@@ -2595,4 +2592,188 @@ UI UX Page
 
 .ps-othr-services .ps-othr-services-ins .ps-othr-ser-rgt {
   padding: 20px 0 20px 160px;
+}
+
+/*================================================
+Marketing
+=================================================*/
+
+/* banner */
+
+.ps-service-banner.ps-marketing .ps-service-banner-content h3>span {
+  font-weight: 800;
+  color: #f9a1d4;
+}
+
+.ps-marketing-cnt-sec {
+  background-color: var(--bg-color);
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.ps-marketing-cnt-sec .ps-marketing-cnt-ins {
+  padding: 40px 0;
+}
+
+.ps-marketing-cnt-sec .ps-marketing-cnt-ins p {
+  font-family: var(--font-family);
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 1.73;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--font-secondary-color);
+}
+
+.ps-marketing-cnt-sec .ps-marketing-cnt-ins p>span {
+  font-weight: bold;
+}
+
+.ps-marketing-sat-sec {
+  margin-bottom: 80px;
+}
+
+.ps-marketing-sat-sec .ps-subtitle-wrap {
+  margin-bottom: 50px;
+}
+
+.ps-marketing-sat-sec .ps-marketing-sat-sig {
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.15);
+  background-color: var(--white-color);
+  text-align: center;
+}
+
+.ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-ic {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-ic>img {
+  height: 45px;
+}
+
+.ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-txt {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-txt>h3 {
+  font-family: var(--font-family);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  color: var(--font-primary-color);
+}
+
+.ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-cnt>p {
+  margin-bottom: 0;
+  color: var(--font-secondary-color);
+}
+
+.ps-quick-cnt {
+  margin-bottom: 50px;
+  margin-top: 80px;
+}
+
+.ps-quick-cnt .ps-quick-cnt-ins {
+  width: 100%;
+  padding: 50px 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  position: relative;
+}
+
+.ps-quick-cnt .ps-quick-cnt-ins::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  bottom: 35px;
+  width: 1px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.5;
+  background-color: var(--secondary-color);
+}
+
+.ps-quick-cnt .ps-quick-cnt-ins::after {
+  content: url('../img/quick-cnt-img.png');
+  position: absolute;
+  right: -46.5px;
+  top: -95px;
+}
+
+.ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left {
+  padding-right: 35px;
+}
+
+.ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left>p {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 1.6px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left>h4 {
+  font-family: var(--font-family);
+  font-size: 37px;
+  font-weight: 800;
+  text-align: left;
+  margin-bottom: 0;
+  color: var(--font-primary-color);
+}
+
+.ps-quick-cnt .ps-quick-cnt-ins .ps-quick-right {
+  position: relative;
+  padding-left: 35px;
+}
+
+.ps-quick-cnt .ps-quick-cnt-ins .ps-quick-right>input {
+  width: 100%;
+  position: relative;
+  border-radius: 5px;
+  border: solid 1px var(--secondary-color);
+  background-color: var(--white-color);
+  padding: 20px 150px 20px 20px;
+}
+
+.ps-quick-cnt .ps-quick-cnt-ins .ps-quick-right>input:hover, .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-right>input:focus {
+  border: solid 1px var(--secondary-color);
+  outline: none;
+  box-shadow:0 0 10px rgb(142,60,204,0.21);
+}
+
+.ps-quick-cnt .ps-quick-cnt-ins .ps-quick-right>button {
+  position: absolute;
+  right: 5px;
+  margin: 0;
+  top: 5px;
+  bottom: 5px;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  min-width: 120px;
+}
+
+.ps-quick-cnt .ps-quick-cnt-ins .ps-quick-right>button:hover {
+  transform: unset;
+  opacity: .8;
 }
