@@ -7,8 +7,7 @@ const toggleBtn = document.getElementById('menu-toggle');
 const bannerSec = document.getElementById('ps-banner-sec');
 const bannerText = document.getElementById('ps-banner-txt');
 const bannerOption = document.getElementById('bannerOptions');
-// const counter = document.querySelectorAll('.counter-value');
-// const speed = 50;
+const counterOuter = document.getElementById('counter');
 
 
 // onload function
@@ -175,82 +174,38 @@ bannerOptions = () => {
 
 bannerOptions();
 
-//retrieve all counters from body
-let counters = document.getElementsByClassName('counter-value');
+// counter Animation
 
-//retrieve all counter value
-let vals = Array.from(counters).map(x => Number(x.getAttribute('data-count')));
+var elementHeight = counterOuter.clientHeight;
+var isActive = true;
 
-//convert counters element collection to an array
-counters = Array.from(counters);
+counterInView = () => {
+    let scrollY = window.scrollY || window.pageYOffset;
+    let scrollPosition = scrollY + window.innerHeight;
+    let elementPosition = counterOuter.getBoundingClientRect().top + scrollY + elementHeight / 2;
 
-//loop through all counters
-counters.forEach(el => {
-    //set counter to 0
-    el.innerHTML = '0';
-    //set 'internal' counter to 0 -> obviously this isn't super efficient
-    //could be faster if you used an array instead
-    el.counter = 10;
-});
-
-//execute this function as often as possible using requestAnimationFrame()
-let update = () => {
-    //loop through all counters
-    counters.forEach((el, i) => {
-        //add one to 'internal counter'
-        el.counter += 2;
-        //update counter display value min(max, currentVal + 1)
-        el.innerHTML = Math.min(vals[i], el.counter);
-    });
-    requestAnimationFrame(update);
+    if (scrollPosition > elementPosition)
+        return true;
+    return false;
 }
-update();
 
-
-
-
-// var a = 0;
-// $(window).scroll(function () {
-//     var oTop = $('#counter').offset().top - window.innerHeight;
-//     // console.log(oTop, '1');
-//     // console.log($('#counter').offset().top, '2');
-//     // console.log(window.innerHeight, '3');
-//     if (a == 0 && $(window).scrollTop() > oTop) {
-//         $('.counter-value').each(function () {
-//             var $this = $(this),
-//                 countTo = $this.attr('data-count');
-//             $({ countNum: $this.text() }).animate({ countNum: countTo },
-//                 {
-//                     duration: 2000,
-//                     easing: 'swing',
-//                     step: function () {
-//                         $this.text(Math.floor(this.countNum));
-//                     },
-//                     complete: function () {
-//                         $this.text(this.countNum);
-//                         // alert('finished');
-//                     }
-
-//                 });
-//         });
-//         a = 1;
-//     }
-// });
-
-
-// window.addEventListener('scroll', function () {
-//     var counterOuter = document.getElementById('counter');
-//     var oTop = counterOuter.offsetTop - window.innerHeight;
-
-//     // console.log(oTop, '1.1');
-//     // console.log(counterOuter.offsetTop, '2.2');
-//     // console.log(window.innerHeight, '3.3');
-
-//     if (window.scrollY > oTop) {
-//         document.querySelectorAll('.counter-value').forEach(item => {
-//             var countTo = item.getAttribute('data-count'),
-//             countNum = item.innerHTML
-
-//         })
-//     }
-// });
+document.addEventListener('scroll', () => {
+    if (isActive && counterInView()) {
+        let counters = document.getElementsByClassName('counter-value');
+        let counterValue = Array.from(counters).map(data => Number(data.getAttribute('data-count')));
+        counters = Array.from(counters);
+        counters.forEach(e => {
+            e.innerHTML = '0';
+            e.counter = 10;
+        });
+        let updateCounter = () => {
+            counters.forEach((e, i) => {
+                e.counter += 2;
+                e.innerHTML = Math.min(counterValue[i], e.counter);
+            });
+            requestAnimationFrame(updateCounter);
+        }
+        updateCounter();
+        isActive = false;
+    }
+});
