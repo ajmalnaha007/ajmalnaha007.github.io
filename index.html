@@ -604,73 +604,7 @@
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 	<!-- slick js -->
 	<script src="assets/js/slick/slick.min.js"></script>
-	<script>
-		$('#slick').slick({
-			dots: true,
-			variableWidth: true,
-			infinite: true,
-			slidesToShow: 4,
-			slidesToScroll: 3,
-			dragToSlide: 3,
-			centerMode: true,
-			autoplay: true,
-			autoplaySpeed: 2000,
-			pauseOnHover: true,
-			prevArrow: '<button class="btn slide-arrow prev"><span class="icon-ps-prev"></span></button>',
-			nextArrow: '<button class="btn slide-arrow next"><span class="icon-ps-next"></span></button>',
-			responsive: [
-				{
-					breakpoint: 768,
-					settings: {
-						arrows: false,
-						centerMode: true,
-						centerPadding: '40px',
-						slidesToShow: 3
-					}
-				},
-				{
-					breakpoint: 480,
-					settings: {
-						arrows: false,
-						centerMode: true,
-						centerPadding: '40px',
-						slidesToShow: 1
-					}
-				}
-			]
-		});
-
-		$('#slick-blog').slick({
-			infinite: true,
-			slidesToShow: 3,
-			dots: true,
-			slidesToScroll: 3,
-			dragToSlide: 3,
-			autoplay: true,
-			autoplaySpeed: 2000,
-			pauseOnHover: true,
-			prevArrow: '<button class="btn slide-arrow prev"><span class="icon-ps-prev"></span></button>',
-			nextArrow: '<button class="btn slide-arrow next"><span class="icon-ps-next"></span></button>',
-			responsive: [
-				{
-					breakpoint: 768,
-					settings: {
-						slidesToShow: 2,
-						slidesToScroll: 2,
-					}
-				},
-				{
-					breakpoint: 497,
-					settings: {
-						arrows: false,
-						slidesToShow: 1,
-						slidesToScroll: 1,
-					}
-				}
-			]
-		});
-
-	</script>
+	<script src="assets/js/plugins.js"></script>
 	<!-- Main JS -->
 	<script src="assets/js/main.js"></script>
 </body>

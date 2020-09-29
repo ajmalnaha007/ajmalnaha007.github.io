@@ -524,7 +524,7 @@ img {
   z-index: 999;
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
   box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
-  background-color: #ffffff !important;
+  background-color: #ffffff;
   -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 }
@@ -535,13 +535,6 @@ img {
 
 @media (max-width: 991px) {
   #ps-header .menu-toggle {
-    /* position: relative;
-    display: inline-block;
-    width: 47px;
-    height: 39px;
-    padding: 5px 7px;
-    z-index: 9999;
-    margin: 0; */
     display: block;
     background: 0 0;
     border: none;
@@ -2888,6 +2881,10 @@ Marketing
   color: var(--white-color);
 }
 
+#ps-header.about.is-sticky {
+  background-color: var(--primary-color);
+}
+
 /* banner */
 
 .ps-about-bnr {
@@ -2933,111 +2930,138 @@ Marketing
   bottom: -212px;
   left: 0;
   right: 0;
-}
-
-.ps-about-bnr .ps-about-bnr-optio .ps-about-bnr-optio-sin .bnr-optio-head {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  background-color: var(--secondary-color);
-  border-radius: 5px;
-  padding: 10px 20px;
-  min-width: 50%;
-}
-
-.ps-about-bnr .ps-about-bnr-optio .ps-about-bnr-optio-sin .bnr-optio-head>h3 {
-  text-transform: uppercase;
-  color: var(--white-color);
-  font-size: 22px;
-  margin-bottom: 0;
-  font-weight: 800;
+  transition: all .2s ease;
 }
 
 #bannerOptions>a>text {
   font-size: 19px;
+  transition: all .2s ease;
   font-family: var(--font-family);
   font-weight: 700;
   pointer-events: none;
- fill: var(--font-primary-color); 
+  fill: var(--font-primary-color);
 }
 
 #bannerOptions>a.is-hovered>g>path {
-fill: var(--white-color);
+  transition: all .2s ease;
+  fill: var(--white-color);
 }
 
 #bannerOptions>a.is-hovered>text {
- fill: var(--white-color); 
+  transition: all .2s ease;
+  fill: var(--white-color);
 }
 
-/* 
-.ps-about-bnr .ps-about-bnr-optio .ps-about-bnr-optio-sin .bnr-optio-card {
-  box-shadow: 0 0 19px rgb(0, 0, 0, 0.22);
-  border-radius: 5px;
-  position: absolute;
+/* who we are */
+
+.ps-about-who-we {
+  background-color: var(--bg-color);
+  padding: 75px 0;
+}
+
+.ps-about-who-we .ps-about-who-we-head>img {
+  width: 160px;
+  opacity: .5;
+}
+
+.ps-about-who-we .ps-about-who-we-head>h4 {
+  font-family: var(--font-family);
+  margin-bottom: 0;
+  font-size: 45px;
+  font-weight: 800;
+  text-align: left;
+  color: var(--font-primary-color);
+}
+
+.ps-about-who-we .ps-about-who-we-head>p {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  text-align: left;
+  color: var(--font-secondary-color);
+}
+
+.ps-about-who-we .ps-about-who-we-head>p:last-child {
+  margin-bottom: 0;
+}
+
+/* Our Culture */
+
+.ps-our-culture {
+  padding: 80px 0;
+}
+
+.ps-our-culture .ps-our-culture-cnt>h3 {
+  font-family: var(--font-family);
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--font-primary-color);
+  margin-bottom: 35px;
+}
+
+.ps-our-culture .ps-our-culture-cnt>p {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  text-align: center;
+  color: var(--font-secondary-color);
+}
+
+.ps-our-culture .ps-our-culture-cnt>p:last-child {
+  margin-bottom: 0;
+}
+
+/* Counter */
+
+.ps-about-numbers {
   background-color: var(--white-color);
+}
+
+.ps-about-numbers .ps-about-num-ins {
+  background-image: url(../img/map.png);
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding: 75px 0;
+}
+
+.ps-about-numbers .ps-about-num-ins .ps-about-num-sin {
+  text-align: center;
   display: flex;
-  padding: 20px;
-  max-width: 245px;
-  height: 80px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ps-about-numbers .ps-about-num-ins .ps-about-num-sin .text-num {
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  font-size: 28px;
+  font-weight: 400;
+  display: flex;
   align-items: center;
 }
 
-.ps-about-bnr .ps-about-bnr-optio .ps-about-bnr-optio-sin .bnr-optio-card>img {
-  width: 30px;
-  height: auto;
-  margin-right: 15px;
+.ps-about-numbers .ps-about-num-ins .ps-about-num-sin .text-num>.counter-value {
+  font-size: 45px !important;
+  font-weight: 900;
+  margin-right: 8px;
 }
 
-.ps-about-bnr .ps-about-bnr-optio .ps-about-bnr-optio-sin .bnr-optio-card>p {
-  margin-bottom: 0;
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--primary-color);
-  letter-spacing: 0;
-  line-height: 20px;
+.ps-about-numbers .ps-about-num-ins .ps-about-num-sin .subti-num {
+  font-family: var(--font-family);
+  font-size: 14px;
+  opacity: .9;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--font-primary-color);
 }
 
-.item-1 {
-  left: 273px;
-  top: 43px;
+.ps-about-numbers .ps-about-num-ins .count-action{
+text-align: center;
+margin-top: 70px;
 }
-
-.item-2 {
-  bottom: 13px;
-  left: 140px;
-}
-
-.item-3 {
-  bottom: -8px;
-  left: 318px;
-}
-
-.item-4 {
-  top: 99px;
-  left: 448px;
-}
-
-.item-5 {
-  top: -40px;
-  left: 550px;
-}
-
-.item-6 {
-  top: 36px;
-  left: 644px;
-}
-
-.item-7 {
-  bottom: 18px;
-  right: 179px;
-}
-
-.item-8 {
-  top: -20px;
-  right: 27px;
-}
-
-.item-9 {
-  top: 80px;
-  right: 0;
-} */
