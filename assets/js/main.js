@@ -57,9 +57,11 @@ bannerHeight = () => {
 }
 
 bannerTxtOffset = () => {
-    let logoLeftSpace = header.children[0].offsetLeft;
-    if (mediaMobile.matches && logoLeftSpace && bannerText) {
-        bannerText.style.paddingLeft = logoLeftSpace + 30 + "px";
+    if (header) {
+        let logoLeftSpace = header.children[0].offsetLeft;
+        if (mediaMobile.matches && logoLeftSpace && bannerText) {
+            bannerText.style.paddingLeft = logoLeftSpace + 30 + "px";
+        }
     }
 }
 
@@ -120,3 +122,48 @@ dropdowns.forEach(item => {
         }
     });
 });
+
+
+bannerOptionControl = (item, e) => {
+    if (e.type == 'mouseover') {
+        if (!(item.style.opacity == '.1')) {
+            var i;
+            for (i = 0; i < singleOption.length; i++) {
+                singleOption[i].closest('a').style.opacity = '.1';
+            }
+        }
+        item.closest('a').style.opacity = '1';
+        item.style['fill'] = 'var(--primary-color)';
+        item.closest('a').classList.add('is-hovered');
+    }
+    if (e.type == 'mouseout') {
+        var i;
+        for (i = 0; i < singleOption.length; i++) {
+            singleOption[i].closest('a').style.opacity = '1';
+        }
+        item.removeAttribute('style');
+        item.closest('a').classList.remove('is-hovered');
+    }
+}
+
+
+
+const bannerOption = document.getElementById('bannerOptions');
+var singleOption = '';
+
+bannerOptions = () => {
+    if (bannerOption) {
+        singleOption = bannerOption.querySelectorAll('.outer-div');
+        singleOption.forEach(item => {
+            item.addEventListener('mouseover', (e) => {
+                bannerOptionControl(item, e);
+            }, false);
+
+            item.addEventListener('mouseout', (e) => {
+                bannerOptionControl(item, e);
+            }, false);
+        });
+    }
+}
+
+bannerOptions();
