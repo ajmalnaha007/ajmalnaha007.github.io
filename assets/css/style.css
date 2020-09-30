@@ -2867,37 +2867,36 @@ Marketing
 
 /* header */
 
-#ps-header.about {
+#ps-header.header-alt {
   background: transparent;
   --header-text-color: var(--white-color);
 }
 
-#ps-header.about .btn-ps {
+#ps-header.header-alt .btn-ps {
   background-color: transparent;
   border: 1px solid var(--white-color);
 }
 
-#ps-header.about .btn-ps:hover {
+#ps-header.header-alt .btn-ps:hover {
   color: var(--white-color);
 }
 
-#ps-header.about.is-sticky {
+#ps-header.header-alt.is-sticky {
   background-color: var(--primary-color);
 }
 
 /* banner */
 
-.ps-about-bnr {
+.banner-alt {
   position: relative;
   width: 100%;
   background-color: var(--primary-color);
   background-repeat: no-repeat;
   background-image: url(../img/about-bnr-bg-left.png), url(../img/about-bnr-bg-right.png);
   background-position: top left, bottom right;
-  margin-bottom: 170px;
 }
 
-.ps-about-bnr .ps-about-bnr-ins h3 {
+.banner-alt h3 {
   font-family: var(--font-family);
   font-size: 50px;
   font-weight: bold;
@@ -3061,7 +3060,89 @@ Marketing
   color: var(--font-primary-color);
 }
 
-.ps-about-numbers .ps-about-num-ins .count-action{
-text-align: center;
-margin-top: 70px;
+.ps-about-numbers .ps-about-num-ins .count-action {
+  text-align: center;
+  margin-top: 70px;
+}
+
+/* BLOG */
+
+/* banner */
+
+.ps-resource-bnr {
+  padding-top: 240px;
+}
+
+.ps-resource-bnr .ps-resource-bnr-ins {
+  padding-right: 33.333333%;
+  padding-bottom: 60px;
+}
+
+.ps-resource-bnr .ps-resource-bnr-tab-sec {
+  position: absolute;
+  left: 15px;
+  background: var(--white-color);
+  right: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgb(0 0 0 / 21%);
+  padding: 15px 15px;
+  bottom: -50px;
+}
+
+.ps-resource-bnr .ps-resource-bnr-tab-sec a.rs-btn {
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  background-color: transparent;
+  border-radius: 50px;
+  padding: 11px 25px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all .2s ease-in;
+  letter-spacing: 0.8px;
+  display: inline-block;
+}
+
+.ps-resource-bnr .ps-resource-bnr-tab-sec a.rs-btn.active {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.wrapper-tab {
+  border-radius: 37px;
+  background-color: #f4f4f4;
+  padding: 5px;
+  display: inline-block;
+}
+
+.ps-resource-bnr .ps-resource-bnr-tab-sec .blog-search {
+  width: 280px;
+  border-radius: 3px;
+}
+
+.ps-resource-bnr .ps-resource-bnr-tab-sec .blog-search input {
+  padding-right: 55px;
+  border-radius: 5px!important;
+  border-color: var(--secondary-color);
+}
+
+.ps-resource-bnr .ps-resource-bnr-tab-sec .blog-search input:focus {
+  background-color: transparent;
+}
+
+.ps-resource-bnr .ps-resource-bnr-tab-sec .blog-search .search-btn {
+  height: 50px;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  z-index: 9;
+}
+
+.ps-resource-bnr .ps-resource-bnr-tab-sec .blog-search .icon-ps-search {
+  font-size: 20px;
+  color: var(--secondary-color);
 }

@@ -24,8 +24,81 @@
 </head>
 
 <body>
-	
-	<h1>Blog</h1>
+
+	<header class="ps-header header-alt" id="ps-header">
+		<div class="container-lg">
+			<nav class="navbar navbar-light">
+				<a class="navbar-brand ps-logo" id="logo" href="index.html">
+					<img src="assets/img/log-alt.svg" alt="logo">
+				</a>
+				<button class="menu-toggle btn" id="menu-toggle" type="button">
+					<span class="nav-toggle">
+						<span class="mn-stick mn-stick-1"></span>
+						<span class="mn-stick mn-stick-2"></span>
+						<span class="mn-stick mn-stick-3"></span>
+					</span>
+				</button>
+				<div class="menu" id="menu">
+					<ul class="navbar-nav nav" id="navbarMobile">
+						<li class="nav-item has-dropdown"><a href="javascript:void(0);" class="nav-link">Services</a>
+							<span class="menu-arrow"></span>
+							<ul class="dropdown">
+								<li class="nav-item"><a href="./uiux.html" class="nav-link">Ui / Ux Design</a></li>
+								<li class="nav-item"><a href="./marketing.html" class="nav-link">Marketing</a></li>
+								<li class="nav-item"><a href="./branding.html" class="nav-link">Branding</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item"><a href="./portfolio.html" class="nav-link">Our Portfolio</a></li>
+
+						<li class="nav-item"><a href="./blog.html" class="nav-link">Resources</a></li>
+					</ul>
+
+					<div class="others-options">
+						<a href="#" class="btn ml-3 btn-call"><span class="icon-ps-call"></span></a>
+						<a href="#" class="btn btn-ps shake">Contact</a>
+					</div>
+				</div>
+
+			</nav>
+		</div>
+	</header>
+
+	<section class="ps-resource-bnr banner-alt">
+		<div class="container position-relative">
+			<div class="row">
+				<div class="col-12">
+					<div class="ps-resource-bnr-ins">
+						<h3>Lorem ipsum is placeholder text commonly used.</h3>
+					</div>
+				</div>
+			</div>
+			<div class="ps-resource-bnr-tab-sec">
+				<div class="row align-items-center">
+					<div class="col-6">
+						<div class="wrapper-tab">
+							<a href="#" class="rs-btn active">Blogs</a>
+							<a href="#" class="rs-btn">WHITE PAPERS</a>
+							<a href="#" class="rs-btn">CASE STUDIES</a>
+						</div>
+					</div>
+					<div class="col-6">
+						<form class="blog-search float-right">
+							<div class="input-group">
+								<input type="text" name="search" class="form-control" placeholder="Search...">
+								<button type="submit" name="search" id="search-btn" class="btn search-btn">
+									<span class="icon-ps-search"></span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
 	<div class="go-top" id="go-top"><span class="icon-upload"></span></div>
 	<div class="overlay"></div>
 

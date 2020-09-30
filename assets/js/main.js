@@ -176,20 +176,23 @@ bannerOptions();
 
 // counter Animation
 
-var elementHeight = counterOuter.clientHeight;
 var isActive = true;
 
 counterInView = () => {
-    let scrollY = window.scrollY || window.pageYOffset;
-    let scrollPosition = scrollY + window.innerHeight;
-    let elementPosition = counterOuter.getBoundingClientRect().top + scrollY + elementHeight / 2;
-
-    if (scrollPosition > elementPosition)
-        return true;
+    if (counterOuter) {
+        var elementHeight = counterOuter.clientHeight;
+        let scrollY = window.scrollY || window.pageYOffset;
+        let scrollPosition = scrollY + window.innerHeight;
+        let elementPosition = counterOuter.getBoundingClientRect().top + scrollY + elementHeight / 2;
+        if (scrollPosition > elementPosition)
+            return true;
+    }
     return false;
 }
 
 document.addEventListener('scroll', () => {
+
+
     if (isActive && counterInView()) {
         let counters = document.getElementsByClassName('counter-value');
         let counterValue = Array.from(counters).map(data => Number(data.getAttribute('data-count')));
