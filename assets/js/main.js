@@ -33,10 +33,12 @@ window.onload = onLoadFucntion;
 // preloader
 window.addEventListener('load', function () {
     var preloader = document.getElementById('ps-preloader');
-    preloader.classList.add('fade');
-    setTimeout(() => {
-        preloader.style.display = "none";
-    }, 3000);
+    if (preloader) {
+        preloader.classList.add('fade');
+        setTimeout(() => {
+            preloader.style.display = "none";
+        }, 3000);
+    }
 });
 
 // header class add
@@ -226,12 +228,12 @@ document.addEventListener('scroll', () => {
 
 // testing work code  - 
 
-document.querySelectorAll('.rs-btn').forEach(item => {
-    item.addEventListener('click', () => {
-        for (let i = 0; i < document.querySelectorAll('.rs-btn').length; i++) {
-            document.querySelectorAll('.rs-btn')[i].classList.remove('active');
-        }
-        item.classList.toggle('active');
-    })
+// document.querySelectorAll('.rs-btn').forEach(item => {
+//     item.addEventListener('click', () => {
+//         for (let i = 0; i < document.querySelectorAll('.rs-btn').length; i++) {
+//             document.querySelectorAll('.rs-btn')[i].classList.remove('active');
+//         }
+//         item.classList.toggle('active');
+//     })
 
-});
+// });
