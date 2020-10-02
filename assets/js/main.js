@@ -16,6 +16,7 @@ onLoadFucntion = () => {
     bannerTxtOffset();
     menuToggle();
     scrollToTop();
+    // ass();
 }
 
 // onresize function 
@@ -27,6 +28,15 @@ onResizeFunction = () => {
 window.onresize = onResizeFunction;
 
 window.onload = onLoadFucntion;
+
+// preloader
+document.addEventListener('DOMContentLoaded', function () {
+    var preloader = document.getElementById('ps-preloader');
+    preloader.classList.add('fade');
+    setTimeout(() => {
+        preloader.style.display="none";
+    }, 3000);
+});
 
 // header class add
 
