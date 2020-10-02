@@ -30,21 +30,13 @@ window.onresize = onResizeFunction;
 window.onload = onLoadFucntion;
 
 
-function run() {
+// preloader
+window.addEventListener('load', function () {
     var preloader = document.getElementById('ps-preloader');
     preloader.classList.add('fade');
     setTimeout(() => {
         preloader.style.display = "none";
     }, 3000);
-}
-
-// in case the document is already rendered
-if (document.readyState != 'loading') run();
-// modern browsers
-else if (document.addEventListener) document.addEventListener('DOMContentLoaded', run);
-// IE <= 8
-else document.attachEvent('onreadystatechange', function () {
-    if (document.readyState == 'complete') run();
 });
 
 // header class add
@@ -230,4 +222,16 @@ document.addEventListener('scroll', () => {
         updateCounter();
         isActive = false;
     }
+});
+
+// testing work code  - 
+
+document.querySelectorAll('.rs-btn').forEach(item => {
+    item.addEventListener('click', () => {
+        for (let i = 0; i < document.querySelectorAll('.rs-btn').length; i++) {
+            document.querySelectorAll('.rs-btn')[i].classList.remove('active');
+        }
+        item.classList.toggle('active');
+    })
+
 });

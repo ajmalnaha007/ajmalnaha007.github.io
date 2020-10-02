@@ -1,618 +1,836 @@
 <!doctype html>
 <html lang="zxx">
-
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
-	<!-- slick css -->
-	<link rel="stylesheet" href="assets/css/slick/slick.css">
-	<!-- <link rel="stylesheet" href="assets/css/slick/slick-theme.css"> -->
-	<!-- Bootstrap Min CSS -->
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-	<!-- Animate Min CSS -->
-	<link rel="stylesheet" href="assets/css/animate.min.css">
-	<!-- font css -->
-	<link rel="stylesheet" href="assets/css/font/style.css">
-	<!-- Style CSS -->
-	<link rel="stylesheet" href="assets/css/style.css">
-
-	<title>PlutoSpark</title>
-
-	<link rel="icon" type="image/png" href="assets/img/favicon.png">
-</head>
-
-<body>
-	<div class='ps-preloader' id="ps-preloader">
-		<span>
-			<img src="assets/img/logo.svg" alt="PlutoSpark">
-			<div class='dot'></div>
-		</span>
-	</div>
-	<!-- Start Navbar Area -->
-	<header class="ps-header" id="ps-header">
-		<div class="container-lg">
-			<nav class="navbar navbar-light">
-				<a class="navbar-brand ps-logo" id="logo" href="index.html">
-					<img src="assets/img/logo.svg" alt="logo">
-				</a>
-				<button class="menu-toggle btn" id="menu-toggle" type="button">
-					<span class="nav-toggle">
-						<span class="mn-stick mn-stick-1"></span>
-						<span class="mn-stick mn-stick-2"></span>
-						<span class="mn-stick mn-stick-3"></span>
-					</span>
-				</button>
-				<div class="menu" id="menu">
-					<ul class="navbar-nav nav" id="navbarMobile">
-						<li class="nav-item has-dropdown"><a href="javascript:void(0);" class="nav-link">Services</a>
-							<span class="menu-arrow"></span>
-							<ul class="dropdown">
-								<li class="nav-item"><a href="./uiux.html" class="nav-link">Ui / Ux Design</a></li>
-								<li class="nav-item"><a href="./marketing.html" class="nav-link">Marketing</a></li>
-								<li class="nav-item"><a href="./branding.html" class="nav-link">Branding</a></li>
-							</ul>
-						</li>
-
-						<li class="nav-item"><a href="./portfolio.html" class="nav-link">Our Portfolio</a></li>
-
-						<li class="nav-item"><a href="./blog.html" class="nav-link">Resources</a></li>
-					</ul>
-
-					<div class="others-options">
-						<a href="#" class="btn btn-ps ml-3 btn-call"><span class="icon-ps-call"></span></a>
-						<a href="#" class="btn btn-ps shake">Contact</a>
-					</div>
-				</div>
-
-			</nav>
-		</div>
-	</header>
-	<!-- End Navbar Area -->
-
-
-	<!-- Start Main Banner -->
-	<section class="ps-banner-sec" id="ps-banner-sec">
-		<div class="ps-ins-banner-sec">
-			<div class="ps-banner-sec-left">
-				<div class="ps-banner-txt" id="ps-banner-txt">
-					<div class="bfr-bg">
-						<h1 class="heading1">We Transform Digiral into Wealth.</h1>
-						<p class="subtext1">Lorem Ipsum is simply dummy text of the printing and typesetting
-							industry. Lorem Ipsum has been</p>
-						<button class="btn btn-primary">Know More</button>
-					</div>
-				</div>
-			</div>
-			<div class="ps-make-wish">
-				<span class="dash-circle"></span>
-				<svg viewBox="0 0 110 110">
-					<circle cx="55" cy="55" r="50" class="dashed" />
-					<foreignObject x="5" y="5">
-
-					</foreignObject>
-				</svg>
-			</div>
-			<div class="ps-banner-sec-right">
-				<div class="ps-banner-img">
-					<img src="./assets/img/banner-art.png" alt="PlutoSpark" class="banner-art">
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Main Banner -->
-
-	<section class="key-feature-sec">
-		<div class="container-lg">
-			<div class="key-ins-feature">
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="feature-sing">
-							<div class="feature-ic">
-								<svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 45 49">
-									<g class="st0">
-										<path class="st1"
-											d="M37.2 21.9c0 4.5-2 8.8-5.6 11.6 -2 1.5-3.1 3.9-3.2 6.4v0.6c1 0.3 1.8 1.2 1.8 2.3v0.3c0 1.3-1 2.4-2.4 2.4h-0.4c0.1 0.3 0.1 0.5 0.1 0.8v0.3c0 1.3-1 2.4-2.4 2.4h-5.6c-1.3 0-2.4-1.1-2.4-2.4V46.3c0-0.3 0-0.5 0.1-0.8h-0.4c-1.3 0-2.4-1.1-2.4-2.4v-0.3c0-1.1 0.7-2 1.8-2.3v-0.6c0-2.4-1.1-4.7-2.9-6.2 -3.8-2.9-5.9-7.4-5.8-12.2C8 13.8 14.1 7.5 21.8 7.1c4-0.2 8 1.3 10.9 4.1C35.6 14 37.3 17.8 37.2 21.9z" />
-									</g>
-									<path class="st2"
-										d="M19.7 49c-1.3 0-2.4-1.1-2.4-2.4 0 0 0 0 0 0v-0.3c0-0.3 0.1-0.5 0.1-0.8h-0.4c-1.3 0-2.4-1.1-2.4-2.4 0 0 0 0 0 0v-0.3c0-1.1 0.7-2 1.7-2.3v-0.6c0-2.4-1.1-4.7-2.9-6.2 -3.8-2.9-5.9-7.4-5.8-12.2 0.2-7.7 6.3-14 14-14.4 4-0.2 8 1.3 10.9 4.1 2.9 2.8 4.6 6.7 4.6 10.7 0 4.5-2 8.8-5.6 11.6 -2 1.5-3.1 3.9-3.2 6.4v0.6c1 0.3 1.7 1.2 1.7 2.3V43.1c0 1.3-1.1 2.4-2.4 2.4 0 0 0 0 0 0h-0.4c0.1 0.3 0.1 0.5 0.1 0.8v0.3c0 1.3-1.1 2.4-2.4 2.4 0 0 0 0 0 0H19.7zM18.9 46.3V46.6c0 0.4 0.4 0.8 0.8 0.8h5.6c0.4 0 0.8-0.4 0.8-0.8v-0.3c0-0.4-0.3-0.8-0.8-0.8 0 0 0 0 0 0h-5.6C19.3 45.5 18.9 45.8 18.9 46.3zM16.3 42.8V43.1c0 0.4 0.4 0.8 0.8 0.8h10.8c0.4 0 0.8-0.4 0.8-0.8v-0.3c0-0.4-0.4-0.8-0.8-0.8H17.1c-0.4 0-0.8 0.4-0.8 0.8V42.8zM25 40.4h1.9v-0.5c0-3 1.4-5.8 3.7-7.6 3.2-2.5 5-6.3 5-10.3 0-3.6-1.5-7.1-4.1-9.6 -2.6-2.5-6.1-3.8-9.7-3.6 -6.9 0.4-12.3 6-12.5 12.8 -0.1 4.2 1.8 8.3 5.2 10.9 2.3 1.8 3.6 4.5 3.6 7.4v0.5h1.9v-8.9h-1.6c-1.5 0-2.8-1.2-2.8-2.8v-0.4c0-1.5 1.2-2.8 2.8-2.8h0.4c1.5 0 2.8 1.2 2.8 2.8V29.9h1.9v-1.6c0-1.5 1.2-2.8 2.8-2.8h0.4c1.5 0 2.8 1.2 2.8 2.8v0.4c0 1.5-1.2 2.8-2.8 2.8h-1.6L25 40.4zM21.5 40.4h1.9v-8.9h-1.9V40.4zM25 28.3v1.6h1.6c0.7 0 1.2-0.5 1.2-1.2 0 0 0 0 0 0v-0.4c0-0.7-0.5-1.2-1.2-1.2 0 0 0 0 0 0h-0.4c-0.7 0-1.2 0.5-1.2 1.2V28.3zM17.2 28.3v0.4c0 0.7 0.5 1.2 1.2 1.2 0 0 0 0 0 0h1.6v-1.6c0-0.7-0.5-1.2-1.2-1.2 0 0 0 0 0 0h-0.4c-0.7 0-1.2 0.5-1.2 1.2V28.3zM40.6 20.7v-1.6h4.4v1.6H40.6zM0 20.7v-1.6H4.4v1.6H0zM33.8 7.5l3.1-3.1 1.1 1.1 -3.1 3.1L33.8 7.5zM7 5.5l1.1-1.1 3.1 3.1 -1.1 1.1L7 5.5zM21.7 4.4V0h1.6v4.4L21.7 4.4z" />
-								</svg>
-							</div>
-							<div class="feature-txt">
-								<h5>Innovative solutions</h5>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-									Ipsum
-									has been the industry's standard dummy text ever since the 1500s,</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="feature-sing">
-							<div class="feature-ic">
-								<svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 45.3 44.3">
-									<g class="st0">
-										<path class="st1"
-											d="M20.8 44.2H0.2c0-4.2 2.6-8.1 6.5-9.6 -1.7-1.2-2.8-3.2-2.8-5.4 0-3.6 2.9-6.5 6.5-6.6h0.1c3.6 0 6.5 2.9 6.6 6.5v0.1c0 2.1-1 4.1-2.8 5.4C18.2 36.1 20.8 39.9 20.8 44.2z" />
-										<path class="st1"
-											d="M33 21.7H12.3c0-4.2 2.6-8 6.5-9.6 -1.7-1.2-2.8-3.2-2.8-5.4 0-3.6 2.9-6.5 6.5-6.6h0.1c3.6 0 6.5 2.9 6.6 6.5v0.1c0 2.1-1 4.1-2.8 5.4C30.4 13.6 33 17.5 33 21.7z" />
-										<path class="st1"
-											d="M45.1 44.2H24.5c0-4.2 2.6-8.1 6.5-9.6 -1.7-1.2-2.8-3.2-2.8-5.4 0-3.6 2.9-6.5 6.5-6.6h0.1c3.6 0 6.5 2.9 6.6 6.5v0.1c0 2.1-1 4.1-2.8 5.4C42.6 36.1 45.2 39.9 45.1 44.2z" />
-									</g>
-									<path class="st2"
-										d="M43.3 44.2c0-4.5-3.5-8.2-8-8.4 -0.1 0-0.3 0-0.4 0 -0.1 0-0.3 0-0.4 0 -4.5 0.2-8 3.9-8 8.4h-1.9c0-4.2 2.6-8.1 6.5-9.6 -1.7-1.2-2.8-3.2-2.8-5.4 0-3.6 2.9-6.5 6.5-6.6 0 0 0.1 0 0.1 0 3.6 0 6.5 2.9 6.6 6.5 0 0 0 0.1 0 0.1 0 2.1-1 4.1-2.8 5.4 3.9 1.6 6.5 5.4 6.5 9.6L43.3 44.2zM35.2 33.8c2.4-0.2 4.3-2.2 4.3-4.7 0-2.6-2-4.7-4.6-4.7 0 0-0.1 0-0.1 0 -2.6 0-4.7 2-4.7 4.6 0 0 0 0.1 0 0.1 0 2.4 1.8 4.5 4.3 4.7 0.1 0 0.3 0 0.4 0s0.3 0 0.4 0H35.2zM18.9 44.2c0-4.5-3.5-8.2-8-8.4 -0.1 0-0.3 0-0.4 0 -0.2 0-0.3 0-0.4 0 -4.5 0.2-8 3.9-8 8.4H0.2c0-4.2 2.6-8.1 6.5-9.6 -1.7-1.2-2.8-3.2-2.8-5.4 0-3.6 2.9-6.5 6.5-6.6 0 0 0.1 0 0.1 0 3.6 0 6.5 2.9 6.6 6.5 0 0 0 0.1 0 0.1 0 2.1-1 4.1-2.8 5.4 3.9 1.6 6.5 5.4 6.5 9.6H18.9zM10.9 33.8c2.4-0.2 4.3-2.2 4.3-4.7 0-2.6-2-4.7-4.6-4.7 0 0-0.1 0-0.1 0 -2.6 0-4.7 2-4.7 4.6 0 0 0 0.1 0 0.1 0 2.4 1.8 4.5 4.3 4.7 0.1 0 0.3 0 0.4 0s0.3 0 0.4 0H10.9zM31.1 21.7c0-4.5-3.5-8.2-7.9-8.4 -0.2 0-0.3 0-0.5 0 -0.2 0-0.3 0-0.5 0 -4.5 0.2-8 4-7.9 8.4h-1.9c0-4.2 2.6-8.1 6.5-9.6C17.1 10.9 16.1 8.9 16.1 6.7c0-3.6 2.9-6.5 6.5-6.6 0 0 0.1 0 0.1 0 3.6 0 6.5 2.9 6.6 6.5 0 0 0 0.1 0 0.1 0 2.1-1 4.1-2.8 5.4 3.9 1.6 6.5 5.4 6.5 9.6H31.1zM23.1 11.4c2.4-0.2 4.2-2.2 4.2-4.7 0-2.6-2-4.7-4.6-4.7 0 0-0.1 0-0.1 0 -2.6 0-4.7 2-4.7 4.6 0 0 0 0.1 0 0.1 0 2.4 1.8 4.5 4.2 4.7 0.2 0 0.3 0 0.5 0s0.3 0 0.5 0L23.1 11.4z" />
-								</svg>
-							</div>
-							<div class="feature-txt">
-								<h5>Experienced team</h5>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-									Ipsum
-									has been the industry's standard dummy text ever since the 1500s,</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="feature-sing">
-							<div class="feature-ic">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.2 45.3" width="40">
-									<g class="st0">
-										<path class="st1"
-											d="M45 33.3c-1.1-2-3.6-2.7-5.6-1.7l-6.6 3.1c-0.9-1.7-2.6-2.8-4.6-2.8l-6.2-0.2c-0.8 0-1.6-0.2-2.4-0.6l-0.8-0.4c-3.1-1.6-6.9-1.6-10.1 0l0.1-2.2L1.4 28.2c-0.5 0-0.8 0.4-0.9 0.8L0.1 44.5l7.5 0.2h0c0.5 0 0.8-0.4 0.8-0.8l0-0.7 1.7-0.9c0.7-0.4 1.5-0.5 2.2-0.2l10.3 2.9c0 0 0 0 0 0 0.8 0.2 1.5 0.2 2.3 0.2h0c1.6 0 3.2-0.4 4.7-1l15-9.7C45.1 34.2 45.2 33.7 45 33.3zM6.8 43l-5-0.1L2.2 29.9l5 0.1L6.8 43z" />
-										<path class="st1"
-											d="M41.7 12.1c-0.3-0.4-0.5-1.1-0.5-1.6V9.5c0-1.6-0.9-3-2.3-3.7L38.2 5.4c-0.5-0.2-0.9-0.6-1.1-1.1l-0.4-0.7c-0.8-1.4-2.2-2.3-3.8-2.3H32.2c-0.1 0-0.1 0-0.2 0 -0.7 0-1.3-0.2-1.8-0.5 -1.7-1.1-3.8-1.1-5.5 0 -0.5 0.3-1.3 0.5-1.8 0.5h-1c-1.6 0-3 0.8-3.8 2.2l-0.4 0.8c-0.2 0.4-0.6 0.8-1.1 1l-0.7 0.3c-1.4 0.7-2.3 2.1-2.3 3.7v1c0 0.5-0.2 1.2-0.5 1.6 -1.1 1.6-1.1 3.8 0 5.5 0.3 0.4 0.5 1.1 0.5 1.6v1.1c0 1.5 0.9 3 2.3 3.6l0.8 0.3c0.5 0.2 0.8 0.6 1.1 1l0.4 0.7c0.8 1.4 2.3 2.3 3.9 2.3h0.7c0.7 0 1.4 0.1 2.1 0.5 0.8 0.5 1.8 0.8 2.8 0.8 1 0 2-0.3 2.8-0.8 0.5-0.3 1.1-0.5 1.7-0.5h3.3c1 0 1.8-0.8 1.8-1.8v-0.9c0.3-0.6 0.8-1.1 1.5-1.4l0.4-0.2c1.5-0.8 2.3-2.4 2.3-4.1v-0.8c0-0.4 0.2-1 0.4-1.3C42.9 16.1 42.9 13.8 41.7 12.1zM22.8 13.2c-1.2-0.2-2.2-1.3-2-2.5 -0.1-1.2 0.8-2.4 2-2.5 1.3 0.2 2.2 1.3 2 2.5C25 11.9 24.1 13 22.8 13.2zM31.9 21.7c-1.2-0.2-2.1-1.3-2-2.5 -0.1-1.3 0.8-2.4 2-2.5 1.3 0.2 2.1 1.3 2 2.5C34 20.4 33.1 21.5 31.9 21.7z" />
-									</g>
-									<path class="st2"
-										d="M25 45.2c-0.8 0-1.5-0.1-2.3-0.2 0 0 0 0-0.1 0l-10.3-2.9c-0.7-0.2-1.5-0.1-2.2 0.2l-1.7 0.9 0 0.7c0 0.5-0.4 0.8-0.8 0.8H7.6l-7.5-0.2L0.5 29.1c0-0.5 0.4-0.8 0.9-0.8 0 0 0 0 0 0l7.5 0.2 -0.1 2.2c3.2-1.7 6.9-1.7 10.1 0l0.8 0.4c0.7 0.4 1.6 0.6 2.4 0.6l6.3 0.2c1.9 0.1 3.7 1.1 4.6 2.8l6.6-3.1c2-1 4.5-0.3 5.6 1.7 0.2 0.4 0.1 0.9-0.3 1.1l-15 9.7c-1.5 0.7-3.1 1-4.7 1L25 45.2zM12.8 40.4L23.1 43.3c2 0.4 4 0.2 5.8-0.6l14.1-9.1c-0.8-0.7-1.9-0.9-2.9-0.4l0 0 -6.7 3.2c0.1 0.4 0.1 0.7 0.1 1.1 0 0.5-0.4 0.8-0.8 0.8h0l-10-0.3c-0.5 0-0.8-0.4-0.8-0.9 0 0 0 0 0 0 0-0.5 0.4-0.8 0.9-0.8 0 0 0 0 0 0l9 0.2c-0.3-1.7-1.8-2.9-3.5-2.9l-6.1-0.2c-1.2 0-2.4-0.3-3.5-0.9l-0.6-0.3c-3-1.5-6.6-1.4-9.4 0.5l-0.2 8.6 0.9-0.5c0.7-0.4 1.4-0.6 2.2-0.6 0.4 0 0.8 0.1 1.3 0.2L12.8 40.4zM1.8 42.9l5 0.1 0.4-12.9 -5-0.1L1.8 42.9zM24.6 28.8c-0.6-0.4-1.3-0.6-2.1-0.5h-0.7c-1.6 0-3.1-0.9-3.9-2.3l-0.4-0.7c-0.2-0.4-0.6-0.8-1.1-1l-0.7-0.4c-1.4-0.7-2.3-2.1-2.3-3.6l0-1.1c0-0.5-0.2-1.2-0.5-1.6 -1.1-1.6-1.1-3.8 0-5.5 0.3-0.4 0.5-1.1 0.5-1.6l0-1c0-1.7 0.9-3.1 2.3-3.7l0.7-0.4c0.5-0.2 0.8-0.6 1.1-1l0.4-0.8c0.8-1.4 2.2-2.2 3.8-2.2l1 0c0.5 0 1.4-0.2 1.8-0.5 1.7-1.1 3.8-1.1 5.5 0l0 0c0.6 0.4 1.3 0.6 2.1 0.5h0.7c1.6 0 3.1 0.9 3.9 2.3l0.4 0.7c0.3 0.5 0.6 0.8 1.1 1.1l0.7 0.4c1.4 0.7 2.3 2.2 2.3 3.7l0 1c0 0.5 0.2 1.2 0.5 1.6 1.2 1.7 1.1 4-0.1 5.6 -0.2 0.3-0.4 0.9-0.4 1.3 0 0.2 0 0.5 0 0.8 0 1.7-0.9 3.2-2.4 4.1l-0.4 0.2c-0.6 0.3-1.2 0.8-1.5 1.4v0.8c0 1-0.8 1.8-1.8 1.8l-3.3 0c-0.6 0-1.2 0.2-1.7 0.5 -0.8 0.5-1.8 0.8-2.8 0.8 -1 0-1.9-0.3-2.8-0.8L24.6 28.8zM25.5 27.4c1.2 0.7 2.7 0.7 3.8-0.1 0.7-0.5 1.6-0.7 2.4-0.7l1.5 0c0.9 0 1.7-0.5 2-1.3l0.4-0.8c0.4-0.8 1-1.4 1.8-1.7l0.8-0.3c0.8-0.3 1.3-1.1 1.3-2l0-1.3c0-0.9 0.3-1.7 0.8-2.4 0.8-1.1 0.8-2.6 0-3.7 -0.5-0.7-0.8-1.6-0.8-2.4V9.7c0-1.1-0.5-2-1.4-2.4l-0.9-0.4c-0.7-0.4-1.3-1-1.7-1.7l-0.4-0.7C34.8 3.7 34 3.2 33.1 3.2l-1.3 0C30.9 3.2 30 2.9 29.2 2.4c-1.2-0.7-2.6-0.7-3.8 0 -0.8 0.5-1.7 0.8-2.6 0.8l-0.8 0c-1.1 0-2 0.5-2.5 1.4l-0.5 0.8c-0.4 0.7-1 1.2-1.7 1.6l-0.7 0.3c-0.9 0.4-1.4 1.3-1.4 2.3v0.5c0.1 1.1-0.2 2.1-0.8 3l0 0c-0.8 1.1-0.7 2.6 0.1 3.6 0.5 0.6 0.7 1.4 0.7 2.2l0 1.1c0 1 0.5 1.9 1.4 2.3l1.1 0.6c0.6 0.3 1.1 0.8 1.4 1.4l0.4 0.7c0.5 0.9 1.5 1.5 2.6 1.5h0.5c0.1 0 0.2 0 0.3 0 1 0 1.9 0.3 2.7 0.8L25.5 27.4zM21.9 23.5c-0.4-0.2-0.5-0.8-0.3-1.2l9.9-15.9c0.2-0.3 0.4-0.4 0.7-0.4 0.3 0 0.6 0.2 0.7 0.4 0.1 0.3 0.1 0.6 0 0.8l-9.9 15.9c-0.2 0.2-0.4 0.4-0.7 0.4 -0.2 0-0.3 0-0.4-0.1L21.9 23.5zM28.1 19.2c-0.1-2.2 1.5-4.1 3.7-4.2 2.2 0.2 3.8 2 3.7 4.2 0.1 2.2-1.5 4.1-3.7 4.2 -2.2-0.2-3.8-2-3.7-4.2L28.1 19.2zM29.8 19.2c-0.1 1.3 0.8 2.4 2 2.5 1.3-0.2 2.1-1.3 2-2.5 0.1-1.3-0.8-2.4-2-2.5 -1.3 0.2-2.1 1.3-2 2.5L29.8 19.2zM19.1 10.7c-0.1-2.2 1.5-4.1 3.7-4.2 2.2 0.2 3.8 2 3.7 4.2 0.1 2.2-1.5 4.1-3.7 4.2 -2.2-0.2-3.8-2-3.7-4.2L19.1 10.7zM20.8 10.7c-0.1 1.3 0.8 2.4 2 2.5 1.3-0.2 2.1-1.3 2-2.5 0.1-1.3-0.8-2.4-2-2.5 -1.3 0.2-2.2 1.3-2 2.5V10.7z" />
-								</svg>
-							</div>
-							<div class="feature-txt">
-								<h5>Flexible pricing</h5>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-									Ipsum
-									has been the industry's standard dummy text ever since the 1500s,</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="bg-sec">
-		<div class="bg-art">
-			<img src="./assets/img/art-2.png" alt="art" class="bg-art">
-		</div>
-		<div class="container-md">
-			<div class="row">
-				<div class="col-lg-7 offset-lg-5 col-md-12 offset-md-0">
-					<div class="bg-sec-ins">
-						<div class="ps-subtitle-wrap">
-							<h2>We Follow Intelligent Ideas Method To Deliver Solutions</h2>
-						</div>
-						<div class="ps-content-wrap">
-							<p>Excepteur sint occaecat cupidatat non proident, sunt culpa qui officia deserunt mollit
-								any id
-								est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-								doloremque laudantium totam rem aperiam eaque.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-								incididunt ut
-								labore et dolore magna aliqua uet enim ad minim veniam quis.</p>
-						</div>
-						<div class="ps-point-wrap">
-							<ul>
-								<li>
-									<span class="icon-checked"></span>
-									Ipsa quae ab illo inventore veritatis quasi architecto beatae
-								</li>
-
-								<li>
-									<span class="icon-checked"></span>
-
-									Vitae dicta sunt explicabo nemo enim ipsay voluptatem
-								</li>
-
-								<li>
-									<span class="icon-checked"></span>
-									Quia voluptas sit aspernatur autodit aut fugit quia cons quntur</li>
-
-								<li>
-									<span class="icon-checked"></span>
-									Magni dolores eosy qui ratione voluptatem ipsum</li>
-							</ul>
-						</div>
-						<div class="ps-action-wrap">
-							<button class="btn btn-ps">GET IN TOUCH</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="ps-cnt-card-sec bg-true">
-		<div class="container-md">
-			<div class="row">
-				<div class="col-xl-10 m-auto">
-					<div class="ps-cnt-ins">
-						<h2>Lorem Ipsum is simply dummy </h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-							been the industry's standard dummy text ever since the 1500s</p>
-						<button class="btn ps-btn-alt">Get in Touch</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="ps-service-sec">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="ps-subtitle-wrap">
-						<h2 class="text-center">Services We Offer</h2>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="ps-service-ins">
-						<div class="ps-service">
-							<div class="ps-service-ic">
-								<svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" width="131px"
-									height="120px">
-									<path fill-rule="evenodd" d=""></path>
-								</svg>
-								<span class="icon-ps-ui"></span>
-							</div>
-							<h5 class="head-ser">Ui UX Design</h5>
-							<p class="content-ser">Lorem Ipsum is simply dummy text of the printing and typesetting
-								industry. Lorem Ipsum
-								has been the industry's standard dummy text ever since the 1500s,</p>
-							<button class="btn ps-service-go-btn">
-								<span class="icon-ps-arrow"></span>
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4">
-					<div class="ps-service-ins">
-						<div class="ps-service">
-							<div class="ps-service-ic">
-								<svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" width="131px"
-									height="120px">
-									<path fill-rule="evenodd" d=""></path>
-								</svg>
-								<span class="icon-ps-marketing"></span>
-							</div>
-							<h5 class="head-ser">Marketing Strategy</h5>
-							<p class="content-ser">Lorem Ipsum is simply dummy text of the printing and typesetting
-								industry. Lorem Ipsum
-								has been the industry's standard dummy text ever since the 1500s,</p>
-							<button class="btn ps-service-go-btn">
-								<span class="icon-ps-arrow"></span>
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4">
-					<div class="ps-service-ins">
-						<div class="ps-service">
-							<div class="ps-service-ic">
-								<svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" width="131px"
-									height="120px">
-									<path fill-rule="evenodd" d=""></path>
-								</svg>
-								<span class="icon-ps-web"></span>
-							</div>
-							<h5 class="head-ser">Branding</h5>
-							<p class="content-ser">Lorem Ipsum is simply dummy text of the printing and typesetting
-								industry. Lorem Ipsum
-								has been the industry's standard dummy text ever since the 1500s,</p>
-							<button class="btn ps-service-go-btn">
-								<span class="icon-ps-arrow"></span>
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="ps-portfolio">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8">
-					<div class="ps-subtitle-wrap text-center text-lg-left">
-						<h2>Our Portfolio</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					</div>
-				</div>
-				<div class="col-lg-4 d-none d-lg-block">
-					<button class="btn btn-ps float-right btn-head">VIEW ALL</button>
-				</div>
-			</div>
-		</div>
-		<div class="container-fluid">
-			<div id="slick">
-				<div class="single-slick">
-					<div class="ps-port-slick-item">
-						<img src="assets/img/portfolio/img-1.png" alt="">
-					</div>
-					<div class="ps-port-content">
-						<div class="ps-content-ins">
-							<h4 class="title">Real design inspiration</h4>
-							<p>Sitting proudly atop is the storey form bedroom phenomenally.</p>
-						</div>
-					</div>
-				</div>
-				<div class="single-slick">
-					<div class="ps-port-slick-item">
-						<img src="assets/img/portfolio/img-2.png" alt="">
-					</div>
-					<div class="ps-port-content">
-						<div class="ps-content-ins">
-							<h4 class="title">Real design inspiration</h4>
-							<p>Sitting proudly atop is the storey form bedroom phenomenally.</p>
-						</div>
-					</div>
-				</div>
-				<div class="single-slick">
-					<div class="ps-port-slick-item">
-						<img src="assets/img/portfolio/img-3.png" alt="">
-					</div>
-					<div class="ps-port-content">
-						<div class="ps-content-ins">
-							<h4 class="title">Real design inspiration</h4>
-							<p>Sitting proudly atop is the storey form bedroom phenomenally.</p>
-						</div>
-					</div>
-				</div>
-				<div class="single-slick">
-					<div class="ps-port-slick-item">
-						<img src="assets/img/portfolio/img-4.png" alt="">
-					</div>
-					<div class="ps-port-content">
-						<div class="ps-content-ins">
-							<h4 class="title">Real design inspiration</h4>
-							<p>Sitting proudly atop is the storey form bedroom phenomenally.</p>
-						</div>
-					</div>
-				</div>
-				<div class="single-slick">
-					<div class="ps-port-slick-item">
-						<img src="assets/img/portfolio/img-5.png" alt="">
-					</div>
-					<div class="ps-port-content">
-						<div class="ps-content-ins">
-							<h4 class="title">Real design inspiration</h4>
-							<p>Sitting proudly atop is the storey form bedroom phenomenally.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		</div>
-	</section>
-	<section class="ps-blog-sec">
-		<div class="container-md">
-			<div class="row">
-				<div class="col-lg-8">
-					<div class="ps-subtitle-wrap  text-center text-lg-left">
-						<h2>Our Portfolio</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					</div>
-				</div>
-				<div class="col-lg-4 d-none d-lg-block">
-					<button class="btn btn-ps float-right btn-head">VIEW ALL</button>
-				</div>
-			</div>
-			<div id="slick-blog">
-				<div class="blog-slick">
-					<div class="single-blog">
-						<div class="blog-thumb">
-							<a href="#"><img src="assets/img/blog/article-1.jpg" alt=""></a>
-							<div class="date">
-								<h5 class="title">25</h5>
-								<span>JUN</span>
-							</div>
-						</div>
-						<div class="blog-content">
-							<h2>The Start-Up Ultimate Guide to Make Press Journal. The Start-Up Ultimate Guide to Make
-								Press Journal. </h2>
-							<a class="ps-btn-link" href="#">LEARN MORE <span class="icon-ps-arrow"><svg width="26px"
-										height="26px" viewBox="0 0 32 32">
-										<circle class="a-circle" cx="13" cy="13" r="12.12" />
-									</svg></span>
-
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="blog-slick">
-					<div class="single-blog">
-						<div class="blog-thumb">
-							<a href="#"><img src="assets/img/blog/article-1.jpg" alt=""></a>
-							<div class="date">
-								<h5 class="title">25</h5>
-								<span>JUN</span>
-							</div>
-						</div>
-						<div class="blog-content">
-							<h2>The Start-Up Ultimate Guide to Make Press Journal. The Start-Up Ultimate Guide to Make
-								Press Journal. </h2>
-							<a class="ps-btn-link" href="#">LEARN MORE <span class="icon-ps-arrow"><svg width="26px"
-										height="26px" viewBox="0 0 32 32">
-										<circle class="a-circle" cx="13" cy="13" r="12.12" />
-									</svg></span>
-
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="blog-slick">
-					<div class="single-blog">
-						<div class="blog-thumb">
-							<a href="#"><img src="assets/img/blog/article-1.jpg" alt=""></a>
-							<div class="date">
-								<h5 class="title">25</h5>
-								<span>JUN</span>
-							</div>
-						</div>
-						<div class="blog-content">
-							<h2>The Start-Up Ultimate Guide to Make Press Journal. The Start-Up Ultimate Guide to Make
-								Press Journal. </h2>
-							<a class="ps-btn-link" href="#">LEARN MORE <span class="icon-ps-arrow"><svg width="26px"
-										height="26px" viewBox="0 0 32 32">
-										<circle class="a-circle" cx="13" cy="13" r="12.12" />
-									</svg></span>
-
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="blog-slick">
-					<div class="single-blog">
-						<div class="blog-thumb">
-							<a href="#"><img src="assets/img/blog/article-1.jpg" alt=""></a>
-							<div class="date">
-								<h5 class="title">25</h5>
-								<span>JUN</span>
-							</div>
-						</div>
-						<div class="blog-content">
-							<h2>The Start-Up Ultimate Guide to Make Press Journal. The Start-Up Ultimate Guide to Make
-								Press Journal. </h2>
-							<a class="ps-btn-link" href="#">LEARN MORE <span class="icon-ps-arrow"><svg width="26px"
-										height="26px" viewBox="0 0 32 32">
-										<circle class="a-circle" cx="13" cy="13" r="12.12" />
-									</svg></span>
-
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="blog-slick">
-					<div class="single-blog">
-						<div class="blog-thumb">
-							<a href="#"><img src="assets/img/blog/article-1.jpg" alt=""></a>
-							<div class="date">
-								<h5 class="title">25</h5>
-								<span>JUN</span>
-							</div>
-						</div>
-						<div class="blog-content">
-							<h2>The Start-Up Ultimate Guide to Make Press Journal. The Start-Up Ultimate Guide to Make
-								Press Journal. </h2>
-							<a class="ps-btn-link" href="#">LEARN MORE <span class="icon-ps-arrow"><svg width="26px"
-										height="26px" viewBox="0 0 32 32">
-										<circle class="a-circle" cx="13" cy="13" r="12.12" />
-									</svg></span>
-
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="blog-slick">
-					<div class="single-blog">
-						<div class="blog-thumb">
-							<a href="#"><img src="assets/img/blog/article-1.jpg" alt=""></a>
-							<div class="date">
-								<h5 class="title">25</h5>
-								<span>JUN</span>
-							</div>
-						</div>
-						<div class="blog-content">
-							<h2>The Start-Up Ultimate Guide to Make Press Journal. The Start-Up Ultimate Guide to Make
-								Press Journal. </h2>
-							<a class="ps-btn-link" href="#">LEARN MORE <span class="icon-ps-arrow"><svg width="26px"
-										height="26px" viewBox="0 0 32 32">
-										<circle class="a-circle" cx="13" cy="13" r="12.12" />
-									</svg></span>
-
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="ps-cnt-bar-btm">
-		<div class="container-md">
-			<div class="ps-ins-cnt-bar">
-				<div class="row align-items-center">
-					<div class="col-md-8">
-						<div class="ps-cnt-bar-content">
-							<h3>Like Our Work? Let’s Start Together</h3>
-							<p>WE PROVIDE SOLUTIONS FOR EVERYONE</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="ps-cnt-bar-content float-md-right text-md-left text-center">
-							<button class="btn ps-btn-alt">Get in Touch</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<footer class="ps-footer">
-		<div class="top-footer-content">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="ps-footer-brand">
-							<img src="./assets/img/log-alt.svg" alt="PlutoSpark" class="footer-log">
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="ps-footer-social">
-							<ul class="ps-social-links">
-								<li><a href="#"><span class="icon-ps-facebook"></span></a></li>
-								<li><a href="#"><span class="icon-ps-linkedin"></span></a></li>
-								<li><a href="#"><span class="icon-ps-behance"></span></a></li>
-								<li><a href="#"><span class="icon-ps-dribbble"></span></a></li>
-								<li><a href="#"><span class="icon-ps-twitter"></span></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-8">
-						<div class="ps-footer-menu">
-							<ul class="ps-menu-links">
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-								<li><a href="portfolio.html">Our Works</a></li>
-								<li><a href="blog.html">Resources</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bottom-footer-content">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<p>Copyrights &copy;
-							<span id="ftr-yr">
-								<script type="text/javascript">
-									document.write(new Date().getFullYear());
-								</script>
-							</span> plutospark. All rights reserved.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<div class="go-top" id="go-top"><span class="icon-upload"></span></div>
-	<div class="overlay"></div>
-
-	<!-- JQuery Min JS -->
-	<script src="assets/js/jquery.min.js"></script>
-	<!-- Bootstrap Min JS -->
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<!-- slick js -->
-	<script src="assets/js/slick/slick.min.js"></script>
-	<script src="assets/js/plugins.js"></script>
-	<!-- Main JS -->
-	<script src="assets/js/main.js"></script>
-</body>
-
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    </meta>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    </meta>
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
+    </meta>
+    <!-- slick css -->
+    <link rel="stylesheet" href="assets/css/slick/slick.css">
+    </link>
+    <!-- <link rel="stylesheet" href="assets/css/slick/slick-theme.css"> -->
+    <!-- Bootstrap Min CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    </link>
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    </link>
+    <!-- font css -->
+    <link rel="stylesheet" href="assets/css/font/style.css">
+    </link>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    </link>
+    <title>PlutoSpark</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    </link>
+  </head>
+  <body>
+    <div class="ps-preloader" id="ps-preloader">
+      <span>
+        <!-- <img src="assets/img/logo.svg" alt="PlutoSpark"> -->
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 324.59406 60.11881"
+          style="enable-background:new 0 0 324.59406 60.11881;" xml:space="preserve">
+          <g>
+            <path class="lg-2"
+              d="M13.72944,53.00077c-0.79292,0-1.31962-0.63717-1.17043-1.41593l6.5698-34.29489 c0.14919-0.77876,0.92-1.41593,1.71292-1.41593h4.6461c0.79292,0,1.31962,0.63717,1.17043,1.41593l-6.5698,34.29489 c-0.14919,0.77876-0.92,1.41593-1.71292,1.41593H13.72944z">
+            </path>
+            <path class="lg-1" d="M26.23248,41.44395c-0.15204,0.77821,0.26175,1.05266,0.91954,0.6099l12.80366-8.61831
+              c0.65779-0.44276,0.83372-1.34322,0.39095-2.00101l-8.6183-12.80366c-0.44277-0.65779-0.92943-0.55926-1.08147,0.21895
+              L26.23248,41.44395z"></path>
+            <path class="lg-3" d="M43.66414,29.20147c0.44276,0.65779,0.92943,0.55926,1.08147-0.21895L49.15998,6.3884
+              c0.15205-0.77821-0.26175-1.05266-0.91954-0.6099l-12.80365,8.6183c-0.65779,0.44277-0.83372,1.34322-0.39095,2.00101
+              L43.66414,29.20147z"></path>
+          </g>
+          <g>
+            <path class="lg-2" d="M65.31995,15.87554c-0.79292,0-1.5637,0.63718-1.71283,1.41595l-6.56763,34.29503
+              c-0.14914,0.77877,0.3776,1.41595,1.17052,1.41595h4.64985c0.79293,0,1.5637-0.63718,1.71284-1.41595l6.56763-34.29503
+              c0.14914-0.77877-0.37759-1.41595-1.17052-1.41595H65.31995z"></path>
+            <path class="lg-3" d="M85.90995,26.17951c0,8.79348-5.84933,16.8654-14.64292,16.8654
+              c-1.41424,0-2.68403-0.24052-3.62708-0.56766l1.06802-5.56083c0.65415,0.32708,1.42387,0.50025,2.29929,0.50025
+              c3.9928,0,7.09068-5.69554,7.09068-10.6695c0-2.01079-0.8275-4.13702-3.26137-4.13702
+              c-1.37595,0-2.70351,0.76971-3.80043,2.15512L72.258,18.377c1.66439-1.16414,3.58856-1.76063,5.532-1.76063
+              C83.27384,16.61637,85.90995,21.01311,85.90995,26.17951z"></path>
+          </g>
+          <path class="lg-2" d="M89.49153,43.04878c-0.79292,0-1.31945-0.63714-1.17007-1.41586l6.56908-34.24368
+            c0.14938-0.77872,0.92036-1.41586,1.71329-1.41586h4.6461c0.79292,0,1.31946,0.63714,1.17007,1.41586l-6.56908,34.24368
+            c-0.14938,0.77872-0.92036,1.41586-1.71329,1.41586H89.49153z"></path>
+          <g>
+            <path class="lg-3" d="M117.63013,34.14561l-1.2315,6.43636c-2.1264,1.70285-4.45457,2.45331-6.74423,2.45331
+              c-4.23331,0-6.78275-2.38601-6.78275-7.43697c0-1.47196,0.15385-3.0498,0.53883-4.89698l2.5398-13.60391
+              c0.13483-0.71194,0.75046-1.22187,1.47202-1.22187h4.78154c0.93319,0,1.64513,0.84664,1.47202,1.77026l-2.32817,12.45903
+              c-0.2215,1.19298-0.39461,2.5014-0.39461,3.47312c0,1.74137,0.66402,3.09795,2.67463,3.09795
+              C115.02269,36.6759,116.45618,35.78111,117.63013,34.14561z"></path>
+            <path class="lg-2" d="M128.56076,15.87554c0.79292,0,1.3194,0.63713,1.16994,1.41584l-4.67097,24.33768
+              c-0.14945,0.77871-0.92049,1.41584-1.71341,1.41584h-4.64985c-0.79292,0-1.3194-0.63713-1.16994-1.41584l4.67097-24.33768
+              c0.14945-0.77871,0.92049-1.41584,1.71341-1.41584H128.56076z"></path>
+          </g>
+          <g>
+            <path class="lg-2" d="M144.65984,5.9757c0.90604,0,1.58795,0.82515,1.4173,1.71496l-6.78021,35.35123
+              c-0.00032,0.00166-0.00197,0.00301-0.00365,0.00301c0,0-0.02606,0-0.07397,0c-0.81787,0-7.40825-0.25015-5.81105-8.56259
+              c0.00964-0.04809,0.01894-0.13166,0.01894-0.13166c0.00018-0.00168,0.0006-0.0044,0.00093-0.00606l0.07593-0.41729
+              c0.00027-0.00166,0.00078-0.00438,0.0011-0.00603l2.15367-11.23113c0.00032-0.00166-0.00081-0.00301-0.00249-0.00301h-1.44753
+              c-0.90509,0-1.58679-0.82352-1.41774-1.71268l0.52866-2.78044c0.12946-0.68088,0.72466-1.17358,1.41772-1.17358h2.00616
+              c0.00168,0,0.00333-0.00135,0.00365-0.00301l1.9003-9.87139c0.13077-0.67936,0.72527-1.17033,1.4171-1.17033H144.65984z">
+            </path>
+            <path class="lg-3" d="M145.30937,36.57003l-0.87564,5.87839c-0.81787,0.31744-2.35707,0.52914-3.8002,0.5676l0.09607-0.5195
+              l1.06802-5.56089l0.10593-0.5676c0.31734,0.202,0.76009,0.30787,1.3372,0.30787
+              C143.90453,36.6759,144.63573,36.6759,145.30937,36.57003z"></path>
+            <polygon class="lg-3"
+              points="149.73483,17.02043 148.64755,22.68713 144.53003,22.68713 145.34766,18.39626 145.61708,17.02043">
+            </polygon>
+          </g>
+          <path class="lg-3" d="M176.57011,26.54272c0,9.50046-6.47542,16.45366-15.49904,16.45366
+            c-6.58128,0-10.98628-4.29914-10.98628-10.72163c0-9.02315,6.26276-16.40073,15.49904-16.40073
+            C172.53609,15.87401,176.57011,20.65094,176.57011,26.54272z M157.99263,32.11549c0,3.02552,1.48677,5.04253,4.14082,5.04253
+            c4.19234,0,6.52882-6.10396,6.52882-10.56237c0-2.38847-1.00897-4.93619-4.08742-4.93619
+            C160.1689,21.65945,157.94017,28.08194,157.99263,32.11549z"></path>
+          <path class="lg-3" d="M178.99638,37.10961c0.27138-0.78313,1.13887-1.19512,1.90955-0.89016
+            c1.53261,0.60645,3.56387,1.19241,5.4193,1.19241c2.18048,0,3.29749-1.06349,3.29749-2.33958
+            c0-1.27657-0.85136-2.18049-3.24399-3.35052c-3.0309-1.48918-5.53053-3.66967-5.53053-6.91365
+            c0-5.37096,4.73268-8.93409,11.43373-8.93409c2.1833,0,4.0359,0.30344,5.37813,0.75157
+            c0.75902,0.25341,1.15132,1.08998,0.8983,1.84913l-0.89037,2.67134c-0.25331,0.76-1.07309,1.19614-1.83281,0.94201
+            c-1.036-0.34653-2.34804-0.63-3.87241-0.63c-2.02092,0-3.40355,0.90392-3.40355,2.28655
+            c0,1.06349,1.06349,1.96789,3.19142,2.97835c2.81783,1.43567,5.79617,3.50961,5.79617,7.12577
+            c0,5.95622-5.05278,9.14765-11.91243,9.14765c-2.61761,0-5.13466-0.53648-6.83276-1.34275
+            c-0.67691-0.32139-0.99812-1.10163-0.75276-1.80966L178.99638,37.10961z"></path>
+          <g>
+            <path class="lg-2" d="M199.8353,53.00077c-0.79292,0-1.31963-0.63717-1.17044-1.41593l6.56981-34.29489
+              c0.14919-0.77876,0.92-1.41593,1.71292-1.41593h4.6461c0.79292,0,1.31961,0.63717,1.17043,1.41593l-6.56981,34.29489
+              c-0.14919,0.77876-0.92,1.41593-1.71292,1.41593H199.8353z"></path>
+            <path class="lg-3" d="M227.57713,26.14104c0,8.82232-5.85895,16.90386-14.68121,16.90386
+              c-1.41446,0-2.69388-0.24052-3.63695-0.56766l1.06802-5.54163v-0.02883c0.65416,0.31745,1.4335,0.49067,2.31854,0.49067
+              c3.9928,0,7.10033-5.70522,7.10033-10.67919c0-2.02036-0.8275-4.15622-3.27124-4.15622
+              c-1.37572,0-2.71292,0.77929-3.80983,2.16469l0.39461-2.03962l0.81764-4.29087l0.00963-0.06735
+              c1.66438-1.17378,3.60782-1.77027,5.55125-1.77027C224.9314,16.55865,227.57713,20.96502,227.57713,26.14104z"></path>
+          </g>
+          <g>
+            <path class="lg-3" d="M248.4257,16.55865l-1.09691,5.70516c-0.32697-0.02883-0.68304-0.05772-1.0295-0.05772
+              c-4.81984,0-8.34122,5.90722-8.34122,10.62147c0,2.49177,0.98134,4.20431,3.04974,4.20431
+              c1.31816,0,2.80945-0.88516,4.04094-2.88626v0.0192l-1.26039,6.56144c-1.85675,1.68365-3.95404,2.30903-5.93599,2.30903
+              c-4.56029,0-7.66803-3.51164-7.66803-8.80311c0-8.56253,5.64755-17.67352,18.14505-17.67352H248.4257z"></path>
+            <path class="lg-2" d="M255.96976,15.87554c0.79294,0,1.31961,0.63717,1.17044,1.41593l-4.66231,24.3375
+              c-0.14919,0.77876-0.92001,1.41593-1.71294,1.41593h-4.64984c-0.79294,0-1.31963-0.63717-1.17043-1.41593l4.66252-24.3375
+              c0.14919-0.77876,0.92001-1.41593,1.71294-1.41593H255.96976z"></path>
+          </g>
+          <g>
+            <path class="lg-2" d="M269.92001,15.87554c0.79291,0,1.3194,0.63713,1.16995,1.41584l-4.67099,24.33768
+              c-0.14944,0.77871-0.92047,1.41584-1.71341,1.41584h-4.6402c-0.79294,0-1.3194-0.63713-1.16995-1.41584l4.67117-24.33769
+              c0.14948-0.77871,0.9205-1.41584,1.71344-1.41584H269.92001z"></path>
+            <path class="lg-3" d="M278.25266,16.57318c0.25275,0.01316,0.41901,0.22698,0.36951,0.47515l-1.27277,6.38056
+              c-0.0495,0.24817-0.29666,0.43847-0.54922,0.42288c0,0-0.32013-0.01975-0.74338-0.01975
+              c-2.38596,0-5.08624,2.46089-5.08624,2.46089c-0.18701,0.17046-0.30145,0.10651-0.25427-0.14212l0.18451-0.972
+              c0.04718-0.24862,0.12509-0.65532,0.17313-0.90378l0.2197-1.13613c0.04803-0.24846,0.12631-0.65509,0.17395-0.90363
+              l0.62537-3.26209c0.04764-0.24854,0.26309-0.56019,0.47876-0.69256c0,0,2.82132-1.73159,4.74548-1.73159
+              C277.7886,16.54902,278.25266,16.57318,278.25266,16.57318z"></path>
+          </g>
+          <g>
+            <path class="lg-2" d="M279.43762,43.04878c-0.79294,0-1.31946-0.63714-1.17007-1.41586l6.56909-34.24368
+              c0.14938-0.77872,0.92035-1.41586,1.71329-1.41586h4.64609c0.79291,0,1.31946,0.63714,1.17007,1.41586L285.797,41.63292
+              c-0.14938,0.77872-0.92035,1.41586-1.71329,1.41586H279.43762z"></path>
+            <path class="lg-3" d="M305.0636,18.51171l-8.83188,8.5337l6.53259,13.81554c0.48105,1.01981-0.2598,2.18396-1.38559,2.18396
+              h-5.45496c-0.61563,0-1.17371-0.37523-1.41425-0.94289l-4.38715-10.6695l-1.27942,1.20261l1.14484-5.94569l0.32693-1.70291
+              c0.23114-0.29824,0.46204-0.59649,0.69293-0.8851l6.49408-7.68712c0.28842-0.34634,0.71191-0.53876,1.16406-0.53876h5.33002
+              C305.38116,15.87554,306.05457,17.54962,305.0636,18.51171z"></path>
+          </g>
+        </svg>
+        <div class="dot"></div>
+      </span>
+    </div>
+    <!-- Start Navbar Area -->
+    <header class="ps-header" id="ps-header">
+      <div class="container-lg">
+        <nav class="navbar navbar-light">
+          <a class="navbar-brand ps-logo" id="logo" href="index.html">
+          <img src="assets/img/logo.svg" alt="logo">
+          </a>
+          <button class="menu-toggle btn" id="menu-toggle" type="button">
+          <span class="nav-toggle">
+          <span class="mn-stick mn-stick-1"></span>
+          <span class="mn-stick mn-stick-2"></span>
+          <span class="mn-stick mn-stick-3"></span>
+          </span>
+          </button>
+          <div class="menu" id="menu">
+            <ul class="navbar-nav nav" id="navbarMobile">
+              <li class="nav-item has-dropdown">
+                <a href="javascript:void(0);" class="nav-link">Services</a>
+                <span class="menu-arrow"></span>
+                <ul class="dropdown">
+                  <li class="nav-item">
+                    <a href="./uiux.html" class="nav-link">Ui / Ux Design</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./marketing.html" class="nav-link">Marketing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./branding.html" class="nav-link">Branding</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="./portfolio.html" class="nav-link">Our Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a href="./blog.html" class="nav-link">Resources</a>
+              </li>
+            </ul>
+            <div class="others-options">
+              <a href="#" class="btn btn-ps ml-3 btn-call">
+              <span class="icon-ps-call"></span>
+              </a>
+              <a href="#" class="btn btn-ps shake">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Navbar Area -->
+    <!-- Start Main Banner -->
+    <section class="ps-banner-sec" id="ps-banner-sec">
+      <div class="ps-ins-banner-sec">
+        <div class="ps-banner-sec-left">
+          <div class="ps-banner-txt" id="ps-banner-txt">
+            <div class="bfr-bg">
+              <h1 class="heading1">
+                We Transform Digiral into Wealth.
+              </h1>
+              <p class="subtext1">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                been
+              </p>
+              <button class="btn btn-primary">Know More</button>
+            </div>
+          </div>
+        </div>
+        <div class="ps-make-wish">
+          <span class="dash-circle"></span>
+          <svg viewBox="0 0 110 110">
+            <circle cx="55" cy="55" r="50" class="dashed"></circle>
+            <foreignObject x="5" y="5"></foreignObject>
+          </svg>
+        </div>
+        <div class="ps-banner-sec-right">
+          <div class="ps-banner-img">
+            <img src="./assets/img/banner-art.png" alt="PlutoSpark" class="banner-art">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Main Banner -->
+    <section class="key-feature-sec">
+      <div class="container-lg">
+        <div class="key-ins-feature">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="feature-sing">
+                <div class="feature-ic">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 45 49">
+                    <g class="st0">
+                      <path class="st1"
+                        d="M37.2 21.9c0 4.5-2 8.8-5.6 11.6 -2 1.5-3.1 3.9-3.2 6.4v0.6c1 0.3 1.8 1.2 1.8 2.3v0.3c0 1.3-1 2.4-2.4 2.4h-0.4c0.1 0.3 0.1 0.5 0.1 0.8v0.3c0 1.3-1 2.4-2.4 2.4h-5.6c-1.3 0-2.4-1.1-2.4-2.4V46.3c0-0.3 0-0.5 0.1-0.8h-0.4c-1.3 0-2.4-1.1-2.4-2.4v-0.3c0-1.1 0.7-2 1.8-2.3v-0.6c0-2.4-1.1-4.7-2.9-6.2 -3.8-2.9-5.9-7.4-5.8-12.2C8 13.8 14.1 7.5 21.8 7.1c4-0.2 8 1.3 10.9 4.1C35.6 14 37.3 17.8 37.2 21.9z">
+                      </path>
+                    </g>
+                    <path class="st2"
+                      d="M19.7 49c-1.3 0-2.4-1.1-2.4-2.4 0 0 0 0 0 0v-0.3c0-0.3 0.1-0.5 0.1-0.8h-0.4c-1.3 0-2.4-1.1-2.4-2.4 0 0 0 0 0 0v-0.3c0-1.1 0.7-2 1.7-2.3v-0.6c0-2.4-1.1-4.7-2.9-6.2 -3.8-2.9-5.9-7.4-5.8-12.2 0.2-7.7 6.3-14 14-14.4 4-0.2 8 1.3 10.9 4.1 2.9 2.8 4.6 6.7 4.6 10.7 0 4.5-2 8.8-5.6 11.6 -2 1.5-3.1 3.9-3.2 6.4v0.6c1 0.3 1.7 1.2 1.7 2.3V43.1c0 1.3-1.1 2.4-2.4 2.4 0 0 0 0 0 0h-0.4c0.1 0.3 0.1 0.5 0.1 0.8v0.3c0 1.3-1.1 2.4-2.4 2.4 0 0 0 0 0 0H19.7zM18.9 46.3V46.6c0 0.4 0.4 0.8 0.8 0.8h5.6c0.4 0 0.8-0.4 0.8-0.8v-0.3c0-0.4-0.3-0.8-0.8-0.8 0 0 0 0 0 0h-5.6C19.3 45.5 18.9 45.8 18.9 46.3zM16.3 42.8V43.1c0 0.4 0.4 0.8 0.8 0.8h10.8c0.4 0 0.8-0.4 0.8-0.8v-0.3c0-0.4-0.4-0.8-0.8-0.8H17.1c-0.4 0-0.8 0.4-0.8 0.8V42.8zM25 40.4h1.9v-0.5c0-3 1.4-5.8 3.7-7.6 3.2-2.5 5-6.3 5-10.3 0-3.6-1.5-7.1-4.1-9.6 -2.6-2.5-6.1-3.8-9.7-3.6 -6.9 0.4-12.3 6-12.5 12.8 -0.1 4.2 1.8 8.3 5.2 10.9 2.3 1.8 3.6 4.5 3.6 7.4v0.5h1.9v-8.9h-1.6c-1.5 0-2.8-1.2-2.8-2.8v-0.4c0-1.5 1.2-2.8 2.8-2.8h0.4c1.5 0 2.8 1.2 2.8 2.8V29.9h1.9v-1.6c0-1.5 1.2-2.8 2.8-2.8h0.4c1.5 0 2.8 1.2 2.8 2.8v0.4c0 1.5-1.2 2.8-2.8 2.8h-1.6L25 40.4zM21.5 40.4h1.9v-8.9h-1.9V40.4zM25 28.3v1.6h1.6c0.7 0 1.2-0.5 1.2-1.2 0 0 0 0 0 0v-0.4c0-0.7-0.5-1.2-1.2-1.2 0 0 0 0 0 0h-0.4c-0.7 0-1.2 0.5-1.2 1.2V28.3zM17.2 28.3v0.4c0 0.7 0.5 1.2 1.2 1.2 0 0 0 0 0 0h1.6v-1.6c0-0.7-0.5-1.2-1.2-1.2 0 0 0 0 0 0h-0.4c-0.7 0-1.2 0.5-1.2 1.2V28.3zM40.6 20.7v-1.6h4.4v1.6H40.6zM0 20.7v-1.6H4.4v1.6H0zM33.8 7.5l3.1-3.1 1.1 1.1 -3.1 3.1L33.8 7.5zM7 5.5l1.1-1.1 3.1 3.1 -1.1 1.1L7 5.5zM21.7 4.4V0h1.6v4.4L21.7 4.4z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="feature-txt">
+                  <h5>Innovative solutions</h5>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="feature-sing">
+                <div class="feature-ic">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 45.3 44.3">
+                    <g class="st0">
+                      <path class="st1"
+                        d="M20.8 44.2H0.2c0-4.2 2.6-8.1 6.5-9.6 -1.7-1.2-2.8-3.2-2.8-5.4 0-3.6 2.9-6.5 6.5-6.6h0.1c3.6 0 6.5 2.9 6.6 6.5v0.1c0 2.1-1 4.1-2.8 5.4C18.2 36.1 20.8 39.9 20.8 44.2z">
+                      </path>
+                      <path class="st1"
+                        d="M33 21.7H12.3c0-4.2 2.6-8 6.5-9.6 -1.7-1.2-2.8-3.2-2.8-5.4 0-3.6 2.9-6.5 6.5-6.6h0.1c3.6 0 6.5 2.9 6.6 6.5v0.1c0 2.1-1 4.1-2.8 5.4C30.4 13.6 33 17.5 33 21.7z">
+                      </path>
+                      <path class="st1"
+                        d="M45.1 44.2H24.5c0-4.2 2.6-8.1 6.5-9.6 -1.7-1.2-2.8-3.2-2.8-5.4 0-3.6 2.9-6.5 6.5-6.6h0.1c3.6 0 6.5 2.9 6.6 6.5v0.1c0 2.1-1 4.1-2.8 5.4C42.6 36.1 45.2 39.9 45.1 44.2z">
+                      </path>
+                    </g>
+                    <path class="st2"
+                      d="M43.3 44.2c0-4.5-3.5-8.2-8-8.4 -0.1 0-0.3 0-0.4 0 -0.1 0-0.3 0-0.4 0 -4.5 0.2-8 3.9-8 8.4h-1.9c0-4.2 2.6-8.1 6.5-9.6 -1.7-1.2-2.8-3.2-2.8-5.4 0-3.6 2.9-6.5 6.5-6.6 0 0 0.1 0 0.1 0 3.6 0 6.5 2.9 6.6 6.5 0 0 0 0.1 0 0.1 0 2.1-1 4.1-2.8 5.4 3.9 1.6 6.5 5.4 6.5 9.6L43.3 44.2zM35.2 33.8c2.4-0.2 4.3-2.2 4.3-4.7 0-2.6-2-4.7-4.6-4.7 0 0-0.1 0-0.1 0 -2.6 0-4.7 2-4.7 4.6 0 0 0 0.1 0 0.1 0 2.4 1.8 4.5 4.3 4.7 0.1 0 0.3 0 0.4 0s0.3 0 0.4 0H35.2zM18.9 44.2c0-4.5-3.5-8.2-8-8.4 -0.1 0-0.3 0-0.4 0 -0.2 0-0.3 0-0.4 0 -4.5 0.2-8 3.9-8 8.4H0.2c0-4.2 2.6-8.1 6.5-9.6 -1.7-1.2-2.8-3.2-2.8-5.4 0-3.6 2.9-6.5 6.5-6.6 0 0 0.1 0 0.1 0 3.6 0 6.5 2.9 6.6 6.5 0 0 0 0.1 0 0.1 0 2.1-1 4.1-2.8 5.4 3.9 1.6 6.5 5.4 6.5 9.6H18.9zM10.9 33.8c2.4-0.2 4.3-2.2 4.3-4.7 0-2.6-2-4.7-4.6-4.7 0 0-0.1 0-0.1 0 -2.6 0-4.7 2-4.7 4.6 0 0 0 0.1 0 0.1 0 2.4 1.8 4.5 4.3 4.7 0.1 0 0.3 0 0.4 0s0.3 0 0.4 0H10.9zM31.1 21.7c0-4.5-3.5-8.2-7.9-8.4 -0.2 0-0.3 0-0.5 0 -0.2 0-0.3 0-0.5 0 -4.5 0.2-8 4-7.9 8.4h-1.9c0-4.2 2.6-8.1 6.5-9.6C17.1 10.9 16.1 8.9 16.1 6.7c0-3.6 2.9-6.5 6.5-6.6 0 0 0.1 0 0.1 0 3.6 0 6.5 2.9 6.6 6.5 0 0 0 0.1 0 0.1 0 2.1-1 4.1-2.8 5.4 3.9 1.6 6.5 5.4 6.5 9.6H31.1zM23.1 11.4c2.4-0.2 4.2-2.2 4.2-4.7 0-2.6-2-4.7-4.6-4.7 0 0-0.1 0-0.1 0 -2.6 0-4.7 2-4.7 4.6 0 0 0 0.1 0 0.1 0 2.4 1.8 4.5 4.2 4.7 0.2 0 0.3 0 0.5 0s0.3 0 0.5 0L23.1 11.4z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="feature-txt">
+                  <h5>Experienced team</h5>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="feature-sing">
+                <div class="feature-ic">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.2 45.3" width="40">
+                    <g class="st0">
+                      <path class="st1"
+                        d="M45 33.3c-1.1-2-3.6-2.7-5.6-1.7l-6.6 3.1c-0.9-1.7-2.6-2.8-4.6-2.8l-6.2-0.2c-0.8 0-1.6-0.2-2.4-0.6l-0.8-0.4c-3.1-1.6-6.9-1.6-10.1 0l0.1-2.2L1.4 28.2c-0.5 0-0.8 0.4-0.9 0.8L0.1 44.5l7.5 0.2h0c0.5 0 0.8-0.4 0.8-0.8l0-0.7 1.7-0.9c0.7-0.4 1.5-0.5 2.2-0.2l10.3 2.9c0 0 0 0 0 0 0.8 0.2 1.5 0.2 2.3 0.2h0c1.6 0 3.2-0.4 4.7-1l15-9.7C45.1 34.2 45.2 33.7 45 33.3zM6.8 43l-5-0.1L2.2 29.9l5 0.1L6.8 43z">
+                      </path>
+                      <path class="st1"
+                        d="M41.7 12.1c-0.3-0.4-0.5-1.1-0.5-1.6V9.5c0-1.6-0.9-3-2.3-3.7L38.2 5.4c-0.5-0.2-0.9-0.6-1.1-1.1l-0.4-0.7c-0.8-1.4-2.2-2.3-3.8-2.3H32.2c-0.1 0-0.1 0-0.2 0 -0.7 0-1.3-0.2-1.8-0.5 -1.7-1.1-3.8-1.1-5.5 0 -0.5 0.3-1.3 0.5-1.8 0.5h-1c-1.6 0-3 0.8-3.8 2.2l-0.4 0.8c-0.2 0.4-0.6 0.8-1.1 1l-0.7 0.3c-1.4 0.7-2.3 2.1-2.3 3.7v1c0 0.5-0.2 1.2-0.5 1.6 -1.1 1.6-1.1 3.8 0 5.5 0.3 0.4 0.5 1.1 0.5 1.6v1.1c0 1.5 0.9 3 2.3 3.6l0.8 0.3c0.5 0.2 0.8 0.6 1.1 1l0.4 0.7c0.8 1.4 2.3 2.3 3.9 2.3h0.7c0.7 0 1.4 0.1 2.1 0.5 0.8 0.5 1.8 0.8 2.8 0.8 1 0 2-0.3 2.8-0.8 0.5-0.3 1.1-0.5 1.7-0.5h3.3c1 0 1.8-0.8 1.8-1.8v-0.9c0.3-0.6 0.8-1.1 1.5-1.4l0.4-0.2c1.5-0.8 2.3-2.4 2.3-4.1v-0.8c0-0.4 0.2-1 0.4-1.3C42.9 16.1 42.9 13.8 41.7 12.1zM22.8 13.2c-1.2-0.2-2.2-1.3-2-2.5 -0.1-1.2 0.8-2.4 2-2.5 1.3 0.2 2.2 1.3 2 2.5C25 11.9 24.1 13 22.8 13.2zM31.9 21.7c-1.2-0.2-2.1-1.3-2-2.5 -0.1-1.3 0.8-2.4 2-2.5 1.3 0.2 2.1 1.3 2 2.5C34 20.4 33.1 21.5 31.9 21.7z">
+                      </path>
+                    </g>
+                    <path class="st2"
+                      d="M25 45.2c-0.8 0-1.5-0.1-2.3-0.2 0 0 0 0-0.1 0l-10.3-2.9c-0.7-0.2-1.5-0.1-2.2 0.2l-1.7 0.9 0 0.7c0 0.5-0.4 0.8-0.8 0.8H7.6l-7.5-0.2L0.5 29.1c0-0.5 0.4-0.8 0.9-0.8 0 0 0 0 0 0l7.5 0.2 -0.1 2.2c3.2-1.7 6.9-1.7 10.1 0l0.8 0.4c0.7 0.4 1.6 0.6 2.4 0.6l6.3 0.2c1.9 0.1 3.7 1.1 4.6 2.8l6.6-3.1c2-1 4.5-0.3 5.6 1.7 0.2 0.4 0.1 0.9-0.3 1.1l-15 9.7c-1.5 0.7-3.1 1-4.7 1L25 45.2zM12.8 40.4L23.1 43.3c2 0.4 4 0.2 5.8-0.6l14.1-9.1c-0.8-0.7-1.9-0.9-2.9-0.4l0 0 -6.7 3.2c0.1 0.4 0.1 0.7 0.1 1.1 0 0.5-0.4 0.8-0.8 0.8h0l-10-0.3c-0.5 0-0.8-0.4-0.8-0.9 0 0 0 0 0 0 0-0.5 0.4-0.8 0.9-0.8 0 0 0 0 0 0l9 0.2c-0.3-1.7-1.8-2.9-3.5-2.9l-6.1-0.2c-1.2 0-2.4-0.3-3.5-0.9l-0.6-0.3c-3-1.5-6.6-1.4-9.4 0.5l-0.2 8.6 0.9-0.5c0.7-0.4 1.4-0.6 2.2-0.6 0.4 0 0.8 0.1 1.3 0.2L12.8 40.4zM1.8 42.9l5 0.1 0.4-12.9 -5-0.1L1.8 42.9zM24.6 28.8c-0.6-0.4-1.3-0.6-2.1-0.5h-0.7c-1.6 0-3.1-0.9-3.9-2.3l-0.4-0.7c-0.2-0.4-0.6-0.8-1.1-1l-0.7-0.4c-1.4-0.7-2.3-2.1-2.3-3.6l0-1.1c0-0.5-0.2-1.2-0.5-1.6 -1.1-1.6-1.1-3.8 0-5.5 0.3-0.4 0.5-1.1 0.5-1.6l0-1c0-1.7 0.9-3.1 2.3-3.7l0.7-0.4c0.5-0.2 0.8-0.6 1.1-1l0.4-0.8c0.8-1.4 2.2-2.2 3.8-2.2l1 0c0.5 0 1.4-0.2 1.8-0.5 1.7-1.1 3.8-1.1 5.5 0l0 0c0.6 0.4 1.3 0.6 2.1 0.5h0.7c1.6 0 3.1 0.9 3.9 2.3l0.4 0.7c0.3 0.5 0.6 0.8 1.1 1.1l0.7 0.4c1.4 0.7 2.3 2.2 2.3 3.7l0 1c0 0.5 0.2 1.2 0.5 1.6 1.2 1.7 1.1 4-0.1 5.6 -0.2 0.3-0.4 0.9-0.4 1.3 0 0.2 0 0.5 0 0.8 0 1.7-0.9 3.2-2.4 4.1l-0.4 0.2c-0.6 0.3-1.2 0.8-1.5 1.4v0.8c0 1-0.8 1.8-1.8 1.8l-3.3 0c-0.6 0-1.2 0.2-1.7 0.5 -0.8 0.5-1.8 0.8-2.8 0.8 -1 0-1.9-0.3-2.8-0.8L24.6 28.8zM25.5 27.4c1.2 0.7 2.7 0.7 3.8-0.1 0.7-0.5 1.6-0.7 2.4-0.7l1.5 0c0.9 0 1.7-0.5 2-1.3l0.4-0.8c0.4-0.8 1-1.4 1.8-1.7l0.8-0.3c0.8-0.3 1.3-1.1 1.3-2l0-1.3c0-0.9 0.3-1.7 0.8-2.4 0.8-1.1 0.8-2.6 0-3.7 -0.5-0.7-0.8-1.6-0.8-2.4V9.7c0-1.1-0.5-2-1.4-2.4l-0.9-0.4c-0.7-0.4-1.3-1-1.7-1.7l-0.4-0.7C34.8 3.7 34 3.2 33.1 3.2l-1.3 0C30.9 3.2 30 2.9 29.2 2.4c-1.2-0.7-2.6-0.7-3.8 0 -0.8 0.5-1.7 0.8-2.6 0.8l-0.8 0c-1.1 0-2 0.5-2.5 1.4l-0.5 0.8c-0.4 0.7-1 1.2-1.7 1.6l-0.7 0.3c-0.9 0.4-1.4 1.3-1.4 2.3v0.5c0.1 1.1-0.2 2.1-0.8 3l0 0c-0.8 1.1-0.7 2.6 0.1 3.6 0.5 0.6 0.7 1.4 0.7 2.2l0 1.1c0 1 0.5 1.9 1.4 2.3l1.1 0.6c0.6 0.3 1.1 0.8 1.4 1.4l0.4 0.7c0.5 0.9 1.5 1.5 2.6 1.5h0.5c0.1 0 0.2 0 0.3 0 1 0 1.9 0.3 2.7 0.8L25.5 27.4zM21.9 23.5c-0.4-0.2-0.5-0.8-0.3-1.2l9.9-15.9c0.2-0.3 0.4-0.4 0.7-0.4 0.3 0 0.6 0.2 0.7 0.4 0.1 0.3 0.1 0.6 0 0.8l-9.9 15.9c-0.2 0.2-0.4 0.4-0.7 0.4 -0.2 0-0.3 0-0.4-0.1L21.9 23.5zM28.1 19.2c-0.1-2.2 1.5-4.1 3.7-4.2 2.2 0.2 3.8 2 3.7 4.2 0.1 2.2-1.5 4.1-3.7 4.2 -2.2-0.2-3.8-2-3.7-4.2L28.1 19.2zM29.8 19.2c-0.1 1.3 0.8 2.4 2 2.5 1.3-0.2 2.1-1.3 2-2.5 0.1-1.3-0.8-2.4-2-2.5 -1.3 0.2-2.1 1.3-2 2.5L29.8 19.2zM19.1 10.7c-0.1-2.2 1.5-4.1 3.7-4.2 2.2 0.2 3.8 2 3.7 4.2 0.1 2.2-1.5 4.1-3.7 4.2 -2.2-0.2-3.8-2-3.7-4.2L19.1 10.7zM20.8 10.7c-0.1 1.3 0.8 2.4 2 2.5 1.3-0.2 2.1-1.3 2-2.5 0.1-1.3-0.8-2.4-2-2.5 -1.3 0.2-2.2 1.3-2 2.5V10.7z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="feature-txt">
+                  <h5>Flexible pricing</h5>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-sec">
+      <div class="bg-art">
+        <img src="./assets/img/art-2.png" alt="art" class="bg-art">
+      </div>
+      <div class="container-md">
+        <div class="row">
+          <div class="col-lg-7 offset-lg-5 col-md-12 offset-md-0">
+            <div class="bg-sec-ins">
+              <div class="ps-subtitle-wrap">
+                <h2>
+                  We Follow Intelligent Ideas Method To Deliver Solutions
+                </h2>
+              </div>
+              <div class="ps-content-wrap">
+                <p>
+                  Excepteur sint occaecat cupidatat non proident, sunt culpa qui officia deserunt mollit
+                  any id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium totam rem aperiam eaque.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua uet enim ad minim veniam quis.
+                </p>
+              </div>
+              <div class="ps-point-wrap">
+                <ul>
+                  <li>
+                    <span class="icon-checked"></span>
+                    Ipsa quae ab illo inventore veritatis quasi architecto beatae
+                  </li>
+                  <li>
+                    <span class="icon-checked"></span>
+                    Vitae dicta sunt explicabo nemo enim ipsay voluptatem
+                  </li>
+                  <li>
+                    <span class="icon-checked"></span>
+                    Quia voluptas sit aspernatur autodit aut fugit quia cons quntur
+                  </li>
+                  <li>
+                    <span class="icon-checked"></span>
+                    Magni dolores eosy qui ratione voluptatem ipsum
+                  </li>
+                </ul>
+              </div>
+              <div class="ps-action-wrap">
+                <button class="btn btn-ps">GET IN TOUCH</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ps-cnt-card-sec bg-true">
+      <div class="container-md">
+        <div class="row">
+          <div class="col-xl-10 m-auto">
+            <div class="ps-cnt-ins">
+              <h2>Lorem Ipsum is simply dummy</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                been the industry's standard dummy text ever since the 1500s
+              </p>
+              <button class="btn ps-btn-alt">Get in Touch</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ps-service-sec">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ps-subtitle-wrap">
+              <h2 class="text-center">Services We Offer</h2>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="ps-service-ins">
+              <div class="ps-service">
+                <div class="ps-service-ic">
+                  <svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" width="131px"
+                    height="120px">
+                    <path fill-rule="evenodd" d=""></path>
+                  </svg>
+                  <span class="icon-ps-ui"></span>
+                </div>
+                <h5 class="head-ser">Ui UX Design</h5>
+                <p class="content-ser">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                  has been the industry's standard dummy text ever since the 1500s,
+                </p>
+                <button class="btn ps-service-go-btn">
+                <span class="icon-ps-arrow"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="ps-service-ins">
+              <div class="ps-service">
+                <div class="ps-service-ic">
+                  <svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" width="131px"
+                    height="120px">
+                    <path fill-rule="evenodd" d=""></path>
+                  </svg>
+                  <span class="icon-ps-marketing"></span>
+                </div>
+                <h5 class="head-ser">Marketing Strategy</h5>
+                <p class="content-ser">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                  has been the industry's standard dummy text ever since the 1500s,
+                </p>
+                <button class="btn ps-service-go-btn">
+                <span class="icon-ps-arrow"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="ps-service-ins">
+              <div class="ps-service">
+                <div class="ps-service-ic">
+                  <svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" width="131px"
+                    height="120px">
+                    <path fill-rule="evenodd" d=""></path>
+                  </svg>
+                  <span class="icon-ps-web"></span>
+                </div>
+                <h5 class="head-ser">Branding</h5>
+                <p class="content-ser">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                  has been the industry's standard dummy text ever since the 1500s,
+                </p>
+                <button class="btn ps-service-go-btn">
+                <span class="icon-ps-arrow"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ps-portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="ps-subtitle-wrap text-center text-lg-left">
+              <h2>Our Portfolio</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 d-none d-lg-block">
+            <button class="btn btn-ps float-right btn-head">VIEW ALL</button>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div id="slick">
+          <div class="single-slick">
+            <div class="ps-port-slick-item">
+              <img src="assets/img/portfolio/img-1.png" alt="">
+            </div>
+            <div class="ps-port-content">
+              <div class="ps-content-ins">
+                <h4 class="title">Real design inspiration</h4>
+                <p>
+                  Sitting proudly atop is the storey form bedroom phenomenally.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="single-slick">
+            <div class="ps-port-slick-item">
+              <img src="assets/img/portfolio/img-2.png" alt="">
+            </div>
+            <div class="ps-port-content">
+              <div class="ps-content-ins">
+                <h4 class="title">Real design inspiration</h4>
+                <p>
+                  Sitting proudly atop is the storey form bedroom phenomenally.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="single-slick">
+            <div class="ps-port-slick-item">
+              <img src="assets/img/portfolio/img-3.png" alt="">
+            </div>
+            <div class="ps-port-content">
+              <div class="ps-content-ins">
+                <h4 class="title">Real design inspiration</h4>
+                <p>
+                  Sitting proudly atop is the storey form bedroom phenomenally.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="single-slick">
+            <div class="ps-port-slick-item">
+              <img src="assets/img/portfolio/img-4.png" alt="">
+            </div>
+            <div class="ps-port-content">
+              <div class="ps-content-ins">
+                <h4 class="title">Real design inspiration</h4>
+                <p>
+                  Sitting proudly atop is the storey form bedroom phenomenally.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="single-slick">
+            <div class="ps-port-slick-item">
+              <img src="assets/img/portfolio/img-5.png" alt="">
+            </div>
+            <div class="ps-port-content">
+              <div class="ps-content-ins">
+                <h4 class="title">Real design inspiration</h4>
+                <p>
+                  Sitting proudly atop is the storey form bedroom phenomenally.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ps-blog-sec">
+      <div class="container-md">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="ps-subtitle-wrap  text-center text-lg-left">
+              <h2>Our Portfolio</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 d-none d-lg-block">
+            <button class="btn btn-ps float-right btn-head">VIEW ALL</button>
+          </div>
+        </div>
+        <div id="slick-blog">
+          <div class="blog-slick">
+            <div class="single-blog">
+              <div class="blog-thumb">
+                <a href="#">
+                <img src="assets/img/blog/article-1.jpg" alt="">
+                </a>
+                <div class="date">
+                  <h5 class="title">25</h5>
+                  <span>JUN</span>
+                </div>
+              </div>
+              <div class="blog-content">
+                <h2>
+                  The Start-Up Ultimate Guide to Make Press Journal. The Start-Up Ultimate Guide to Make
+                  Press Journal.
+                </h2>
+                <a class="ps-btn-link" href="#">
+                  LEARN MORE
+                  <span class="icon-ps-arrow">
+                    <svg width="26px" height="26px" viewBox="0 0 32 32">
+                      <circle class="a-circle" cx="13" cy="13" r="12.12"></circle>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="blog-slick">
+            <div class="single-blog">
+              <div class="blog-thumb">
+                <a href="#">
+                <img src="assets/img/blog/article-1.jpg" alt="">
+                </a>
+                <div class="date">
+                  <h5 class="title">25</h5>
+                  <span>JUN</span>
+                </div>
+              </div>
+              <div class="blog-content">
+                <h2>
+                  The Start-Up Ultimate Guide to Make Press Journal. The Start-Up Ultimate Guide to Make
+                  Press Journal.
+                </h2>
+                <a class="ps-btn-link" href="#">
+                  LEARN MORE
+                  <span class="icon-ps-arrow">
+                    <svg width="26px" height="26px" viewBox="0 0 32 32">
+                      <circle class="a-circle" cx="13" cy="13" r="12.12"></circle>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="blog-slick">
+            <div class="single-blog">
+              <div class="blog-thumb">
+                <a href="#">
+                <img src="assets/img/blog/article-1.jpg" alt="">
+                </a>
+                <div class="date">
+                  <h5 class="title">25</h5>
+                  <span>JUN</span>
+                </div>
+              </div>
+              <div class="blog-content">
+                <h2>
+                  The Start-Up Ultimate Guide to Make Press Journal. The Start-Up Ultimate Guide to Make
+                  Press Journal.
+                </h2>
+                <a class="ps-btn-link" href="#">
+                  LEARN MORE
+                  <span class="icon-ps-arrow">
+                    <svg width="26px" height="26px" viewBox="0 0 32 32">
+                      <circle class="a-circle" cx="13" cy="13" r="12.12"></circle>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="blog-slick">
+            <div class="single-blog">
+              <div class="blog-thumb">
+                <a href="#">
+                <img src="assets/img/blog/article-1.jpg" alt="">
+                </a>
+                <div class="date">
+                  <h5 class="title">25</h5>
+                  <span>JUN</span>
+                </div>
+              </div>
+              <div class="blog-content">
+                <h2>
+                  The Start-Up Ultimate Guide to Make Press Journal. The Start-Up Ultimate Guide to Make
+                  Press Journal.
+                </h2>
+                <a class="ps-btn-link" href="#">
+                  LEARN MORE
+                  <span class="icon-ps-arrow">
+                    <svg width="26px" height="26px" viewBox="0 0 32 32">
+                      <circle class="a-circle" cx="13" cy="13" r="12.12"></circle>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="blog-slick">
+            <div class="single-blog">
+              <div class="blog-thumb">
+                <a href="#">
+                <img src="assets/img/blog/article-1.jpg" alt="">
+                </a>
+                <div class="date">
+                  <h5 class="title">25</h5>
+                  <span>JUN</span>
+                </div>
+              </div>
+              <div class="blog-content">
+                <h2>
+                  The Start-Up Ultimate Guide to Make Press Journal. The Start-Up Ultimate Guide to Make
+                  Press Journal.
+                </h2>
+                <a class="ps-btn-link" href="#">
+                  LEARN MORE
+                  <span class="icon-ps-arrow">
+                    <svg width="26px" height="26px" viewBox="0 0 32 32">
+                      <circle class="a-circle" cx="13" cy="13" r="12.12"></circle>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="blog-slick">
+            <div class="single-blog">
+              <div class="blog-thumb">
+                <a href="#">
+                <img src="assets/img/blog/article-1.jpg" alt="">
+                </a>
+                <div class="date">
+                  <h5 class="title">25</h5>
+                  <span>JUN</span>
+                </div>
+              </div>
+              <div class="blog-content">
+                <h2>
+                  The Start-Up Ultimate Guide to Make Press Journal. The Start-Up Ultimate Guide to Make
+                  Press Journal.
+                </h2>
+                <a class="ps-btn-link" href="#">
+                  LEARN MORE
+                  <span class="icon-ps-arrow">
+                    <svg width="26px" height="26px" viewBox="0 0 32 32">
+                      <circle class="a-circle" cx="13" cy="13" r="12.12"></circle>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ps-cnt-bar-btm">
+      <div class="container-md">
+        <div class="ps-ins-cnt-bar">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <div class="ps-cnt-bar-content">
+                <h3>
+                  Like Our Work? Let’s Start Together
+                </h3>
+                <p>
+                  WE PROVIDE SOLUTIONS FOR EVERYONE
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="ps-cnt-bar-content float-md-right text-md-left text-center">
+                <button class="btn ps-btn-alt">Get in Touch</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="ps-footer">
+      <div class="top-footer-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="ps-footer-brand">
+                <img src="./assets/img/log-alt.svg" alt="PlutoSpark" class="footer-log">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="ps-footer-social">
+                <ul class="ps-social-links">
+                  <li>
+                    <a href="#">
+                    <span class="icon-ps-facebook"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                    <span class="icon-ps-linkedin"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                    <span class="icon-ps-behance"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                    <span class="icon-ps-dribbble"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                    <span class="icon-ps-twitter"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="ps-footer-menu">
+                <ul class="ps-menu-links">
+                  <li>
+                    <a href="about.html">About Us</a>
+                  </li>
+                  <li>
+                    <a href="contact.html">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="portfolio.html">Our Works</a>
+                  </li>
+                  <li>
+                    <a href="blog.html">Resources</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-footer-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p>
+                Copyrights &copy;
+                <span id="ftr-yr">
+                  <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                  </script>
+                </span>
+                plutospark. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="go-top" id="go-top">
+      <span class="icon-upload"></span>
+    </div>
+    <div class="overlay"></div>
+    <!-- JQuery Min JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap Min JS -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slick js -->
+    <script src="assets/js/slick/slick.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

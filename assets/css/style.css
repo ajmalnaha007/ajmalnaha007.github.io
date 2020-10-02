@@ -3192,6 +3192,18 @@ Marketing
   border-radius: 10px;
 }
 
+svg .lg-1 {
+  fill: #8E3DCC;
+}
+
+svg .lg-2 {
+  fill: #303082;
+}
+
+svg .lg-3 {
+  fill: #574FA0;
+}
+
 @-webkit-keyframes dot {
   0% {
     left: 0;
@@ -3222,14 +3234,12 @@ Marketing
   }
 }
 
-
-
 @-webkit-keyframes logo {
   0% {
     opacity: .5;
   }
   50% {
-   opacity: 1;
+    opacity: 1;
   }
   100% {
     opacity: .5;
@@ -3241,10 +3251,9 @@ Marketing
     opacity: .5;
   }
   50% {
-   opacity: 1;
+    opacity: 1;
   }
   100% {
     opacity: .5;
   }
 }
-
