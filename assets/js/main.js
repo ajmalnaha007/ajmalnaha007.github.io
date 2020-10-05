@@ -8,6 +8,8 @@ const bannerSec = document.getElementById('ps-banner-sec');
 const bannerText = document.getElementById('ps-banner-txt');
 const bannerOption = document.getElementById('bannerOptions');
 const counterOuter = document.getElementById('counter');
+const filterElement = document.getElementById('blogFilter');
+
 
 
 // onload function
@@ -16,13 +18,14 @@ onLoadFucntion = () => {
     bannerTxtOffset();
     menuToggle();
     scrollToTop();
-    // ass();
+    updateScrollIndicators();
 }
 
 // onresize function 
 onResizeFunction = () => {
     bannerHeight();
     bannerTxtOffset();
+    updateScrollIndicators();
 }
 
 window.onresize = onResizeFunction;
@@ -55,8 +58,7 @@ window.addEventListener('scroll', function () {
     let getScrollposition = window.scrollY;
     if (getScrollposition > 0) {
         addClassHeader();
-    }
-    else {
+    } else {
         removeClassHeader();
     }
 });
@@ -203,37 +205,33 @@ counterInView = () => {
     return false;
 }
 
-document.addEventListener('scroll', () => {
-
-
-    if (isActive && counterInView()) {
-        let counters = document.getElementsByClassName('counter-value');
-        let counterValue = Array.from(counters).map(data => Number(data.getAttribute('data-count')));
-        counters = Array.from(counters);
-        counters.forEach(e => {
-            e.innerHTML = '0';
-            e.counter = 10;
+updateScrollIndicators = () => {
+    if (filterElement) {
+        var filterContainerWidth = filterElement.offsetWidth,
+            filterContainerScrollWidth = filterElement.scrollWidth,
+            prevBtn = document.querySelector(".scroll-prev"),
+            nextBtn = document.querySelector(".scroll-next"),
+            i = Math.ceil(filterElement.scrollLeft),
+            n = 0 < i,
+            o = i + filterContainerWidth >= filterContainerScrollWidth;
+        console.log(n);
+        console.log(i);
+        if (!n)
+            prevBtn.classList.add("d-none");
+        else
+            prevBtn.classList.remove("d-none");
+        if (o)
+            nextBtn.classList.add("d-none");
+        else
+            nextBtn.classList.remove("d-none");
+        prevBtn.addEventListener('click', () => {
+            filterElement.scrollLeft -= 100;
         });
-        let updateCounter = () => {
-            counters.forEach((e, i) => {
-                e.counter += 2;
-                e.innerHTML = Math.min(counterValue[i], e.counter);
-            });
-            requestAnimationFrame(updateCounter);
-        }
-        updateCounter();
-        isActive = false;
+        nextBtn.addEventListener('click', () => {
+            filterElement.scrollLeft += 100;
+        });
     }
-});
+}
 
-// testing work code  - 
+filterElement ? filterElement.addEventListener('scroll', updateScrollIndicators, false) : '';
 
-// document.querySelectorAll('.rs-btn').forEach(item => {
-//     item.addEventListener('click', () => {
-//         for (let i = 0; i < document.querySelectorAll('.rs-btn').length; i++) {
-//             document.querySelectorAll('.rs-btn')[i].classList.remove('active');
-//         }
-//         item.classList.toggle('active');
-//     })
-
-// });

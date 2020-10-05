@@ -3072,6 +3072,7 @@ Marketing
 
 .ps-resource-bnr {
   padding-top: 240px;
+  margin-bottom: 80px;
 }
 
 .ps-resource-bnr .ps-resource-bnr-ins {
@@ -3085,7 +3086,7 @@ Marketing
   background: var(--white-color);
   right: 15px;
   border-radius: 5px;
-  box-shadow: 0 0 15px rgb(0 0 0 / 21%);
+  box-shadow: 0 4px 12px -1px rgba(18, 22, 33, 0.1);
   padding: 15px 15px;
   bottom: -50px;
 }
@@ -3293,7 +3294,7 @@ svg .lg-3 {
 /* blog-feature-sec */
 
 .tab-cnt-se {
-  padding-top: 100px;
+  padding-top: 10px;
 }
 
 .ps-blog-card {
@@ -3501,4 +3502,93 @@ svg .lg-3 {
 .res-inner div[class*='col-'] {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+/* blog - filter */
+
+.ps-tag-wrap {
+  /* background: #fff; */
+  position: relative;
+}
+
+.ps-tag-subnav {
+  text-align: center;
+  position: relative;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.ps-tag-subnav ul {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 2px;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  list-style: none;
+}
+
+.ps-tag-subnav ul::-webkit-scrollbar {
+  display: none;
+}
+
+.ps-tag-subnav ul .ps-category {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+  background: transparent;
+}
+
+.ps-tag-subnav ul .ps-category>a {
+  color: var(--font-primary-color);
+  display: inline-block;
+  color: #6e6d7a;
+  padding: 10px 12px;
+  display: inline-block;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  text-decoration: none;
+}
+
+.ps-tag-subnav ul .ps-category.active>a {
+  font-weight: 500;
+  background: rgba(51, 51, 51, 0.05);
+  border-radius: 8px;
+}
+
+.ps-tag-subnav .scroll-prev, .ps-tag-subnav .scroll-next {
+  color: var(--font-primary-color);
+  position: absolute;
+  width: 40px;
+  z-index: 1;
+  padding: 10px 0;
+  outline: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ps-tag-subnav .scroll-prev {
+  left: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), color-stop(50%, white));
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 50%);
+}
+
+.ps-tag-subnav .scroll-next {
+  right: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, white));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
 }
