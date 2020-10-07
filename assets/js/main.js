@@ -56,11 +56,7 @@ removeClassHeader = () => {
 
 window.addEventListener('scroll', function () {
     let getScrollposition = window.scrollY;
-    if (getScrollposition > 0) {
-        addClassHeader();
-    } else {
-        removeClassHeader();
-    }
+    (getScrollposition > 0) ? addClassHeader() : removeClassHeader();
 });
 
 
@@ -91,10 +87,7 @@ bannerTxtOffset = () => {
 
 window.addEventListener('scroll', () => {
     if (goTopBtn) {
-        if (document.body.scrollToTop > 20 || document.documentElement.scrollTop > 20)
-            goTopBtn.classList.add('active');
-        else
-            goTopBtn.classList.remove('active');
+        (document.body.scrollToTop > 20 || document.documentElement.scrollTop > 20) ? goTopBtn.classList.add('active') : goTopBtn.classList.remove('active');
     }
 })
 
@@ -109,8 +102,6 @@ scrollToTop = () => {
         });
     }
 }
-
-
 
 // menu toggle button on responsive
 
@@ -139,9 +130,7 @@ activeDropdown = (item) => {
 
 dropdowns.forEach(item => {
     item.addEventListener('click', () => {
-        if (!mediaMobile.matches) {
-            activeDropdown(item);
-        }
+        (!mediaMobile.matches) && activeDropdown(item);
     });
 });
 
@@ -205,6 +194,29 @@ counterInView = () => {
     return false;
 }
 
+document.addEventListener('scroll', () => {
+    if (isActive && counterInView()) {
+        let counters = document.getElementsByClassName('counter-value');
+        let counterValue = Array.from(counters).map(data => Number(data.getAttribute('data-count')));
+        counters = Array.from(counters);
+        counters.forEach(e => {
+            e.innerHTML = '0';
+            e.counter = 10;
+        });
+        let updateCounter = () => {
+            counters.forEach((e, i) => {
+                e.counter += 2;
+                e.innerHTML = Math.min(counterValue[i], e.counter);
+            });
+            requestAnimationFrame(updateCounter);
+        }
+        updateCounter();
+        isActive = false;
+    }
+});
+
+// blog filter arrow display
+
 updateScrollIndicators = () => {
     if (filterElement) {
         var filterContainerWidth = filterElement.offsetWidth,
@@ -214,16 +226,8 @@ updateScrollIndicators = () => {
             i = Math.ceil(filterElement.scrollLeft),
             n = 0 < i,
             o = i + filterContainerWidth >= filterContainerScrollWidth;
-        console.log(n);
-        console.log(i);
-        if (!n)
-            prevBtn.classList.add("d-none");
-        else
-            prevBtn.classList.remove("d-none");
-        if (o)
-            nextBtn.classList.add("d-none");
-        else
-            nextBtn.classList.remove("d-none");
+        (!n) ? prevBtn.classList.add("d-none") : prevBtn.classList.remove("d-none");
+        (o) ? nextBtn.classList.add("d-none") : nextBtn.classList.remove("d-none");
         prevBtn.addEventListener('click', () => {
             filterElement.scrollLeft -= 100;
         });
@@ -233,5 +237,26 @@ updateScrollIndicators = () => {
     }
 }
 
-filterElement ? filterElement.addEventListener('scroll', updateScrollIndicators, false) : '';
+filterElement && filterElement.addEventListener('scroll', updateScrollIndicators, false);
+
+// blog sticky
+
+window.addEventListener('scroll', () => {
+    var optionWrapper = document.getElementById("sticky"),
+        bottomft = document.getElementById("btm");
+    if (optionWrapper && bottomft) {
+        let start = (optionWrapper.offsetTop + 161),
+            stop = (bottomft.offsetTop - 161);
+        var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        if ((scrollTop <= stop) && (scrollTop >= start)) {
+            optionWrapper.classList.add('is-sticky');
+            optionWrapper.style.top = header.clientHeight + 'px';
+        } else {
+            optionWrapper.classList.remove('is-sticky');
+            optionWrapper.removeAttribute('style');
+        }
+    }
+});
+
+
 

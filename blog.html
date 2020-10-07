@@ -72,35 +72,37 @@
 					</div>
 				</div>
 			</div>
-			<div class="ps-resource-bnr-tab-sec">
-				<div class="row align-items-center">
-					<div class="col-6">
-						<div class="wrapper-tab">
-							<ul class="nav" role="tablist">
-								<li class="nav-item" role="presentation">
-									<a class="nav-link" id="blog-tab" data-toggle="tab" href="#blog" role="tab"
-										aria-controls="blog" aria-selected="true">blog</a>
-								</li>
-								<li class="nav-item" role="presentation">
-									<a class="nav-link active" id="whitePaper-tab" data-toggle="tab" href="#whitePaper"
-										role="tab" aria-controls="whitePaper" aria-selected="false">whitePaper</a>
-								</li>
-								<li class="nav-item" role="presentation">
-									<a class="nav-link" id="caseStudies-tab" data-toggle="tab" href="#caseStudies"
-										role="tab" aria-controls="caseStudies" aria-selected="false">caseStudies</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-6">
-						<form class="blog-search float-right">
-							<div class="input-group">
-								<input type="text" name="search" class="form-control" placeholder="Search...">
-								<button type="submit" name="search" id="search-btn" class="btn search-btn">
-									<span class="icon-ps-search"></span>
-								</button>
+			<div class="ps-resource-bnr-tab-sec" id="sticky">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-6">
+							<div class="wrapper-tab">
+								<ul class="nav" role="tablist">
+									<li class="nav-item" role="presentation">
+										<a class="nav-link active" id="blog-tab" data-toggle="tab" href="#blog"
+											role="tab" aria-controls="blog" aria-selected="true">blog</a>
+									</li>
+									<li class="nav-item" role="presentation">
+										<a class="nav-link" id="whitePaper-tab" data-toggle="tab" href="#whitePaper"
+											role="tab" aria-controls="whitePaper" aria-selected="false">whitePaper</a>
+									</li>
+									<li class="nav-item" role="presentation">
+										<a class="nav-link" id="caseStudies-tab" data-toggle="tab" href="#caseStudies"
+											role="tab" aria-controls="caseStudies" aria-selected="false">caseStudies</a>
+									</li>
+								</ul>
 							</div>
-						</form>
+						</div>
+						<div class="col-6">
+							<form class="blog-search float-right">
+								<div class="input-group">
+									<input type="text" name="search" class="form-control" placeholder="Search...">
+									<button type="submit" name="search" id="search-btn" class="btn search-btn">
+										<span class="icon-ps-search"></span>
+									</button>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -150,11 +152,12 @@
 	</section>
 
 	<section class="tab-cnt-se">
-		<div class="container">
+		<div class=" container">
 			<div class="row">
 				<div class="col-12">
 					<div class="tab-content">
-						<div class="blog tab-pane fade" id="blog" role="tabpanel" aria-labelledby="blog-tab">
+						<div class="blog tab-pane fade show active" id="blog" role="tabpanel"
+							aria-labelledby="blog-tab">
 							<div class="ps-blog-feature">
 								<div class="blog-feature-main" role="main">
 									<article class="ps-blog-card blog-card-feautred">
@@ -432,10 +435,32 @@
 										</article>
 									</div>
 								</div>
+								<div class="row  ps-pagination">
+									<div class="col-auto m-auto">
+										<nav aria-label="Page">
+											<ul class="pagination">
+												<li class="page-item disabled">
+													<a class="page-link" href="#" aria-label="Previous">
+														<span class="icon-ps-prev"></span>
+													</a>
+												</li>
+												<li class="page-item"><a class="page-link active" href="#">1500</a></li>
+												<li class="page-item"><a class="page-link" href="#">2</a></li>
+												<li class="page-item"><a class="page-link" href="#">3</a></li>
+												<li class="page-item"><a class="page-link dots" href="#">...</a></li>
+												<li class="page-item"><a class="page-link" href="#">100</a></li>
+												<li class="page-item">
+													<a class="page-link" href="#" aria-label="Next">
+														<span class="icon-ps-next"></span>
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
 							</section>
 						</div>
-						<div class="whitepapper tab-pane fade show active" id="whitePaper" role="tabpanel"
-							aria-labelledby="whitePaper-tab">
+						<div class="tab-pane fade" id="whitePaper" role="tabpanel" aria-labelledby="whitePaper-tab">
 							<section class="res-inner">
 								<div class="row">
 									<div class="col-4">
@@ -607,12 +632,35 @@
 										</article>
 									</div>
 								</div>
+								<div class="row  ps-pagination">
+									<div class="col-auto m-auto">
+										<nav aria-label="Page">
+											<ul class="pagination">
+												<li class="page-item disabled">
+													<a class="page-link" href="#" aria-label="Previous">
+														<span class="icon-ps-prev"></span>
+													</a>
+												</li>
+												<li class="page-item"><a class="page-link active" href="#">1500</a></li>
+												<li class="page-item"><a class="page-link" href="#">2</a></li>
+												<li class="page-item"><a class="page-link" href="#">3</a></li>
+												<li class="page-item"><a class="page-link dots" href="#">...</a></li>
+												<li class="page-item"><a class="page-link" href="#">100</a></li>
+												<li class="page-item">
+													<a class="page-link" href="#" aria-label="Next">
+														<span class="icon-ps-next"></span>
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
 							</section>
 						</div>
 						<div class="tab-pane fade" id="caseStudies" role="tabpanel" aria-labelledby="caseStudies-tab">
 							<section class="res-inner">
 								<div class="row">
-									<div class="col-6">
+									<div class="col-4">
 										<article class="ps-blog-card">
 											<div class="position-relative">
 												<figure>
@@ -640,7 +688,7 @@
 
 										</article>
 									</div>
-									<div class="col-6">
+									<div class="col-4">
 										<article class="ps-blog-card">
 											<div class="position-relative">
 												<figure>
@@ -668,7 +716,7 @@
 
 										</article>
 									</div>
-									<div class="col-6">
+									<div class="col-4">
 										<article class="ps-blog-card">
 											<div class="position-relative">
 												<figure>
@@ -696,7 +744,7 @@
 
 										</article>
 									</div>
-									<div class="col-6">
+									<div class="col-4">
 										<article class="ps-blog-card">
 											<div class="position-relative">
 												<figure>
@@ -724,7 +772,7 @@
 
 										</article>
 									</div>
-									<div class="col-6">
+									<div class="col-4">
 										<article class="ps-blog-card">
 											<div class="position-relative">
 												<figure>
@@ -752,7 +800,7 @@
 
 										</article>
 									</div>
-									<div class="col-6">
+									<div class="col-4">
 										<article class="ps-blog-card">
 											<div class="position-relative">
 												<figure>
@@ -781,6 +829,29 @@
 										</article>
 									</div>
 								</div>
+								<div class="row  ps-pagination">
+									<div class="col-auto m-auto">
+										<nav aria-label="Page">
+											<ul class="pagination">
+												<li class="page-item disabled">
+													<a class="page-link" href="#" aria-label="Previous">
+														<span class="icon-ps-prev"></span>
+													</a>
+												</li>
+												<li class="page-item"><a class="page-link active" href="#">1500</a></li>
+												<li class="page-item"><a class="page-link" href="#">2</a></li>
+												<li class="page-item"><a class="page-link" href="#">3</a></li>
+												<li class="page-item"><a class="page-link dots" href="#">...</a></li>
+												<li class="page-item"><a class="page-link" href="#">100</a></li>
+												<li class="page-item">
+													<a class="page-link" href="#" aria-label="Next">
+														<span class="icon-ps-next"></span>
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
 							</section>
 						</div>
 					</div>
@@ -790,7 +861,7 @@
 	</section>
 
 
-	<section class="ps-btm-contact">
+	<section id="btm" class="ps-btm-contact">
 		<div class="container">
 			<div class="row">
 				<div class="col-10 m-auto">
