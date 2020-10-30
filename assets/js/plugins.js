@@ -186,19 +186,20 @@ $('#ps-brand-list').slick({
 //     // columnWidth: 200
 // });
 
+$(document).ready(function () {
 
+    var $container = $('.ps-grid')
 
-var $container = $('.ps-grid')
-
-$container.imagesLoaded(function () {
-    $container.masonry({
-        itemSelector: '.item',
-        percentPosition: true,
-        gutter: 20,
-        horizontalOrder: true,
-        transitionDuration: '0.8s',
-        // resize: false,
-        fitWidth: true,
-        stamp: '.stamb'
+    $container.imagesLoaded(function () {
+        $container.masonry({
+            itemSelector: '.item',
+            percentPosition: true,
+            gutter: 20,
+            horizontalOrder: true,
+            transitionDuration: '0.8s',
+            // resize: false,
+            fitWidth: true,
+            stamp: '.stamb'
+        });
     });
 });
