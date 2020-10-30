@@ -173,15 +173,30 @@ $('#ps-brand-list').slick({
 // enableIsotope();
 
 
-$('.ps-grid').masonry({
-    // options
-    itemSelector: '.item',
-    // percentPosition: true,
-    gutter: 20,
-    horizontalOrder: true,
-    transitionDuration: '0.8s',
-    // resize: false,
-    fitWidth: true,
-    stamp: '.stamb'
-    // columnWidth: 200
-  });
+// $('.ps-grid').masonry({
+//     // options
+//     itemSelector: '.item',
+//     // percentPosition: true,
+//     gutter: 20,
+//     horizontalOrder: true,
+//     transitionDuration: '0.8s',
+//     // resize: false,
+//     fitWidth: true,
+//     stamp: '.stamb'
+//     // columnWidth: 200
+// });
+
+var $grid = $('.ps-grid').imagesLoaded(function () {
+    // init Masonry after all images have loaded
+    $grid.masonry({
+        // options
+        itemSelector: '.item',
+        // percentPosition: true,
+        gutter: 20,
+        horizontalOrder: true,
+        transitionDuration: '0.8s',
+        // resize: false,
+        fitWidth: true,
+        stamp: '.stamb'
+    });
+});
