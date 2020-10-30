@@ -193,7 +193,7 @@ $(document).ready(function () {
     $container.imagesLoaded(function () {
         $container.masonry({
             itemSelector: '.item',
-            percentPosition: true,
+            // percentPosition: true,
             gutter: 20,
             horizontalOrder: true,
             transitionDuration: '0.8s',
