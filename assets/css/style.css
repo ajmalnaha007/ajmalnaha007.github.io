@@ -3720,7 +3720,7 @@ svg .lg-3 {
   text-align: center;
   width: 100%;
   padding: 200px 0 0 0;
-  margin-bottom: -30px;
+  /* margin-bottom: -30px; */
 }
 
 .header-hero h5 {
