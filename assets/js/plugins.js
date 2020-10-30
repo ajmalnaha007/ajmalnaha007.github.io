@@ -186,12 +186,14 @@ $('#ps-brand-list').slick({
 //     // columnWidth: 200
 // });
 
-var $grid = $('.ps-grid').imagesLoaded(function () {
-    // init Masonry after all images have loaded
-    $grid.masonry({
-        // options
+
+
+var $container = $('.ps-grid')
+
+$container.imagesLoaded(function () {
+    $container.masonry({
         itemSelector: '.item',
-        // percentPosition: true,
+        percentPosition: true,
         gutter: 20,
         horizontalOrder: true,
         transitionDuration: '0.8s',
