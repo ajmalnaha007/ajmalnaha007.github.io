@@ -260,3 +260,24 @@ window.addEventListener('scroll', () => {
 
 
 
+
+// addClassPort = () => {
+//     let diva = document.querySelectorAll('.img-check');
+//     // let divains = diva.getElementsByTagName('img');
+//     // console.log(diva.clientHeight);
+//     // diva.map(item => {
+//     //     let img = item.getElementsByTagName('img');
+//     //     console.log(img);
+//     // })
+//     diva.forEach(item => {
+//         // console.log(item[1].clientHeight);
+//         let n = item.clientHeight > item.clientWidth,
+//             o = item.closest('.item');
+//         n ? o.classList.add('height') : o.classList.add('width');
+
+//     })
+// }
+
+// addClassPort();
+
+// slick
