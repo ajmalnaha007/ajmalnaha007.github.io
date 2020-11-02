@@ -3939,6 +3939,7 @@ figure {
 
 .ps-grid {
   margin: 0 auto;
+  opacity: 0;
 }
 
 .ps-port-grid .item {
