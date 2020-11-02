@@ -353,8 +353,8 @@
                 stamp: '.stamb',
             });
 
-            $('.ps-grid')
-            $('.ps-grid').animate({ 'opacity': 1 });
+            // $('.ps-grid')
+            // $('.ps-grid').animate({ 'opacity': 1 });
         });
         $grid.on('layoutComplete', function () {
             $(this).animate({
@@ -388,7 +388,7 @@
             // images have loaded
             // $('.item').fillColor();
             const colorThief = new ColorThief();
-            const img = document.querySelector('.img-check1');
+            const img = document.querySelector('.img-check');
             var color;
 
             // Make sure image is finished loading
