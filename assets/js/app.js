@@ -388,7 +388,7 @@
             // images have loaded
             // $('.item').fillColor();
             const colorThief = new ColorThief();
-            const img = document.querySelector('.img-check');
+            const img = document.querySelectorAll('.img-check')[0];
             var color;
 
             // Make sure image is finished loading
