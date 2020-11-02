@@ -342,14 +342,9 @@
         //     });
         // }
 
-
-        var container = document.querySelector('.ps-grid');
-        var msnry;
-        //create empty var msnry
-        // var msnry;
-        // initialize Masonry after all images have loaded
-        imagesLoaded(container, function () {
-            msnry = new Masonry(container, {
+        var $grid = $('.ps-grid').imagesLoaded(function () {
+            // init Masonry after all images have loaded
+            $grid.masonry({
                 itemSelector: '.item',
                 gutter: 20,
                 horizontalOrder: true,
@@ -357,16 +352,57 @@
                 fitWidth: true,
                 stamp: '.stamb',
             });
+
+            $('.ps-grid')
+            $('.ps-grid').animate({ 'opacity': 1 });
         });
+        $grid.on('layoutComplete', function () {
+            $(this).animate({
+                'opacity': 1
+            });
+            // $('.item').fillcolor();
+        });
+
+        // console.log($('.item1').fillColor()[0]);
+
+
+        //     var container = document.querySelector('.ps-grid');
+        //     var msnry;
+        //     //create empty var msnry
+        //     // var msnry;
+        //     // initialize Masonry after all images have loaded
+        //     imagesLoaded(container, function () {
+        //         msnry = new Masonry(container, {
+        //             itemSelector: '.item',
+        //             gutter: 20,
+        //             horizontalOrder: true,
+        //             transitionDuration: '0.8s',
+        //             fitWidth: true,
+        //             stamp: '.stamb',
+        //         });
+        //     });
     }
 
-    // PATH.addColorToPort = () => {
-    //     $('.ps-grid').imagesLoaded(function () {
-    //         // images have loaded
-    //         $('.item').fillColor();
-    //     });
+    PATH.addColorToPort = () => {
+        $('.ps-grid').imagesLoaded(function () {
+            // images have loaded
+            // $('.item').fillColor();
+            const colorThief = new ColorThief();
+            const img = document.querySelector('.img-check1');
+            var color;
 
-    // }
+            // Make sure image is finished loading
+            if (img.complete) {
+                color = colorThief.getColor(img);
+            } else {
+                image.addEventListener('load', function () {
+                    color = colorThief.getColor(img);
+                });
+            }
+            console.log(color);
+        });
+
+    }
 
 
 
@@ -381,7 +417,7 @@
         PATH.blogHeader();
         PATH.masnoryPort();
         PATH.slickPlugin();
-        // PATH.addColorToPort();
+        PATH.addColorToPort();
     });
 
     /* Window on load function */
