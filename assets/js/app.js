@@ -354,14 +354,14 @@
             });
 
             // $('.ps-grid')
-            $('.ps-grid').animate({ 'opacity': 1 });
+            // $('.ps-grid').animate({ 'opacity': 1 });
         });
-        // $grid.on('layoutComplete', function () {
-        //     $(this).animate({
-        //         'opacity': 1
-        //     });
-        //     // $('.item').fillcolor();
-        // });
+        $grid.on('layoutComplete', function () {
+            $(this).animate({
+                'opacity': 1
+            });
+            // $('.item').fillcolor();
+        });
 
         // console.log($('.item1').fillColor()[0]);
 
