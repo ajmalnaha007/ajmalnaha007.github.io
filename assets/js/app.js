@@ -360,7 +360,10 @@
             $(this).animate({
                 'opacity': 1
             });
-            // $('.item').fillcolor();
+            // $('.item')..fillcolor();
+            $('.item').each(function () {
+
+            });
         });
 
         // console.log($('.item1').fillColor()[0]);
@@ -388,17 +391,39 @@
             // images have loaded
             // $('.item').fillColor();
             const colorThief = new ColorThief();
-            const img = document.querySelectorAll('.img-check')[0];
+            const img = document.querySelectorAll('.img-check');
+
             var color;
 
+            // $('.img-check').each(function () {
+            //     if (img.complete) {
+            //         color = colorThief.getColor(img);
+            //     } else {
+            //         img.addEventListener('load', function () {
+            //             color = colorThief.getColor(img);
+            //         });
+            //     }
+            // });
+
+            img.forEach(item => {
+                if (item.complete) {
+                    color = colorThief.getColor(item);
+                } else {
+                    item.addEventListener('load', function () {
+                        color = colorThief.getColor(item);
+                    });
+                }
+                console.log(color);
+            });
+
             // Make sure image is finished loading
-            if (img.complete) {
-                color = colorThief.getColor(img);
-            } else {
-                image.addEventListener('load', function () {
-                    color = colorThief.getColor(img);
-                });
-            }
+            // if (img.complete) {
+            //     color = colorThief.getColor(img);
+            // } else {
+            //     image.addEventListener('load', function () {
+            //         color = colorThief.getColor(img);
+            //     });
+            // }
             console.log(color);
         });
 
