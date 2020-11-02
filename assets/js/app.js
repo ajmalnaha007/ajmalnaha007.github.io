@@ -327,7 +327,8 @@
     }
 
     PATH.masnoryPort = () => {
-        var $container = $('.ps-grid');
+        // var container = $('.ps-grid');
+        // var msnry;
         // if ($('.ps-grid').length) {
         //     $container.imagesLoaded(function () {
         //         $container.masonry({
@@ -342,20 +343,20 @@
         // }
 
 
-        $container.imagesLoaded(function () {
-            $container.masonry({
+        var container = document.querySelector('.ps-grid');
+        var msnry;
+        //create empty var msnry
+        // var msnry;
+        // initialize Masonry after all images have loaded
+        imagesLoaded(container, function () {
+            msnry = new Masonry(container, {
                 itemSelector: '.item',
-                itemSelector: '.item',
-                    gutter: 20,
-                    horizontalOrder: true,
-                    transitionDuration: '0.8s',
-                    fitWidth: true,
-                    stamp: '.stamb',
+                gutter: 20,
+                horizontalOrder: true,
+                transitionDuration: '0.8s',
+                fitWidth: true,
+                stamp: '.stamb',
             });
-            $('.item img').lazyload({
-                effect: 'fadeIn'
-            });
-            $('.item img').trigger('scroll');
         });
     }
 
