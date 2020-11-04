@@ -344,7 +344,7 @@
                 });
                 AOS.init();
             });
-        }s
+        }
 
         var item = document.createElement('div');
         item.className = 'item';
