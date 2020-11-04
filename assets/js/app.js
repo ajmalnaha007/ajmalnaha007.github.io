@@ -327,117 +327,39 @@
     }
 
     PATH.masnoryPort = () => {
-        // var container = $('.ps-grid');
-        // var msnry;
-        // if ($('.ps-grid').length) {
-        //     $container.imagesLoaded(function () {
-        //         $container.masonry({
-        //             itemSelector: '.item',
-        //             gutter: 20,
-        //             horizontalOrder: true,
-        //             transitionDuration: '0.8s',
-        //             fitWidth: true,
-        //             stamp: '.stamb',
-        //         });
-        //     });
-        // }
-
         var $grid = $('.ps-grid').imagesLoaded(function () {
-            // init Masonry after all images have loaded
             $grid.masonry({
                 itemSelector: '.item',
                 gutter: 20,
                 horizontalOrder: true,
-                transitionDuration: '0.8s',
+                transitionDuration: '.2s',
                 fitWidth: true,
                 stamp: '.stamb',
             });
-
-            // $('.ps-grid')
-            // $('.ps-grid').animate({ 'opacity': 1 });
         });
         $grid.on('layoutComplete', function () {
             $(this).animate({
                 'opacity': 1
             });
-            // $('.item')..fillcolor();
-            $('.item').each(function () {
-
-            });
+            AOS.init();
         });
 
-        // console.log($('.item1').fillColor()[0]);
-
-
-        //     var container = document.querySelector('.ps-grid');
-        //     var msnry;
-        //     //create empty var msnry
-        //     // var msnry;
-        //     // initialize Masonry after all images have loaded
-        //     imagesLoaded(container, function () {
-        //         msnry = new Masonry(container, {
-        //             itemSelector: '.item',
-        //             gutter: 20,
-        //             horizontalOrder: true,
-        //             transitionDuration: '0.8s',
-        //             fitWidth: true,
-        //             stamp: '.stamb',
-        //         });
-        //     });
+        var item = document.createElement('div');
+        item.className = 'item';
+        item.innerHTML = '<div class="get-in-item"><div class="get-in-item-bg"></div><h1>Lorem Ipsum Dolar</h1><button class="btn ps-btn-alt">GET IN TOUCH</button></div>';
+        item.setAttribute("data-aos", "zoom-in");
+        $(".item:nth-child(15n)").after(item);
     }
 
-    PATH.addColorToPort = () => {
-        $('.ps-grid').imagesLoaded(function () {
-            // images have loaded
-            // $('.item').fillColor();
-            const colorThief = new ColorThief();
-            const img = document.querySelectorAll('.img-check');
-
-            var color;
-
-            // $('.img-check').each(function () {
-            //     if (img.complete) {
-            //         color = colorThief.getColor(img);
-            //     } else {
-            //         img.addEventListener('load', function () {
-            //             color = colorThief.getColor(img);
-            //         });
-            //     }
-            // });
-
-            img.forEach(item => {
-                if (item.complete) {
-                    color = colorThief.getColor(item);
-                } else {
-                    item.addEventListener('load', function () {
-                        color = colorThief.getColor(item);
-                    });
-                }
-                hex(color)
-            });
-
-            var hex = (item) => {
-                const rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
-                    const hex = x.toString(16)
-                    return hex.length === 1 ? '0' + hex : hex
-                }).join('');
-                console.log(rgbToHex);
+    PATH.modalOpen = () => {
+        var a = true;
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > $(window).height() / 2 && a) {
+                $('#exampleModalCenter').modal('show');
+                a = false;
             }
-
-            // Make sure image is finished loading
-            // if (img.complete) {
-            //     color = colorThief.getColor(img);
-            // } else {
-            //     image.addEventListener('load', function () {
-            //         color = colorThief.getColor(img);
-            //     });
-            // }
-            console.log(color);
         });
-
     }
-
-
 
     /* Document ready function */
     $(function () {
@@ -450,7 +372,7 @@
         PATH.blogHeader();
         PATH.masnoryPort();
         PATH.slickPlugin();
-        PATH.addColorToPort();
+        PATH.modalOpen();
     });
 
     /* Window on load function */

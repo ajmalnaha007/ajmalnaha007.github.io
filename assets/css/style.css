@@ -34,6 +34,7 @@ body {
   font-size: 14px;
   /* padding-top: 95px; */
   color: #000;
+  
 }
 
 ul {
@@ -2126,7 +2127,6 @@ Go Top CSS
   opacity: .8;
 }
 
-
 .go-top svg path {
   fill: #ddc4f0;
 }
@@ -3965,4 +3965,33 @@ figure {
   height: 130px;
   z-index: 10;
   width: 302px;
+}
+
+.get-in-item {
+  padding: 20px;
+  background-color: #8e3ccc;
+  position: relative;
+}
+
+.get-in-item-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: .3;
+  background-image: url('../img/art-2.png');
+  background-position: inherit;
+}
+
+.get-in-item h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+
+.get-in-item button {
+  margin-bottom: 20px;
 }
