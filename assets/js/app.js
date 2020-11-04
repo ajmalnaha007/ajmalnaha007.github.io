@@ -361,10 +361,7 @@
                 localStorage.setItem('modalState', 'shown');
                 a = false;
             }
-            // $(window).scroll(function () {
-            //     if ($(window).scrollTop() > $(window).height() / 2 && a) {
-            //         $('#exampleModalCenter').modal('show');
-            //     }
+
         });
     }
 
