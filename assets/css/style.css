@@ -34,7 +34,6 @@ body {
   font-size: 14px;
   /* padding-top: 95px; */
   color: #000;
-  
 }
 
 ul {
@@ -3285,102 +3284,63 @@ Marketing
   opacity: 0;
 }
 
-.ps-preloader span {
-  position: absolute;
-  top: 50%;
+.ps-preloader svg {
+  bottom: 0;
+  height: 70px;
   left: 0;
-  letter-spacing: -2px;
-  width: 190px;
-  right: 0;
   margin: auto;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
 }
 
-.ps-preloader span>img {
-  opacity: .5;
-  -webkit-animation: logo 9s cubic-bezier(0.54, 0.24, 0.59, 1.04) infinite;
-  animation: logo 9s cubic-bezier(0.54, 0.24, 0.59, 1.04) infinite;
+.ps-preloader svg path {
+  stroke-dasharray: 67;
+  -webkit-animation: dash 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+  animation: dash 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
 }
 
-.ps-preloader .dot {
-  position: relative;
-  text-align: center;
-  top: 4px;
+.ps-preloader svg path:first-child {
+  stroke-dasharray: 87;
+  -webkit-animation: dash-2 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+  animation: dash-2 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 136;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 136;
+  }
+}
+
+@-webkit-keyframes dash-2 {
+  to {
+    stroke-dashoffset: 175;
+  }
+}
+
+@keyframes dash-2 {
+  to {
+    stroke-dashoffset: 175;
+  }
+}
+
+.ps-loader-text {
+  color: var(--font-primary-color);
   left: 0;
-  font-weight: 900;
-  letter-spacing: -2px;
-  -webkit-animation: dot 1.5s infinite;
-  animation: dot 1.5s infinite;
-  width: 6px;
-  height: 6px;
-  border-radius: 10px;
-}
-
-svg .lg-1 {
-  fill: #8E3DCC;
-}
-
-svg .lg-2 {
-  fill: #303082;
-}
-
-svg .lg-3 {
-  fill: #574FA0;
-}
-
-@-webkit-keyframes dot {
-  0% {
-    left: 0;
-    background: var(--primary-color);
-  }
-  50% {
-    left: 178px;
-    background-color: var(--secondary-color);
-  }
-  100% {
-    left: 0;
-    background: var(--primary-color);
-  }
-}
-
-@keyframes dot {
-  0% {
-    left: 0;
-    background: var(--primary-color);
-  }
-  50% {
-    left: 178px;
-    background-color: var(--secondary-color);
-  }
-  100% {
-    left: 0;
-    background: var(--primary-color);
-  }
-}
-
-@-webkit-keyframes logo {
-  0% {
-    opacity: .5;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: .5;
-  }
-}
-
-@keyframes logo {
-  0% {
-    opacity: .5;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: .5;
-  }
+  letter-spacing: 4px;
+  margin-top: 50px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* blog-feature-sec */
