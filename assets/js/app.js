@@ -327,22 +327,24 @@
     }
 
     PATH.masnoryPort = () => {
-        var $grid = $('.ps-grid').imagesLoaded(function () {
-            $grid.masonry({
-                itemSelector: '.item',
-                gutter: 20,
-                horizontalOrder: true,
-                transitionDuration: '.2s',
-                fitWidth: true,
-                stamp: '.stamb',
+        if ($('.ps-grid').length) {
+            var $grid = $('.ps-grid').imagesLoaded(function () {
+                $grid.masonry({
+                    itemSelector: '.item',
+                    gutter: 20,
+                    horizontalOrder: true,
+                    transitionDuration: '.2s',
+                    fitWidth: true,
+                    stamp: '.stamb',
+                });
             });
-        });
-        $grid.on('layoutComplete', function () {
-            $(this).animate({
-                'opacity': 1
+            $grid.on('layoutComplete', function () {
+                $(this).animate({
+                    'opacity': 1
+                });
+                AOS.init();
             });
-            AOS.init();
-        });
+        }s
 
         var item = document.createElement('div');
         item.className = 'item';
