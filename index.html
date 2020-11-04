@@ -17,14 +17,13 @@
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   </link>
   <!-- Animate Min CSS -->
-  <link rel="stylesheet" href="assets/css/animate.min.css">
-  </link>
+  <link rel="stylesheet" href="assets/css/animate.min.css">  </link>
   <!-- font css -->
-  <link rel="stylesheet" href="assets/css/font/style.css">
-  </link>
+  <link rel="stylesheet" href="assets/css/font/style.css">  </link>
+  <link rel="stylesheet" href="assets/css/aos.css">  </link>
+
   <!-- Style CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  </link>
+  <link rel="stylesheet" href="assets/css/style.css">  </link>
   <title>PlutoSpark</title>
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   </link>
@@ -32,6 +31,7 @@
 
 <body>
   <div class="ps-preloader" id="ps-preloader">
+    <!-- <div class="loader"> -->
     <svg id="triangle" viewBox="0 0 37.65772 48.43402">
       <path
         d="M7.86685,48.717a1.14951,1.14951,0,0,1-1.17043-1.41593l6.5698-34.29489a1.81886,1.81886,0,0,1,1.71292-1.41593h4.6461a1.1495,1.1495,0,0,1,1.17042,1.41593L14.22587,47.30108A1.81888,1.81888,0,0,1,12.513,48.717Z"
@@ -43,7 +43,10 @@
         d="M37.80155,24.91771c.44276.65779.92942.55926,1.08147-.21895L43.29739,2.10464c.15205-.77821-.26175-1.05266-.91954-.6099L29.5742,10.113a1.44591,1.44591,0,0,0-.391,2.001Z"
         transform="translate(-6.17114 -0.78299)" style="fill: none;stroke: #574fa0;stroke-miterlimit: 10" />
     </svg>
-    <div class="ps-loader-text">Loading...</div>
+    <!-- <div class="ps-loader-text">Loading...</div> -->
+    <!-- </div> -->
+    <div class="loader-anim"></div>
+    <div class="loader-anim2 color-bg"></div>
   </div>
   <!-- Start Navbar Area -->
   <header class="ps-header" id="ps-header">
@@ -99,7 +102,12 @@
     <div class="ps-ins-banner-sec">
       <div class="ps-banner-sec-left">
         <div class="ps-banner-txt" id="ps-banner-txt">
-          <div class="bfr-bg">
+          <div class="bfr-bg" data-aos="fade-right" >
+            <!-- <h2 class="large-title-bold">
+              <span class="load-title-fill tr-delay03" data-text="new approach">new approach</span><br>
+              <span class="load-title-fill tr-delay04" data-text="to design">to design</span><br>
+              <span class="load-title-fill tr-delay05" data-text="&amp; marketing">&amp; marketing</span>
+            </h2> -->
             <h1 class="heading1">
               We Transform Digiral into Wealth.
             </h1>
@@ -280,77 +288,6 @@
       </div>
     </div>
   </section>
-  <!-- <section class="ps-service-sec">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="ps-subtitle-wrap">
-            <h2 class="text-center">Services We Offer</h2>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="ps-service-ins">
-            <div class="ps-service">
-              <div class="ps-service-ic">
-                <svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" width="131px" height="120px">
-                  <path fill-rule="evenodd" d=""></path>
-                </svg>
-                <span class="icon-ps-ui"></span>
-              </div>
-              <h5 class="head-ser">Ui UX Design</h5>
-              <p class="content-ser">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                has been the industry's standard dummy text ever since the 1500s,
-              </p>
-              <button class="btn ps-service-go-btn">
-                <span class="icon-ps-arrow"></span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="ps-service-ins">
-            <div class="ps-service">
-              <div class="ps-service-ic">
-                <svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" width="131px" height="120px">
-                  <path fill-rule="evenodd" d=""></path>
-                </svg>
-                <span class="icon-ps-marketing"></span>
-              </div>
-              <h5 class="head-ser">Marketing Strategy</h5>
-              <p class="content-ser">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                has been the industry's standard dummy text ever since the 1500s,
-              </p>
-              <button class="btn ps-service-go-btn">
-                <span class="icon-ps-arrow"></span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="ps-service-ins">
-            <div class="ps-service">
-              <div class="ps-service-ic">
-                <svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" width="131px" height="120px">
-                  <path fill-rule="evenodd" d=""></path>
-                </svg>
-                <span class="icon-ps-web"></span>
-              </div>
-              <h5 class="head-ser">Branding</h5>
-              <p class="content-ser">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                has been the industry's standard dummy text ever since the 1500s,
-              </p>
-              <button class="btn ps-service-go-btn">
-                <span class="icon-ps-arrow"></span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
   <section class="ps-service-sec">
     <div class="container">
       <div class="row align-items-center">
@@ -816,7 +753,8 @@
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <!-- slick js -->
   <script src="assets/js/slick/slick.min.js"></script>
-
+  <script src="assets/js/tweenmax.js"></script>
+  <script src="assets/js/aos.js"></script>
   <!-- Main JS -->
   <script src="assets/js/app.js"></script>
 </body>

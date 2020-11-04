@@ -3,8 +3,46 @@
     var PATH = {};
 
     PATH.preLoader = function () {
-        var preloader = $('#ps-preloader');
-        preloader && preloader.delay(350).fadeOut('slow');
+        // var preloader = $('#ps-preloader');
+        // preloader && preloader.delay(350).fadeOut('slow');
+
+        TweenMax.to($("#ps-preloader svg"), 1.0, {
+            force3D: true,
+            y: "-150px",
+            opacity: 0,
+            ease: Expo.easeInOut,
+            delay: 1.2,
+            onComplete: function () {
+                PATH.aosAdd();
+                TweenMax.to($(".loader-anim"), 0.8, {
+                    force3D: true,
+                    bottom: "100%",
+                    ease: Expo.easeInOut,
+                });
+                TweenMax.to($(".loader-anim2"), 0.8, {
+                    force3D: true,
+                    bottom: "100%",
+                    delay: 0.2,
+                    ease: Expo.easeInOut,
+                    onComplete: function () {
+                        $(".loader").fadeOut(1);
+                    }
+                });
+                TweenMax.to($("#ps-preloader"), 0.8, {
+                    force3D: true,
+                    bottom: "100%",
+                    delay: 0.2,
+                    ease: Expo.easeInOut,
+                    onComplete: function () {
+                        $(".loader").fadeOut(1);
+                    }
+                });
+                AOS.init();
+                setTimeout(function () {
+                    $("body").addClass("anim");
+                }, 1000);
+            }
+        });
     }
 
     PATH.headerSticky = function () {
@@ -365,9 +403,14 @@
         });
     }
 
+    PATH.aosAdd = () => {
+        $('.has-animation').attr({ "data-aos": 'fade-in', "data-aos-2": 'ease-in-sine', "data-aos-duration": 1000 });
+    }
+
     /* Document ready function */
     $(function () {
         PATH.backToTop();
+        // PATH.aosAdd();
         PATH.headerSticky();
         PATH.menuToggle();
         PATH.counterSec();
