@@ -219,6 +219,7 @@
     PATH.blogHeader = () => {
         window.addEventListener('scroll', () => {
             var optionWrapper = document.getElementById("sticky"),
+                header = document.getElementById('ps-header'),
                 bottomft = document.getElementById("btm");
             if (optionWrapper && bottomft) {
                 let start = (optionWrapper.offsetTop + 161),
