@@ -6,14 +6,13 @@
         // var preloader = $('#ps-preloader');
         // preloader && preloader.delay(350).fadeOut('slow');
 
-        TweenMax.to($("#ps-preloader svg"), 1.0, {
+        TweenMax.to($("#ps-preloader svg , #ps-preloader .ps-loader-text"), 1.0, {
             force3D: true,
             y: "-150px",
             opacity: 0,
             ease: Expo.easeInOut,
             delay: 1.2,
             onComplete: function () {
-                PATH.aosAdd();
                 TweenMax.to($(".loader-anim"), 0.8, {
                     force3D: true,
                     bottom: "100%",
@@ -37,10 +36,14 @@
                         $(".loader").fadeOut(1);
                     }
                 });
-                AOS.init();
                 setTimeout(function () {
-                    $("body").addClass("anim");
-                }, 1000);
+                    $("body").addClass("loaded");
+                    AOS.init({
+                        easing: 'ease-in-out', // default easing for AOS animations
+                        once: false, // whether animation should happen only once - while scrolling down
+                        duration: 500, // values from 0 to 3000, with step 50ms
+                    });
+                }, 800);
             }
         });
     }
@@ -111,7 +114,7 @@
             (mediaMobile.matches) ? $('#ps-banner-txt').css({ 'padding-left': headerOffset }) : $('#ps-banner-txt').removeAttr('style');
             $('#ps-about-bnr').css({ 'margin-bottom': bannerOptionHgt });
         }
-        bannerTxtOffset();
+        ($('#ps-header').length) && bannerTxtOffset();
     }
 
     PATH.menuToggle = () => {
@@ -403,14 +406,9 @@
         });
     }
 
-    PATH.aosAdd = () => {
-        $('.has-animation').attr({ "data-aos": 'fade-in', "data-aos-2": 'ease-in-sine', "data-aos-duration": 1000 });
-    }
-
     /* Document ready function */
     $(function () {
         PATH.backToTop();
-        // PATH.aosAdd();
         PATH.headerSticky();
         PATH.menuToggle();
         PATH.counterSec();
