@@ -3,9 +3,6 @@
     var PATH = {};
 
     PATH.preLoader = function () {
-        // var preloader = $('#ps-preloader');
-        // preloader && preloader.delay(350).fadeOut('slow');
-
         TweenMax.to($("#ps-preloader svg , #ps-preloader .ps-loader-text"), 1.0, {
             force3D: true,
             y: "-150px",
