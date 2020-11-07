@@ -1,7 +1,6 @@
 (function ($) {
     "use strict"
     var PATH = {};
-
     PATH.preLoader = function () {
         TweenMax.to($("#ps-preloader svg , #ps-preloader .ps-loader-text"), 1.0, {
             force3D: true,
@@ -404,6 +403,42 @@
         });
     }
 
+    PATH.contactForm = () => {
+        var switcher = () => {
+            $(".switcher-wrapper .form-group").hide();
+            $(".switcher-wrapper .form-group.web-url").show();
+            $(".switcher-wrapper input[type='radio']").click(function () {
+                var inputValue = $(this).val();
+                $(".switcher-wrapper .form-group").hide();
+                $("." + inputValue).show();
+            });
+        }
+        switcher();
+
+        var savePrevData = (item) => {
+            item.data('val', item.val());
+        }
+        var printData = (item) => {
+            var prevValue = item.data('val').replace(/C:\\fakepath\\/i, ''),
+                currentValue = item.val().replace(/C:\\fakepath\\/i, '');
+            (item.val()) ? item.parent().find('.file-name').html(currentValue) : item.parent().find('.file-name').html(prevValue);
+        }
+
+        var handleUpload = () => {
+            $(document).on('focusin', '#doc-file', function () {
+                savePrevData($(this));
+            }).on('change', '#doc-file', function () {
+                printData($(this));
+            });
+            $(document).on('focusin', '#media-file', function () {
+                savePrevData($(this));
+            }).on('change', '#media-file', function () {
+                printData($(this));
+            });
+        }
+        handleUpload();
+    }
+
     /* Document ready function */
     $(function () {
         PATH.backToTop();
@@ -416,6 +451,7 @@
         PATH.masnoryPort();
         PATH.slickPlugin();
         PATH.modalOpen();
+        PATH.contactForm();
     });
 
     /* Window on load function */

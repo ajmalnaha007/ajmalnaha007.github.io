@@ -17,10 +17,29 @@
 	</link>
 	<!-- Style CSS -->
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+
 	</link>
 	<title>PlutoSpark</title>
 	<link rel="icon" type="image/png" href="assets/img/favicon.png">
 	</link>
+	<style>
+		.form-group {
+			position: relative;
+		}
+
+		.switch-toggle {
+			position: absolute !IMPORTANT;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+
+		.form-control {
+			/* display: none; */
+		}
+	</style>
 </head>
 
 <body>
@@ -40,7 +59,32 @@
 		<div class="loader-anim"></div>
 		<div class="loader-anim2 color-bg"></div>
 	</div>
-	<h1>Make a Wish</h1>
+
+
+	<section>
+		<div class="form-group">
+			<input type="email" class="a form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+				placeholder="Enter email">
+			<input type="email" class="b form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+				placeholder="Enter email2">
+			<input type="email" class="c form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+				placeholder="Enter email3">
+
+			<div class="switch-toggle switch-candy">
+				<input id="week" name="view" type="radio" value="a" checked="checked">
+				<label for="week" onclick="">Week</label>
+
+				<input id="month" name="view" type="radio" value="b">
+				<label for="month" onclick="">Month</label>
+
+				<input id="day" name="view" type="radio" value="c">
+				<label for="day" onclick="">Day</label>
+				
+				<a></a>
+			</div>
+		</div>
+	</section>
+
 	<div class="go-top">
 		<svg class="ps-outer-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
 			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98">
@@ -53,6 +97,17 @@
 	<script src="assets/js/plugins.js"></script>
 	<!-- Main JS -->
 	<script src="assets/js/app.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("input.form-control").hide();
+			$("input.form-control:first-child").show();
+			$("input[type='radio']").click(function () {
+				var inputValue = $(this).val();
+				$("input.form-control").hide();
+				$("." + inputValue).show();
+			});
+		});
+	</script>
 </body>
 
 </html>

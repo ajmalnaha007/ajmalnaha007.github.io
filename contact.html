@@ -40,7 +40,7 @@
 		<div class="loader-anim"></div>
 		<div class="loader-anim2"></div>
 	</div>
-	<!-- <header class="ps-header" id="ps-header">
+	<header class="ps-header" id="ps-header">
 		<div class="container-lg">
 			<nav class="navbar navbar-light">
 				<a class="navbar-brand ps-logo" id="logo" href="index.html">
@@ -71,26 +71,30 @@
 
 					<div class="others-options">
 						<a href="#" class="btn ml-3 btn-call"><span class="icon-ps-call"></span></a>
-						<a href="#" class="btn btn-ps shake">Contact</a>
+						<a href="#" class="btn ps-df-btn btn-ps">
+							<div class="inside-item">
+								<span data-alt="Let's talk!">Contact</span>
+							</div>
+						</a>
 					</div>
 				</div>
 
 			</nav>
 		</div>
-	</header> -->
+	</header>
 	<section class="ps-contact-bnr">
 		<div class="container">
 			<div class="row justify-content-center text-center">
 				<div class="col-md-8 col-lg-6">
 					<div class="ps-contact-bnr-title">
 						<h1 data-aos="fade-up" data-aos-delay="0">
-							Hi, 🖐 we are <span>PlutoSpark</span>
+							Lorem ipsum Dolar
 						</h1>
 						<p data-aos="fade-up" data-aos-delay="100">
-							Drop by for a cup of coffe ☕
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry
 						</p>
 						<div data-aos="fade-up" data-aos-delay="200">
-							<a href="#" class="btn ps-df-btn">
+							<a href="#" class="btn ps-df-btn btn-ps-alt">
 								<div class="inside-item">
 									<span data-alt="Let's talk!">Let's talk!</span>
 								</div>
@@ -117,7 +121,7 @@
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>Full Name</label>
-									<input type="text" class="form-control" placeholder="ex. John Doe">
+									<input type="text" class="form-control invalid-missing" placeholder="ex. John Doe">
 								</div>
 							</div>
 							<div class="col-md-12">
@@ -127,18 +131,59 @@
 										placeholder="Tell us more about your project, needs, and timeline."></textarea>
 								</div>
 							</div>
-
-							<div class="col-12 d-md-flex justify-content-between margin-t-2">
-								<!-- <div class="item_upload mb-3 mb-md-0">
-									<div class="upload__file">
-										<input type="file">
-										<button type="button" class="btn btn_md_primary">
-											<i class="tio attachment"></i>
-											Attach File
-										</button>
+							<div class="col-md-12">
+								<div class="switcher-wrapper">
+									<div class="ps-cnt-switcher">
+										<input type="radio" name="switcher" id="webUrl" value="web-url"
+											checked="checked" />
+										<label data-title="Web Url" for="webUrl">
+											<span class="icon-lb icon-ps-web"></span>
+											<span class="text-lb">Web Url</span>
+										</label>
+										<input type="radio" name="switcher" id="document" value="document" />
+										<label data-title="Document" for="document">
+											<span class="icon-lb icon-ps-docs"></span>
+											<span class="text-lb">Document</span>
+										</label>
+										<input type="radio" name="switcher" id="media" value="media-url" />
+										<label data-title="Media" for="media">
+											<span class="icon-lb icon-ps-media"></span>
+											<span class="text-lb">Media</span>
+										</label>
 									</div>
-									<span class="my-auto">Maximum total file size: 12 MB</span>
-								</div> -->
+									<div class="form-group web-url">
+										<input type="text" class="form-control " placeholder="ex. www.plutospark.com">
+									</div>
+									<div class="form-group document">
+										<div class="item_upload mb-3 mb-md-0">
+											<div class="upload__file">
+												<input type="file" id="doc-file">
+												<button type="button" class="btn btn_md_primary">
+													<span class="icon-ps-attach"></span>
+													Attach File
+												</button>
+												<span class="file-name"></span>
+											</div>
+											<span class="msg">Maximum total file size: 12 MB</span>
+										</div>
+									</div>
+									<div class="form-group media-url">
+										<div class="item_upload mb-3 mb-md-0">
+											<div class="upload__file">
+												<input type="file" id="media-file">
+												<button type="button" class="btn btn_md_primary">
+													<span class="icon-ps-attach"></span>
+													Attach File
+												</button>
+												<span class="file-name"></span>
+
+											</div>
+											<span class="msg">Maximum total file size: 18 MB</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
 								<a href="#" class="btn ps-df-btn">
 									<div class="inside-item">
 										<span data-alt="Let's talk!">Send Message</span>
@@ -154,7 +199,7 @@
 
 
 
-	<!-- <footer class="ps-footer">
+	<footer class="ps-footer">
 		<div class="top-footer-content">
 			<div class="container">
 				<div class="row">
@@ -201,7 +246,7 @@
 				</div>
 			</div>
 		</div>
-	</footer> -->
+	</footer>
 	<div class="go-top">
 		<svg class="ps-outer-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
 			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98">
