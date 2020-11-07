@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 :root {
   --primary-color: #2f2f82;
   --secondary-color: #8e3ccc;
@@ -9,7 +9,7 @@
   --white-color: #ffffff;
   --border-color: #dfe3eb;
   --black-color: #000000;
-  --font-family: 'Roboto', sans-serif;
+  --font-family: 'Open Sans', sans-serif;
 }
 
 * {
@@ -25,7 +25,9 @@ html, body {
   transition: .5s ease;
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased!important;
+  -moz-osx-font-smoothing: grayscale!important;
   scroll-behavior: smooth;
   letter-spacing: 1px;
   /* overflow: hidden; */
@@ -53,13 +55,13 @@ label {
   color: #0b2238;
 }
 
-.form-group input::placeholder, .form-group select::placeholder {
+.ps-contact-form .form-group input::placeholder, .form-group select::placeholder {
   color: rgba(11, 34, 56, 0.4);
   font-size: 14px;
   font-weight: 400;
 }
 
-.form-group textarea::placeholder {
+.ps-contact-form .form-group textarea::placeholder {
   color: rgba(11, 34, 56, 0.4);
   font-size: 14px;
   font-weight: 400;
@@ -111,9 +113,9 @@ input.form-control.invalid-missing::placeholder {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
-  margin-right: 16px;
+  /* margin-right: 16px; */
   transition: all .2s ease-in;
-  letter-spacing: 0.8px;
+  letter-spacing: 1.5px;
 }
 
 .btn:focus, a:focus, a:hover, button:focus {
@@ -1205,8 +1207,8 @@ img {
 
 .key-feature-sec .feature-txt h5 {
   font-family: var(--font-family);
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
   margin-bottom: 17px;
   letter-spacing: normal;
   text-align: left;
@@ -4524,25 +4526,3 @@ input[type=radio]:checked+label {
   height: 0;
   visibility: hidden;
 }
-
-/* .ps-cnt-switcher input[type="radio"]+span {} */
-
-/* .ps-cnt-switcher label:first-child>span {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-} */
-
-/* 
-.ps-cnt-switcher label:last-child>span {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.ps-cnt-switcher input[type="radio"]:checked+span {
-  background-color: var(--secondary-color);
-  color: var(--white-color);
-}
-
-.ps-cnt-switcher input[type="radio"]:focus+span {
-  color: #fff;
-} */
