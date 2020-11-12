@@ -94,7 +94,7 @@
     }
 
     PATH.setBannerStyle = () => {
-        let mediaMobile = window.matchMedia('(min-width: 991px)');
+        let mediaMobile = window.matchMedia('(min-width: 992px)');
         var bannerHeight = () => {
             (mediaMobile.matches) ?
                 $('#ps-banner-sec').css({
