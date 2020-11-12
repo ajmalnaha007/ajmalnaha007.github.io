@@ -34,7 +34,7 @@
                 });
                 setTimeout(function () {
                     $("body").addClass("loaded");
-                    $('.ps-loader').hide();
+                    $('#ps-preloader').hide();
                     AOS.init({
                         easing: 'ease-in-out', // default easing for AOS animations
                         once: false, // whether animation should happen only once - while scrolling down
