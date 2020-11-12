@@ -115,23 +115,33 @@
     }
 
     PATH.menuToggle = () => {
-        var menuDropDownClass = () => {
-            $(".has-dropdown").each(function () {
-                $(this).on('click', function () {
-                    $(this).toggleClass('active').siblings().removeClass('active');
-                })
-            });
+        var headerSubmenuHover = () => {
+            $('#ps-header li.dropdown').hover(
+                function () {
+                    $(this).addClass('show')
+                },
+                function () {
+                    $(this).removeClass('show')
+                });
         }
-        menuDropDownClass();
+        headerSubmenuHover();
+        // var menuDropDownClass = () => {
+        //     $(".has-dropdown").each(function () {
+        //         $(this).on('click', function () {
+        //             $(this).toggleClass('active').siblings().removeClass('active');
+        //         })
+        //     });
+        // }
+        // menuDropDownClass();
 
-        var toggleBtnClass = () => {
-            $('#menu-toggle').on('click', function (event) {
-                $(this).toggleClass('is-active');
-                $('#ps-header').toggleClass('minisidebar');
-                $('body').toggleClass('is-overlay');
-            });
-        }
-        toggleBtnClass();
+        // var toggleBtnClass = () => {
+        //     $('#menu-toggle').on('click', function (event) {
+        //         $(this).toggleClass('is-active');
+        //         // $('#ps-header').toggleClass('minisidebar');
+        //         // $('body').toggleClass('is-overlay');
+        //     });
+        // }
+        // toggleBtnClass();
     }
 
 
