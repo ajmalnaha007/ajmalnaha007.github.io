@@ -34,6 +34,7 @@
                 });
                 setTimeout(function () {
                     $("body").addClass("loaded");
+                    $('.ps-loader').hide();
                     AOS.init({
                         easing: 'ease-in-out', // default easing for AOS animations
                         once: false, // whether animation should happen only once - while scrolling down
@@ -98,7 +99,7 @@
             (mediaMobile.matches) ?
                 $('#ps-banner-sec').css({
                     'width': '100%',
-                    'height': $(window).height()
+                    'height': $(window).height() - 68 + 'px'
                 }) :
                 $('#ps-banner-sec').removeAttr("style");
         }
@@ -246,7 +247,7 @@
             slidesToScroll: 3,
             dragToSlide: 3,
             centerMode: true,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 2000,
             pauseOnHover: true,
             prevArrow: '<button class="btn slide-arrow prev"><span class="icon-ps-prev"></span></button>',
@@ -439,6 +440,31 @@
         handleUpload();
     }
 
+    // PATH.test = () => {
+    //     maskCircle = {
+    //         x: t,
+    //         y: e,
+    //         radius: 0
+    //     }
+    //     $('#make').mouseover(function () {
+    //         TweenLite.to(maskCircle, .4, {
+    //             radius: 0,
+    //             ease: Power2.easeOut,
+    //             onComplete: function () {
+    //                 // e.isHoveringOut = !1
+    //             }
+    //         });
+    //         // $(this).css({
+    //         //     'opacity': '.1'
+    //         // });
+
+    //     }).mouseout(function () {
+    //         // $('#make').css({
+    //         //     'opacity': '1'
+    //         // })
+    //     });
+    // }
+
     /* Document ready function */
     $(function () {
         PATH.backToTop();
@@ -452,6 +478,7 @@
         PATH.slickPlugin();
         PATH.modalOpen();
         PATH.contactForm();
+        // PATH.test();
     });
 
     /* Window on load function */
