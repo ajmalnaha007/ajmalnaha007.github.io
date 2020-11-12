@@ -125,6 +125,25 @@
                 });
         }
         headerSubmenuHover();
+
+        var mobileToggleMenu = () => {
+            var element = document.getElementsByClassName("drop-head");
+            var i;
+
+            for (i = 0; i < element.length; i++) {
+                element[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.height) {
+                        content.style.height = null;
+                    } else {
+                        content.style.height = content.scrollHeight + "px";
+                    }
+                });
+            };
+        }
+
+        mobileToggleMenu();
         // var menuDropDownClass = () => {
         //     $(".has-dropdown").each(function () {
         //         $(this).on('click', function () {

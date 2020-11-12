@@ -794,8 +794,6 @@ img {
   transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
   display: inline-block;
   height: auto;
-  top: 57px;
-
 }
 
 .dropdown .dropdown-menu .dropdown-menu-ins {
@@ -807,7 +805,7 @@ img {
 }
 
 .dropdown .dropdown-menu .dropdown-menu-ins li .dropdown-item {
-  padding: 0.4rem 1.5rem;
+  padding: 7px 24px;
 }
 
 .dropdown.show .dropdown-menu {
@@ -821,6 +819,66 @@ img {
   transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
   opacity: 1;
   visibility: visible;
+}
+
+@media (max-width: 991px) {
+  .ps-header .navbar {
+    height: auto;
+    padding: 15px;
+  }
+  .ps-header .navbar .navbar-collapse {
+    margin-top: 12px;
+  }
+  .ps-header .navbar-collapse .navbar-nav {
+    padding-bottom: 20px;
+  }
+  .ps-header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+    margin: 0;
+    padding: 12px 0;
+  }
+  .dropdown .dropdown-menu {
+    box-shadow: none;
+    display: block;
+    transform: none;
+    overflow: hidden;
+    height: 0;
+    width: 100%;
+    padding: 0;
+    -webkit-transition: height 0.4s cubic-bezier(0.35, 0.2, 0.2, 1);
+    -moz-transition: height 0.4s cubic-bezier(0.35, 0.2, 0.2, 1);
+    -o-transition: height 0.4s cubic-bezier(0.35, 0.2, 0.2, 1);
+    -ms-transition: height 0.4s cubic-bezier(0.35, 0.2, 0.2, 1);
+    transition: height 0.4s cubic-bezier(0.35, 0.2, 0.2, 1);
+    box-shadow: none !important;
+    border-radius: 0;
+    top: 57px;
+  }
+  .dropdown .dropdown-toggle {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+    padding-left: 10px !important;
+    padding-right: 42px !important;
+    overflow: hidden;
+  }
+  .dropdown .active+.dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  .ps-header .navbar .navbar-collapse .navbar-nav .dropdown .active.nav-link {
+    color: var(--secondary-color);
+    background-color:var(--bg-color);
+    border-radius: 5px;
+  }
+  .dropdown .dropdown-toggle .menu-arrow {
+    top: 19px;
+  }
+  .dropdown .dropdown-menu .dropdown-menu-ins li .dropdown-item {
+    border-radius: 5px;
+  }
 }
 
 /* 
