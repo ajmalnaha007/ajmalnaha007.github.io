@@ -43,35 +43,45 @@
 	<!-- Start Navbar Area -->
 	<header class="ps-header" id="ps-header">
 		<div class="container-lg">
-			<nav class="navbar navbar-light">
-				<a class="navbar-brand ps-logo" id="logo" href="index.html">
-					<img src="assets/img/logo.svg" alt="logo">
+			<!-- navbar -->
+			<nav class="navbar navbar-expand-lg">
+				<a class="navbar-brand" href="index.html">
+					<img class="ps-logo" src="assets/img/logo.svg" alt="logo">
 				</a>
-				<button class="menu-toggle btn" id="menu-toggle" type="button">
+				<button class="navbar-toggler menu-toggle btn" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true"
+					aria-label="Toggle navigation" id="menu-toggle">
 					<span class="nav-toggle">
 						<span class="mn-stick mn-stick-1"></span>
 						<span class="mn-stick mn-stick-2"></span>
 						<span class="mn-stick mn-stick-3"></span>
 					</span>
 				</button>
-				<div class="menu" id="menu">
-					<ul class="navbar-nav nav" id="navbarMobile">
-						<li class="nav-item has-dropdown"><a href="javascript:void(0);" class="nav-link">Services</a>
-							<span class="menu-arrow"></span>
-							<ul class="dropdown">
-								<li class="nav-item"><a href="./uiux.html" class="nav-link">Ui / Ux Design</a></li>
-								<li class="nav-item"><a href="./marketing.html" class="nav-link">Marketing</a></li>
-								<li class="nav-item"><a href="./branding.html" class="nav-link">Branding</a></li>
-							</ul>
+				<div class="navbar-collapse collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle drop-head" href="#" id="navbarDropdown" role="button"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Services
+								<span class="menu-arrow"></span> </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<ul class="dropdown-menu-ins">
+									<li><a class="dropdown-item" href="./uiux.html">Ui / Ux Design</a></li>
+									<li><a class="dropdown-item" href="./marketing.html">Marketing</a></li>
+									<li><a class="dropdown-item" href="./branding.html">Branding</a></li>
+								</ul>
+							</div>
 						</li>
-
-						<li class="nav-item"><a href="./portfolio.html" class="nav-link">Our Portfolio</a></li>
-
-						<li class="nav-item"><a href="./blog.html" class="nav-link">Resources</a></li>
+						<li class="nav-item">
+							<a class="nav-link" href="./portfolio.html">Our Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./blog.html">Resources</a>
+						</li>
 					</ul>
-
 					<div class="others-options">
-						<a href="#" class="btn btn-ps ml-3 btn-call"><span class="icon-ps-call"></span></a>
+						<a href="#" class="btn btn-ps ml-lg-3 btn-call">
+							<span class="icon-ps-call"></span>
+						</a>
 						<a href="#" class="btn ps-df-btn btn-ps">
 							<div class="inside-item">
 								<span data-alt="Let's talk!">Contact</span>
@@ -79,9 +89,10 @@
 						</a>
 					</div>
 				</div>
-
 			</nav>
+			<!-- End Navbar -->
 		</div>
+		<!-- end container -->
 	</header>
 	<div class="ps-breadcrumb">
 		<div class="container-lg">
@@ -98,14 +109,16 @@
 					<div class="ps-service-banner-content">
 						<h3data-aos="fade-up" data-aos-delay="0">Thinking about<br>
 							New Dimensions,
-							<br><spandata-aos="fade-up" data-aos-delay="100">New Possibilities</span></h3>
-						<p data-aos="fade-up" data-aos-delay="200">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-							been the industry's standard dummy text ever since the 1500s.</p>
-						<a href="#" class="btn ps-df-btn btn-ps" data-aos="fade-up" data-aos-delay="300">
-							<div class="inside-item">
-								<span data-alt="Let's talk!">Contact</span>
-							</div>
-						</a>
+							<br>
+							<spandata-aos="fade-up" data-aos-delay="100">New Possibilities</span></h3>
+								<p data-aos="fade-up" data-aos-delay="200">Lorem Ipsum is simply dummy text of the
+									printing and typesetting industry. Lorem Ipsum has
+									been the industry's standard dummy text ever since the 1500s.</p>
+								<a href="#" class="btn ps-df-btn btn-ps" data-aos="fade-up" data-aos-delay="300">
+									<div class="inside-item">
+										<span data-alt="Let's talk!">Contact</span>
+									</div>
+								</a>
 					</div>
 				</div>
 				<div class="col-6">
@@ -122,7 +135,8 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="ps-marketing-cnt-ins">
-						<p data-aos="fade-up" data-aos-delay="0">In the crowded digital space, the old adage, <span>‘build it and they will come’</span>,
+						<p data-aos="fade-up" data-aos-delay="0">In the crowded digital space, the old adage,
+							<span>‘build it and they will come’</span>,
 							simply doesn’t
 							apply anymore. To get results, brands need to market to users at the right time, with the
 							right message, and in the right channel.</p>
@@ -138,7 +152,8 @@
 				<div class="col-12">
 					<div class="ps-subtitle-wrap text-center">
 						<h2 data-aos="fade-up" data-aos-delay="0">Lorem ipsum dolar</h2>
-						<p data-aos="fade-up" data-aos-delay="100">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+						<p data-aos="fade-up" data-aos-delay="100">Lorem Ipsum is simply dummy text of the printing and
+							typesetting industry.</p>
 					</div>
 				</div>
 			</div>
@@ -210,10 +225,10 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="ps-subtitle-wrap text-center">
-						<h2 class="text-center"  data-aos="fade-up" data-aos-delay="0">Why PlutoSpark For Marketing?</h2>
+						<h2 class="text-center" data-aos="fade-up" data-aos-delay="0">Why PlutoSpark For Marketing?</h2>
 					</div>
 					<div class="ps-why-ins">
-						<div class="ps-content-wrap"  data-aos="fade-up" data-aos-delay="100">
+						<div class="ps-content-wrap" data-aos="fade-up" data-aos-delay="100">
 							<p>Excepteur sint occaecat cupidatat non proident, sunt culpa qui officia deserunt mollit
 								any id
 								est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -267,12 +282,12 @@
 						<div class="row align-items-center">
 							<div class="col-6">
 								<div class="ps-quick-left">
-									<p  data-aos="fade-up" data-aos-delay="0">Lorem ipsum is placeholder text</p>
-									<h4  data-aos="fade-up" data-aos-delay="100">Lorem ipsum is place text commonly</h4>
+									<p data-aos="fade-up" data-aos-delay="0">Lorem ipsum is placeholder text</p>
+									<h4 data-aos="fade-up" data-aos-delay="100">Lorem ipsum is place text commonly</h4>
 								</div>
 							</div>
 							<div class="col-6">
-								<div class="ps-quick-right"  data-aos="fade-up" data-aos-delay="100">
+								<div class="ps-quick-right" data-aos="fade-up" data-aos-delay="100">
 									<input type="text" name="websiteURL" placeholder="Your Webiste URL">
 									<button class="btn" type="submit"> Submit </button>
 								</div>
