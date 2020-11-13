@@ -268,41 +268,6 @@
     // slick
 
     PATH.slickPlugin = () => {
-        $('#slick').not('.slick-initialized').slick({
-            dots: true,
-            variableWidth: true,
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 3,
-            dragToSlide: 3,
-            centerMode: true,
-            autoplay: false,
-            autoplaySpeed: 2000,
-            pauseOnHover: true,
-            prevArrow: '<button class="btn slide-arrow prev"><span class="icon-ps-prev"></span></button>',
-            nextArrow: '<button class="btn slide-arrow next"><span class="icon-ps-next"></span></button>',
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-
         // blog
         $('#slick-blog').not('.slick-initialized').slick({
             infinite: true,
@@ -317,14 +282,14 @@
             nextArrow: '<button class="btn slide-arrow next"><span class="icon-ps-next"></span></button>',
             responsive: [
                 {
-                    breakpoint: 768,
+                    breakpoint: 992,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,
                     }
                 },
                 {
-                    breakpoint: 497,
+                    breakpoint: 576,
                     settings: {
                         arrows: false,
                         slidesToShow: 1,
