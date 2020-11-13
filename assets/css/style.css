@@ -412,7 +412,7 @@ img {
 .ps-header {
   --header-text-color: var(--font-primary-color);
   --header-padding: 0;
-  background: #fff;
+  /* background: #fff; */
   position: absolute;
   top: 0;
   left: 0;
@@ -3227,7 +3227,7 @@ UI UX Page
 .ps-breadcrumb {
   background-color: #efefff;
   position: absolute;
-  top: 75px;
+  top: 64px;
   left: 0;
   right: 0;
 }
@@ -3293,6 +3293,10 @@ UI UX Page
   display: flex;
   align-items: center;
   min-height: 100vh;
+  /* background-image: -webkit-gradient(linear, left top, left bottom, from(#E8D9F6), to(#fff));
+  background-image: -webkit-linear-gradient(top, #E8D9F6, #fff);
+  background-image: -o-linear-gradient(top, #E8D9F6, #fff);
+  background-image: linear-gradient(to bottom, #E8D9F6, #fff); */
 }
 
 .ps-service-banner .ps-service-banner-content h3 {
@@ -3307,7 +3311,7 @@ UI UX Page
 
 .ps-service-banner.ps-ui .ps-service-banner-content h3>span {
   font-weight: 800;
-  color: #57bb69;
+  color: var(--secondary-color);
 }
 
 .ps-service-banner .ps-service-banner-content p {
@@ -3328,8 +3332,196 @@ UI UX Page
 
 .ps-how-work {
   margin-bottom: 90px;
+  margin-top: 110px;
 }
 
+.ps-how-work .ps-how-work-ins .title-wrap {
+  padding-left: 10%;
+}
+
+.ps-how-work .ps-how-work-ins .title-wrap h2 {
+  font-size: 40px;
+  text-align: left;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--font-primary-color);
+}
+
+.ps-how-work .ps-how-work-ins .title-wrap p {
+  font-size: 14px;
+  color: var(--font-secondary-color);
+  margin-right: 80px;
+}
+
+.ps-single-pro {
+  margin-top: 12%;
+}
+
+.ps-single-pro:nth-child(odd) {
+  margin-top: -3%;
+}
+
+.ps-how-work .ps-how-work-ins .ps-process-wrap {
+  position: relative;
+  /* margin-bottom: 40px; */
+  margin-right: 50px;
+  position: relative;
+  /* max-width: 400px; */
+  border: 1px dashed rgba(142, 61, 204, 0.20);
+  border-radius: 8px;
+  padding: 15px 15px 15px 95px;
+}
+
+.ps-process-wrap:before {
+  content: attr(data-step);
+  color: #ffffff;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  background-color: #2f2f82;
+  left: -20px;
+  transform: translate(0, -50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.ps-how-work .ps-how-work-ins .ps-process-wrap .ps-how-work-ic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+  background-color: rgba(142, 61, 204, 0.09);
+  margin-bottom: 0;
+  position: absolute;
+  top: 15px;
+  left: 35px;
+}
+
+.ps-how-work .ps-how-work-ins .ps-process-wrap .ps-how-work-ic>img {
+  width: 20px;
+  height: auto;
+}
+
+/* .ps-how-work .ps-how-work-ins .ps-process-wrap::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  bottom: -55px;
+  width: 37.5px;
+  border-right: 1px dashed var(--secondary-color);
+  left: 0;
+} */
+
+/* 
+.ps-how-work .ps-how-work-ins .ps-process-wrap:last-child::before {
+  content: none;
+} */
+
+.ps-how-work .ps-how-work-ins .ps-process-wrap h3 {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--font-primary-color);
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.ps-how-work .ps-how-work-ins .ps-process-wrap p {
+  font-family: var(--font-family);
+  color: var(--font-secondary-color);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* .ps-how-work .ps-how-work-ins .ps-process-wrap {
+  position: relative;
+}
+
+.ps-how-work .ps-how-work-ins .ps-process-wrap li {
+  margin-bottom: 40px;
+  position: relative;
+  max-width: 400px;
+  border: 1px solid var(--bg-color);
+  border-radius: 8px;
+  padding: 15px 15px 15px 75px;
+}
+
+.ps-how-work .ps-how-work-ins .ps-process-wrap .ps-how-work-ic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+  background-color: rgba(142, 61, 204, 0.09);
+  margin-bottom: 0;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.ps-how-work .ps-how-work-ins .ps-process-wrap .ps-how-work-ic>img {
+  width: 20px;
+  height: auto;
+}
+
+.ps-how-work .ps-how-work-ins .ps-process-wrap li::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  bottom: -55px;
+  width: 37.5px;
+  border-right: 1px dashed var(--secondary-color);
+  left: 0;
+}
+
+.ps-how-work .ps-how-work-ins .ps-process-wrap li:last-child::before {
+  content: none;
+}
+
+.ps-how-work .ps-how-work-ins .ps-process-wrap li h3 {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--font-primary-color);
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.ps-how-work .ps-how-work-ins .ps-process-wrap li p {
+  font-family: var(--font-family);
+  color: var(--font-secondary-color);
+  font-size: 14px;
+  font-weight: 400;
+} */
+
+/*
 .ps-how-work .ps-how-work-ins {
   padding: 0 20px;
   margin-top: 20px;
@@ -3384,7 +3576,7 @@ UI UX Page
   line-height: 24px;
   text-align: center;
   color: var(--font-secondary-color);
-}
+} */
 
 .ps-why-us {
   background-color: var(--bg-color-2);
