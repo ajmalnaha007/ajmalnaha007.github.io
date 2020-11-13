@@ -2078,30 +2078,15 @@ svg .st2 {
 }
 
 .ps-ser {
-  padding-bottom: 18px;
-}
-
-@media(min-width:768px) {
-  .ps-ser {
-    padding-top: 12px;
-  }
-}
-
-.ps-ser {
-  padding-bottom: 48px;
+  padding-top: 12px;
+  padding-bottom: 30px;
 }
 
 .ps-ser .ps-service-ins {
   margin-bottom: 30px;
 }
 
-@media(min-width:768px) {
-  .ps-ser {
-    padding-bottom: 30px
-  }
-}
-
-@media(min-width:768px) {
+@media(min-width:992px) {
   .ps-service-ins:nth-child(2n) {
     top: -50%;
     transform: translate(0, 50%);
@@ -2110,13 +2095,11 @@ svg .st2 {
 }
 
 .ps-service {
-  /* -webkit-box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.09);
-  box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.09); */
-  -webkit-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07) !important;
-  -moz-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07) !important;
-  -o-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07) !important;
-  -ms-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07) !important;
-  box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07) !important;
+  -webkit-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  -moz-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  -o-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  -ms-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
   border-radius: 10px;
   display: block;
   -webkit-transition: all .4s;
@@ -2179,10 +2162,6 @@ svg .st2 {
   transition: all .4s;
   color: var(--primary-color);
 }
-
-/* .ps-service-sec {
-  background-color: var(--bg-color-2);
-} */
 
 .ps-service-sec .ps-service-ins .ps-service-ic {
   height: 89px;
@@ -2338,6 +2317,49 @@ svg .st2 {
   }
 }
 
+@media (max-width:991px) {
+  .ps-ser.ps-ser-discr p {
+    margin-right: 0;
+  }
+  .ps-service {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width:768px) {
+  .ps-ser {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .ps-ser.ps-ser-discr h3 {
+    font-size: 28px;
+  }
+  .ps-ser.ps-ser-discr p {
+    font-size: 14px;
+  }
+  .ps-service {
+    padding: 25px;
+  }
+  .ps-ser .ps-service-ins {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width:497px) {
+  .ps-ser {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .ps-ser.ps-ser-discr h3 {
+    font-size: 26px;
+    margin: 0 0 15px 0;
+  }
+  .ps-ser.ps-ser-discr h6 {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
 .ps-portfolio {
   margin-top: 130px;
   background: url('../img/port-bg.png') no-repeat left bottom;
@@ -2402,11 +2424,11 @@ svg .st2 {
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   z-index: 1;
-  -webkit-transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1) !important;
-  -moz-transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1) !important;
-  -o-transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1) !important;
-  -ms-transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1) !important;
-  transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1) !important;
+  -webkit-transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  -moz-transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  -o-transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  -ms-transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 .ps-portfolio .ps-portfolio-img {
