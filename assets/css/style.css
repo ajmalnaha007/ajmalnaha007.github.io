@@ -53,6 +53,13 @@ body.loaded {
   font-size: 120%;
 }
 
+.bg-active {
+  background: url(../img/bg-ui.svg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .color-sec {
   color: var(--secondary-color);
   font-size: 120%;
@@ -420,6 +427,12 @@ img {
   width: 100%;
   z-index: 999;
   height: auto;
+}
+
+@media (max-width: 991px) {
+  .ps-header {
+    background-color: #fff;
+  }
 }
 
 .ps-header.is-sticky {
@@ -2024,6 +2037,10 @@ svg .st2 {
   margin: 110px 0;
 }
 
+.ps-cnt-card-sec.ps-ui {
+  margin: 110px 0 50px 0;
+}
+
 .ps-cnt-ins {
   background-image: linear-gradient(to right, #8e3ccc 0%, #ce8cff 100%);
   border-radius: 15px;
@@ -2043,6 +2060,18 @@ svg .st2 {
   font-size: 14px;
   opacity: 0.7;
   text-align: left;
+}
+
+.ps-cnt-card-sec.ps-ui .ps-cnt-ins h2 {
+  font-size: 54px;
+  text-transform: capitalize;
+}
+
+.ps-cnt-card-sec.ps-ui .ps-cnt-ins p {
+  font-size: 16px;
+  opacity: 1;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 @media (max-width:991px) {
@@ -3289,50 +3318,181 @@ UI UX Page
 /* banner */
 
 .ps-service-banner {
-  padding-top: 110px;
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-  /* background-image: -webkit-gradient(linear, left top, left bottom, from(#E8D9F6), to(#fff));
-  background-image: -webkit-linear-gradient(top, #E8D9F6, #fff);
-  background-image: -o-linear-gradient(top, #E8D9F6, #fff);
-  background-image: linear-gradient(to bottom, #E8D9F6, #fff); */
+  position: relative;
+  background: linear-gradient(to top, #ffffff 33%, #f3ebfa 20%);
+  padding-top: 140px;
+  padding-bottom: 120px;
 }
 
 .ps-service-banner .ps-service-banner-content h3 {
+  position: relative;
+  line-height: 1.2;
   font-family: var(--font-family);
-  font-size: 58px;
-  font-weight: 300;
-  line-height: normal;
-  text-align: left;
-  color: var(--font-primary-color);
+  font-size: 50px;
+  font-weight: 700;
   margin-bottom: 30px;
+  margin-top: 30px;
+  text-transform: capitalize;
+  color: #1b1b4c;
 }
 
 .ps-service-banner.ps-ui .ps-service-banner-content h3>span {
-  font-weight: 800;
-  color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 5px;
 }
 
 .ps-service-banner .ps-service-banner-content p {
+  position: relative;
   font-family: var(--font-family);
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.78;
-  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: normal;
   color: var(--font-secondary-color);
-  margin-bottom: 40px;
+  z-index: 2;
+  text-align: left;
+  margin-bottom: 30px;
 }
 
-.ps-service-banner .ps-service-banner-content button {
-  margin: 0;
+.ps-service-banner .ps-service-banner-img {
+  margin-top: 20%;
 }
 
 /* how we work */
 
 .ps-how-work {
-  margin-bottom: 90px;
-  margin-top: 110px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.ps-how-work .single-process:nth-child(1) {
+  margin-top: 40px;
+}
+
+.ps-how-work .single-process:nth-child(2) {
+  margin-top: -86px;
+}
+
+.ps-how-work .single-process:nth-child(3) {
+  margin-top: -182px;
+}
+
+.ps-how-work .single-process .single-process-ins {
+  margin-bottom: 40px;
+  position: relative;
+  max-width: 400px;
+  background-color: var(--white-color);
+  -webkit-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  -moz-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  -o-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  -ms-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  border-radius: 8px;
+  padding: 15px;
+  border: 1px solid var(--bg-color);
+}
+
+.ps-how-work .single-process .single-process-ins svg {
+  position: absolute;
+}
+
+.ps-how-work .single-process .single-process-ins svg.back-arrow {
+  top: 100%;
+  left: -50%;
+}
+
+.ps-how-work .single-process .single-process-ins svg.forward-arrow {
+  bottom: 100%;
+  left: 50%;
+}
+
+.ps-how-work path, .ps-how-work polyline {
+  fill: none;
+  stroke: var(--font-secondary-color);
+  vector-effect: non-scaling-stroke;
+  stroke-width: 1;
+}
+
+.ps-how-work path {
+  stroke-dasharray: 5, 5;
+}
+
+.ps-how-work .title-wrap {
+  margin-bottom: 40px;
+}
+
+.ps-how-work .title-wrap h2 {
+  font-size: 40px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--font-primary-color);
+}
+
+.ps-how-work .title-wrap p {
+  font-size: 14px;
+  color: var(--font-secondary-color);
+  /* margin-right: 80px; */
+}
+
+.ps-how-work .single-process h3 {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 62px;
+  margin-bottom: 7px;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--font-primary-color);
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.ps-how-work .single-process p {
+  margin-top: 18px;
+  margin-bottom: 0;
+  font-family: var(--font-family);
+  color: var(--font-secondary-color);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.ps-how-work .single-process .ps-how-work-ic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+  background-color: rgba(142, 61, 204, 0.09);
+  margin-bottom: 0;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.ps-how-work .single-process .ps-how-work-ic>img {
+  width: 20px;
+  height: auto;
+}
+
+/* .ps-how-work .single-process {
+  width: 245px;
+} */
+
+/* 
+.ps-how-work {
+  margin-bottom: 50px;
+  padding-top: 50px;
+  margin-top: 70px;
+  padding-bottom: 50px;
 }
 
 .ps-how-work .ps-how-work-ins .title-wrap {
@@ -3353,103 +3513,7 @@ UI UX Page
   margin-right: 80px;
 }
 
-.ps-single-pro {
-  margin-top: 12%;
-}
-
-.ps-single-pro:nth-child(odd) {
-  margin-top: -3%;
-}
-
 .ps-how-work .ps-how-work-ins .ps-process-wrap {
-  position: relative;
-  /* margin-bottom: 40px; */
-  margin-right: 50px;
-  position: relative;
-  /* max-width: 400px; */
-  border: 1px dashed rgba(142, 61, 204, 0.20);
-  border-radius: 8px;
-  padding: 15px 15px 15px 95px;
-}
-
-.ps-process-wrap:before {
-  content: attr(data-step);
-  color: #ffffff;
-  font-size: 18px;
-  position: absolute;
-  top: 50%;
-  background-color: #2f2f82;
-  left: -20px;
-  transform: translate(0, -50%);
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-}
-
-.ps-how-work .ps-how-work-ins .ps-process-wrap .ps-how-work-ic {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 7px;
-  background-color: rgba(142, 61, 204, 0.09);
-  margin-bottom: 0;
-  position: absolute;
-  top: 15px;
-  left: 35px;
-}
-
-.ps-how-work .ps-how-work-ins .ps-process-wrap .ps-how-work-ic>img {
-  width: 20px;
-  height: auto;
-}
-
-/* .ps-how-work .ps-how-work-ins .ps-process-wrap::before {
-  content: '';
-  position: absolute;
-  top: 60px;
-  bottom: -55px;
-  width: 37.5px;
-  border-right: 1px dashed var(--secondary-color);
-  left: 0;
-} */
-
-/* 
-.ps-how-work .ps-how-work-ins .ps-process-wrap:last-child::before {
-  content: none;
-} */
-
-.ps-how-work .ps-how-work-ins .ps-process-wrap h3 {
-  font-family: var(--font-family);
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 7px;
-  letter-spacing: normal;
-  text-align: left;
-  color: var(--font-primary-color);
-  height: 45px;
-  display: flex;
-  align-items: center;
-}
-
-.ps-how-work .ps-how-work-ins .ps-process-wrap p {
-  font-family: var(--font-family);
-  color: var(--font-secondary-color);
-  font-size: 14px;
-  font-weight: 400;
-}
-
-/* .ps-how-work .ps-how-work-ins .ps-process-wrap {
   position: relative;
 }
 
@@ -3457,7 +3521,8 @@ UI UX Page
   margin-bottom: 40px;
   position: relative;
   max-width: 400px;
-  border: 1px solid var(--bg-color);
+  
+  background-color: #f5f0f3;
   border-radius: 8px;
   padding: 15px 15px 15px 75px;
 }
@@ -3493,7 +3558,7 @@ UI UX Page
   top: 60px;
   bottom: -55px;
   width: 37.5px;
-  border-right: 1px dashed var(--secondary-color);
+  border-right: 1px dashed #bbc7d4;
   left: 0;
 }
 
@@ -3521,102 +3586,31 @@ UI UX Page
   font-weight: 400;
 } */
 
-/*
-.ps-how-work .ps-how-work-ins {
-  padding: 0 20px;
-  margin-top: 20px;
-}
-
-.ps-how-work .ps-how-work-ins .ps-how-work-ic {
-  width: 90px;
-  height: 90px;
-  border-radius: 50px;
-  border: 1px dashed var(--border-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  background-color: var(--white-color);
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.is-conntected {
-  position: relative;
-}
-
-.is-conntected::before {
-  content: '';
-  background-color: var(--secondary-color);
-  position: absolute;
-  left: 19%;
-  top: 65px;
-  background-color: transparent;
-  right: 19%;
-  border-top: 1px dashed var(--border-color);
-}
-
-.ps-how-work .ps-how-work-ins .ps-how-work-ic>img {
-  width: 41px;
-  height: 41px;
-}
-
-.ps-how-work .ps-how-work-ins .ps-how-work-txt h5 {
-  font-family: var(--font-family);
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  color: var(--font-primary-color);
-}
-
-.ps-how-work .ps-how-work-ins .ps-how-work-txt p {
-  font-family: var(--font-family);
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 24px;
-  text-align: center;
-  color: var(--font-secondary-color);
-} */
+/* WHY US */
 
 .ps-why-us {
-  background-color: var(--bg-color-2);
+  /* background-color: var(--bg-color-2); */
   margin-top: 0;
   padding-top: 80px;
-  text-align: center;
+  text-align: left;
   padding-bottom: 50px;
 }
 
-.ps-why-us .ps-why-ins .ps-content-wrap {
-  margin-top: 40px;
+.ps-why-us .title-wrap h2 {
+  font-size: 44px;
+  color: var(--font-primary-color);
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
 }
 
-.ps-why-us .ps-why-ins .ps-content-wrap p {
-  text-align: center;
-  font-family: var(--font-family);
+.ps-why-us .content-wrap p {
   font-size: 16px;
-  font-weight: normal;
-  line-height: 1.63;
-  text-align: center;
-  color: var(--font-secondary-color);
-}
-
-.ps-why-us .ps-why-ins .ps-point-wrap {
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--font-primary-color);
+  margin-bottom: 30px;
   text-align: left;
-  margin-top: 40px;
-}
-
-.ps-why-us .ps-why-ins .ps-point-wrap ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.ps-why-us .ps-why-ins .ps-point-wrap ul li {
-  width: 50%;
 }
 
 /* TESTIMONIAL */
@@ -3624,70 +3618,86 @@ UI UX Page
 .ps-testi-sec {
   padding-top: 80px;
   padding-bottom: 80px;
+  /* background: linear-gradient(to right, #ffffff 50%, #f3ebfa 50%); */
 }
 
-.ps-testi-sec .ps-subtitle-wrap {
-  margin-bottom: 50px;
-}
-
-.testi-slick {
-  margin-bottom: 50px;
+.ps-testi-sec .ps-subtitle-wrap h2 {
+  font-size: 44px;
+  color: var(--font-primary-color);
+  font-weight: 600;
+  margin: 0;
 }
 
 .testi-slick .single-testi {
-  display: flex;
-  -ms-flex-align: start;
-  align-items: flex-start;
   border-radius: 5px;
-  background-color: var(--bg-color);
-  padding: 20px;
-  margin-right: 15px;
-  margin-left: 15px;
+  /* max-width: 350px; */
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 3px 13px 0px rgba(11, 34, 56, 0.07);
+  -moz-box-shadow: 0px 3px 13px 0px rgba(11, 34, 56, 0.07);
+  -o-box-shadow: 0px 3px 13px 0px rgba(11, 34, 56, 0.07);
+  -ms-box-shadow: 0px 3px 13px 0px rgba(11, 34, 56, 0.07);
+  box-shadow: 0px 3px 13px 0px rgba(11, 34, 56, 0.07);
+  padding: 45px 40px 55px;
+  margin: 30px 24px 30px;
+  position: relative;
 }
 
-.testi-slick .single-testi .testi-autr {
-  width: 80px;
-  position: relative;
-  min-width: 80px;
-  height: 80px;
+.testi-slick .single-testi::before {
+  content: url(../img/testimonial.svg);
+  position: absolute;
+  right: 40px;
+  bottom: 55px;
+}
+
+.testi-slick .single-testi .testi-cnt p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--font-primary-color);
+  margin-bottom: 35px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  height: 120px;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.testi-slick .single-testi .testi-meta {
+  display: flex;
+  align-items: center;
+}
+
+.testi-slick .single-testi .img-wrapper {
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   overflow: hidden;
-  display: inline-block;
-  border: solid 5px rgb(142, 60, 204, 0.31);
-  margin-right: 25px;
+  margin-right: 15px;
 }
 
-.testi-slick .single-testi .testi-autr>img {
+.testi-slick .single-testi .img-wrapper img {
+  object-fit: contain;
+  -o-object-fit: contain;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
 }
 
-.testi-slick .single-testi .testi-cnt .testi-authr-name {
+.testi-slick .single-testi .testi-authr-name {
   font-family: var(--font-family);
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--font-primary-color);
-  margin-bottom: 10px;
-}
-
-.testi-slick .single-testi .testi-cnt .testi-authr-pos {
-  font-family: var(--font-family);
-  font-size: 14px;
-  font-weight: normal;
-  color: var(--secondary-color);
-  margin-bottom: 25px;
-}
-
-.testi-slick .single-testi .testi-cnt .testi-content {
-  font-family: var(--font-family);
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.63;
-  text-align: left;
-  color: var(--font-secondary-color);
+  font-size: 18px;
+  font-weight: 600;
   margin-bottom: 0;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--font-primary-color);
+}
+
+.testi-slick .single-testi .testi-authr-pos {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: var(--font-secondary-color);
 }
 
 .ps-testi-sec .slick-arrow {
@@ -3779,17 +3789,16 @@ UI UX Page
 .ps-brands .ps-brand-head h3 {
   position: relative;
   font-family: var(--font-family);
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 18px;
   text-align: center;
-  color: var(--font-secodary-color);
+  color: var(--font-secondary-color);
   display: inline-block;
 }
 
 .ps-brands .ps-brand-head h3::before, .ps-brands .ps-brand-head h3::after {
   content: '';
   width: 150px;
-  height: 2px;
+  height: 1px;
   background-color: var(--font-secondary-color);
   position: absolute;
   top: 50%;
@@ -3805,20 +3814,37 @@ UI UX Page
 }
 
 .ps-brands .ps-brand-list {
-  border-radius: 5px;
-  box-shadow: 0 0 43px 0 rgba(47, 47, 130, 0.13);
-  padding: 30px 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.ps-brands .ps-brand-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  height: 100%;
+  pointer-events: none;
+  cursor: pointer;
+  -webkit-background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, #fff 100%) !important;
+  -moz-background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, #fff 100%) !important;
+  -o-background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, #fff 100%) !important;
+  -ms-background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, #fff 100%) !important;
+  background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, #fff 100%) !important;
 }
 
 .ps-brands .ps-brand-list .single-brand {
   position: relative;
+  width: 160px;
+  margin: 0 20px;
   min-height: 80px;
 }
 
 .ps-brands .ps-brand-list .single-brand img {
   margin: auto;
-  max-width: 150px;
-  width: 100%;
+  width: 110px;
   position: absolute;
   top: 0;
   bottom: 0;

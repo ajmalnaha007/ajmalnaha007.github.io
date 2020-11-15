@@ -302,14 +302,15 @@
         // testmonial
 
         $('#slick-testimonial').not('.slick-initialized').slick({
-            dots: true,
+            dots: false,
             infinite: true,
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            dragToSlide: 2,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dragToSlide: 3,
             autoplay: true,
             autoplaySpeed: 3000,
             pauseOnHover: true,
+            arrows:false,
             prevArrow: '<button class="btn slide-arrow prev"><span class="icon-ps-arrow"></span></button>',
             nextArrow: '<button class="btn slide-arrow next"><span class="icon-ps-arrow"></span></button>',
         });
@@ -321,6 +322,7 @@
             slidesToShow: 5,
             arrows: false,
             slidesToScroll: 5,
+            variableWidth:true,
             speed: 1300,
             infinite: true,
             autoplay: true,
