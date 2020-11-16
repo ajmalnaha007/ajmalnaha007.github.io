@@ -3345,7 +3345,7 @@ UI UX Page
   color: #1b1b4c;
 }
 
-.ps-service-banner.ps-ui .ps-service-banner-content h3>span {
+.ps-service-banner .ps-service-banner-content h3>span {
   background-color: var(--secondary-color);
   color: #fff;
   padding: 5px;
@@ -3749,7 +3749,7 @@ UI UX Page
   position: relative;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0px 16px 25px 0px rgba(0, 0, 0, 0.03);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.12);
   padding: 70px 100px 50px;
   z-index: 5;
 }
@@ -3945,9 +3945,11 @@ UI UX Page
 }
 
 /* OTHER SERVICES */
+
 .ps-othr-services {
   display: none;
 }
+
 @media (min-width :992px) {
   .ps-othr-services {
     display: block;
@@ -4048,69 +4050,105 @@ Marketing
 
 /* banner */
 
-.ps-service-banner.ps-marketing .ps-service-banner-content h3>span {
-  font-weight: 800;
-  color: #f9a1d4;
+.ps-service-banner.ps-marketing .ps-service-banner-img {
+  /* margin-top:5% */
 }
 
 .ps-marketing-cnt-sec {
-  background-color: var(--bg-color);
-  margin-top: 80px;
   margin-bottom: 80px;
 }
 
 .ps-marketing-cnt-sec .ps-marketing-cnt-ins {
-  padding: 40px 0;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: var(--bg-color-2);
+  margin-top: -43%;
+}
+
+.ps-marketing-sat-ins {
+  position: relative;
+  /* padding: 20px 20px 20px 80px; */
 }
 
 .ps-marketing-cnt-sec .ps-marketing-cnt-ins p {
   font-family: var(--font-family);
-  font-size: 26px;
-  font-weight: normal;
-  line-height: 1.73;
-  letter-spacing: normal;
+  font-size: 18px;
+  line-height: 1.7;
   text-align: center;
   color: var(--font-secondary-color);
+  margin-bottom: 0;
 }
 
 .ps-marketing-cnt-sec .ps-marketing-cnt-ins p>span {
-  font-weight: bold;
+  font-weight: 700;
+  color: var(--secondary-color);
 }
 
 .ps-marketing-sat-sec {
-  margin-bottom: 80px;
+  margin-bottom: calc(100px + 60px);
 }
 
-.ps-marketing-sat-sec .ps-subtitle-wrap {
-  margin-bottom: 50px;
+.ps-marketing-sat-sec .ps-subtitle-wrap h2 {
+  font-size: 40px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--font-primary-color);
+}
+
+.ps-marketing-sat-sec .ps-subtitle-wrap p {
+  font-size: 16px;
+  color: var(--font-secondary-color);
+  margin-bottom: 0;
+}
+
+.ps-marketing-sat-sec .single-stat:nth-child(1) {
+  -webkit-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  transform: translateY(60px);
+}
+
+.ps-marketing-sat-sec .single-stat:nth-child(3) {
+  -webkit-transform: translateY(-60px);
+  -ms-transform: translateY(-60px);
+  transform: translateY(-60px);
 }
 
 .ps-marketing-sat-sec .ps-marketing-sat-sig {
-  padding: 30px;
-  border-radius: 5px;
-  box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.15);
+  text-align: left;
+  border-radius: 8px;
+  /* border: 1px solid rgba(255, 255, 255, 0.08); */
+  /* background-color: rgba(0,0,0,0.04); */
   background-color: var(--white-color);
-  text-align: center;
+  -webkit-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  -moz-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  -o-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  -ms-box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  box-shadow: 0 30px 50px 0px rgba(11, 34, 56, 0.07);
+  border-radius: 8px;
+  padding: 15px;
+  border: 1px solid var(--bg-color);
+  padding: 20px 25px;
 }
 
 .ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-ic {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 30px;
+  width: 55px;
+  height: 55px;
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.04);
+  margin-bottom: 20px;
 }
 
 .ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-ic>img {
-  height: 45px;
+  height: 30px;
 }
 
 .ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-txt {
@@ -4120,16 +4158,21 @@ Marketing
 
 .ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-txt>h3 {
   font-family: var(--font-family);
-  font-size: 22px;
+  font-size: 20px;
+  text-transform: capitalize;
   font-weight: 500;
-  line-height: normal;
-  text-align: center;
+  margin-bottom: 7px;
+  text-align: left;
   color: var(--font-primary-color);
 }
 
 .ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-cnt>p {
+  margin-top: 15px;
   margin-bottom: 0;
+  font-family: var(--font-family);
   color: var(--font-secondary-color);
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .ps-quick-cnt {
@@ -4142,10 +4185,32 @@ Marketing
   width: 100%;
   padding: 50px 40px;
   border-radius: 5px;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.2);
-  background-color: var(--white-color);
+  /* box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--white-color); */
+  position: relative;
+  z-index: 1;
+}
+
+.ps-quick-cnt .ps-quick-outer{
   position: relative;
 }
+
+.ps-quick-cnt .ps-quick-outer::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-radius: 150px 20px 30px 20px;
+  background-color: #262669;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
 
 .ps-quick-cnt .ps-quick-cnt-ins::before {
   content: "";
