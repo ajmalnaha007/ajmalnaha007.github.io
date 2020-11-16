@@ -322,7 +322,6 @@
             slidesToShow: 5,
             arrows: false,
             slidesToScroll: 5,
-            variableWidth: true,
             speed: 1300,
             infinite: true,
             autoplay: true,
@@ -355,6 +354,7 @@
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    centerMode:true
                 }
             }
             ]
