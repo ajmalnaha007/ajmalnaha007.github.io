@@ -5744,39 +5744,26 @@ body.anim .load-title-fill:before, body.anim .load-title-fill:after {
 /* contact-pluto */
 
 .ps-contact-bnr {
-  background-color: var(--primary-color);
+  background-color: #f3ebfa;
   padding-bottom: 18.75rem;
   position: relative;
   overflow: hidden;
   padding-top: 10rem;
 }
 
-/* .ps-contact-bnr::before {
-  content: "";
-  background-image: url(../img/inner/bg-contact.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: -10%;
-  bottom: -50%;
-} */
-
 .ps-contact-bnr-title h1 {
   font-size: 50px;
   font-weight: 700;
   margin-bottom: 22px;
   margin-top: 15px;
-  color: var(--white-color);
+  color: var(--font-primary-color);
 }
 
 .ps-contact-bnr-title p {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   margin-bottom: 25px;
-  color: var(--white-color);
-  opacity: .7;
+  color: var(--font-secondary-color);
 }
 
 .ps-contact-form {
@@ -5787,11 +5774,11 @@ body.anim .load-title-fill:before, body.anim .load-title-fill:after {
   background-color: #ffffff;
   border-radius: 5px;
   padding: 35px;
-  -webkit-box-shadow: 0px 50px 70px -10px rgba(11, 34, 56, 0.05);
-  -moz-box-shadow: 0px 50px 70px -10px rgba(11, 34, 56, 0.05);
-  -o-box-shadow: 0px 50px 70px -10px rgba(11, 34, 56, 0.05);
-  -ms-box-shadow: 0px 50px 70px -10px rgba(11, 34, 56, 0.05);
-  box-shadow: 0px 50px 70px -10px rgba(11, 34, 56, 0.05);
+  -webkit-box-shadow: 0px 20px 60px 0px rgba(11, 34, 56, 0.1);
+  -moz-box-shadow: 0px 20px 60px 0px rgba(11, 34, 56, 0.1);
+  -o-box-shadow: 0px 20px 60px 0px rgba(11, 34, 56, 0.1);
+  -ms-box-shadow: 0px 20px 60px 0px rgba(11, 34, 56, 0.1);
+  box-shadow: 0px 20px 60px 0px rgba(11, 34, 56, 0.1);
   margin-bottom: 50px;
 }
 
@@ -5896,6 +5883,28 @@ input[type=radio]:checked+label {
   width: 0;
   height: 0;
   visibility: hidden;
+}
+
+.ps-carrier {
+  text-align: center;
+  margin: 50px 0 80px;
+}
+
+.ps-carrier .ps-carrier-ins {
+  border-radius: 8px;
+  background-color: rgba(142, 60, 204, .1);
+  padding: 50px 40px;
+}
+
+.ps-carrier .ps-carrier-ins h3{
+  font-size: 34px;
+  color: var(--font-primary-color);
+  font-weight: 600;
+}
+
+.ps-carrier .ps-carrier-ins p{
+  font-size: 16px;
+  color: var(--font-secondary-color);
 }
 
 /* port modal */
