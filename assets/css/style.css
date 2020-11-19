@@ -4193,7 +4193,7 @@ Marketing
   z-index: 1;
 }
 
-.ps-quick-cnt .ps-quick-outer{
+.ps-quick-cnt .ps-quick-outer {
   position: relative;
 }
 
@@ -4212,7 +4212,6 @@ Marketing
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-
 
 /* .ps-quick-cnt .ps-quick-cnt-ins::before {
   content: "";
@@ -4267,7 +4266,7 @@ Marketing
   margin-left: auto;
   max-width: 412px;
   padding: 20px;
-  box-shadow: 0px 0 4px 0px rgb(11,34,56,0.17);
+  box-shadow: 0px 0 4px 0px rgb(11, 34, 56, 0.17);
 }
 
 /* bottom contact */
@@ -4355,89 +4354,170 @@ Marketing
 
 /* banner */
 
-.banner-alt {
+.ps-about-bnr {
   position: relative;
+  padding: 120px 0 250px;
   width: 100%;
-  background-color: var(--primary-color);
-  background-repeat: no-repeat;
-  background-image: url(../img/about-bnr-bg-left.png), url(../img/about-bnr-bg-right.png);
-  background-position: top left, bottom right;
+  background-color: #f3ebfa;
+  /* background:linear-gradient(to top, var(--bg-color-2) 33%, #f3ebfa 20%); */
+  /* background-repeat: no-repeat; */
+  /* background-image: url(../img/about-bnr-bg-left.png), url(../img/about-bnr-bg-right.png); */
+  /* background-position: top left, bottom right; */
 }
 
-.banner-alt h3 {
+.ps-about-bnr h3 {
   font-family: var(--font-family);
   font-size: 50px;
   font-weight: bold;
   line-height: normal;
   text-align: left;
-  color: var(--white-color);
+  color: var(--font-primary-color);
   margin-bottom: 25px;
 }
 
 .ps-about-bnr .ps-about-bnr-ins {
-  margin-bottom: 94px;
+  /* margin-top: 30px; */
 }
 
 .ps-about-bnr .ps-about-bnr-ins p {
   margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 16px;
   text-align: left;
-  color: var(--white-color);
+  color: var(--font-secondary-color);
 }
 
 .ps-about-bnr .ps-about-bnr-optio {
   position: relative;
-  padding: 184px 0 90px;
 }
 
-.ps-about-bnr .ps-about-bnr-optio .ps-about-bnr-optio-sin {
-  background-color: transparent;
+/* .head-wht-we {
+  display: block;
+  text-align: right;
+  margin: 0 10px;
+} */
+
+.ps-abt-opt {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.ps-abt-opt .ps-abt-opt-item {
+  --box-width: 250px;
+  min-width: 250px;
+  -ms-flex: 0 0 var(--box-width);
+  flex: 0 0 var(--box-width);
+  max-width: var(--box-width);
+  min-height: 264px;
+  width: var(--box-width);
+  margin: 10px;
+  position: relative;
+}
+
+.ps-abt-opt .ps-abt-opt-item:nth-child(2n) {
+  transform: translateY(calc(50% + 10px));
+}
+
+.ps-abt-opt .ps-abt-opt-item .ps-abt-opt-in {
   position: absolute;
-  bottom: -212px;
-  left: 0;
+  top: 0;
+  bottom: 0;
   right: 0;
-  transition: all .2s ease;
+  left: 0;
+  padding: 20px;
+  background-color: var(--white-color);
+  border-radius: 8px;
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  -webkit-box-shadow: 0px 20px 60px 0px rgba(11, 34, 56, 0.1);
+  -moz-box-shadow: 0px 20px 60px 0px rgba(11, 34, 56, 0.1);
+  -o-box-shadow: 0px 20px 60px 0px rgba(11, 34, 56, 0.1);
+  -ms-box-shadow: 0px 20px 60px 0px rgba(11, 34, 56, 0.1);
+  box-shadow: 0px 20px 60px 0px rgba(11, 34, 56, 0.1);
 }
 
-#bannerOptions>a>text {
-  font-size: 19px;
-  transition: all .2s ease;
-  font-family: var(--font-family);
-  font-weight: 700;
-  pointer-events: none;
-  fill: var(--font-primary-color);
+.ps-abt-opt .ps-abt-opt-item .ps-abt-opt-in.is-show {
+  transition-timing-function: ease-out;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
 }
 
-#bannerOptions>a.is-hovered>g>path {
-  transition: all .2s ease;
-  fill: var(--white-color);
+.ps-abt-opt .ps-abt-opt-item .ps-abt-opt-in h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 15px 0;
 }
 
-#bannerOptions>a.is-hovered>text {
-  transition: all .2s ease;
-  fill: var(--white-color);
+.ps-abt-opt .ps-abt-opt-item .ps-abt-opt-in p {
+  margin-bottom: 0;
+  font-size: 14px;
+  display: inline-block;
+  color: var(--font-secondary-color);
+}
+
+.ps-abt-opt .ps-abt-opt-item .ps-abt-opt-in .ps-ic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+  border: 1px solid rgba(0, 0, 0, .09);
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+
+.ps-abt-opt .ps-abt-opt-item .ps-abt-opt-in .ps-ic>img {
+  width: 20px;
+  height: auto;
 }
 
 /* who we are */
 
 .ps-about-who-we {
-  background-color: var(--bg-color);
-  padding: 75px 0;
+  /* background-color: var(--bg-color-2); */
+  /* padding: 75px 0; */
+}
+
+.ps-about-who-we .ps-about-who-we-ins {
+  -webkit-box-shadow: 0 10px 25px rgba(60, 72, 88, 0.15) !important;
+  box-shadow: 0 10px 25px rgba(60, 72, 88, 0.15) !important;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  text-align: center;
+  transform: translateY(-140px);
+  padding: 20px;
 }
 
 .ps-about-who-we .ps-about-who-we-head>img {
   width: 160px;
-  opacity: .5;
+  opacity: .5!important;
 }
 
-.ps-about-who-we .ps-about-who-we-head>h4 {
-  font-family: var(--font-family);
-  margin-bottom: 0;
-  font-size: 45px;
-  font-weight: 800;
-  text-align: left;
-  color: var(--font-primary-color);
+.ps-about-who-we .ps-title-section-two>h4 {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--white-color);
 }
 
 .ps-about-who-we .ps-about-who-we-head>p {
@@ -4445,8 +4525,7 @@ Marketing
   font-size: 14px;
   font-weight: normal;
   line-height: 24px;
-  text-align: left;
-  color: var(--font-secondary-color);
+  color: var(--white-color);
 }
 
 .ps-about-who-we .ps-about-who-we-head>p:last-child {
@@ -5726,18 +5805,18 @@ body.anim .load-title-fill:before, body.anim .load-title-fill:after {
 
 .ps-cnt-switcher input[type=radio]+label {
   font-family: var(--font-family);
-    color: var(--secondary-color);
-    background-color: transparent;
-    border-radius: 50px;
-    padding: 7px 13px;
-    font-weight: 600;
-    font-size: 13px;
-    transition: all .2s ease-in;
-    border: transparent;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    display: flex;
-    align-items: center;
+  color: var(--secondary-color);
+  background-color: transparent;
+  border-radius: 50px;
+  padding: 7px 13px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all .2s ease-in;
+  border: transparent;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
 }
 
 input[type=radio]:checked+label {
