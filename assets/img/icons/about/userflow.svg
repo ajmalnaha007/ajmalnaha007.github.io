@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="19.7" viewBox="0 0 24 19.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2f2f82;
+      }
+    </style>
+  </defs>
+  <title>userflow</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path class="cls-1" d="M13.2,5.9V8.7h8.7v5H24v6H17.4v-6h2.1V11H4.5v2.7H6.6v6H0v-6H2.1v-5h8.7V5.9H8.7V0h6.6V5.9Z"/>
+    </g>
+  </g>
+</svg>

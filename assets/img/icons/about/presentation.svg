@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2f2f82;
+      }
+    </style>
+  </defs>
+  <title>presentation</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <path class="cls-1" d="M24,3.3V1.9H12.7V0H11.3V1.9H0V3.3H1.4V16.1H0v1.4H11.3v5.1H6V24H18V22.6H12.7V17.5H24V16.1H22.6V3.3ZM21.2,16.1H2.8V3.3H21.2V16.1Z"/>
+        <path class="cls-1" d="M12,14.6l4.6-2.5V7.3L12,4.8,7.4,7.3v4.8ZM8.8,8.9l2.5,1.4v2.3L8.8,11.3Zm3.9,3.7V10.3l2.5-1.4v2.4Zm1.7-4.9L12,9.1,9.6,7.7,12,6.4Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

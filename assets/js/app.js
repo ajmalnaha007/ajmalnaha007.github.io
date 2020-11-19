@@ -109,7 +109,6 @@
             var headerOffset = $('#ps-header').children().offset().left + 20 + 'px',
                 bannerOptionHgt = $('#bannerOptions').height() / 2 + 80 + 'px';
             (mediaMobile.matches) ? $('#ps-banner-txt').css({ 'padding-left': headerOffset }) : $('#ps-banner-txt').removeAttr('style');
-            $('#ps-about-bnr').css({ 'margin-bottom': bannerOptionHgt });
         }
         ($('#ps-header').length) && bannerTxtOffset();
     }
@@ -144,39 +143,6 @@
         }
 
         mobileToggleMenu();
-        // var menuDropDownClass = () => {
-        //     $(".has-dropdown").each(function () {
-        //         $(this).on('click', function () {
-        //             $(this).toggleClass('active').siblings().removeClass('active');
-        //         })
-        //     });
-        // }
-        // menuDropDownClass();
-
-        // var toggleBtnClass = () => {
-        //     $('#menu-toggle').on('click', function (event) {
-        //         $(this).toggleClass('is-active');
-        //         // $('#ps-header').toggleClass('minisidebar');
-        //         // $('body').toggleClass('is-overlay');
-        //     });
-        // }
-        // toggleBtnClass();
-    }
-
-
-    PATH.aboutBannerOption = () => {
-        $('.outer-div').each(function () {
-            $(this).mouseover(function () {
-                $(this).parent().siblings().css({
-                    'opacity': '.1'
-                });
-
-            }).mouseout(function () {
-                $(this).parent().siblings().css({
-                    'opacity': '1'
-                })
-            });
-        });
     }
 
 
@@ -436,38 +402,12 @@
         handleUpload();
     }
 
-    // PATH.test = () => {
-    //     maskCircle = {
-    //         x: t,
-    //         y: e,
-    //         radius: 0
-    //     }
-    //     $('#make').mouseover(function () {
-    //         TweenLite.to(maskCircle, .4, {
-    //             radius: 0,
-    //             ease: Power2.easeOut,
-    //             onComplete: function () {
-    //                 // e.isHoveringOut = !1
-    //             }
-    //         });
-    //         // $(this).css({
-    //         //     'opacity': '.1'
-    //         // });
-
-    //     }).mouseout(function () {
-    //         // $('#make').css({
-    //         //     'opacity': '1'
-    //         // })
-    //     });
-    // }
-
     /* Document ready function */
     $(function () {
         PATH.backToTop();
         PATH.headerSticky();
         PATH.menuToggle();
         PATH.counterSec();
-        PATH.aboutBannerOption();
         PATH.filterScroll();
         PATH.blogHeader();
         PATH.masnoryPort();
@@ -490,3 +430,50 @@
     });
 
 })(jQuery);
+
+// pure js
+document.addEventListener('DOMContentLoaded', function () {
+    var aboutBannerOption = () => {
+        function aboutImageSwap(targets) {
+            var element = document.querySelectorAll(targets);
+            for (i = 0; i < element.length; i++) {
+                if (i != 2) {
+                    var first = element[i].querySelectorAll('.ps-abt-opt-in:nth-child(1)');
+                    var middile = element[i].querySelectorAll('.ps-abt-opt-in:nth-child(2)');
+                    var last = element[i].querySelectorAll('.ps-abt-opt-in:nth-child(3)');
+                    function animDelay(data, delay) {
+                        data.forEach(element => {
+                            function imageReplace() {
+                                if (element.classList.contains('is-show')) {
+                                    element.classList.remove('is-show');
+                                    if (element.nextElementSibling == null) {
+                                        setTimeout(function () {
+                                            element.parentNode.firstElementChild.classList.add('is-show');
+                                        }, 1000);
+                                    } else if (element.nextElementSibling) {
+                                        setTimeout(function () {
+                                            element.nextElementSibling.classList.add('is-show');
+                                        }, 1000);
+                                    }
+                                }
+                            }
+                            imageReplace();
+                            setInterval(imageReplace, delay);
+                        })
+                    }
+                    animDelay(first, 15000);
+                    animDelay(middile, 15000);
+                    animDelay(last, 15000);
+                }
+            }
+        }
+        var item1 = '.ps-abt-opt .ps-abt-opt-item:nth-child(1)';
+        var item2 = '.ps-abt-opt .ps-abt-opt-item:nth-child(2)';
+        var item3 = '.ps-abt-opt .ps-abt-opt-item:nth-child(3)';
+
+        setTimeout(function () { aboutImageSwap(item1) }, 5000);
+        setTimeout(function () { aboutImageSwap(item2) }, 10000);
+        setTimeout(function () { aboutImageSwap(item3) }, 15000);
+    }
+    aboutBannerOption();
+}, false);
