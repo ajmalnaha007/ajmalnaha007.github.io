@@ -4356,14 +4356,26 @@ Marketing
 
 .ps-about-bnr {
   position: relative;
-  padding: 120px 0 250px;
+  padding: 120px 0 25px;
   width: 100%;
-  background-color: #f3ebfa;
-  /* background:linear-gradient(to top, var(--bg-color-2) 33%, #f3ebfa 20%); */
+  position: relative;
+  /* background-color: #f3ebfa; */
+  background: linear-gradient(to top, #ffffff 28%, #f3ebfa 20%);
   /* background-repeat: no-repeat; */
   /* background-image: url(../img/about-bnr-bg-left.png), url(../img/about-bnr-bg-right.png); */
   /* background-position: top left, bottom right; */
 }
+
+/* 
+.ps-about-bnr::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 58%;
+  right: 0;
+  background-color: #f3ebfa;
+} */
 
 .ps-about-bnr h3 {
   font-family: var(--font-family);
@@ -4376,7 +4388,7 @@ Marketing
 }
 
 .ps-about-bnr .ps-about-bnr-ins {
-  /* margin-top: 30px; */
+  margin-top: 110px;
 }
 
 .ps-about-bnr .ps-about-bnr-ins p {
@@ -4398,10 +4410,12 @@ Marketing
 
 .ps-abt-opt {
   width: 100%;
+  /* background-color: #f3ebfa; */
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .ps-abt-opt .ps-abt-opt-item {
@@ -4495,42 +4509,33 @@ Marketing
 /* who we are */
 
 .ps-about-who-we {
-  /* background-color: var(--bg-color-2); */
-  /* padding: 75px 0; */
+  padding: 70px 0;
+  background-color: var(--bg-color-2);
 }
 
-.ps-about-who-we .ps-about-who-we-ins {
-  -webkit-box-shadow: 0 10px 25px rgba(60, 72, 88, 0.15) !important;
-  box-shadow: 0 10px 25px rgba(60, 72, 88, 0.15) !important;
-  background-color: var(--secondary-color);
-  border-radius: 8px;
-  text-align: center;
-  transform: translateY(-140px);
-  padding: 20px;
+.ps-about-who-we .title-section-two .before-title-img {
+  margin-bottom: 15px;
+  max-width: 120px;
 }
 
-.ps-about-who-we .ps-about-who-we-head>img {
-  width: 160px;
-  opacity: .5!important;
+.ps-about-who-we .title-section-two h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: var(--font-primary-color);
 }
 
-.ps-about-who-we .ps-title-section-two>h4 {
-  font-size: 40px;
-  font-weight: 600;
-  color: var(--white-color);
-}
+.ps-about-who-we {}
 
-.ps-about-who-we .ps-about-who-we-head>p {
-  font-family: var(--font-family);
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 24px;
-  color: var(--white-color);
-}
+.ps-about-who-we {}
 
-.ps-about-who-we .ps-about-who-we-head>p:last-child {
-  margin-bottom: 0;
-}
+.ps-about-who-we {}
+
+.ps-about-who-we {}
+
+.ps-about-who-we {}
+
+.ps-about-who-we {}
 
 /* Our Culture */
 
