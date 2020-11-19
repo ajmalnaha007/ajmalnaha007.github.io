@@ -1,48 +1,55 @@
 (function ($) {
     "use strict"
     var PATH = {};
+    // $("body").addClass("loaded");
+    // $('#ps-preloader').hide();
+    // AOS.init({
+    //     easing: 'ease-in-out', // default easing for AOS animations
+    //     once: false, // whether animation should happen only once - while scrolling down
+    //     duration: 500, // values from 0 to 3000, with step 50ms
+    // });
     PATH.preLoader = function () {
-        TweenMax.to($("#ps-preloader svg , #ps-preloader .ps-loader-text"), 1.0, {
-            force3D: true,
-            y: "-150px",
-            opacity: 0,
-            ease: Expo.easeInOut,
-            delay: 1.2,
-            onComplete: function () {
-                TweenMax.to($(".loader-anim"), 0.8, {
-                    force3D: true,
-                    bottom: "100%",
-                    ease: Expo.easeInOut,
-                });
-                TweenMax.to($(".loader-anim2"), 0.8, {
-                    force3D: true,
-                    bottom: "100%",
-                    delay: 0.2,
-                    ease: Expo.easeInOut,
-                    onComplete: function () {
-                        $(".loader").fadeOut(1);
-                    }
-                });
-                TweenMax.to($("#ps-preloader"), 0.8, {
-                    force3D: true,
-                    bottom: "100%",
-                    delay: 0.2,
-                    ease: Expo.easeInOut,
-                    onComplete: function () {
-                        $(".loader").fadeOut(1);
-                    }
-                });
-                setTimeout(function () {
-                    $("body").addClass("loaded");
-                    $('#ps-preloader').hide();
-                    AOS.init({
-                        easing: 'ease-in-out', // default easing for AOS animations
-                        once: false, // whether animation should happen only once - while scrolling down
-                        duration: 500, // values from 0 to 3000, with step 50ms
+            TweenMax.to($("#ps-preloader svg , #ps-preloader .ps-loader-text"), 1.0, {
+                force3D: true,
+                y: "-150px",
+                opacity: 0,
+                ease: Expo.easeInOut,
+                delay: 1.2,
+                onComplete: function () {
+                    TweenMax.to($(".loader-anim"), 0.8, {
+                        force3D: true,
+                        bottom: "100%",
+                        ease: Expo.easeInOut,
                     });
-                }, 800);
-            }
-        });
+                    TweenMax.to($(".loader-anim2"), 0.8, {
+                        force3D: true,
+                        bottom: "100%",
+                        delay: 0.2,
+                        ease: Expo.easeInOut,
+                        onComplete: function () {
+                            $(".loader").fadeOut(1);
+                        }
+                    });
+                    TweenMax.to($("#ps-preloader"), 0.8, {
+                        force3D: true,
+                        bottom: "100%",
+                        delay: 0.2,
+                        ease: Expo.easeInOut,
+                        onComplete: function () {
+                            $(".loader").fadeOut(1);
+                        }
+                    });
+                    setTimeout(function () {
+                        $("body").addClass("loaded");
+                        $('#ps-preloader').hide();
+                        AOS.init({
+                            easing: 'ease-in-out', // default easing for AOS animations
+                            once: false, // whether animation should happen only once - while scrolling down
+                            duration: 500, // values from 0 to 3000, with step 50ms
+                        });
+                    }, 800);
+                }
+            });
     }
 
     PATH.headerSticky = function () {
@@ -106,8 +113,7 @@
         bannerHeight();
 
         var bannerTxtOffset = () => {
-            var headerOffset = $('#ps-header').children().offset().left + 20 + 'px',
-                bannerOptionHgt = $('#bannerOptions').height() / 2 + 80 + 'px';
+            var headerOffset = $('#ps-header').children().offset().left + 20 + 'px';
             (mediaMobile.matches) ? $('#ps-banner-txt').css({ 'padding-left': headerOffset }) : $('#ps-banner-txt').removeAttr('style');
         }
         ($('#ps-header').length) && bannerTxtOffset();
@@ -289,6 +295,7 @@
             arrows: false,
             slidesToScroll: 5,
             speed: 1300,
+            variableWidth: true,
             infinite: true,
             autoplay: true,
             responsive: [{
@@ -320,7 +327,7 @@
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    centerMode:true
+                    centerMode: true
                 }
             }
             ]
@@ -347,23 +354,21 @@
             });
         }
 
-        var item = document.createElement('div');
-        item.className = 'item';
-        item.innerHTML = '<div class="get-in-item"><div class="get-in-item-bg"></div><h1>Lorem Ipsum Dolar</h1><button class="btn ps-btn-alt">GET IN TOUCH</button></div>';
-        item.setAttribute("data-aos", "zoom-in");
+        var item = $('#get-in').clone();
         $(".item:nth-child(15n)").after(item);
     }
 
     PATH.modalOpen = () => {
         var a = true;
-        $(window).scroll(function () {
-            if (localStorage.getItem('modalState') != 'shown' && $(window).scrollTop() > $(window).height() / 2 && a) {
-                $('#exampleModalCenter').modal('show');
-                localStorage.setItem('modalState', 'shown');
-                a = false;
-            }
-
-        });
+        if ($('body.port').length) {
+            $(window).scroll(function () {
+                if (localStorage.getItem('modalState') != 'shown' && $(document).scrollTop() > $(document).height() / 2 && a) {
+                    $('#exampleModalCenter').modal('show');
+                    localStorage.setItem('modalState', 'shown');
+                    a = false;
+                }
+            });
+        }
     }
 
     PATH.contactForm = () => {
@@ -414,7 +419,6 @@
         PATH.slickPlugin();
         PATH.modalOpen();
         PATH.contactForm();
-        // PATH.test();
     });
 
     /* Window on load function */

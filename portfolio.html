@@ -23,7 +23,7 @@
 	</link>
 </head>
 
-<body>
+<body class="port">
 	<div class="ps-preloader" id="ps-preloader">
 		<svg id="triangle" viewBox="0 0 37.65772 48.43402">
 			<path
@@ -484,7 +484,7 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="ps-footer-brand">
-							<img src="./assets/img/log-alt.svg" alt="PlutoSpark" class="footer-log">
+							<img src="./assets/img/logo-alt.svg" alt="PlutoSpark" class="footer-log">
 						</div>
 					</div>
 					<div class="col-lg-4">
@@ -528,22 +528,100 @@
 	</footer>
 
 
-	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-		aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
+	<div class="modal fade" id="portgetinTouch" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+		aria-labelledby="portgetinTouchTitle" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					...
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
+				<div class="row align-items-center">
+					<div class="col-5 mr-auto">
+						<div class="modal-port-head">
+							<h3>Connect to get your ideas</h3>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="modal-body">
+							<div class="ps-form" data-aos="fade-up" data-aos-delay="300">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<form action="" class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label>Email address</label>
+											<input type="email" class="form-control" placeholder="ex. john@mail.com">
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<label>Message</label>
+											<textarea class="form-control" rows="7"
+												placeholder="Tell us more about your project, needs, and timeline."></textarea>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="switcher-wrapper">
+											<div class="ps-cnt-switcher">
+												<input type="radio" name="switcher" id="webUrl" value="web-url"
+													checked="checked" />
+												<label data-title="Web Url" for="webUrl">
+													<span class="icon-lb icon-ps-web"></span>
+													<span class="text-lb">Web Url</span>
+												</label>
+												<input type="radio" name="switcher" id="document" value="document" />
+												<label data-title="Document" for="document">
+													<span class="icon-lb icon-ps-docs"></span>
+													<span class="text-lb">Document</span>
+												</label>
+												<input type="radio" name="switcher" id="media" value="media-url" />
+												<label data-title="Media" for="media">
+													<span class="icon-lb icon-ps-media"></span>
+													<span class="text-lb">Media</span>
+												</label>
+											</div>
+											<div class="form-group web-url">
+												<input type="text" class="form-control "
+													placeholder="ex. www.plutospark.com">
+											</div>
+											<div class="form-group document">
+												<div class="item_upload mb-3 mb-md-0">
+													<div class="upload__file">
+														<input type="file" id="doc-file">
+														<button type="button" class="btn btn_md_primary">
+															<span class="icon-ps-attach"></span>
+															Attach File
+														</button>
+														<span class="file-name"></span>
+													</div>
+													<span class="msg">Maximum total file size: 12 MB</span>
+												</div>
+											</div>
+											<div class="form-group media-url">
+												<div class="item_upload mb-3 mb-md-0">
+													<div class="upload__file">
+														<input type="file" id="media-file">
+														<button type="button" class="btn btn_md_primary">
+															<span class="icon-ps-attach"></span>
+															Attach File
+														</button>
+														<span class="file-name"></span>
+
+													</div>
+													<span class="msg">Maximum total file size: 18 MB</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<a href="#" class="btn ps-df-btn">
+											<div class="inside-item">
+												<span data-alt="Let's talk!">Send Message</span>
+											</div>
+										</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -560,7 +638,6 @@
 	<script src="assets/js/plugins.js"></script>
 	<!-- Main JS -->
 	<script src="assets/js/app.js"></script>
-
 </body>
 
 </html>

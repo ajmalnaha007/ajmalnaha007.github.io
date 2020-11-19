@@ -5897,3 +5897,32 @@ input[type=radio]:checked+label {
   height: 0;
   visibility: hidden;
 }
+
+/* port modal */
+
+#portgetinTouch.modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-y: hidden;
+}
+
+body.modal-open {
+  overflow-y: hidden;
+}
+
+#portgetinTouch.modal .modal-content {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.modal-port-head h3 {
+  font-size: 90px;
+  font-weight: 400;
+  color: var(--white-color);
+}
+
+#portgetinTouch.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
