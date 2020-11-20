@@ -9,47 +9,47 @@
     //     duration: 500, // values from 0 to 3000, with step 50ms
     // });
     PATH.preLoader = function () {
-            TweenMax.to($("#ps-preloader svg , #ps-preloader .ps-loader-text"), 1.0, {
-                force3D: true,
-                y: "-150px",
-                opacity: 0,
-                ease: Expo.easeInOut,
-                delay: 1.2,
-                onComplete: function () {
-                    TweenMax.to($(".loader-anim"), 0.8, {
-                        force3D: true,
-                        bottom: "100%",
-                        ease: Expo.easeInOut,
+        TweenMax.to($("#ps-preloader svg , #ps-preloader .ps-loader-text"), 1.0, {
+            force3D: true,
+            y: "-150px",
+            opacity: 0,
+            ease: Expo.easeInOut,
+            delay: 1.2,
+            onComplete: function () {
+                TweenMax.to($(".loader-anim"), 0.8, {
+                    force3D: true,
+                    bottom: "100%",
+                    ease: Expo.easeInOut,
+                });
+                TweenMax.to($(".loader-anim2"), 0.8, {
+                    force3D: true,
+                    bottom: "100%",
+                    delay: 0.2,
+                    ease: Expo.easeInOut,
+                    onComplete: function () {
+                        $(".loader").fadeOut(1);
+                    }
+                });
+                TweenMax.to($("#ps-preloader"), 0.8, {
+                    force3D: true,
+                    bottom: "100%",
+                    delay: 0.2,
+                    ease: Expo.easeInOut,
+                    onComplete: function () {
+                        $(".loader").fadeOut(1);
+                    }
+                });
+                setTimeout(function () {
+                    $("body").addClass("loaded");
+                    $('#ps-preloader').hide();
+                    AOS.init({
+                        easing: 'ease-in-out', // default easing for AOS animations
+                        once: false, // whether animation should happen only once - while scrolling down
+                        duration: 500, // values from 0 to 3000, with step 50ms
                     });
-                    TweenMax.to($(".loader-anim2"), 0.8, {
-                        force3D: true,
-                        bottom: "100%",
-                        delay: 0.2,
-                        ease: Expo.easeInOut,
-                        onComplete: function () {
-                            $(".loader").fadeOut(1);
-                        }
-                    });
-                    TweenMax.to($("#ps-preloader"), 0.8, {
-                        force3D: true,
-                        bottom: "100%",
-                        delay: 0.2,
-                        ease: Expo.easeInOut,
-                        onComplete: function () {
-                            $(".loader").fadeOut(1);
-                        }
-                    });
-                    setTimeout(function () {
-                        $("body").addClass("loaded");
-                        $('#ps-preloader').hide();
-                        AOS.init({
-                            easing: 'ease-in-out', // default easing for AOS animations
-                            once: false, // whether animation should happen only once - while scrolling down
-                            duration: 500, // values from 0 to 3000, with step 50ms
-                        });
-                    }, 800);
-                }
-            });
+                }, 800);
+            }
+        });
     }
 
     PATH.headerSticky = function () {
@@ -64,38 +64,16 @@
     //Scroll back to top
 
     PATH.backToTop = function () {
-        var progressPath = document.querySelector('.go-top path');
-        if (progressPath) {
-            var pathLength = progressPath.getTotalLength(),
-                offset = 50,
-                duration = 550;
-            progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-            progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-            progressPath.style.strokeDashoffset = pathLength;
-            progressPath.getBoundingClientRect();
-            progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-
-
-            var updateProgress = function () {
-                var scroll = $(window).scrollTop();
-                var height = $(document).height() - $(window).height();
-                var progress = pathLength - (scroll * pathLength / height);
-                progressPath.style.strokeDashoffset = progress;
-            }
-            updateProgress();
-
-            $(window).scroll(updateProgress);
-
-
+        var backToTopBtn = $('.go-top-btn');
+        if (backToTopBtn.length) {
             $(window).on('scroll', function () {
-                ($(this).scrollTop() > offset) ? $('.go-top').addClass('active-progress') : $('.go-top').removeClass('active-progress');
+                ($(this).scrollTop() > 50) ? backToTopBtn.addClass('active-progress') : backToTopBtn.removeClass('active-progress');
             });
-
-            $('.go-top').on('click', function (e) {
+            backToTopBtn.on('click', function (e) {
                 e.preventDefault();
-                $('html, body').animate({ scrollTop: 0 }, duration);
+                $('html, body').animate({ scrollTop: 0 }, 500);
                 return false;
-            })
+            });
         }
 
     }

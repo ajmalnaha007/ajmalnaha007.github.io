@@ -3169,93 +3169,64 @@ Go Top CSS
   }
 }
 
-.go-top {
-  position: fixed;
-  right: 40px;
-  bottom: 40px;
-  height: 50px;
-  width: 50px;
+.go-top-btn {
   cursor: pointer;
-  display: block;
-  border-radius: 50px;
-  box-shadow: inset 0 0 0 2px rgba(47, 47, 130, .2);
-  z-index: 1000;
+  position: fixed;
+  right: 35px;
+  bottom: 35px;
+  z-index: 10;
+  padding: 10px 5px;
+  border-radius: 3px;
   opacity: 0;
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
   visibility: hidden;
-  transform: translateY(15px);
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
+  transition: opacity .3s ease, -webkit-transform .3s ease;
+  transition: opacity .3s ease, transform .3s ease;
+  transition: opacity .3s ease, transform .3s ease, -webkit-transform .3s ease;
+  font-size: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  background: transparent;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  border: none;
 }
 
-.go-top.active-progress {
+.go-top-btn.active-progress {
   opacity: 1;
   visibility: visible;
+  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 
-.go-top::after {
-  position: absolute;
-  font-family: 'icomoon' !important;
-  content: "\e902";
-  text-align: center;
-  line-height: 50px;
-  font-size: 16px;
-  color: var(--secondary-color);
-  left: 0;
-  top: 0;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  display: block;
-  z-index: 1;
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
+.go-top-btn svg {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  margin-bottom: 10px;
 }
 
-.go-top:hover::after {
-  opacity: .8;
-}
-
-.go-top svg path {
-  fill: #ddc4f0;
-}
-
-.go-top svg.ps-outer-circle path {
+.go-top-btn svg [stroke] {
   stroke: var(--secondary-color);
-  stroke-width: 4;
-  box-sizing: border-box;
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
 }
 
-@-webkit-keyframes shake {
-  1%, 9% {
-    transform: translate3d(-1px, 0, 0);
-  }
-  2%, 8% {
-    transform: translate3d(2px, 0, 0);
-  }
-  3%, 5%, 7% {
-    transform: translate3d(-4px, 0, 0);
-  }
-  4%, 6% {
-    transform: translate3d(4px, 0, 0);
-  }
-}
-
-@keyframes shake {
-  1%, 9% {
-    transform: translate3d(-1px, 0, 0);
-  }
-  2%, 8% {
-    transform: translate3d(2px, 0, 0);
-  }
-  3%, 5%, 7% {
-    transform: translate3d(-4px, 0, 0);
-  }
-  4%, 6% {
-    transform: translate3d(4px, 0, 0);
-  }
+.go-top-btn .label-text {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.63px;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  line-height: 16px;
+  opacity: .33;
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  color: var(--secondary-color);
 }
 
 /*================================================
@@ -5896,13 +5867,13 @@ input[type=radio]:checked+label {
   padding: 50px 40px;
 }
 
-.ps-carrier .ps-carrier-ins h3{
+.ps-carrier .ps-carrier-ins h3 {
   font-size: 34px;
   color: var(--font-primary-color);
   font-weight: 600;
 }
 
-.ps-carrier .ps-carrier-ins p{
+.ps-carrier .ps-carrier-ins p {
   font-size: 16px;
   color: var(--font-secondary-color);
 }
@@ -5935,3 +5906,83 @@ body.modal-open {
   top: 15px;
   right: 15px;
 }
+
+/* port-detal */
+
+.ps-port-detail-head {
+  margin-top: 85px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.ps-port-detail-head .ps-port-head-cnt .port-tag {
+  color: var(--secondary-color);
+  position: relative;
+  font-size: 14px;
+  line-height: 1.3em;
+  letter-spacing: 5px;
+  display: block;
+  margin: 0;
+  text-transform: uppercase
+}
+
+.ps-port-detail-head h2.port-head {
+  color: var(--font-primary-color);
+  margin: 14px 0 24px;
+  display: inline-block;
+  letter-spacing: -2.5px;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.ps-port-detail-head p.port-cont {
+  font-size: 16px;
+  max-width: 750px;
+  color: var(--font-secondary-color);
+  margin-bottom: 0;
+}
+
+.ps-port-detail-head .ps-port-head-img {
+  margin-top: 50px;
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 8px;
+
+}
+
+.ps-port-detail-head img , .ps-port-detail-cnts img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+
+#content-scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.ps-port-detail-cnts .inner-sub-text {
+  margin-bottom: 50px;
+  background-color: rgba(142, 60, 204, 0.06);
+  border-radius: 8px;
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.ps-port-detail-cnts .inner-sub-text p {
+  margin: 0;
+  color: var(--font-primary-color);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.ps-port-detail-head .ps-port-detail-cnts {}
+
+.ps-port-detail-head {}
