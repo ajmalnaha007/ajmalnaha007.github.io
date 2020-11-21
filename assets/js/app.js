@@ -215,6 +215,14 @@
         });
     }
 
+    PATH.blogBannerText = () => {
+        $('ul.nav > li > a').on("shown.bs.tab", function (e) {
+            var getClass = $(e.target).attr("href").substr(1).toLowerCase();
+            var createClass = "ps-resource-bnr-ins " + getClass;
+            $('#blogHead').removeClass().addClass(createClass);
+        });
+    }
+
     // slick
 
     PATH.slickPlugin = () => {
@@ -341,7 +349,7 @@
         if ($('body.port').length) {
             $(window).scroll(function () {
                 if (localStorage.getItem('modalState') != 'shown' && $(document).scrollTop() > $(document).height() / 2 && a) {
-                    $('#exampleModalCenter').modal('show');
+                    $('#portgetinTouch').modal('show');
                     localStorage.setItem('modalState', 'shown');
                     a = false;
                 }
@@ -397,6 +405,7 @@
         PATH.slickPlugin();
         PATH.modalOpen();
         PATH.contactForm();
+        PATH.blogBannerText();
     });
 
     /* Window on load function */

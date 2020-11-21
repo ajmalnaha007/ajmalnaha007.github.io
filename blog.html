@@ -94,19 +94,22 @@
 		<!-- end container -->
 	</header>
 
-	<section class="ps-resource-bnr banner-alt">
+	<section class="ps-resource-bnr">
 		<div class="container position-relative">
 			<div class="row">
-				<div class="col-12">
-					<div class="ps-resource-bnr-ins">
-						<h3 data-aos="fade-up" data-aos-delay="0">Lorem ipsum is placeholder text commonly used.</h3>
+				<div class="col-md-8 col-lg-6">
+					<div class="ps-resource-bnr-ins blog" id="blogHead">
+						<h3 class="blog" data-aos="fade-up" data-aos-delay="0">Blogs</h3>
+						<h3 class="whitepaper" data-aos="fade-up" data-aos-delay="0">white Paper</h3>
+						<h3 class="casestudies" data-aos="fade-up" data-aos-delay="0">Case Studies</h3>
+						<h3 class="templates" data-aos="fade-up" data-aos-delay="0">Templates</h3>
 					</div>
 				</div>
 			</div>
 			<div class="ps-resource-bnr-tab-sec" id="sticky" data-aos="fade-in" data-aos-delay="100">
 				<div class="container">
 					<div class="row align-items-center">
-						<div class="col-6">
+						<div class="col-8">
 							<div class="wrapper-tab">
 								<ul class="nav" role="tablist">
 									<li class="nav-item" role="presentation">
@@ -121,13 +124,17 @@
 										<a class="nav-link" id="caseStudies-tab" data-toggle="tab" href="#caseStudies"
 											role="tab" aria-controls="caseStudies" aria-selected="false">caseStudies</a>
 									</li>
+									<li class="nav-item" role="presentation">
+										<a class="nav-link" id="templates-tab" data-toggle="tab" href="#templates"
+											role="tab" aria-controls="templates" aria-selected="false">Templates</a>
+									</li>
 								</ul>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-4">
 							<form class="blog-search float-right">
 								<div class="input-group">
-									<input type="text" name="search" class="form-control" placeholder="Search...">
+									<input type="text" name="search" class="form-control" placeholder="Search">
 									<button type="submit" name="search" id="search-btn" class="btn search-btn">
 										<span class="icon-ps-search"></span>
 									</button>
@@ -140,160 +147,143 @@
 		</div>
 	</section>
 
-	<section class="ps-tag-wrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="ps-tag-subnav">
-						<button class="scroll-prev"> <span class="icon-ps-prev"></span></button>
-						<button class="scroll-next"> <span class="icon-ps-next"></span></button>
-						<ul id="blogFilter" data-aos="fade-up" data-aos-delay="200">
-							<li class="ps-category active">
-								<a href="#">All</a>
-							</li>
-							<li class="ps-category">
-								<a href="#"> Marketing</a>
-							</li>
-							<li class="ps-category">
-								<a href="#"> Branding</a>
-							</li>
-							<li class="ps-category">
-								<a href="#"> Web</a>
-							</li>
-							<li class="ps-category">
-								<a href="#"> Social</a>
-							</li>
-							<li class="ps-category">
-								<a href="#"> Done</a>
-							</li>
-							<li class="ps-category">
-								<a href="#"> Product Design</a>
-							</li>
-							<li class="ps-category">
-								<a href="#"> Typo</a>
-							</li>
-							<li class="ps-category">
-								<a href="#"> Web Design</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<section class="tab-cnt-se">
 		<div class=" container">
 			<div class="row">
 				<div class="col-12">
 					<div class="tab-content">
-						<div class="blog tab-pane fade show active" id="blog" role="tabpanel"
-							aria-labelledby="blog-tab">
-							<div class="ps-blog-feature">
-								<div class="blog-feature-main" role="main">
-									<article class="ps-blog-card blog-card-feautred" data-aos="fade-up"
-										data-aos-delay="0">
-										<div class="position-relative">
-											<figure>
-												<a href="#">
-													<img src="assets/img/blog/1.jpg"
-														alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-												</a>
-											</figure>
-											<div class="date-blog">
-												<h5 class="title-blog">25</h5>
-												<span>JUN</span>
-											</div>
-										</div>
-										<div class="ps-blog-card-cnt">
-											<h3 class="ps-blog-card-cnt-title">
-												<a href="#">
-													How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-													Templates]
-												</a>
-											</h3>
-											<div class="ps-blog-card-meta">
-												<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-											</div>
-										</div>
-
-									</article>
+						<div class="blog tab-pane fade" id="blog" role="tabpanel" aria-labelledby="blog-tab">
+							<div class="ps-tag-wrap">
+								<div class="ps-tag-subnav">
+									<button class="scroll-prev"> <span class="icon-ps-prev"></span></button>
+									<button class="scroll-next"> <span class="icon-ps-next"></span></button>
+									<ul id="blogFilter" data-aos="fade-up" data-aos-delay="200">
+										<li class="ps-category active">
+											<a href="#">All</a>
+										</li>
+										<li class="ps-category">
+											<a href="#"> Marketing</a>
+										</li>
+										<li class="ps-category">
+											<a href="#"> Branding</a>
+										</li>
+										<li class="ps-category">
+											<a href="#"> Web</a>
+										</li>
+										<li class="ps-category">
+											<a href="#"> Social</a>
+										</li>
+										<li class="ps-category">
+											<a href="#"> Done</a>
+										</li>
+										<li class="ps-category">
+											<a href="#"> Product Design</a>
+										</li>
+										<li class="ps-category">
+											<a href="#"> Typo</a>
+										</li>
+										<li class="ps-category">
+											<a href="#"> Web Design</a>
+										</li>
+									</ul>
 								</div>
-								<aside class="ps-blog-feature-sidebar" role="complimentary" data-aos="fade-up"
-									data-aos-delay="0">
-									<h3 class="ps-blog-side-head">POPULAR POSTS</h3>
-									<article class="ps-blog-card card-auto">
-										<div class="ps-blog-card-cnt">
-											<h3 class="ps-blog-card-cnt-title">
-												<a href="#">
-													How to Create a Sales Plan: Template + Examples
-												</a>
-											</h3>
-											<div class="ps-blog-card-meta">
-												<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-											</div>
-										</div>
-									</article>
-									<article class="ps-blog-card card-auto">
-										<div class="ps-blog-card-cnt">
-											<h3 class="ps-blog-card-cnt-title">
-												<a href="#">
-													How to Create a Sales Plan: Template + Examples
-												</a>
-											</h3>
-											<div class="ps-blog-card-meta">
-												<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-											</div>
-										</div>
-									</article>
-									<article class="ps-blog-card card-auto">
-										<div class="ps-blog-card-cnt">
-											<h3 class="ps-blog-card-cnt-title">
-												<a href="#">
-													How to Create a Sales Plan: Template + Examples
-												</a>
-											</h3>
-											<div class="ps-blog-card-meta">
-												<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-											</div>
-										</div>
-									</article>
-									<article class="ps-blog-card card-auto">
-										<div class="ps-blog-card-cnt">
-											<h3 class="ps-blog-card-cnt-title">
-												<a href="#">
-													How to Create a Sales Plan: Template + Examples
-												</a>
-											</h3>
-											<div class="ps-blog-card-meta">
-												<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-											</div>
-										</div>
-									</article>
-								</aside>
 							</div>
-							<section class="ps-quick-cnt blog">
-								<div class="row">
-									<div class="col-12">
-										<div class="ps-quick-cnt-ins">
-											<div class="row align-items-center">
-												<div class="col-6">
-													<div class="ps-quick-left">
-														<p data-aos="fade-up" data-aos-delay="0">Lorem ipsum is
-															placeholder text</p>
-														<h4 data-aos="fade-up" data-aos-delay="100">Lorem ipsum is place
-															text commonly</h4>
-													</div>
+
+							<div class="row">
+								<div class="col-lg-8">
+									<div class="blog-feature ps-blog-card">
+										<a href="#">
+											<div class="cover-blog">
+												<img src="assets/img/blog/article-1.jpg" alt="">
+											</div>
+											<div class="meta-blog">
+												<span class="meta-text">25 JUN 2022</span>
+											</div>
+											<div class="content-blog card-body">
+												<h4 class="head">
+													Funds adding fuel in tech’s climate race
+												</h4>
+												<p class="content">
+													Vitae semper quis lectus nulla at volutpat diam. Sed viverra ipsum
+													nunc aliquet .
+												</p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<aside class="ps-blog-feature-sidebar">
+										<h3 class="ps-blog-side-head">POPULAR POSTS</h3>
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
 												</div>
-												<div class="col-6">
-													<div class="ps-quick-right" data-aos="fade-up" data-aos-delay="100">
-														<input type="text" name="websiteURL"
-															placeholder="Your Webiste URL">
-														<button class="btn" type="submit"> Submit </button>
-													</div>
-													<small data-aos="fade-up" data-aos-delay="200">*Your mail id is
-														Confidential</small>
+												<div class="content-blog card-body">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
 												</div>
+											</a>
+										</div>
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog card-body">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+												</div>
+											</a>
+										</div>
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog card-body">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+												</div>
+											</a>
+										</div>
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog card-body">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+												</div>
+											</a>
+										</div>
+									</aside>
+								</div>
+							</div>
+							<section class="ps-cnt-card-sec blog">
+								<div class="container-md">
+									<div class="ps-cnt-ins" data-aos="fade-up" data-aos-delay="0">
+										<div class="row align-items-lg-center">
+											<div class="col-lg-8">
+												<h2>8 out of 10 Customers pay more for a better ux</h2>
+												<p> See what change, a simple design upgrade could bring to you. Get
+													in
+													touch with us for a service trial
+													now.
+												</p>
+											</div>
+											<div class="col-lg-4">
+												<a href="#" class="btn ps-df-btn btn-outlne-ps float-lg-right">
+													<div class="inside-item">
+														<span data-alt="Let's talk!">Contact us</span>
+													</div>
+												</a>
 											</div>
 										</div>
 									</div>
@@ -301,173 +291,219 @@
 							</section>
 							<section class="res-inner">
 								<div class="row">
-									<div class="col-6">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/article-1.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
+									<div class="col-12">
+										<div class="card-columns">
+											<div class="card ps-blog-card">
+												<a href="#">
+													<div class="cover-blog">
+														<img src="assets/img/blog/2.jpg" alt="">
+													</div>
+													<div class="meta-blog">
+														<span class="meta-text">25 JUN 2022</span>
+														<span class="meta-text">Branding</span>
+														<span class="meta-text">Marketing</span>
+
+													</div>
+													<div class="content-blog">
+														<h4 class="head">
+															Funds adding fuel in tech’s climate race
+														</h4>
+														<p class="content">
+															Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+															ipsum
+															nunc aliquet .
+														</p>
+													</div>
+												</a>
 											</div>
 
-										</article>
-									</div>
-									<div class="col-6">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/5.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
+											<div class="card ps-blog-card">
+												<a href="#">
+													<div class="cover-blog">
+														<img src="assets/img/blog/1.jpg" alt="">
+													</div>
+													<div class="meta-blog">
+														<span class="meta-text">Branding</span>
+														<span class="meta-text">25 JUN 2022</span>
+													</div>
+													<div class="content-blog card-body">
+														<h4 class="head">
+															Funds adding fuel in tech’s climate race
+														</h4>
+														<p class="content">
+															Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+															ipsum
+															nunc aliquet .
+														</p>
+													</div>
+												</a>
 											</div>
 
-										</article>
-									</div>
-									<div class="col-6">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/4.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
+											<div class="card ps-blog-card">
+												<a href="#">
+													<div class="cover-blog">
+													</div>
+													<div class="meta-blog">
+														<span class="meta-text">25 JUN 2022</span>
+													</div>
+													<div class="content-blog card-body">
+														<h4 class="head">
+															Funds adding fuel in tech’s climate race
+														</h4>
+														<p class="content">
+															Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+															ipsum
+															nunc aliquet .
+														</p>
+													</div>
+												</a>
 											</div>
 
-										</article>
-									</div>
-									<div class="col-6">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/3.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
+											<div class="card ps-blog-card">
+												<a href="#">
+													<div class="cover-blog">
+														<img src="assets/img/blog/3.jpg" alt="">
+													</div>
+													<div class="meta-blog">
+														<span class="meta-text">25 JUN 2022</span>
+													</div>
+													<div class="content-blog card-body">
+														<h4 class="head">
+															Funds adding fuel in tech’s climate race
+														</h4>
+														<p class="content">
+															Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+															ipsum
+															nunc aliquet .
+														</p>
+													</div>
+												</a>
 											</div>
 
-										</article>
-									</div>
-									<div class="col-6">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/2.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
+											<div class="card ps-blog-card">
+												<a href="#">
+													<div class="cover-blog">
+														<img src="assets/img/blog/4.jpg" alt="">
+													</div>
+													<div class="meta-blog">
+														<span class="meta-text">25 JUN 2022</span>
+													</div>
+													<div class="content-blog card-body">
+														<h4 class="head">
+															Funds adding fuel in tech’s climate race
+														</h4>
+														<p class="content">
+															Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+															ipsum
+															nunc aliquet .
+														</p>
+													</div>
+												</a>
 											</div>
 
-										</article>
-									</div>
-									<div class="col-6">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/1.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
+											<div class="card ps-blog-card">
+												<a href="#">
+													<div class="cover-blog">
+													</div>
+													<div class="meta-blog">
+														<span class="meta-text">25 JUN 2022</span>
+													</div>
+													<div class="content-blog card-body">
+														<h4 class="head">
+															Funds adding fuel in tech’s climate race
+														</h4>
+														<p class="content">
+															Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+															ipsum
+															nunc aliquet .
+														</p>
+													</div>
+												</a>
 											</div>
 
-										</article>
+											<div class="card ps-blog-card">
+												<a href="#">
+													<div class="cover-blog">
+														<img src="assets/img/blog/5.jpg" alt="">
+													</div>
+													<div class="meta-blog">
+														<span class="meta-text">25 JUN 2022</span>
+													</div>
+													<div class="content-blog card-body">
+														<h4 class="head">
+															Funds adding fuel in tech’s climate race
+														</h4>
+														<p class="content">
+															Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+															ipsum
+															nunc aliquet .
+														</p>
+													</div>
+												</a>
+											</div>
+
+											<div class="card ps-blog-card">
+												<a href="#">
+													<div class="cover-blog">
+														<img src="assets/img/blog/article-1.jpg" alt="">
+													</div>
+													<div class="meta-blog">
+														<span class="meta-text">25 JUN 2022</span>
+													</div>
+													<div class="content-blog card-body">
+														<h4 class="head">
+															Funds adding fuel in tech’s climate race
+														</h4>
+														<p class="content">
+															Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+															ipsum
+															nunc aliquet .
+														</p>
+													</div>
+												</a>
+											</div>
+
+											<div class="card ps-blog-card">
+												<a href="#">
+													<div class="cover-blog">
+														<img src="assets/img/blog/article-1.jpg" alt="">
+													</div>
+													<div class="meta-blog">
+														<span class="meta-text">25 JUN 2022</span>
+													</div>
+													<div class="content-blog card-body">
+														<h4 class="head">
+															Funds adding fuel in tech’s climate race
+														</h4>
+														<p class="content">
+															Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+															ipsum
+															nunc aliquet .
+														</p>
+													</div>
+												</a>
+											</div>
+
+											<div class="card ps-blog-card">
+												<a href="#">
+													<div class="cover-blog">
+													</div>
+													<div class="meta-blog">
+														<span class="meta-text">25 JUN 2022</span>
+													</div>
+													<div class="content-blog card-body">
+														<h4 class="head">
+															Funds adding fuel in tech’s climate race
+														</h4>
+														<p class="content">
+															Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+															ipsum
+															nunc aliquet .
+														</p>
+													</div>
+												</a>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div class="row  ps-pagination">
@@ -479,10 +515,12 @@
 														<span class="icon-ps-prev"></span>
 													</a>
 												</li>
-												<li class="page-item"><a class="page-link active" href="#">1500</a></li>
+												<li class="page-item"><a class="page-link active" href="#">1</a>
+												</li>
 												<li class="page-item"><a class="page-link" href="#">2</a></li>
 												<li class="page-item"><a class="page-link" href="#">3</a></li>
-												<li class="page-item"><a class="page-link dots" href="#">...</a></li>
+												<li class="page-item"><a class="page-link dots" href="#"></a>
+												</li>
 												<li class="page-item"><a class="page-link" href="#">100</a></li>
 												<li class="page-item">
 													<a class="page-link" href="#" aria-label="Next">
@@ -499,172 +537,212 @@
 							<section class="res-inner">
 								<div class="row">
 									<div class="col-4">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/2.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/2.jpg" alt="">
 												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
-											</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+													<span class="meta-text">Branding</span>
+													<span class="meta-text">Marketing</span>
 
-										</article>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
 									</div>
-									<div class="col-4">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/1.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
-											</div>
 
-										</article>
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/1.jpg" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">Branding</span>
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
 									</div>
-									<div class="col-4">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/5.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
-											</div>
 
-										</article>
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
 									</div>
-									<div class="col-4">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/article-1.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
-											</div>
 
-										</article>
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/3.jpg" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
 									</div>
-									<div class="col-4">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/1.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
-											</div>
 
-										</article>
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/4.jpg" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
 									</div>
-									<div class="col-4">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/2.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
-											</div>
 
-										</article>
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/5.jpg" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/article-1.jpg" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/article-1.jpg" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
 									</div>
 								</div>
 								<div class="row  ps-pagination">
@@ -676,10 +754,12 @@
 														<span class="icon-ps-prev"></span>
 													</a>
 												</li>
-												<li class="page-item"><a class="page-link active" href="#">1500</a></li>
+												<li class="page-item"><a class="page-link active" href="#">1500</a>
+												</li>
 												<li class="page-item"><a class="page-link" href="#">2</a></li>
 												<li class="page-item"><a class="page-link" href="#">3</a></li>
-												<li class="page-item"><a class="page-link dots" href="#">...</a></li>
+												<li class="page-item"><a class="page-link dots" href="#"></a>
+												</li>
 												<li class="page-item"><a class="page-link" href="#">100</a></li>
 												<li class="page-item">
 													<a class="page-link" href="#" aria-label="Next">
@@ -696,172 +776,212 @@
 							<section class="res-inner">
 								<div class="row">
 									<div class="col-4">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/5.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/2.jpg" alt="">
 												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
-											</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+													<span class="meta-text">Branding</span>
+													<span class="meta-text">Marketing</span>
 
-										</article>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
 									</div>
-									<div class="col-4">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/article-1.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
-											</div>
 
-										</article>
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/1.jpg" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">Branding</span>
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
 									</div>
-									<div class="col-4">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/4.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
-											</div>
 
-										</article>
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
 									</div>
-									<div class="col-4">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/3.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
-											</div>
 
-										</article>
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/3.jpg" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
 									</div>
-									<div class="col-4">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/1.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
-											</div>
 
-										</article>
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/4.jpg" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
 									</div>
-									<div class="col-4">
-										<article class="ps-blog-card" data-aos="fade-up" data-aos-delay="0">
-											<div class="position-relative">
-												<figure>
-													<a href="#">
-														<img src="assets/img/blog/2.jpg"
-															alt="How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post Templates]">
-													</a>
-												</figure>
-												<div class="date-blog">
-													<h5 class="title-blog">25</h5>
-													<span>JUN</span>
-												</div>
-											</div>
-											<div class="ps-blog-card-cnt">
-												<h3 class="ps-blog-card-cnt-title">
-													<a href="#">
-														How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog Post
-														Templates]
-													</a>
-												</h3>
-												<div class="ps-blog-card-meta">
-													<a href="#"><span>MARKETING</span>| <span>22 - 05 -2020</span></a>
-												</div>
-											</div>
 
-										</article>
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/5.jpg" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/article-1.jpg" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-4">
+										<div class="ps-blog-card">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/blog/article-1.jpg" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+													<p class="content">
+														Vitae semper quis lectus nulla at volutpat diam. Sed viverra
+														ipsum
+														nunc aliquet .
+													</p>
+												</div>
+											</a>
+										</div>
 									</div>
 								</div>
 								<div class="row  ps-pagination">
@@ -873,10 +993,12 @@
 														<span class="icon-ps-prev"></span>
 													</a>
 												</li>
-												<li class="page-item"><a class="page-link active" href="#">1500</a></li>
+												<li class="page-item"><a class="page-link active" href="#">1500</a>
+												</li>
 												<li class="page-item"><a class="page-link" href="#">2</a></li>
 												<li class="page-item"><a class="page-link" href="#">3</a></li>
-												<li class="page-item"><a class="page-link dots" href="#">...</a></li>
+												<li class="page-item"><a class="page-link dots" href="#"></a>
+												</li>
 												<li class="page-item"><a class="page-link" href="#">100</a></li>
 												<li class="page-item">
 													<a class="page-link" href="#" aria-label="Next">
@@ -886,6 +1008,176 @@
 											</ul>
 										</nav>
 									</div>
+								</div>
+							</section>
+						</div>
+						<div class="tab-pane fade show active" id="templates" role="tabpanel"
+							aria-labelledby="templates-tab">
+							<section class="res-inner">
+								<div class="row">
+									<div class="col-4">
+										<div class="resource-box">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/portfolio/img-2.png" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+												</div>
+
+											</a>
+										</div>
+									</div>
+									<div class="col-4">
+										<div class="resource-box">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/portfolio/img-2.png" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+												</div>
+
+											</a>
+										</div>
+									</div>
+									<div class="col-4">
+										<div class="resource-box">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/portfolio/img-2.png" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+												</div>
+
+											</a>
+										</div>
+									</div>
+									<div class="col-4">
+										<div class="resource-box">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/portfolio/img-2.png" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+												</div>
+
+											</a>
+										</div>
+									</div>
+									<div class="col-4">
+										<div class="resource-box">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/portfolio/img-2.png" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+												</div>
+
+											</a>
+										</div>
+									</div>
+									<div class="col-4">
+										<div class="resource-box">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/portfolio/img-2.png" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+												</div>
+
+											</a>
+										</div>
+									</div>
+									<div class="col-4">
+										<div class="resource-box">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/portfolio/img-2.png" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+												</div>
+
+											</a>
+										</div>
+									</div>
+									<div class="col-4">
+										<div class="resource-box">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/portfolio/img-2.png" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+												</div>
+
+											</a>
+										</div>
+									</div>
+									<div class="col-4">
+										<div class="resource-box">
+											<a href="#">
+												<div class="cover-blog">
+													<img src="assets/img/portfolio/img-2.png" alt="">
+												</div>
+												<div class="meta-blog">
+													<span class="meta-text">25 JUN 2022</span>
+												</div>
+												<div class="content-blog">
+													<h4 class="head">
+														Funds adding fuel in tech’s climate race
+													</h4>
+												</div>
+
+											</a>
+										</div>
+									</div>
+
 								</div>
 							</section>
 						</div>
@@ -964,7 +1256,7 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="ps-footer-brand">
-							<img src="./assets/img/log-alt.svg" alt="PlutoSpark" class="footer-log">
+							<img src="./assets/img/logo-alt.svg" alt="PlutoSpark" class="footer-log">
 						</div>
 					</div>
 					<div class="col-lg-4">
