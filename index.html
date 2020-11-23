@@ -746,14 +746,89 @@
       </div>
     </div>
   </footer>
+  <div class="make-canvas"></div>
+  <section class="make-a-wish-inner" data-open="false">
+    <canvas id="canvas-make-bg"></canvas>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-5 ml-auto">
+          <div class="ps-form">
+            <form action="" class="row">
+              <div class="col-md-12 animate">
+                <div class="form-group">
+                  <label>Email address</label>
+                  <input type="email" class="form-control" placeholder="ex. john@mail.com">
+                </div>
+              </div>
+              <div class="col-md-12 animate">
+                <div class="switcher-wrapper">
+                  <div class="ps-cnt-switcher">
+                    <input type="radio" name="switcher" id="webUrl" value="web-url" checked="checked" />
+                    <label data-title="Web Url" for="webUrl">
+                      <span class="icon-lb icon-ps-web"></span>
+                      <span class="text-lb">Web Url</span>
+                    </label>
+                    <input type="radio" name="switcher" id="document" value="document" />
+                    <label data-title="Document" for="document">
+                      <span class="icon-lb icon-ps-docs"></span>
+                      <span class="text-lb">Document</span>
+                    </label>
+                    <input type="radio" name="switcher" id="media" value="media-url" />
+                    <label data-title="Media" for="media">
+                      <span class="icon-lb icon-ps-media"></span>
+                      <span class="text-lb">Media</span>
+                    </label>
+                  </div>
+                  <div class="form-group web-url">
+                    <input type="text" class="form-control " placeholder="ex. www.plutospark.com">
+                  </div>
+                  <div class="form-group document">
+                    <div class="item_upload mb-3 mb-md-0">
+                      <div class="upload__file">
+                        <input type="file" id="doc-file">
+                        <button type="button" class="btn btn_md_primary">
+                          <span class="icon-ps-attach"></span>
+                          Attach File
+                        </button>
+                        <span class="file-name"></span>
+                      </div>
+                      <span class="msg">Maximum total file size: 12 MB</span>
+                    </div>
+                  </div>
+                  <div class="form-group media-url">
+                    <div class="item_upload mb-3 mb-md-0">
+                      <div class="upload__file">
+                        <input type="file" id="media-file">
+                        <button type="button" class="btn btn_md_primary">
+                          <span class="icon-ps-attach"></span>
+                          Attach File
+                        </button>
+                        <span class="file-name"></span>
 
-  <!-- <div class="go-top">
-    <svg class="ps-outer-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98">
-      </path>
-    </svg>
-  </div> -->
-
+                      </div>
+                      <span class="msg">Maximum total file size: 18 MB</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 animate">
+                <a href="#" class="btn ps-df-btn btn-ps-alt">
+                  <div class="inside-item">
+                    <span data-alt="Let's talk!">Make A Wish</span>
+                  </div>
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-4 mr-auto">
+          <div class="img-wrapper">
+            <img src="assets/img/make-wish.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <button class="go-top-btn">
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11">
