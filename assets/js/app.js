@@ -396,72 +396,177 @@
     PATH.makeAWishSec = () => {
         var makeBtnClick = () => {
             document.querySelector('.ps-make-wish').addEventListener('click', animateNavbar);
+            document.querySelector('.close-make').addEventListener('click', animateRevNvabar);
+            var isOpen = false;
             function animateNavbar() {
-                TweenMax.to('.ps-banner-sec-right', 1, {
-                    force3D: true,
-                    left: "100%",
-                    opacity: 0,
-                    ease: Expo.easeInOut,
-                });
-                TweenMax.to('.ps-banner-sec-left', 1, {
-                    force3D: true,
-                    xPercent: "-100%",
-                    opacity: 0,
-                    ease: Expo.easeInOut,
-                });
-                TweenMax.to('.ps-make-wish .wish-outer', 1, {
-                    css: {
-                        animation: 'none',
-                        transform: 'rotate(0deg)',
-                    },
-                    ease: Expo.easeInOut,
-                    onComplete: function () {
-                        TweenMax.fromTo(
-                            ".make-canvas .anim",
-                            1, {
-                            scale: 0,
-                            opacity: .5
-                        }, {
-                            scale: 35,
-                            opacity: 1,
-                            backgroundColor: '#30203c',
-                            ease: Power3.easeInOut,
-                            onStart: function () {
-                                $('body').css({ 'overflow': 'hidden' });
-                                $('.make-a-wish-inner').attr('data-open', "true");
-                            },
-                            onComplete: function () {
-                                TweenMax.to(".ps-make-wish", 1, {
-                                    opacity: 0
-                                });
-                                TweenMax.to('.make-a-wish-inner', 1, {
-                                    opacity: 1
-                                });
-                                TweenMax.to('.ps-form', 1, {
-                                    opacity: 1,
-                                    x: 0,
-                                    ease: Power3.easeIn,
-                                    onComplete: function () {
-                                        TweenMax.staggerTo('.animate', 1, {
-                                            y: 0,
-                                            opacity: 1,
-                                            ease: Power3.easeIn,
-                                        }, 0.2);
-                                    }
-                                });
-                                TweenMax.to('.make-a-wish-inner .img-wrapper', 1, {
-                                    opacity: 1,
-                                    X: 0,
-                                    ease: Power3.easeIn
-                                });
-                            }
-                        });
-                    }
-                });
-                TweenMax.to('.ps-make-wish .wish-outer-animation', 1, {
-                    opacity: 0,
-                    display: "none"
-                });
+                if (!isOpen) {
+                    TweenMax.to('.ps-banner-sec-right', 1, {
+                        force3D: true,
+                        left: "100%",
+                        opacity: 0,
+                        ease: Expo.easeInOut,
+                    });
+                    TweenMax.to('.ps-banner-sec-left', 1, {
+                        force3D: true,
+                        xPercent: "-100%",
+                        opacity: 0,
+                        ease: Expo.easeInOut,
+                    });
+                    TweenMax.to('.ps-make-wish .wish-outer', 1, {
+                        css: {
+                            animation: 'none',
+                            transform: 'rotate(0deg)',
+                        },
+                        ease: Expo.easeInOut,
+                        onComplete: function () {
+                            TweenMax.fromTo(
+                                ".make-canvas .anim",
+                                1, {
+                                scale: 0,
+                                opacity: .5,
+                            }, {
+                                scale: 35,
+                                opacity: 1,
+                                backgroundColor: '#30203c',
+                                ease: Power3.easeInOut,
+                                repeat: 0,
+
+                                onStart: function () {
+                                    $('body').css({ 'overflow': 'hidden' });
+                                    $('.make-a-wish-inner').attr('data-open', "true");
+                                },
+                                onComplete: function () {
+                                    TweenMax.to(".ps-make-wish", 1, {
+                                        opacity: 0
+                                    });
+                                    TweenMax.to('.make-a-wish-inner', 1, {
+                                        opacity: 1
+                                    });
+                                    TweenMax.to('.ps-form', 1, {
+                                        opacity: 1,
+                                        x: 0,
+                                        ease: Power3.easeIn,
+                                        onComplete: function () {
+                                            TweenMax.staggerTo('.animate', 1, {
+                                                y: 0,
+                                                opacity: 1,
+                                                ease: Power3.easeIn,
+                                            }, 0.2);
+                                        }
+                                    });
+                                    TweenMax.fromTo(".make-a-wish-inner .img-wrapper", 1, {
+                                        force3D: true,
+                                        opacity: 0,
+                                        x: 30,
+                                    }, {
+                                        opacity: 1,
+                                        x: 0,
+                                        repeat: 0,
+                                        ease: Power3.easeInOut,
+                                    });
+                                    TweenMax.to("#canvas-make-bg", 1, {
+                                        webkitFilter: 'blur(3px)',
+                                        filter: 'blur(3px)',
+                                        opacity: 1,
+                                    });
+                                }
+                            });
+                        }
+                    });
+                    TweenMax.to('.ps-make-wish .wish-outer-animation', 1, {
+                        opacity: 0,
+                        display: "none"
+                    });
+                    TweenMax.to('.close-make', 1, {
+                        opacity: 1,
+                    });
+                    isOpen = true;
+                }
+            }
+            function animateRevNvabar() {
+                if (isOpen) {
+                    TweenMax.staggerTo('.animate', 1, {
+                        y: 50,
+                        opacity: 0,
+                        ease: Power3.easeIn,
+                        onComplete: function () {
+                            TweenMax.to('.ps-form', 1, {
+                                opacity: 0,
+                                x: -50,
+                                ease: Power3.easeIn,
+                            });
+                            TweenMax.fromTo(".make-a-wish-inner .img-wrapper", 1, {
+                                force3D: true,
+                                opacity: 1,
+                                x: 0,
+
+                            }, {
+                                opacity: 0,
+                                x: 30,
+                                repeat: 0,
+                                ease: Power3.easeInOut,
+                            });
+                            TweenMax.to("#canvas-make-bg", 1, {
+                                webkitFilter: 'blur(5px)',
+                                filter: 'blur(5px)',
+                                opacity: 0,
+                            });
+                            TweenMax.fromTo(".make-canvas .anim", 1, {
+                                scale: 35,
+                                opacity: 1,
+                                backgroundColor: '#30203c',
+
+                            }, {
+                                scale: 0,
+                                opacity: .5,
+                                backgroundColor: '#8e3ccc',
+                                repeat: 0,
+                                ease: Power3.easeInOut,
+                                onComplete: function () {
+                                    $('body').css({ 'overflow-y': 'auto' });
+                                    $('.make-a-wish-inner').attr('data-open', "false");
+                                }
+                            });
+                            TweenMax.to('.ps-banner-sec-right', 1, {
+                                force3D: true,
+                                left: "var(--width-left)",
+                                opacity: 1,
+                                ease: Expo.easeInOut,
+                            });
+                            TweenMax.to('.ps-banner-sec-left', 1, {
+                                force3D: true,
+                                xPercent: "unset",
+                                opacity: 1,
+                                ease: Expo.easeInOut,
+                                onComplete: function () {
+                                    TweenMax.to(".ps-make-wish", 1.5, {
+                                        opacity: 1,
+                                        ease: Expo.easeInOut,
+
+                                    });
+                                    TweenMax.to('.ps-make-wish .wish-outer', 1.5, {
+                                        css: {
+                                            animation: 'inherit',
+                                            transform: 'rotate(45deg)',
+                                        },
+                                        ease: Expo.easeInOut,
+                                    });
+                                    TweenMax.to('.ps-make-wish .wish-outer-animation', 1.5, {
+                                        opacity: 1,
+                                        display: "block",
+                                        ease: Expo.easeInOut,
+
+                                    });
+                                }
+                            });
+                            TweenMax.to('.close-make', 1, {
+                                opacity: 0,
+                            });
+                        }
+
+                    }, 0.2);
+                    isOpen = false;
+                }
             }
         }
         makeBtnClick();
