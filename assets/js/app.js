@@ -397,41 +397,73 @@
         var makeBtnClick = () => {
             document.querySelector('.ps-make-wish').addEventListener('click', animateNavbar);
             function animateNavbar() {
-                TweenMax.to('.make-canvas', 1, {
-                    opacity: 1,
-                    ease: Power3.ease,
+                TweenMax.to('.ps-banner-sec-right', 1, {
+                    force3D: true,
+                    left: "100%",
+                    opacity: 0,
+                    ease: Expo.easeInOut,
+                });
+                TweenMax.to('.ps-banner-sec-left', 1, {
+                    force3D: true,
+                    xPercent: "-100%",
+                    opacity: 0,
+                    ease: Expo.easeInOut,
+                });
+                TweenMax.to('.ps-make-wish .wish-outer', 1, {
+                    css: {
+                        animation: 'none',
+                        transform: 'rotate(0deg)',
+                    },
+                    ease: Expo.easeInOut,
                     onComplete: function () {
-                        $('body').css({ 'overflow': 'hidden' });
-                        $('.make-a-wish-inner').attr('data-open', "true");
-                        TweenMax.to('.make-canvas', 1, {
+                        TweenMax.fromTo(
+                            ".make-canvas .anim",
+                            1, {
+                            scale: 0,
+                            opacity: .5
+                        }, {
+                            scale: 35,
+                            opacity: 1,
                             backgroundColor: '#30203c',
-                            ease: Power3.easeIn
-                        });
-                        TweenMax.to('.make-a-wish-inner', 1, {
-                            opacity: 1
-                        });
-                        TweenMax.to('.ps-form', 1, {
-                            opacity: 1,
-                            x: 0,
-                            ease: Power3.easeIn,
+                            ease: Power3.easeInOut,
+                            onStart: function () {
+                                $('body').css({ 'overflow': 'hidden' });
+                                $('.make-a-wish-inner').attr('data-open', "true");
+                            },
                             onComplete: function () {
-                                TweenMax.staggerTo('.animate', 1, {
-                                    y: 0,
+                                TweenMax.to(".ps-make-wish", 1, {
+                                    opacity: 0
+                                });
+                                TweenMax.to('.make-a-wish-inner', 1, {
+                                    opacity: 1
+                                });
+                                TweenMax.to('.ps-form', 1, {
                                     opacity: 1,
+                                    x: 0,
                                     ease: Power3.easeIn,
-                                }, 0.2);
+                                    onComplete: function () {
+                                        TweenMax.staggerTo('.animate', 1, {
+                                            y: 0,
+                                            opacity: 1,
+                                            ease: Power3.easeIn,
+                                        }, 0.2);
+                                    }
+                                });
+                                TweenMax.to('.make-a-wish-inner .img-wrapper', 1, {
+                                    opacity: 1,
+                                    X: 0,
+                                    ease: Power3.easeIn
+                                });
                             }
-                        });
-                        TweenMax.to('.make-a-wish-inner .img-wrapper', 1, {
-                            opacity: 1,
-                            X: 0,
-                            ease: Power3.easeIn
                         });
                     }
                 });
+                TweenMax.to('.ps-make-wish .wish-outer-animation', 1, {
+                    opacity: 0,
+                    display: "none"
+                });
             }
         }
-
         makeBtnClick();
 
         var makeBgCanvas = () => {

@@ -1601,8 +1601,8 @@ img {
   transition: all .6s cubic-bezier(.19, 1, .22, 1);
   transform-origin: top left;
   -webkit-transform-origin: top left;
-  transform: scale(1) translate(-50%, -50%)!important;
-  -webkit-transform: scale(1) translate(-50%, -50%)!important;
+  transform: scale(1) translate(-50%, -50%);
+  -webkit-transform: scale(1) translate(-50%, -50%);
   background-color: transparent;
   width: 80px;
   height: 80px;
@@ -1624,11 +1624,11 @@ img {
 }
 
 .ps-make-wish .wish-outer {
-  -webkit-animation: sm-ripple 1.3s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95) !important;
-  -moz-animation: sm-ripple 1.3s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95) !important;
-  -o-animation: sm-ripple 1.3s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95) !important;
-  -ms-animation: sm-ripple 1.3s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95) !important;
-  animation: sm-ripple 1.3s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95) !important;
+  -webkit-animation: sm-ripple 1.3s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95);
+  -moz-animation: sm-ripple 1.3s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95);
+  -o-animation: sm-ripple 1.3s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95);
+  -ms-animation: sm-ripple 1.3s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95);
+  animation: sm-ripple 1.3s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95);
 }
 
 @-webkit-keyframes sm-ripple {
@@ -5808,7 +5808,6 @@ body.modal-open {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #8e3dcc;
   z-index: 1000;
   max-height: 100vh;
   max-width: 100vw;
@@ -5817,7 +5816,19 @@ body.modal-open {
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
-  opacity: 0;
+  /* opacity: 0; */
+}
+
+.make-canvas .anim {
+  background-color: var(--secondary-color);
+  transform: scale(0) rotate(45deg);
+  border-radius: 50%;
+  width: 79px;
+  height: 79px;
+  position: absolute;
+  top: 22%;
+  left: 46%;
+  opacity: .5;
 }
 
 .make-a-wish-inner {
@@ -5852,7 +5863,7 @@ body.modal-open {
   opacity: 0;
   margin-bottom: 0;
   transform: translateX(-50px);
-  }
+}
 
 .make-a-wish-inner .ps-form input, .make-a-wish-inner .ps-form textarea {
   background-color: transparent;
@@ -5895,10 +5906,12 @@ body.modal-open {
   color: #ffffff;
   opacity: .7;
 }
+
 .make-a-wish-inner .img-wrapper {
   opacity: 0;
 }
-.make-a-wish-inner .img-wrapper >img{
+
+.make-a-wish-inner .img-wrapper>img {
   width: 100%;
   height: auto;
   max-width: 394px;
