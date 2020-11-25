@@ -93,6 +93,8 @@
         var bannerTxtOffset = () => {
             var headerOffset = $('#ps-header').children().offset().left + 20 + 'px';
             (mediaMobile.matches) ? $('#ps-banner-txt').css({ 'padding-left': headerOffset }) : $('#ps-banner-txt').removeAttr('style');
+            // (mediaMobile.matches) ? $('.make-a-wish-inner').css({ 'left': headerOffset }) : $('.make-a-wish-inner').removeAttr('style');
+
         }
         ($('#ps-header').length) && bannerTxtOffset();
     }
@@ -394,279 +396,156 @@
     }
 
     PATH.makeAWishSec = () => {
-        var makeBtnClick = () => {
-            document.querySelector('.ps-make-wish').addEventListener('click', animateNavbar);
-            document.querySelector('.close-make').addEventListener('click', animateRevNvabar);
-            var isOpen = false;
-            function animateNavbar() {
-                if (!isOpen) {
-                    TweenMax.to('.ps-banner-sec-right', 1, {
-                        force3D: true,
-                        left: "100%",
-                        opacity: 0,
-                        ease: Expo.easeInOut,
-                    });
-                    TweenMax.to('.ps-banner-sec-left', 1, {
-                        force3D: true,
-                        xPercent: "-100%",
-                        opacity: 0,
-                        ease: Expo.easeInOut,
-                    });
-                    TweenMax.to('.ps-make-wish .wish-outer', 1, {
-                        css: {
-                            animation: 'none',
-                            transform: 'rotate(0deg)',
-                        },
-                        ease: Expo.easeInOut,
-                        onComplete: function () {
-                            TweenMax.fromTo(
-                                ".make-canvas .anim",
-                                1, {
-                                scale: 0,
-                                opacity: .5,
-                            }, {
-                                scale: 35,
-                                opacity: 1,
-                                backgroundColor: '#30203c',
-                                ease: Power3.easeInOut,
-                                repeat: 0,
+        var isOpen = false;
+        $(".wish-btn").on("click", function (e) {
+            if (isOpen == false) {
+                TweenMax.to('.ps-make-wish .wish-outer', 1, {
+                    css: {
+                        animation: 'none',
+                        transform: 'rotate(0deg)',
+                        backgroundColor: '#ffffff'
+                    },
+                    force3D: true,
+                    ease: Power3.easeInOut,
+                    onComplete: function () {
+                        TweenMax.to('.wish-outer', 1, { opacity: 0 })
+                    },
+                    onStart: function () {
+                        $('.ps-make-wish').addClass('is-active');
+                        $('.make-canvas').attr('data-open', "true");
+                        TweenMax.to('.wish-txt', 1, {
+                            opacity: 0,
+                            display: 'none',
+                            ease: Power3.easeInOut,
 
-                                onStart: function () {
-                                    $('body').css({ 'overflow': 'hidden' });
-                                    $('.make-a-wish-inner').attr('data-open', "true");
-                                },
-                                onComplete: function () {
-                                    TweenMax.to(".ps-make-wish", 1, {
-                                        opacity: 0
-                                    });
-                                    TweenMax.to('.make-a-wish-inner', 1, {
+                        });
+                        TweenMax.to('.ps-make-wish .wish-btn', 1, {
+                            opacity: 0,
+                            display: 'none',
+                            ease: Power3.easeInOut,
+                            onStart: function () {
+
+                            }
+                        });
+                        TweenMax.to('.make-canvas', 1, {
+                            force3D: true,
+                            css: {
+                                // transform: 'scale(9)',
+                                width: '430px',
+                                height: '460px',
+                                backgroundColor: '#ffffff',
+                                opacity: 1
+                            },
+                            ease: Power3.easeInOut,
+                            onStart: function () {
+                                TweenMax.to('.ps-banner-sec-left', 1, {
+                                    webkitFilter: 'blur(6px)',
+                                    filter: 'blur(6px)'
+                                })
+                                // TweenMax.to('.ps-banner-sec-right', 1, {
+                                //     webkitFilter: 'blur(10px)',
+                                //     filter: 'blur(6px)'
+                                // })
+                            },
+                            onComplete: function () {
+                                TweenMax.to('.make-a-wish-inner', 1, {
+                                    opacity: 1,
+                                    onStart: function () {
+                                        TweenMax.staggerTo('.make-ani', 1, {
+                                            y: 0,
+                                            opacity: 1,
+                                            ease: Power3.easeIn,
+                                        }, 0.2);
+                                    }
+                                });
+                            }
+                        });
+                        TweenMax.to('.ps-make-wish .wish-outer-animation', 1, {
+                            opacity: 0,
+                            display: "none"
+                        });
+                    }
+                });
+                isOpen = true;
+            }
+        });
+        $(".close-make").on("click", function () {
+            if (isOpen == true) {
+                TweenMax.staggerTo('.make-ani', 1, {
+                    y: 50,
+                    opacity: 0,
+                    ease: Power3.easeIn,
+                    onStart: function () {
+                        $('.ps-make-wish').removeClass('is-active');
+                        $('.make-canvas').attr('data-open', "false");
+                    },
+                    onComplete: function () {
+                        TweenMax.to('.make-a-wish-inner', 1, {
+                            opacity: 0,
+                            onStart: function () {
+                                TweenMax.to('.wish-txt', 1, {
+                                    opacity: 1,
+                                    display: '',
+                                    ease: Power3.easeInOut,
+                                    delay: .5
+                                });
+                                TweenMax.to('.ps-make-wish .wish-btn', 1, {
+                                    opacity: 1,
+                                    display: '',
+                                    ease: Power3.easeInOut,
+                                    delay: .5
+                                });
+                                TweenMax.to('.ps-make-wish .wish-outer', 1, {
+                                    css: {
+                                        transform: 'rotate(45deg)',
+                                        backgroundColor: '#8e3ccc',
                                         opacity: 1
-                                    });
-                                    TweenMax.to('.ps-form', 1, {
-                                        opacity: 1,
-                                        x: 0,
-                                        ease: Power3.easeIn,
-                                        onComplete: function () {
-                                            TweenMax.staggerTo('.animate', 1, {
-                                                y: 0,
-                                                opacity: 1,
-                                                ease: Power3.easeIn,
-                                            }, 0.2);
-                                        }
-                                    });
-                                    TweenMax.fromTo(".make-a-wish-inner .img-wrapper", 1, {
-                                        force3D: true,
+                                    },
+                                    force3D: true,
+                                    delay: .3,
+                                    ease: Power3.easeInOut,
+                                    onComplete: function () {
+                                        TweenMax.to('.ps-make-wish .wish-outer', 1, {
+                                            css: {
+                                                animation: ''
+                                            }
+                                        });
+                                        TweenMax.to('.ps-make-wish .wish-outer-animation', 1, {
+                                            opacity: 1,
+                                            display: ""
+                                        });
+                                    }
+                                });
+                                TweenMax.to('.make-canvas', 1, {
+                                    force3D: true,
+                                    css: {
+                                        width: '30px',
+                                        height: '30px',
+                                        backgroundColor: '#8e3ccc',
                                         opacity: 0,
-                                        x: 30,
-                                    }, {
-                                        opacity: 1,
-                                        x: 0,
-                                        repeat: 0,
-                                        ease: Power3.easeInOut,
-                                    });
-                                    TweenMax.to("#canvas-make-bg", 1, {
-                                        webkitFilter: 'blur(3px)',
-                                        filter: 'blur(3px)',
-                                        opacity: 1,
-                                    });
-                                }
-                            });
-                        }
-                    });
-                    TweenMax.to('.ps-make-wish .wish-outer-animation', 1, {
-                        opacity: 0,
-                        display: "none"
-                    });
-                    TweenMax.to('.close-make', 1, {
-                        opacity: 1,
-                    });
-                    isOpen = true;
-                }
-            }
-            function animateRevNvabar() {
-                if (isOpen) {
-                    TweenMax.staggerTo('.animate', 1, {
-                        y: 50,
-                        opacity: 0,
-                        ease: Power3.easeIn,
-                        onComplete: function () {
-                            TweenMax.to('.ps-form', 1, {
-                                opacity: 0,
-                                x: -50,
-                                ease: Power3.easeIn,
-                            });
-                            TweenMax.fromTo(".make-a-wish-inner .img-wrapper", 1, {
-                                force3D: true,
-                                opacity: 1,
-                                x: 0,
-
-                            }, {
-                                opacity: 0,
-                                x: 30,
-                                repeat: 0,
-                                ease: Power3.easeInOut,
-                            });
-                            TweenMax.to("#canvas-make-bg", 1, {
-                                webkitFilter: 'blur(5px)',
-                                filter: 'blur(5px)',
-                                opacity: 0,
-                            });
-                            TweenMax.fromTo(".make-canvas .anim", 1, {
-                                scale: 35,
-                                opacity: 1,
-                                backgroundColor: '#30203c',
-
-                            }, {
-                                scale: 0,
-                                opacity: .5,
-                                backgroundColor: '#8e3ccc',
-                                repeat: 0,
-                                ease: Power3.easeInOut,
-                                onComplete: function () {
-                                    $('body').css({ 'overflow-y': 'auto' });
-                                    $('.make-a-wish-inner').attr('data-open', "false");
-                                }
-                            });
-                            TweenMax.to('.ps-banner-sec-right', 1, {
-                                force3D: true,
-                                left: "var(--width-left)",
-                                opacity: 1,
-                                ease: Expo.easeInOut,
-                            });
-                            TweenMax.to('.ps-banner-sec-left', 1, {
-                                force3D: true,
-                                xPercent: "unset",
-                                opacity: 1,
-                                ease: Expo.easeInOut,
-                                onComplete: function () {
-                                    TweenMax.to(".ps-make-wish", 1.5, {
-                                        opacity: 1,
-                                        ease: Expo.easeInOut,
-
-                                    });
-                                    TweenMax.to('.ps-make-wish .wish-outer', 1.5, {
-                                        css: {
-                                            animation: 'inherit',
-                                            transform: 'rotate(45deg)',
-                                        },
-                                        ease: Expo.easeInOut,
-                                    });
-                                    TweenMax.to('.ps-make-wish .wish-outer-animation', 1.5, {
-                                        opacity: 1,
-                                        display: "block",
-                                        ease: Expo.easeInOut,
-
-                                    });
-                                }
-                            });
-                            TweenMax.to('.close-make', 1, {
-                                opacity: 0,
-                            });
-                        }
-
-                    }, 0.2);
-                    isOpen = false;
-                }
-            }
-        }
-        makeBtnClick();
-
-        var makeBgCanvas = () => {
-            var Stars = {
-                canvas: null,
-                context: null,
-                circleArray: [],
-                colorArray: ['#2F2F82', '#85D6A6', '#F7D125', '#1f2e37', '#474848', '#542619', '#ead8cf', '#4c241f', '#d6b9b1', '#964a47'],
-                mouseDistance: 100,
-                radius: .5,
-                maxRadius: 1.5,
-                mouse: {
-                    x: undefined,
-                    y: undefined,
-                    down: false,
-                    move: false
-                },
-                init: function () {
-                    this.canvas = document.getElementById('canvas-make-bg');
-                    this.canvas.width = window.innerWidth;
-                    this.canvas.height = window.innerHeight;
-                    this.canvas.style.display = 'block';
-                    this.context = this.canvas.getContext('2d');
-
-                    window.addEventListener('mousemove', this.mouseMove);
-                    window.addEventListener('resize', this.resize);
-
-                    this.prepare();
-                    this.animate();
-                },
-                Circle: function (x, y, dx, dy, radius, fill) {
-                    this.x = x;
-                    this.y = y;
-                    this.dx = dx;
-                    this.dy = dy;
-                    this.radius = radius;
-                    this.minRadius = this.radius;
-
-                    this.draw = function () {
-                        Stars.context.beginPath();
-                        Stars.context.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-                        Stars.context.fillStyle = fill;
-                        Stars.context.fill();
-                    };
-                    this.update = function () {
-                        if (this.x + this.radius > Stars.canvas.width || this.x - this.radius < 0) this.dx = -this.dx;
-                        if (this.y + this.radius > Stars.canvas.height || this.y - this.radius < 0) this.dy = -this.dy;
-
-                        this.x += this.dx;
-                        this.y += this.dy;
-
-                        //  INTERACTIVITY
-                        if (Stars.mouse.x - this.x < Stars.mouseDistance && Stars.mouse.x - this.x > -Stars.mouseDistance && Stars.mouse.y - this.y < Stars.mouseDistance && Stars.mouse.y - this.y > -Stars.mouseDistance) {
-                            if (this.radius < Stars.maxRadius) this.radius += 1;
-                        } else if (this.radius > this.minRadius) {
-                            this.radius -= 1;
-                        }
-
-                        this.draw();
-                    };
-                },
-                prepare: function () {
-                    this.circleArray = [];
-
-                    for (var i = 0; i < 1200; i++) {
-                        var radius = Stars.radius;
-                        var x = Math.random() * (this.canvas.width - radius * 2) + radius;
-                        var y = Math.random() * (this.canvas.height - radius * 2) + radius;
-                        var dx = (Math.random() - 0.5) * 1.5;
-                        var dy = (Math.random() - 1) * 1.5;
-                        var fill = this.colorArray[Math.floor(Math.random() * this.colorArray.length)];
-
-                        this.circleArray.push(new this.Circle(x, y, dx, dy, radius, fill));
+                                    },
+                                    delay: .2,
+                                    ease: Power3.easeInOut,
+                                    onComplete: function () {
+                                        TweenMax.to('.ps-banner-sec-left', 1, {
+                                            webkitFilter: 'blur(0)',
+                                            filter: 'blur(0)',
+                                            // delay: 1,
+                                        });
+                                        // TweenMax.to('.ps-banner-sec-right', 1, {
+                                        //     webkitFilter: 'blur(0)',
+                                        //     filter: 'blur(0)',
+                                        //     // delay: 1,
+                                        // });                                       
+                                    }
+                                });
+                            }
+                        });
                     }
-                },
-                animate: function () {
-                    requestAnimationFrame(Stars.animate);
-                    Stars.context.clearRect(0, 0, Stars.canvas.width, Stars.canvas.height);
-
-                    for (var i = 0; i < Stars.circleArray.length; i++) {
-                        var circle = Stars.circleArray[i];
-                        circle.update();
-                    }
-                },
-                mouseMove: function (event) {
-                    Stars.mouse.x = event.x;
-                    Stars.mouse.y = event.y;
-                },
-                resize: function () {
-                    Stars.canvas.width = window.innerWidth;
-                    Stars.canvas.height = window.innerHeight;
-                }
-            };
-            Stars.init();
-        }
-
-        makeBgCanvas();
-
+                }, 0.2);
+                isOpen = false;
+            }
+        });
     }
 
     /* Document ready function */

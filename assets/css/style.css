@@ -10,6 +10,11 @@
   --border-color: #dfe3eb;
   --black-color: #000000;
   --font-family: "CircularStd", sans-serif;
+  /* othe utli */
+  --color-right: rgba(142, 60, 204, .1);
+  --color-left: #f3ebfa;
+  --width-left: 48%;
+  --width-right: 52%;
 }
 
 * {
@@ -1521,10 +1526,6 @@ img {
   padding-top: 49px;
   padding-right: 15px;
   padding-left: 15px;
-  --color-right: rgba(142, 60, 204, .1);
-  --color-left: #f3ebfa;
-  --width-left: 48%;
-  --width-right: 52%;
   background-color: var(--color-left);
   padding-top: 0;
   padding-right: 0;
@@ -1610,6 +1611,11 @@ img {
   align-items: center;
   cursor: pointer;
   justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 .ps-make-wish .wish-outer, .ps-make-wish .wish-outer-animation {
@@ -1707,11 +1713,11 @@ img {
 .ps-make-wish button {
   position: relative;
   z-index: 3;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  pointer-events: none;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  pointer-events: auto;
 }
 
 .ps-make-wish button svg {
@@ -5818,143 +5824,120 @@ body.modal-open {
 
 /* make a wish */
 
-.make-canvas, .make-a-wish-inner {
-  display: none;
+.make-canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  background-color: var(--secondary-color);
+  opacity: 1;
+  width: 68px;
+  -webkit-transform-origin: right top;
+  border-radius: 5px;
+  transform-origin: right top;
+  height: 68px;
+  background-color: transparent;
+  z-index: -1;
+  padding: 20px;
 }
 
-@media (min-width:991px) {
-  .make-canvas {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1000;
-    max-height: 100vh;
-    max-width: 100vw;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    pointer-events: none;
-    /* opacity: 0; */
-  }
-  .make-canvas .anim {
-    background-color: var(--secondary-color);
-    transform: scale(0) rotate(45deg);
-    border-radius: 50%;
-    width: 79px;
-    height: 79px;
-    position: absolute;
-    top: 22%;
-    left: 46%;
-    opacity: .5;
-  }
-  .make-a-wish-inner {
-    position: fixed;
-    top: 0;
-    display: block;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    pointer-events: none;
-    z-index: 1001;
-    display: flex;
-    align-items: center;
-    opacity: 0;
-  }
-  .make-a-wish-inner[data-open=true] {
-    -webkit-user-select: auto;
-    -moz-user-select: auto;
-    -ms-user-select: auto;
-    user-select: auto;
-    pointer-events: all;
-  }
-  .make-a-wish-inner .ps-form {
-    box-shadow: none;
-    background-color: rgba(0, 0, 0, .15);
-    margin-top: 130px;
-    opacity: 0;
-    margin-bottom: 0;
-    transform: translateX(-50px);
-  }
-  .make-a-wish-inner .ps-form input, .make-a-wish-inner .ps-form textarea {
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255);
-    color: #fff;
-  }
-  .make-a-wish-inner .ps-form label {
-    color: #fff;
-  }
-  .make-a-wish-inner .ps-form input::placeholder, .make-a-wish-inner .ps-form textarea::placeholder {
-    color: #fff;
-    opacity: .8;
-    font-weight: 400;
-  }
-  .make-a-wish-inner .ps-form .ps-cnt-switcher {
-    background-color: rgba(0, 0, 0, .15);
-  }
-  .make-a-wish-inner .ps-form .ps-cnt-switcher input[type=radio]+label {
-    color: #fff;
-    font-weight: 400;
-  }
-  .make-a-wish-inner .ps-form .ps-cnt-switcher input[type=radio]:checked+label {
-    color: var(--primary-color);
-    background-color: #fff;
-  }
-  .make-a-wish-inner .ps-form .upload__file .btn {
-    border-color: #ffffff;
-    color: #ffffff;
-  }
-  .make-a-wish-inner .ps-form .upload__file .btn .icon-ps-attach {
-    color: #ffffff;
-  }
-  .make-a-wish-inner .ps-form .item_upload span.msg {
-    color: #ffffff;
-    opacity: .7;
-  }
-  .make-a-wish-inner .img-wrapper {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  .make-a-wish-inner .img-wrapper>img {
-    width: 100%;
-    height: auto;
-    max-width: 394px;
-    transform: translateX(-86px);
-  }
-  .animate {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  #canvas-make-bg {
-    position: absolute;
-    filter: blur(6px);
-  }
-  .make-a-wish-inner .btn.close-make {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    color: #ffffff;
-    cursor: pointer;
-    z-index: 1002;
-    font-size: 20px;
-    padding: 5px;
-    justify-content: center;
-    opacity: .8;
-    background-color: rgba(0, 0, 0, .09);
-    width: 50px;
-    display: flex;
-    align-items: center;
-    height: 50px;
-  }
-  .make-a-wish-inner .btn.close-make:hover, .make-a-wish-inner .btn.close-make:focus {
-    background-color: rgba(0, 0, 0, .15);
-    opacity: 1;
-  }
+.make-canvas[data-open=true] {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  pointer-events: all;
+}
+
+.make-a-wish-inner {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  right: 28px;
+  display: block;
+  /* width: 100%; */
+  /* border-radius: 8px; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1001;
+  /* display: flex; */
+  /* background-color: var(--color-left); */
+  align-items: center;
+  opacity: 0;
+}
+
+.make-canvas[data-open=true] .make-a-wish-inner {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  pointer-events: all;
+}
+
+.make-a-wish-inner .ps-form {
+  box-shadow: none;
+  opacity: 1;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.make-canvas[data-open=true] .make-a-wish-inner .ps-form {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  pointer-events: all;
+}
+
+.make-canvas .make-head h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 54px;
+  color: var(--font-primary-color);
+  line-height: 1;
+  padding-right: calc(45px + 20px);
+}
+
+.make-ani {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.make-canvas .btn.close-make {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #8e3dcc;
+  cursor: pointer;
+  z-index: 1002;
+  font-size: 16px;
+  padding: 5px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .09);
+  width: 45px;
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+
+.make-canvas[data-open=true] .btn.close-make {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  pointer-events: all;
+}
+
+.make-canvas .btn.close-make:hover, .make-canvas .btn.close-make:focus {
+  background-color: rgba(0, 0, 0, .15);
+  opacity: .5;
 }

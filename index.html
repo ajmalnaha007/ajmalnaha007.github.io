@@ -116,7 +116,92 @@
         </div>
       </div>
       <div class="ps-make-wish">
-        <div class="wish-outer"></div>
+        <div class="make-canvas" data-open="false">
+          <div class="make-head">
+            <h3 class="make-ani">
+              Make A Wish
+            </h3>
+          </div>
+          <button class="btn close-make">&#10005;</button>
+          <div class="make-a-wish-inner">
+            <!-- <canvas id="canvas-make-bg"></canvas> -->
+            <div class="ps-form">
+              <form action="" class="row">
+                <div class="col-md-12 make-ani">
+                  <div class="form-group">
+                    <label>Email address</label>
+                    <input type="email" class="form-control" placeholder="ex. john@mail.com">
+                  </div>
+                </div>
+                <div class="col-md-12 make-ani">
+                  <div class="switcher-wrapper">
+                    <div class="ps-cnt-switcher">
+                      <input type="radio" name="switcher" id="webUrl" value="web-url" checked="checked" />
+                      <label data-title="Web Url" for="webUrl">
+                        <span class="icon-lb icon-ps-web"></span>
+                        <span class="text-lb">Web Url</span>
+                      </label>
+                      <input type="radio" name="switcher" id="document" value="document" />
+                      <label data-title="Document" for="document">
+                        <span class="icon-lb icon-ps-docs"></span>
+                        <span class="text-lb">Document</span>
+                      </label>
+                      <input type="radio" name="switcher" id="media" value="media-url" />
+                      <label data-title="Media" for="media">
+                        <span class="icon-lb icon-ps-media"></span>
+                        <span class="text-lb">Media</span>
+                      </label>
+                    </div>
+                    <div class="form-group web-url">
+                      <input type="text" class="form-control " placeholder="ex. www.plutospark.com">
+                    </div>
+                    <div class="form-group document">
+                      <div class="item_upload mb-3 mb-md-0">
+                        <div class="upload__file">
+                          <input type="file" id="doc-file">
+                          <button type="button" class="btn btn_md_primary">
+                            <span class="icon-ps-attach"></span>
+                            Attach File
+                          </button>
+                          <span class="file-name"></span>
+                        </div>
+                        <span class="msg">Maximum total file size: 12 MB</span>
+                      </div>
+                    </div>
+                    <div class="form-group media-url">
+                      <div class="item_upload mb-3 mb-md-0">
+                        <div class="upload__file">
+                          <input type="file" id="media-file">
+                          <button type="button" class="btn btn_md_primary">
+                            <span class="icon-ps-attach"></span>
+                            Attach File
+                          </button>
+                          <span class="file-name"></span>
+
+                        </div>
+                        <span class="msg">Maximum total file size: 18 MB</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 make-ani">
+                  <a href="#" class="btn ps-df-btn btn-ps-alt">
+                    <div class="inside-item">
+                      <span data-alt="Let's talk!">Make A Wish</span>
+                    </div>
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- <div class="col-lg-4 mr-auto">
+                  <div class="img-wrapper">
+                    <img src="assets/img/make-wish.png" alt="">
+                  </div>
+                </div> -->
+        </div>
+        <div class="wish-outer">
+        </div>
         <div class="wish-outer-animation"></div>
         <div class="wish-txt">
           <p>Make A Wish</p>
@@ -125,7 +210,7 @@
             <path d="M94.5,20.7c-9.6-7.7-77.4-33.5-89,0" transform="translate(-4.6 -3)" />
           </svg>
         </div>
-        <button class="btn">
+        <button class="btn wish-btn">
           <svg viewBox="0 0 37.65772 48.43402">
             <path
               d="M7.86685,48.717a1.14951,1.14951,0,0,1-1.17043-1.41593l6.5698-34.29489a1.81886,1.81886,0,0,1,1.71292-1.41593h4.6461a1.1495,1.1495,0,0,1,1.17042,1.41593L14.22587,47.30108A1.81888,1.81888,0,0,1,12.513,48.717Z"
@@ -144,6 +229,8 @@
           <img src="./assets/img/banner-art.png" alt="PlutoSpark" class="banner-art">
         </div>
       </div>
+
+
     </div>
   </section>
   <!-- End Main Banner -->
@@ -746,92 +833,10 @@
       </div>
     </div>
   </footer>
-  <div class="make-canvas">
+  <!-- <div class="make-canvas">
     <div class="anim"></div>
-  </div>
-  <section class="make-a-wish-inner" data-open="false">
-    <button class="btn close-make">&#10005;</button>
-    <canvas id="canvas-make-bg"></canvas>
-    <div class="container-lg">
-      <div class="row align-items-center">
-        <div class="col-xl-5 col-lg-6 ml-auto">
-          <div class="ps-form">
-            <form action="" class="row">
-              <div class="col-md-12 animate">
-                <div class="form-group">
-                  <label>Email address</label>
-                  <input type="email" class="form-control" placeholder="ex. john@mail.com">
-                </div>
-              </div>
-              <div class="col-md-12 animate">
-                <div class="switcher-wrapper">
-                  <div class="ps-cnt-switcher">
-                    <input type="radio" name="switcher" id="webUrl" value="web-url" checked="checked" />
-                    <label data-title="Web Url" for="webUrl">
-                      <span class="icon-lb icon-ps-web"></span>
-                      <span class="text-lb">Web Url</span>
-                    </label>
-                    <input type="radio" name="switcher" id="document" value="document" />
-                    <label data-title="Document" for="document">
-                      <span class="icon-lb icon-ps-docs"></span>
-                      <span class="text-lb">Document</span>
-                    </label>
-                    <input type="radio" name="switcher" id="media" value="media-url" />
-                    <label data-title="Media" for="media">
-                      <span class="icon-lb icon-ps-media"></span>
-                      <span class="text-lb">Media</span>
-                    </label>
-                  </div>
-                  <div class="form-group web-url">
-                    <input type="text" class="form-control " placeholder="ex. www.plutospark.com">
-                  </div>
-                  <div class="form-group document">
-                    <div class="item_upload mb-3 mb-md-0">
-                      <div class="upload__file">
-                        <input type="file" id="doc-file">
-                        <button type="button" class="btn btn_md_primary">
-                          <span class="icon-ps-attach"></span>
-                          Attach File
-                        </button>
-                        <span class="file-name"></span>
-                      </div>
-                      <span class="msg">Maximum total file size: 12 MB</span>
-                    </div>
-                  </div>
-                  <div class="form-group media-url">
-                    <div class="item_upload mb-3 mb-md-0">
-                      <div class="upload__file">
-                        <input type="file" id="media-file">
-                        <button type="button" class="btn btn_md_primary">
-                          <span class="icon-ps-attach"></span>
-                          Attach File
-                        </button>
-                        <span class="file-name"></span>
+  </div> -->
 
-                      </div>
-                      <span class="msg">Maximum total file size: 18 MB</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 animate">
-                <a href="#" class="btn ps-df-btn btn-ps-alt">
-                  <div class="inside-item">
-                    <span data-alt="Let's talk!">Make A Wish</span>
-                  </div>
-                </a>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="col-lg-4 mr-auto">
-          <div class="img-wrapper">
-            <img src="assets/img/make-wish.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- <button id="btntnt"
     style="position: fixed; top: 50%; left: 50%; background-color: #df4a43; color: #fff;z-index: 200000; padding: 20px;">asasasasas</button>
