@@ -9,47 +9,47 @@
     //     duration: 500, // values from 0 to 3000, with step 50ms
     // });
     PATH.preLoader = function () {
-            TweenMax.to($("#ps-preloader svg , #ps-preloader .ps-loader-text"), 1.0, {
-                force3D: true,
-                y: "-150px",
-                opacity: 0,
-                ease: Expo.easeInOut,
-                delay: 1.2,
-                onComplete: function () {
-                    TweenMax.to($(".loader-anim"), 0.8, {
-                        force3D: true,
-                        bottom: "100%",
-                        ease: Expo.easeInOut,
+        TweenMax.to($("#ps-preloader svg , #ps-preloader .ps-loader-text"), 1.0, {
+            force3D: true,
+            y: "-150px",
+            opacity: 0,
+            ease: Expo.easeInOut,
+            delay: 1.2,
+            onComplete: function () {
+                TweenMax.to($(".loader-anim"), 0.8, {
+                    force3D: true,
+                    bottom: "100%",
+                    ease: Expo.easeInOut,
+                });
+                TweenMax.to($(".loader-anim2"), 0.8, {
+                    force3D: true,
+                    bottom: "100%",
+                    delay: 0.2,
+                    ease: Expo.easeInOut,
+                    onComplete: function () {
+                        $(".loader").fadeOut(1);
+                    }
+                });
+                TweenMax.to($("#ps-preloader"), 0.8, {
+                    force3D: true,
+                    bottom: "100%",
+                    delay: 0.2,
+                    ease: Expo.easeInOut,
+                    onComplete: function () {
+                        $(".loader").fadeOut(1);
+                    }
+                });
+                setTimeout(function () {
+                    $("body").addClass("loaded");
+                    $('#ps-preloader').hide();
+                    AOS.init({
+                        easing: 'ease-in-out', // default easing for AOS animations
+                        once: false, // whether animation should happen only once - while scrolling down
+                        duration: 500, // values from 0 to 3000, with step 50ms
                     });
-                    TweenMax.to($(".loader-anim2"), 0.8, {
-                        force3D: true,
-                        bottom: "100%",
-                        delay: 0.2,
-                        ease: Expo.easeInOut,
-                        onComplete: function () {
-                            $(".loader").fadeOut(1);
-                        }
-                    });
-                    TweenMax.to($("#ps-preloader"), 0.8, {
-                        force3D: true,
-                        bottom: "100%",
-                        delay: 0.2,
-                        ease: Expo.easeInOut,
-                        onComplete: function () {
-                            $(".loader").fadeOut(1);
-                        }
-                    });
-                    setTimeout(function () {
-                        $("body").addClass("loaded");
-                        $('#ps-preloader').hide();
-                        AOS.init({
-                            easing: 'ease-in-out', // default easing for AOS animations
-                            once: false, // whether animation should happen only once - while scrolling down
-                            duration: 500, // values from 0 to 3000, with step 50ms
-                        });
-                    }, 800);
-                }
-            });
+                }, 800);
+            }
+        });
     }
 
     PATH.headerSticky = function () {
@@ -323,27 +323,72 @@
     }
 
     PATH.masnoryPort = () => {
-        if ($('.ps-grid').length) {
-            var $grid = $('.ps-grid').imagesLoaded(function () {
-                $grid.masonry({
-                    itemSelector: '.item',
-                    gutter: 20,
-                    horizontalOrder: true,
-                    transitionDuration: '.2s',
-                    fitWidth: true,
-                    stamp: '.stamb',
-                });
-            });
-            $grid.on('layoutComplete', function () {
-                $(this).animate({
-                    'opacity': 1
-                });
-                AOS.init();
-            });
+        let media1127 = window.matchMedia('(max-width: 1127px)');
+        let media991 = window.matchMedia('(max-width: 991px)');
+        let media670 = window.matchMedia('(max-width: 670px)');
+
+        function mediaCheck(media) {
+            let value = media + 'px';
+            if (window.matchMedia(`(max-width:${value})`).matches) {
+                return true
+            } else {
+                return false
+            }
         }
+
+        setWidthToItem(function () {
+            function masonrySet() {
+                if ($('.ps-grid').length) {
+                    // let mediaMobile = window.matchMedia('(min-width: 1127px)');
+                    var $grid = $('.ps-grid').imagesLoaded(function () {
+                        $grid.masonry({
+                            itemSelector: '.item',
+                            gutter: 20,
+                            horizontalOrder: true,
+                            transitionDuration: '.2s',
+                            fitWidth: true,
+                            stamp: '.stamb',
+                            isResizable: true,
+                        });
+                    });
+                    $grid.on('layoutComplete', function () {
+                        $(this).animate({
+                            'opacity': 1
+                        });
+                        AOS.init({ disable: 'mobile' });
+                    });
+                    if (media991.matches) {
+                        $grid.masonry({
+                            itemSelector: '.item',
+                            gutter: 20,
+                            horizontalOrder: true,
+                            transitionDuration: '.2s',
+                            fitWidth: true,
+                            stamp: '',
+                            isResizable: true,
+                        });
+                    }
+
+                }
+            }
+            masonrySet();
+        })
 
         var item = $('#get-in').clone();
         $(".item:nth-child(15n)").after(item);
+        function setWidthToItem(callback) {
+            var itemOuterWidth = $('.ps-grid').width(),
+                itemWidth;
+            (mediaCheck(1127)) && (itemWidth = (itemOuterWidth / 4) - 20 + 'px');
+            (mediaCheck(991)) && (itemWidth = (itemOuterWidth / 3) - 20 + 'px');
+            (mediaCheck(670)) && (itemWidth = (itemOuterWidth / 2) - 20 + 'px');
+            (mediaCheck(670)) && (itemWidth = (itemOuterWidth / 2) - 20 + 'px');
+            (mediaCheck(480)) && (itemWidth = (itemOuterWidth) - 20 + 'px');
+            $('.ps-port-grid .item').css({
+                width: itemWidth
+            });
+            callback();
+        }
     }
 
     PATH.modalOpen = () => {
@@ -594,6 +639,7 @@
     $(window).on('resize', function () {
         PATH.setBannerStyle();
         PATH.filterScroll();
+        PATH.masnoryPort();
     });
 
 })(jQuery);
