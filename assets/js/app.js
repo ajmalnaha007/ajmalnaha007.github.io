@@ -9,47 +9,47 @@
     //     duration: 500, // values from 0 to 3000, with step 50ms
     // });
     PATH.preLoader = function () {
-        TweenMax.to($("#ps-preloader svg , #ps-preloader .ps-loader-text"), 1.0, {
-            force3D: true,
-            y: "-150px",
-            opacity: 0,
-            ease: Expo.easeInOut,
-            delay: 1.2,
-            onComplete: function () {
-                TweenMax.to($(".loader-anim"), 0.8, {
-                    force3D: true,
-                    bottom: "100%",
-                    ease: Expo.easeInOut,
-                });
-                TweenMax.to($(".loader-anim2"), 0.8, {
-                    force3D: true,
-                    bottom: "100%",
-                    delay: 0.2,
-                    ease: Expo.easeInOut,
-                    onComplete: function () {
-                        $(".loader").fadeOut(1);
-                    }
-                });
-                TweenMax.to($("#ps-preloader"), 0.8, {
-                    force3D: true,
-                    bottom: "100%",
-                    delay: 0.2,
-                    ease: Expo.easeInOut,
-                    onComplete: function () {
-                        $(".loader").fadeOut(1);
-                    }
-                });
-                setTimeout(function () {
-                    $("body").addClass("loaded");
-                    $('#ps-preloader').hide();
-                    AOS.init({
-                        easing: 'ease-in-out', // default easing for AOS animations
-                        once: false, // whether animation should happen only once - while scrolling down
-                        duration: 500, // values from 0 to 3000, with step 50ms
+            TweenMax.to($("#ps-preloader svg , #ps-preloader .ps-loader-text"), 1.0, {
+                force3D: true,
+                y: "-150px",
+                opacity: 0,
+                ease: Expo.easeInOut,
+                delay: 1.2,
+                onComplete: function () {
+                    TweenMax.to($(".loader-anim"), 0.8, {
+                        force3D: true,
+                        bottom: "100%",
+                        ease: Expo.easeInOut,
                     });
-                }, 800);
-            }
-        });
+                    TweenMax.to($(".loader-anim2"), 0.8, {
+                        force3D: true,
+                        bottom: "100%",
+                        delay: 0.2,
+                        ease: Expo.easeInOut,
+                        onComplete: function () {
+                            $(".loader").fadeOut(1);
+                        }
+                    });
+                    TweenMax.to($("#ps-preloader"), 0.8, {
+                        force3D: true,
+                        bottom: "100%",
+                        delay: 0.2,
+                        ease: Expo.easeInOut,
+                        onComplete: function () {
+                            $(".loader").fadeOut(1);
+                        }
+                    });
+                    setTimeout(function () {
+                        $("body").addClass("loaded");
+                        $('#ps-preloader').hide();
+                        AOS.init({
+                            easing: 'ease-in-out', // default easing for AOS animations
+                            once: false, // whether animation should happen only once - while scrolling down
+                            duration: 500, // values from 0 to 3000, with step 50ms
+                        });
+                    }, 800);
+                }
+            });
     }
 
     PATH.headerSticky = function () {
@@ -397,7 +397,8 @@
 
     PATH.makeAWishSec = () => {
         var isOpen = false;
-        $(".wish-btn").on("click", function (e) {
+
+        function openMake() {
             if (isOpen == false) {
                 TweenMax.to('.ps-make-wish .wish-outer', 1, {
                     css: {
@@ -438,14 +439,23 @@
                             },
                             ease: Power3.easeInOut,
                             onStart: function () {
+                                TweenMax.to('.make-art', 1, {
+                                    opacity: 1,
+                                    delay: .5,
+
+                                });
                                 TweenMax.to('.ps-banner-sec-left', 1, {
                                     webkitFilter: 'blur(6px)',
-                                    filter: 'blur(6px)'
-                                })
-                                // TweenMax.to('.ps-banner-sec-right', 1, {
-                                //     webkitFilter: 'blur(10px)',
-                                //     filter: 'blur(6px)'
-                                // })
+                                    filter: 'blur(6px)',
+                                    opacity: 0,
+                                    ease: Power3.easeInOut,
+                                });
+                                TweenMax.to('.ps-banner-img img.banner-art', 1, {
+                                    webkitFilter: 'blur(6px)',
+                                    filter: 'blur(6px)',
+                                    opacity: 0,
+                                    ease: Power3.easeInOut
+                                });
                             },
                             onComplete: function () {
                                 TweenMax.to('.make-a-wish-inner', 1, {
@@ -468,8 +478,8 @@
                 });
                 isOpen = true;
             }
-        });
-        $(".close-make").on("click", function () {
+        }
+        function closeMake() {
             if (isOpen == true) {
                 TweenMax.staggerTo('.make-ani', 1, {
                     y: 50,
@@ -530,13 +540,13 @@
                                         TweenMax.to('.ps-banner-sec-left', 1, {
                                             webkitFilter: 'blur(0)',
                                             filter: 'blur(0)',
-                                            // delay: 1,
+                                            opacity: 1
+                                        })
+                                        TweenMax.to('.ps-banner-img img.banner-art', 1, {
+                                            webkitFilter: 'blur(0)',
+                                            filter: 'blur(0)',
+                                            opacity: 1
                                         });
-                                        // TweenMax.to('.ps-banner-sec-right', 1, {
-                                        //     webkitFilter: 'blur(0)',
-                                        //     filter: 'blur(0)',
-                                        //     // delay: 1,
-                                        // });                                       
                                     }
                                 });
                             }
@@ -545,7 +555,18 @@
                 }, 0.2);
                 isOpen = false;
             }
+        }
+
+        $(".wish-btn").on("click", function () { openMake() });
+
+        $(".close-make").on("click", function () { closeMake(); });
+
+        $(window).on('scroll', function () {
+            ($(this).scrollTop() > 50 && isOpen == true) && closeMake();
         });
+
+
+
     }
 
     /* Document ready function */

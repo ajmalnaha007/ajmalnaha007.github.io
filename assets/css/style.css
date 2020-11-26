@@ -5828,7 +5828,7 @@ body.modal-open {
   display: block;
   position: absolute;
   top: 0;
-  right: 0;
+  /* left: 50%; */
   z-index: 1000;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5838,9 +5838,9 @@ body.modal-open {
   background-color: var(--secondary-color);
   opacity: 1;
   width: 68px;
-  -webkit-transform-origin: right top;
+  -webkit-transform-origin: top;
   border-radius: 5px;
-  transform-origin: right top;
+  transform-origin: top;
   height: 68px;
   background-color: transparent;
   z-index: -1;
@@ -5940,4 +5940,14 @@ body.modal-open {
 .make-canvas .btn.close-make:hover, .make-canvas .btn.close-make:focus {
   background-color: rgba(0, 0, 0, .15);
   opacity: .5;
+}
+
+.make-art {
+  width: 320px;
+  position: absolute;
+  position: absolute;
+  right: -261px;
+  top: -61px;
+  opacity: 0;
+  z-index: 10002;
 }
