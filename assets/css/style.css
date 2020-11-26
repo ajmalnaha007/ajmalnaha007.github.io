@@ -5905,6 +5905,20 @@ body.modal-open {
   color: var(--font-primary-color);
   line-height: 1;
   padding-right: calc(45px + 20px);
+  margin-bottom: 10px;
+}
+
+.make-canvas .make-head p {
+  background-color: var(--secondary-color);
+  display: inline-block;
+  color: #ffffff;
+  margin-right: calc(45px + 20px);
+  font-size: 13px;
+  margin-left: 3px;
+  padding: 2px 12px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
 }
 
 .make-ani {
@@ -5950,4 +5964,9 @@ body.modal-open {
   top: -61px;
   opacity: 0;
   z-index: 10002;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }

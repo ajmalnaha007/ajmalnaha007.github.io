@@ -433,7 +433,7 @@
                             css: {
                                 // transform: 'scale(9)',
                                 width: '430px',
-                                height: '460px',
+                                height: '480px',
                                 backgroundColor: '#ffffff',
                                 opacity: 1
                             },
@@ -442,7 +442,6 @@
                                 TweenMax.to('.make-art', 1, {
                                     opacity: 1,
                                     delay: .5,
-
                                 });
                                 TweenMax.to('.ps-banner-sec-left', 1, {
                                     webkitFilter: 'blur(6px)',
@@ -559,10 +558,10 @@
 
         $(".wish-btn").on("click", function () { openMake() });
 
-        $(".close-make").on("click", function () { closeMake(); });
+        $(".close-make").on("click", function () { closeMake() });
 
         $(window).on('scroll', function () {
-            ($(this).scrollTop() > 50 && isOpen == true) && closeMake();
+            ($(this).scrollTop() > 250 && isOpen == true) && closeMake();
         });
 
 
