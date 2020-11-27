@@ -4262,7 +4262,6 @@ Marketing
   position: relative;
 }
 
-
 .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left {
   margin-bottom: 0;
 }
@@ -4298,7 +4297,7 @@ Marketing
 }
 
 @media(max-width:1199px) {
-  .ps-quick-cnt .ps-quick-cnt-ins{
+  .ps-quick-cnt .ps-quick-cnt-ins {
     padding: 60px 30px;
   }
   .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left {
@@ -4335,7 +4334,6 @@ Marketing
   }
 }
 
-
 @media(max-width:767px) {
   .ps-quick-cnt {
     margin-top: 50px;
@@ -4343,7 +4341,7 @@ Marketing
 }
 
 @media(max-width:575px) {
-  .ps-quick-cnt .ps-quick-cnt-ins{
+  .ps-quick-cnt .ps-quick-cnt-ins {
     border-radius: 20px;
   }
   .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left>p {
@@ -6098,6 +6096,52 @@ body.modal-open {
   color: var(--font-primary-color);
   line-height: 1.7;
   font-size: 16px;
+}
+
+@media (max-width:991px) {
+  .ps-port-detail-head {
+    margin-top: 40px;
+    padding-top: 50px;
+  }
+  .ps-port-detail-head h2.port-head {
+    letter-spacing: -1px;
+    font-size: 45px;
+  }
+}
+
+@media (max-width:767px) {
+
+  .ps-port-detail-head h2.port-head {
+    letter-spacing: 0;
+    font-size: 34px;
+  }
+  .ps-port-detail-cnts .inner-sub-text {
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  .ps-port-detail-head {
+    padding-bottom: 30px;
+  }
+
+}
+
+@media (max-width:575px) {
+  .ps-port-detail-head {
+    margin-top: 30px;
+  }
+  .ps-port-detail-head h2.port-head {
+    font-size: 30px;
+  }
+  .ps-port-detail-head p.port-cont {
+    font-size: 14px;
+  }
+  .ps-port-detail-head .ps-port-head-img {
+    margin-top: 30px;
+  }
+  .ps-port-detail-cnts .inner-sub-text p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
 
 /* make a wish */
