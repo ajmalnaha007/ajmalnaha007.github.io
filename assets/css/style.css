@@ -3562,6 +3562,21 @@ UI UX Page
   height: auto;
 }
 
+/* for branding */
+
+.ps-how-work.branding .single-process {
+  margin-top: 0;
+}
+
+.ps-how-work.branding .single-process .single-process-ins {
+  padding: 20px;
+}
+
+.ps-how-work.branding .single-process .ps-how-work-ic {
+  top: 20px;
+  left: 20px;
+}
+
 @media (max-width :991px) {
   .ps-how-work .single-process:nth-child(1) {
     margin-top: 40px;
@@ -5842,6 +5857,37 @@ input[type=radio]:checked+label {
   color: var(--font-secondary-color);
 }
 
+@media(max-width:768px) {
+  .ps-contact-bnr {
+    padding-top: 50px;
+  }
+  .ps-contact-bnr-title h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+  }
+  .ps-carrier {
+    margin: 30px 0 50px;
+  }
+}
+
+@media (max-width:575px) {
+  .ps-form {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width:441px) {
+  .ps-cnt-switcher {
+    display: block;
+    border-radius: 5px;
+  }
+  .ps-cnt-switcher input[type=radio]+label {
+    padding: 12px 13px;
+    border-radius: 5px;
+  }
+}
+
 /* port modal */
 
 #portgetinTouch.modal {
@@ -5859,6 +5905,14 @@ body.modal-open {
   padding: 0;
 }
 
+#portgetinTouch.modal .modal-body {
+  padding: 0;
+}
+
+#portgetinTouch.modal .modal-body .ps-form {
+  margin: 0;
+}
+
 .modal-port-head h3 {
   font-size: 90px;
   font-weight: 400;
@@ -5870,6 +5924,32 @@ body.modal-open {
   top: 15px;
   right: 15px;
 }
+
+@media(max-width:1199px) {
+  .modal-port-head h3 {
+    font-size: 65px;
+  }
+}
+
+@media(max-width:991px) {
+  #portgetinTouch.modal .modal-body .ps-form {
+    padding: 20px;
+  }
+  .modal-port-head h3 {
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px
+  }
+}
+
+/*@media(max-width:1199px){
+  .modal-port-head h3
+}@media(max-width:1199px){
+  .modal-port-head h3
+}@media(max-width:1199px){
+  .modal-port-head h3
+} */
 
 /* port-detal */
 
