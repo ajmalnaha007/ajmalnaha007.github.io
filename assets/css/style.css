@@ -449,6 +449,11 @@ img {
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 }
 
+.ps-header nav {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .ps-header nav .navbar-brand {
   padding: 0;
   margin: 0;
@@ -4561,12 +4566,17 @@ Marketing
   max-width: var(--box-width);
   min-height: 290px;
   width: var(--box-width);
-  margin: 10px;
+  margin: 10px 0;
   position: relative;
+}
+
+.ps-abt-opt .ps-abt-opt-item:nth-child(1), .ps-abt-opt .ps-abt-opt-item:nth-child(3) {
+  margin-right: 10px;
 }
 
 .ps-abt-opt .ps-abt-opt-item:nth-child(2n) {
   transform: translateY(calc(50% + 10px));
+  margin-left: 10px;
 }
 
 .ps-abt-opt .ps-abt-opt-item .ps-abt-opt-in {
@@ -4641,6 +4651,77 @@ Marketing
   height: auto;
 }
 
+@media (max-width:991px) {
+  .ps-about-bnr .ps-about-bnr-ins {
+    margin-top: 0;
+  }
+  .ps-about-bnr h3 {
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .ps-about-bnr .ps-about-bnr-ins p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .ps-about-bnr {
+    padding-top: 110px;
+  }
+  .ps-abt-opt .ps-abt-opt-item {
+    --box-width: calc(33.333% - 14px);
+    min-width: unset;
+    margin: 10px;
+  }
+  .ps-abt-opt .ps-abt-opt-item:first-child {
+    margin-left: 0;
+  }
+  .ps-abt-opt .ps-abt-opt-item:last-child {
+    margin-right: 0;
+  }
+  .ps-abt-opt .ps-abt-opt-item:nth-child(2n) {
+    transform: unset;
+  }
+  .ps-abt-opt .ps-abt-opt-item .ps-abt-opt-in h3 {
+    text-align: left;
+    font-size: 18px;
+  }
+}
+
+@media (max-width:767px) {
+  .ps-about-bnr {
+    padding-top: 80px;
+    background: linear-gradient(to top, #ffffff 38%, #f3ebfa 20%);
+  }
+  .ps-about-bnr h3 {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+  .ps-abt-opt .ps-abt-opt-item {
+    --box-width: calc(100% - 20px);
+    min-width: unset;
+    margin: 10px;
+    min-height: 186px;
+  }
+  .ps-abt-opt .ps-abt-opt-item:first-child, .ps-abt-opt .ps-abt-opt-item:last-child {
+    margin: 10px;
+  }
+}
+
+@media (max-width:521px) {
+  .ps-about-bnr h3 {
+    font-size: 30px;
+  }
+  .ps-abt-opt .ps-abt-opt-item {
+    min-height: 200px;
+  }
+}
+
+@media (max-width:391px) {
+  .ps-abt-opt .ps-abt-opt-item {
+    min-height: 250px;
+  }
+}
+
 /* who we are */
 
 .ps-about-who-we {
@@ -4658,7 +4739,7 @@ Marketing
 .ps-about-who-we .title-section-two h2 {
   font-size: 34px;
   margin-bottom: 0;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--font-primary-color);
 }
 
@@ -4671,6 +4752,36 @@ Marketing
 
 .ps-about-who-we .inner-who-we p:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width:991px) {
+  .ps-about-who-we {
+    padding: 50px 0;
+    margin: 50px 0;
+  }
+  .ps-about-who-we .title-section-two h2 {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width :767px) {
+  .ps-about-who-we .title-section-two h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .ps-about-who-we .inner-who-we p {
+    text-align: justify;
+  }
+}
+
+@media (max-width :475px) {
+  .ps-about-who-we .title-section-two h2 {
+    font-size: 28px;
+  }
+  .ps-about-who-we {
+    padding: 30px 0;
+    margin: 30px 0;
+  }
 }
 
 /* Our Culture */
@@ -4691,7 +4802,6 @@ Marketing
   left: 50%;
   width: 33%;
   height: var(--before-width);
-  /* min-height: 500px; */
   border-radius: 15px;
   background-color: #f2eaf9;
   transform: translate(-50%, -50%);
@@ -4716,7 +4826,7 @@ Marketing
 }
 
 .ps-our-culture .inner-culture {
-  width: 350px;
+  max-width: 350px;
   overflow: hidden;
   border-radius: 8px;
   background-color: var(--white-color);
@@ -4736,19 +4846,48 @@ Marketing
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  animation: breath 5s linear infinite;
   object-position: top;
 }
 
-@keyframes breath {
-  0% {
-    transform: scale(1);
+@media (max-width:991px) {
+  .ps-our-culture .inner-culture {
+    margin-right: auto;
   }
-  50% {
-    transform: scale(1.05);
+  .ps-our-culture::before {
+    width: 50%;
   }
-  100% {
-    transform: scale(1);
+  .ps-our-culture .title-section-two h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .ps-our-culture .title-section-two p {
+    text-align: center;
+  }
+}
+
+@media (max-width:991px) {
+  .ps-our-culture::before {
+    width: 100%;
+    top: auto;
+    bottom: -50px;
+    border-radius: 0;
+    transform: translate(-50%, 0);
+    height: 75%;
+  }
+  .ps-our-culture .title-section-two p {
+    font-size: 15px;
+    text-align: justify;
+  }
+}
+
+@media (max-width:575px) {
+  .ps-our-culture .title-section-two p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  .ps-our-culture .title-section-two h2 {
+    font-size: 30px;
   }
 }
 
@@ -4761,9 +4900,22 @@ Marketing
 .ps-about-numbers .ps-about-num-ins {
   background-image: url(../img/map.png);
   background-position: center;
+  text-align: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
   padding: 75px 0;
+}
+
+.ps-about-numbers .ps-about-num-ins .ps-subtitle-wrap h2 {
+  font-size: 34px;
+  font-weight: 500;
+  color: var(--font-primary-color);
+}
+
+.ps-about-numbers .ps-about-num-ins .ps-subtitle-wrap p {
+  font-size: 16px;
+  color: var(--font-secondary-color);
+  margin-bottom: 60px;
 }
 
 .ps-about-numbers .ps-about-num-ins .ps-about-num-sin {
@@ -4802,6 +4954,25 @@ Marketing
 .ps-about-numbers .ps-about-num-ins .count-action {
   text-align: center;
   margin-top: 70px;
+}
+
+@media (max-width:767px) {
+  .ps-about-numbers .ps-about-num-ins .ps-subtitle-wrap h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width:575px) {
+  .ps-about-numbers .ps-about-num-ins .ps-about-num-sin {
+    margin-bottom: 50px;
+  }
+  .ps-about-numbers .ps-about-num-ins .count-action {
+    margin-top: 0;
+  }
+  .ps-about-numbers .ps-about-num-ins .ps-subtitle-wrap p {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
 }
 
 /* BLOG */
@@ -6110,7 +6281,6 @@ body.modal-open {
 }
 
 @media (max-width:767px) {
-
   .ps-port-detail-head h2.port-head {
     letter-spacing: 0;
     font-size: 34px;
@@ -6122,7 +6292,6 @@ body.modal-open {
   .ps-port-detail-head {
     padding-bottom: 30px;
   }
-
 }
 
 @media (max-width:575px) {
