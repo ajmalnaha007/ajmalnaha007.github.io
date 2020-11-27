@@ -5559,6 +5559,8 @@ figure {
   overflow: hidden;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .ps-port-grid .item img {
@@ -5580,18 +5582,47 @@ figure {
   display: block;
 }
 
+@media (max-width :1097px) {
+  .ps-grid {
+    width: 100%!important;
+  }
+  .ps-port-grid .item {
+    --item-width: calc(100% / 4);
+    width: calc(var(--item-width) - 20px);
+  }
+}
+
 @media (max-width :991px) {
   .stamb {
     display: none;
   }
   .ps-port-grid .item {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media(max-width:868px) {
+  .ps-port-grid .item {
+    --item-width: calc(100% / 3);
+  }
+}
+
+@media(max-width:670px) {
+  .ps-port-grid .item {
+    --item-width: calc(100% / 2);
+  }
+}
+
+@media(max-width:430px) {
+  .ps-port-grid .item {
+    --item-width: 100%;
   }
 }
 
 #get-in {
   display: block;
-
 }
 
 .get-in-item {

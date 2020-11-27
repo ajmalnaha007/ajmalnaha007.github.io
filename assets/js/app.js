@@ -333,64 +333,46 @@
             }
         }
 
-        setWidthToItem(function () {
-            function masonrySet() {
+        function masonrySet() {
 
-                var options = {
+            var options = {
+                itemSelector: '.item',
+                horizontalOrder: true,
+                transitionDuration: '.2s',
+                fitWidth: true,
+                stamp: '.stamb',
+                isResizable: true,
+            }
+            if (mediaCheck(991)) {
+                options = {
                     itemSelector: '.item',
-                    gutter: 20,
                     horizontalOrder: true,
                     transitionDuration: '.2s',
                     fitWidth: true,
-                    stamp: '.stamb',
+                    stamp: '',
                     isResizable: true,
                 }
-                if (mediaCheck(991)) {
-                    options = {
-                        itemSelector: '.item',
-                        gutter: 15,
-                        horizontalOrder: true,
-                        transitionDuration: '.2s',
-                        fitWidth: true,
-                        stamp: '',
-                        isResizable: true,
-                    }
-                }
-
-                console.log({ ...options });
-
-                if ($('.ps-grid').length) {
-                    var $grid = $('.ps-grid').imagesLoaded(function () {
-                        $grid.masonry({
-                            ...options,
-                        });
-                    });
-                    $grid.on('layoutComplete', function () {
-                        $(this).animate({
-                            'opacity': 1
-                        });
-                        AOS.init({ disable: 'mobile' });
-                    });
-                }
             }
-            masonrySet();
-        })
+
+            if ($('.ps-grid').length) {
+                var $grid = $('.ps-grid').imagesLoaded(function () {
+                    $grid.masonry({
+                        ...options,
+                    });
+                });
+                $grid.on('layoutComplete', function () {
+                    $(this).animate({
+                        'opacity': 1
+                    });
+                    AOS.init({ disable: 'mobile' });
+                });
+            }
+        }
+        masonrySet();
+
         if ($('#get-item').length)
             var item = $('#get-in').clone();
         mediaCheck(450) && $(".item:nth-child(15n)").after(item);
-
-        function setWidthToItem(callback) {
-            var itemOuterWidth = $('.ps-grid').width(),
-                itemWidth;
-            (mediaCheck(1127)) && (itemWidth = (itemOuterWidth / 4) - 20 + 'px');
-            (mediaCheck(991)) && (itemWidth = (itemOuterWidth / 3) - 20 + 'px');
-            (mediaCheck(670)) && (itemWidth = (itemOuterWidth / 2) - 20 + 'px');
-            (mediaCheck(430)) && (itemWidth = (itemOuterWidth) - 20 + 'px');
-            $('.ps-port-grid .item').css({
-                width: itemWidth
-            });
-            callback();
-        }
     }
 
     PATH.modalOpen = () => {
