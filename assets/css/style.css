@@ -5584,6 +5584,14 @@ figure {
   .stamb {
     display: none;
   }
+  .ps-port-grid .item {
+    margin-bottom: 15px;
+  }
+}
+
+#get-in {
+  display: block;
+
 }
 
 .get-in-item {
@@ -5597,6 +5605,8 @@ figure {
   top: 0;
   bottom: 0;
   left: 0;
+  user-select: none;
+  pointer-events: none;
   right: 0;
   opacity: .3;
   background-image: url('../img/art-2.png');
@@ -5618,6 +5628,21 @@ figure {
 .get-in-item .ps-df-btn.btn-ps-alt::before {
   background: var(--primary-color);
   color: #fff;
+}
+
+@media (max-width :991px) {
+  .get-in-item h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 450px) {
+  .get-in-item h1 {
+    margin-bottom: 20px;
+  }
+  .get-in-item {
+    padding: 15px;
+  }
 }
 
 /* contact-pluto */
