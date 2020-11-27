@@ -3218,6 +3218,12 @@ Go Top CSS
   border: none;
 }
 
+@media (max-width:991px) {
+  .go-top-btn {
+    right: 20px;
+  }
+}
+
 .go-top-btn.active-progress {
   opacity: 1;
   visibility: visible;
