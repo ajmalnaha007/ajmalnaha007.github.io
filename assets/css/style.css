@@ -368,7 +368,7 @@ img {
   color: var(--font-primary-color);
 }
 
-@media(max-width:768px) {
+@media(max-width:767px) {
   .title-sections-two h2 {
     font-size: 28px;
   }
@@ -927,7 +927,7 @@ img {
   }
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
   .ps-header .navbar {
     padding: 0 8px;
   }
@@ -2124,7 +2124,7 @@ svg .st2 {
   }
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
   .ps-cnt-card-sec {
     margin: 30px 0;
   }
@@ -2416,7 +2416,7 @@ svg .st2 {
   }
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
   .ps-ser {
     padding-left: 5%;
     padding-right: 5%;
@@ -2626,7 +2626,7 @@ svg .st2 {
   margin-bottom: 30px;
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
   .ps-blog-sec .title-sections-two h2 {
     margin-bottom: 25px;
   }
@@ -2973,7 +2973,7 @@ svg .st2 {
   }
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
   .ps-cnt-bar-btm .ps-ins-cnt-bar {
     padding: 30px 0;
   }
@@ -3562,21 +3562,6 @@ UI UX Page
   height: auto;
 }
 
-/* for branding */
-
-.ps-how-work.branding .single-process {
-  margin-top: 0;
-}
-
-.ps-how-work.branding .single-process .single-process-ins {
-  padding: 20px;
-}
-
-.ps-how-work.branding .single-process .ps-how-work-ic {
-  top: 20px;
-  left: 20px;
-}
-
 @media (max-width :991px) {
   .ps-how-work .single-process:nth-child(1) {
     margin-top: 40px;
@@ -3704,7 +3689,7 @@ UI UX Page
   }
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
   .ps-why-us {
     padding-bottom: 35px;
   }
@@ -3942,7 +3927,7 @@ UI UX Page
   right: 0;
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
   .ps-brands .ps-brand-head h3::before, .ps-brands .ps-brand-head h3::after {
     width: 30%;
   }
@@ -4078,6 +4063,7 @@ Marketing
 .ps-marketing-sat-ins {
   position: relative;
   /* padding: 20px 20px 20px 80px; */
+  margin: 0;
 }
 
 .ps-marketing-cnt-sec .ps-marketing-cnt-ins p {
@@ -4140,6 +4126,10 @@ Marketing
   padding: 20px 25px;
 }
 
+.ps-marketing-sat-sec .ps-subtitle-wrap {
+  margin-bottom: 0;
+}
+
 .ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-ic {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4176,6 +4166,10 @@ Marketing
   color: var(--font-primary-color);
 }
 
+.ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-txt>h3>br {
+  display: block;
+}
+
 .ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-cnt>p {
   margin-top: 15px;
   margin-bottom: 0;
@@ -4185,20 +4179,59 @@ Marketing
   font-weight: 400;
 }
 
+@media(max-width:991px) {
+  .ps-marketing-sat-sec .ps-subtitle-wrap {
+    margin-bottom: 20px;
+  }
+  .ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-txt>h3 {
+    font-size: 18px;
+  }
+  .ps-marketing-sat-sec .ps-marketing-sat-sig {
+    padding: 20px;
+  }
+  .ps-marketing-sat-sec {
+    margin-bottom: calc(100px + 44px);
+  }
+}
+
+@media(max-width:767px) {
+  .ps-marketing-sat-sec .ps-subtitle-wrap {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .ps-marketing-sat-sec .ps-subtitle-wrap h2 {
+    text-align: center;
+  }
+  .ps-marketing-sat-ins {
+    margin: 50px 0;
+  }
+  .ps-marketing-sat-sec .single-stat {
+    -webkit-transform: translateY(0)!important;
+    -ms-transform: translateY(0)!important;
+    transform: translateY(0)!important;
+    margin-bottom: 20px;
+  }
+  .ps-marketing-sat-sec .ps-marketing-sat-sig .ps-sat-txt>h3>br {
+    display: none;
+  }
+  .ps-marketing-sat-sec {
+    margin-bottom: 30px;
+  }
+}
+
 .ps-quick-cnt {
   --use-color: var(--secondary-color);
   margin-bottom: 50px;
   position: relative;
   margin-top: 80px;
+  background-color: transparent;
+  padding: 0;
 }
 
 .ps-quick-cnt .ps-quick-cnt-ins {
   width: 100%;
   padding-bottom: 30px;
-  /* padding:0 40px 50px 40px; */
   border-radius: 5px;
-  /* box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.2);
-  background-color: var(--white-color); */
   position: relative;
   z-index: 1;
 }
@@ -4211,7 +4244,6 @@ Marketing
   content: "";
   display: block;
   width: 100%;
-  /* border-radius: 110px 20px 30px 20px; */
   background-color: var(--bg-color);
   position: absolute;
   margin: auto;
@@ -4222,18 +4254,6 @@ Marketing
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-
-/* .ps-quick-cnt .ps-quick-cnt-ins::before {
-  content: "";
-  position: absolute;
-  top: 35px;
-  bottom: 35px;
-  width: 1px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  opacity: 0.5;
-  background-color: var(--use-color);
-} */
 
 .ps-quick-cnt .ps-quick-outer::after {
   content: url(../img/quick-cnt-img.png);
@@ -4277,6 +4297,55 @@ Marketing
   max-width: 412px;
   padding: 20px;
   box-shadow: 0px 0 4px 0px rgb(11, 34, 56, 0.17);
+}
+
+@media(max-width:1199px) {
+  .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left {
+    margin-left: 80px;
+  }
+  .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left>p {
+    font-size: 16px;
+  }
+  .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left>h4 {
+    font-size: 35px;
+  }
+}
+
+@media(max-width:991px) {
+  .ps-quick-cnt .ps-quick-outer::after {
+    content: none;
+  }
+  .ps-quick-cnt::after {
+    content: none;
+  }
+  .ps-quick-cnt {
+    background-color: var(--bg-color);
+    padding: 30px 0;
+  }
+  .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left>p, .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left>h4 {
+    text-align: center;
+  }
+  .ps-quick-cnt .ps-quick-cnt-ins .ps-form {
+    margin: 0 auto;
+  }
+  .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left>h4  {
+    font-size: 28px;
+  }
+  .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .ps-quick-cnt .ps-quick-cnt-ins {
+    margin-bottom: 0;
+  }
+}
+@media(max-width:475px) {
+  .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left>p {
+    font-size: 14px;
+  }
+  .ps-quick-cnt .ps-quick-cnt-ins .ps-quick-left>h4  {
+    font-size: 26px;
+  }
 }
 
 /* bottom contact */
@@ -4365,7 +4434,7 @@ Marketing
   display: inline-block;
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
   .ps-btm-contact {
     padding: 30px 0;
   }
@@ -4486,7 +4555,7 @@ Marketing
   -ms-flex: 0 0 var(--box-width);
   flex: 0 0 var(--box-width);
   max-width: var(--box-width);
-  min-height: 264px;
+  min-height: 290px;
   width: var(--box-width);
   margin: 10px;
   position: relative;
@@ -4590,10 +4659,10 @@ Marketing
 }
 
 .ps-about-who-we .inner-who-we p {
-  font-size: 16px;
+  font-size: 15px;
   color: var(--font-secondary-color);
   margin-bottom: 20px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .ps-about-who-we .inner-who-we p:last-child {
@@ -5857,7 +5926,7 @@ input[type=radio]:checked+label {
   color: var(--font-secondary-color);
 }
 
-@media(max-width:768px) {
+@media(max-width:767px) {
   .ps-contact-bnr {
     padding-top: 50px;
   }
