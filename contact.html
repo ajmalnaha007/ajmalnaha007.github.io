@@ -199,6 +199,8 @@
 									<div class="inside-item">
 										<span data-alt="Let's talk!">Send Message</span>
 									</div>
+									<div class="loader"></div>
+
 								</a>
 							</div>
 						</form>
@@ -276,18 +278,39 @@
 			</div>
 		</div>
 	</footer>
-	
+
 	<button class="go-top-btn">
 		<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11">
-		  <g fill="none" fill-rule="evenodd" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-			<path d="M1.85 5.5H10M6.4 1l4.5 4.5L6.4 10"></path>
-		  </g>
+			<g fill="none" fill-rule="evenodd" stroke="#000" stroke-width="2" stroke-linecap="round"
+				stroke-linejoin="round">
+				<path d="M1.85 5.5H10M6.4 1l4.5 4.5L6.4 10"></path>
+			</g>
 		</svg><span class="label-text">back to top</span></button>
 
 	<div class="overlay"></div>
 	<script src="assets/js/plugins.js"></script>
 	<!-- Main JS -->
 	<script src="assets/js/app.js"></script>
+
+	<script>
+		$(document).ready(function () {
+
+			$(".btn").click(function () {
+				$(this).addClass("is-loading");
+
+				setTimeout(function () {
+					$(".btn").removeClass("is-loading");
+					$(".btn").addClass("success");
+				}, 3500)
+
+				setTimeout(function () {
+					$(".btn").removeClass("success");
+				}, 5000)
+
+			})
+
+		});
+	</script>
 </body>
 
 </html>

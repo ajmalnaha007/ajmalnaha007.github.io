@@ -141,13 +141,38 @@ input.form-control.invalid-missing::placeholder, textarea.form-control.invalid-m
   text-decoration: none!important;
 }
 
-.shake {
-  animation-name: shake;
+.btn .loader {
+  display: none;
+}
+
+.btn.is-loading {
+  display: inline-flex;
+}
+
+.btn.is-loading .loader {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: 3px solid rgba(255, 255, 255, .25);
+  border-top-color: #ffffff;
+  border-radius: 50%;
   position: relative;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(.36, .07, .19, .97);
-  /* animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; */
+  animation: loader-rotate 1s linear infinite;
+  top: 50%;
+  margin-left: 15px;
+}
+
+.btn.success, .btn.success:before {
+  background-color: #14b72c;
+}
+
+@keyframes loader-rotate {
+  0% {
+    transform: rotate(0)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
 }
 
 .ps-df-btn {
@@ -5563,15 +5588,14 @@ Marketing
     margin-top: 20px;
   }
   .ps-resource-bnr .ps-resource-bnr-ins {
-  padding-bottom: 78px;  
+    padding-bottom: 78px;
   }
-  .ps-resource-bnr .ps-resource-bnr-ins h3{
+  .ps-resource-bnr .ps-resource-bnr-ins h3 {
     margin-top: 0;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
-  
   .ps-resource-bnr .ps-resource-bnr-tab-sec {
     width: 447px;
     left: 50%;
@@ -5602,7 +5626,7 @@ Marketing
     margin-bottom: 50px;
     padding-bottom: 30px;
   }
-  .ps-resource-bnr .ps-resource-bnr-ins h3{
+  .ps-resource-bnr .ps-resource-bnr-ins h3 {
     margin-bottom: 0;
   }
   .ps-resource-bnr .ps-resource-bnr-ins {
