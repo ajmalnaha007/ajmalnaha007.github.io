@@ -1,55 +1,55 @@
 (function ($) {
     "use strict"
     var PATH = {};
-    // $("body").addClass("loaded");
-    // $('#ps-preloader').hide();
-    // AOS.init({
-    //     easing: 'ease-in-out', // default easing for AOS animations
-    //     once: false, // whether animation should happen only once - while scrolling down
-    //     duration: 500, // values from 0 to 3000, with step 50ms
-    // });
+    $("body").addClass("loaded");
+    $('#ps-preloader').hide();
+    AOS.init({
+        easing: 'ease-in-out', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        duration: 500, // values from 0 to 3000, with step 50ms
+    });
     PATH.preLoader = function () {
-        TweenMax.to($("#ps-preloader svg , #ps-preloader .ps-loader-text"), 1.0, {
-            force3D: true,
-            y: "-150px",
-            opacity: 0,
-            ease: Expo.easeInOut,
-            delay: 1.2,
-            onComplete: function () {
-                TweenMax.to($(".loader-anim"), 0.8, {
-                    force3D: true,
-                    bottom: "100%",
-                    ease: Expo.easeInOut,
-                });
-                TweenMax.to($(".loader-anim2"), 0.8, {
-                    force3D: true,
-                    bottom: "100%",
-                    delay: 0.2,
-                    ease: Expo.easeInOut,
-                    onComplete: function () {
-                        $(".loader").fadeOut(1);
-                    }
-                });
-                TweenMax.to($("#ps-preloader"), 0.8, {
-                    force3D: true,
-                    bottom: "100%",
-                    delay: 0.2,
-                    ease: Expo.easeInOut,
-                    onComplete: function () {
-                        $(".loader").fadeOut(1);
-                    }
-                });
-                setTimeout(function () {
-                    $("body").addClass("loaded");
-                    $('#ps-preloader').hide();
-                    AOS.init({
-                        easing: 'ease-in-out', // default easing for AOS animations
-                        once: false, // whether animation should happen only once - while scrolling down
-                        duration: 500, // values from 0 to 3000, with step 50ms
-                    });
-                }, 800);
-            }
-        });
+        // TweenMax.to($("#ps-preloader svg , #ps-preloader .ps-loader-text"), 1.0, {
+        //     force3D: true,
+        //     y: "-150px",
+        //     opacity: 0,
+        //     ease: Expo.easeInOut,
+        //     delay: 1.2,
+        //     onComplete: function () {
+        //         TweenMax.to($(".loader-anim"), 0.8, {
+        //             force3D: true,
+        //             bottom: "100%",
+        //             ease: Expo.easeInOut,
+        //         });
+        //         TweenMax.to($(".loader-anim2"), 0.8, {
+        //             force3D: true,
+        //             bottom: "100%",
+        //             delay: 0.2,
+        //             ease: Expo.easeInOut,
+        //             onComplete: function () {
+        //                 $(".loader").fadeOut(1);
+        //             }
+        //         });
+        //         TweenMax.to($("#ps-preloader"), 0.8, {
+        //             force3D: true,
+        //             bottom: "100%",
+        //             delay: 0.2,
+        //             ease: Expo.easeInOut,
+        //             onComplete: function () {
+        //                 $(".loader").fadeOut(1);
+        //             }
+        //         });
+        //         setTimeout(function () {
+        //             $("body").addClass("loaded");
+        //             $('#ps-preloader').hide();
+        //             AOS.init({
+        //                 easing: 'ease-in-out', // default easing for AOS animations
+        //                 once: false, // whether animation should happen only once - while scrolling down
+        //                 duration: 500, // values from 0 to 3000, with step 50ms
+        //             });
+        //         }, 800);
+        //     }
+        // });
     }
 
     PATH.headerSticky = function () {
@@ -597,6 +597,60 @@
 
     }
 
+    PATH.test = () => {
+        $('.ps-ins-pres-holder').on('mousemove', '.ps-port-single-item', function (e) {
+            var itemContainer = $(this);
+            var pageX = e.pageX;
+            var pageY = e.pageY;
+            var itemX = itemContainer.offset().left;
+            var itemY = itemContainer.offset().top;
+            var itemW = itemContainer.width();
+            var itemH = itemContainer.height();
+            var percentX = (pageX - itemX) / itemW * 20;
+            var percentY = (pageY - itemY) / itemH * 20;
+            var minY = 2, maxY = -2, diffY = minY - maxY;
+            var rotateY = minY - percentX / 20 * diffY;
+            rotateY = rotateY < maxY ? maxY : rotateY;
+            rotateY = rotateY > minY ? minY : rotateY;
+            var minX = -2, maxX = 2, diffX = minX - maxX;
+            var rotateX = minX - percentY / 20 * diffX;
+            rotateX = rotateX < minX ? minX : rotateX;
+            rotateX = rotateX > maxX ? maxX : rotateX;
+            var transform = 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
+            var transformImg = 'translate3d(' + (percentX * -.6) + 'px ,' + 0 + 'px ,' + 0 + 'px)';
+            itemContainer.css('transform', transform);
+            itemContainer.find('#ps-port-right .port-right-image-tab').css('transform', transformImg);
+        });
+
+        $('.ps-ins-pres-holder').on('mouseleave', '.ps-port-single-item', function (e) {
+            var itemContainer = $(this);
+            itemContainer.css('transform', '');
+            itemContainer.find('#ps-port-right .port-right-image-tab').css('transform', '');
+        });
+
+        var setBackground = () => {
+            var colorThief = new ColorThief();
+            $('.port-right-image-tab').each(function () {
+                var thumb = $(this);
+                thumb.find('img').on('load', function () {
+                    $(this).each(function () {
+                        var colorPalette = colorThief.getPalette(this, 7);
+                        var darkestColor = colorPalette.reduce(function (previousValue, currentValue) {
+                            var currLightNess = (0.2126 * currentValue[0] + 0.7152 * currentValue[1] + 0.0722 * currentValue[2]);
+                            var prevLightNess = (0.2126 * previousValue[0] + 0.7152 * previousValue[1] + 0.0722 * previousValue[2]);
+                            return (prevLightNess > currLightNess) ? currentValue : previousValue;
+                        });
+                        thumb.closest('.ps-port-item-wrapper').css({
+                            backgroundColor: 'rgb(' + darkestColor + ')'
+                        });
+                    });
+                });
+            });
+        }
+
+        setBackground();
+    }
+
     /* Document ready function */
     $(function () {
         PATH.backToTop();
@@ -611,6 +665,7 @@
         PATH.contactForm();
         PATH.blogBannerText();
         PATH.makeAWishSec();
+        PATH.test();
     });
 
     /* Window on load function */
